@@ -17,8 +17,8 @@
 
 ## Ecosystems Interoperability
 
-* [EBSI/ESSIF](ecosystems-interoperability/ebsi-essif.md)
-* [OIDC](ecosystems-interoperability/oidc.md)
+* [EBSI/ESSIF - European SSI and blockchain infrastructures](ecosystems-interoperability/ebsi-essif.md)
+* [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
 
 ## Usage
 
