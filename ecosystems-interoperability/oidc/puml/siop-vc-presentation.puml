@@ -1,0 +1,99 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam classFontColor 007BFF
+skinparam classFontSize 12
+skinparam classFontName Aapex
+skinparam backgroundColor white
+skinparam minClassWidth 155
+skinparam nodesep 34
+skinparam ranksep 70
+
+skinparam sequence {
+ArrowColor 007BFF
+ActorBorderColor 007BFF
+LifeLineBorderColor 007BFF
+LifeLineBackgroundColor 007BFF
+
+ParticipantBorderColor 007BFF
+ParticipantBackgroundColor 007BFF
+ParticipantFontName Impact
+ParticipantFontSize 17
+ParticipantFontColor #A9DCDF
+
+'ActorBackgroundColor aqua
+ActorFontColor 007BFF
+ActorFontSize 17
+ActorFontName Aapex
+}
+
+skinparam class {
+BorderColor 007BFF
+ArrowColor 007BFF
+BackgroundColor white
+}
+
+skinparam interface {
+BorderColor 007BFF
+ArrowColor 007BFF
+}
+
+skinparam note {
+BorderColor 007BFF
+BackgroundColor 7ACFF5
+}
+
+
+autonumber
+'https://ec.europa.eu/cefdigital/wiki/display/BLOCKCHAININT/2.+VC+exchange+over+API
+header OIDC/SIOP VC presentation flow
+title
+OIDC/SIOP VC presentation flow (BETA)
+end title
+autonumber
+actor "Natural Person" as NP
+participant Browser
+participant "User Web Wallet\n(Wallet Backend)" as WW
+participant "Relying Party \n(Verifier Backend)" as RP
+
+' https://hackmd.io/Y9pLBfnzSUm1JKgULESoYg
+'https://hackmd.io/H0rJR7EQQ9C2T3u7jl_fzw
+'- User uses Browser
+'- SIOPv2 authorization endpoint: https://wallet.walt.id
+
+'https://verifier.demo.walt.id/ (Relying Party - Frontend)
+NP->Browser: User enters RP page
+Browser->RP: GET RP page
+RP->RP: Generate RP page with wallet list
+RP-->Browser:
+Browser->NP: displays page with\n"Present Credential using <wallet>" button(s)
+NP->Browser: Clicks on "Present Credential using <wallet>"
+Browser->RP: GET e.g. https://api.verifier.walt.id/present/diploma?wallet=<wallet-id>
+
+'Code-level integration with SSI Kit
+RP->RP: Generate <SIOPv2 Request>\nwith response_mode=form_post URL\nincluding <redirect_uri>
+
+RP-->Browser: Redirect to e.g. https://wallet.walt.id/?<SIOPv2 Request>
+
+Browser->WW: Open URL with <SIOPv2 Request>
+WW-->Browser: login page
+NP->Browser: username + password
+Browser->WW: submit username + password
+WW->WW: Authenticates user
+
+WW-->Browser: consent page
+NP->Browser: selects credentials / attributes to share
+Browser->WW: submit consent
+
+WW->WW: Verifies consent
+WW->WW: Generates <SIOPv2 Response>
+WW-->Browser: <SIOPv2 response>: id_token, vp_token
+'https://api.verifier.walt.id/oidc/callback (Relying Party API)
+Browser->RP: POST <SIOPv2 response> as form data to <redirect_uri>
+
+RP->RP: Verifies <SIOPv2 Response>
+RP-->Browser: success + reload
+Browser->Browser: reload w/ success
+Browser-->NP:
+
+@enduml
