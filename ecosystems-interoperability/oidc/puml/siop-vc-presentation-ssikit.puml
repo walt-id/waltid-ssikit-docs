@@ -1,0 +1,80 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam classFontColor 007BFF
+skinparam classFontSize 12
+skinparam classFontName Aapex
+skinparam backgroundColor white
+skinparam minClassWidth 155
+skinparam nodesep 34
+skinparam ranksep 70
+
+skinparam sequence {
+ArrowColor 007BFF
+ActorBorderColor 007BFF
+LifeLineBorderColor 007BFF
+LifeLineBackgroundColor 007BFF
+
+ParticipantBorderColor 007BFF
+ParticipantBackgroundColor 007BFF
+ParticipantFontName Impact
+ParticipantFontSize 17
+ParticipantFontColor #A9DCDF
+
+'ActorBackgroundColor aqua
+ActorFontColor 007BFF
+ActorFontSize 17
+ActorFontName Aapex
+}
+
+skinparam class {
+BorderColor 007BFF
+ArrowColor 007BFF
+BackgroundColor white
+}
+
+skinparam interface {
+BorderColor 007BFF
+ArrowColor 007BFF
+}
+
+skinparam note {
+BorderColor 007BFF
+BackgroundColor 7ACFF5
+}
+
+
+autonumber
+header OIDC/SIOP VC presentation flow
+title
+OIDC/SIOP VC presentation flow (BETA)
+end title
+autonumber
+participant "SSIKit User\n(via CLI or SDK)" as SU
+participant "SSIKit" as SK
+participant "Relying Party \n(Verifier Backend)" as RP
+participant "Verifier web portal\n(Browser)" as VWP
+
+SU->VWP: Trigger verification request on verifier web portal (user interaction)
+RP->RP: Generate SIOP request\nincluding <redirect_uri>
+
+RP-->SU: Redirect to/Copy SIOP request URL
+
+SU->SK: Parse SIOP request parameters\n(ssikit oidc verify parse [...])
+SK-->SU: SIOP vp_token claim\n(which credentials have to be presented)
+SU->SU: Choose credentials to present
+
+SU->SK: Generate SIOP presentation response\n(ssikit oidc verify present [...])
+SK->SK: Create presentation
+SK->SK: Generates SIOP response
+opt via SDK
+SK-->SU: SIOP response: id_token, vp_token
+SU->SK: Post SIOP response
+end
+
+SK->RP: POST SIOP response to <redirect_uri>
+
+RP->RP: Verifies SIOP response
+RP-->VWP: Redirect to verifier portal\n(success/error page)
+
+@enduml
