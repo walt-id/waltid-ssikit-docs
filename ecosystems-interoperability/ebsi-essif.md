@@ -29,21 +29,21 @@ Note, that some of the flows are not in their final version. Slight modification
 
 Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable Authorizations" and EBSI access tokens).
 
-![ESSIF VC issuance flow](./essif/02_essif-register-did.png)
+![ESSIF DID registration](./ebsi-essif/puml/02_essif-register-did.png)
 
 For SSIKit usage examples, refer to: [**EBSI DID registration**](../ecosystems-interoperability/ebsi-essif/usage-examples.md#ebsi-did-registration)
 
 ### ESSIF Onboarding
 
-Onboarding of a legal entity to the EBSI/ESSIF ecosystem &#40;incl. combined VC request and DID registration&#41;.
+Onboarding of a legal entity to the EBSI/ESSIF ecosystem (incl. combined VC request and DID registration).
 
-![ESSIF Onboarding](./essif/essif-onboarding.png)
+![ESSIF Onboarding](./ebsi-essif/puml/essif-onboarding.png)
 
 ### EBSI Auth API
 
 Gaining access to protected EBSI/ESSIF services &#40;incl. presentation of "Verifiable Authorization"&#41;.
 
-![EBSI Auth API ](./essif/04_essif-auth-api.png)
+![EBSI Auth API ](./ebsi-essif/puml/04_essif-auth-api.png)
 
 ### Issuance of Verifiable Credentials
 
