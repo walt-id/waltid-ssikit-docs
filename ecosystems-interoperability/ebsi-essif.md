@@ -31,7 +31,7 @@ Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable
 
 ![ESSIF VC issuance flow](./essif/02_essif-register-did.png)
 
-For SSIKit usage examples, refer to: [**EBSI DID registration**](ebsi-essif/usage-examples.md#ebsi-did-registration)
+For SSIKit usage examples, refer to: [**EBSI DID registration**](../ecosystems-interoperability/ebsi-essif/usage-examples.md#ebsi-did-registration)
 
 ### ESSIF Onboarding
 
