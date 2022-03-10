@@ -82,3 +82,4 @@ This product enables your organisation to
 | Value          | Improve citisen/customer experiences by offering them seamless access to services (SSI-based authentication and identification). Get reliable data signed by data sources (41% of customers provide false data due to security and privacy concerns; RSA). Verify citizen/customer data in a privacy-friendly fashion.
 Reduce help desk requests (e.g. related to passwords). Prevent data breaches (e.g. eliminate passwords). |
 | Deployment Options | On-Premise. Multi-Cloud (self-managed). Multi-Cloud (managed service by walt.id) |
+
