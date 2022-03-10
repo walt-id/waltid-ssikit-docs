@@ -15,10 +15,10 @@
 * [Architecture](internals/architecture.md)
 * [Technology Stack](internals/tech-stack.md)
 
-## Ecosystems and Interoperability
+## Ecosystems Interoperability
 
-* [EBSI/ESSIF - European SSI and blockchain infrastructure](ecosystems-interoperability/ebsi-essif.md)
-* [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
+* [EBSI/ESSIF](ecosystems-interoperability/ebsi-essif.md)
+* [OIDC](ecosystems-interoperability/oidc.md)
 
 ## Usage
 

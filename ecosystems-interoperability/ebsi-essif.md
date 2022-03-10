@@ -1,4 +1,4 @@
-# EBSI/ESSIF - European SSI and blockchain infrastructure
+# EBSI/ESSIF - European SSI and blockchain infrastructures
 
 This section shows how you can use the SSI Kit to interact with Europe’s emerging identity ecosystem based on the
 

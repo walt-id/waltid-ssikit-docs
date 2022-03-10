@@ -1,4 +1,4 @@
-# OIDC - OpenID Connect
+# OIDC - OpenID Connect for verifiable credential issuance and presentation
 
 This section shows how the SSIKit can be used to interact with OpenID Connect identity providers for the exchange of verifiables credentials and presentation.
 
