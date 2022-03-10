@@ -13,7 +13,6 @@ The respective **OIDC4CI** specification can be found at:
 {% endhint %}
 
 
-
 ![OIDC for CI](oidc/puml/oidc-credential-issuance-ssikit.png)
 
 {% hint style="info" %}
