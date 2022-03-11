@@ -47,3 +47,4 @@ Refer also to our **web wallet documentation**, for an example of an actual end-
 {% content-ref url="https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/" %}
 [Web wallet](https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/)
 {% endcontent-ref %}
+
