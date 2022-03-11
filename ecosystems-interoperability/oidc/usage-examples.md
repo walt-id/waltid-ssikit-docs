@@ -183,7 +183,7 @@ To play through the verification flow, let's start at our demo verifier web port
 
 `https://verifier.walt.id`
 
-## SIOP request
+### SIOP request
 
 To obtain a valid SIOP request URL from the verifier, let's open the verifier portal in a web browser.
 
@@ -201,7 +201,7 @@ We want to copy the SIOP request URL, in this example it's:
 https://wallet.walt.id/api/wallet/siopv2/initPresentation/?response_type=id_token&response_mode=form_post&client_id=https%3A%2F%2Fverifier.walt.id%2Fverifier-api%2Fverify%2F842b3286-d581-4d6b-ad1d-16a718c28015&redirect_uri=https%3A%2F%2Fverifier.walt.id%2Fverifier-api%2Fverify%2F842b3286-d581-4d6b-ad1d-16a718c28015&scope=openid&nonce=842b3286-d581-4d6b-ad1d-16a718c28015&claims=%7B%22vp_token%22+%3A+%7B%22presentation_definition%22+%3A+%7B%22id%22+%3A+%221%22%2C+%22input_descriptors%22+%3A+%5B%7B%22id%22+%3A+%221%22%2C+%22schema%22+%3A+%7B%22uri%22+%3A+%22https%3A%2F%2Fapi.preprod.ebsi.eu%2Ftrusted-schemas-registry%2Fv1%2Fschemas%2F0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba%22%7D%7D%5D%7D%7D%7D
 ```
 
-### Simulate a SIOP request
+#### Simulate a SIOP request
 
 **_Alternatively_**, we can simulate a SIOP request, by using the SSIKit command line interface, to generate such a request URL:
 
@@ -225,7 +225,7 @@ openid://?response_type=id_token&response_mode=fragment&client_id=http%3A%2F%2Fb
 
 The command prints the SIOP request URI containing the required credential types, as specified in the command parameters.
 
-## Parse SIOP request
+### Parse SIOP request
 
 Continuing the real-case scenario we started on our demo verifier portal, we can copy the SIOP request URL from the browser network tab, like shown in the previous section, and inspect the SIOP request to see which credentials we have to present, using the _parse_ subcommand like this:
 
@@ -245,7 +245,7 @@ Schema ID: https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77
 
 The command prints the requested credentials and their schema IDs. Now we can create and send the SIOP response to the verifier portal.
 
-## SIOP response
+### SIOP response
 
 Using the SIOP request URL we got in the previous sections, we can now generate and post the SIOP response, using the DID and credential issued in the [issuance credential request example](#credential-request), to the verifier portal like so:
 
