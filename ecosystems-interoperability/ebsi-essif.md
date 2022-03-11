@@ -9,61 +9,44 @@ This section shows how you can use the SSI Kit to interact with Europe’s emerg
 
 ### State of the EBSI/ESSIF specifications
 
-::: warning
+{% hint style="danger" %}
 Note, that some of the flows are not in their final version. Slight modifications are to be expected.
-:::
+{% endhint %}
 
-[comment]: <> (ESSIF specifies the flows to standardise the following use cases:)
-
-[comment]: <> (1.   ESSIF DID Registration - creation and anchoring of a new DID on the EBSI ledger &#40;incl. use of "Verifiable Authorizations" and EBSI access tokens&#41;.)
-
-[comment]: <> (1.   ESSIF Onboarding - onboarding of a legal entity to the EBSI/ESSIF ecosystem &#40;incl. combined VC request and DID registration&#41;.)
-
-[comment]: <> (1.   EBSI Auth API - gaining access to protected EBSI/ESSIF services &#40;incl. presentation of "Verifiable Authorization"&#41;.)
-
-[comment]: <> (1.   VC Issuance - issuance of VCs from a legal entity to a natural person &#40;incl. OIDC-based data exchange, open interface for third party issuers component&#41;.)
-
-[comment]: <> (1.   VC Exchange - presentation of a Verifiable Presentation to a Verifier / Relying Party &#40;incl. OIDC-based data exchange, open interface for third party verifier component&#41;.)
-
-### ESSIF DID Registration 
+### ESSIF DID Registration
 
 Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable Authorizations" and EBSI access tokens).
 
-![ESSIF DID registration](./ebsi-essif/puml/02_essif-register-did.png)
+![ESSIF DID registration](ebsi-essif/puml/02\_essif-register-did.png)
 
-For SSIKit usage examples, refer to: [**EBSI DID registration**](../ecosystems-interoperability/ebsi-essif/usage-examples.md#ebsi-did-registration)
+For SSIKit usage examples, refer to: [**EBSI DID registration**](ebsi-essif/usage-examples.md#ebsi-did-registration)
 
 ### ESSIF Onboarding
 
 Onboarding of a legal entity to the EBSI/ESSIF ecosystem (incl. combined VC request and DID registration).
 
-![ESSIF Onboarding](./ebsi-essif/puml/essif-onboarding.png)
+![ESSIF Onboarding](ebsi-essif/puml/essif-onboarding.png)
 
 ### EBSI Auth API
 
-Gaining access to protected EBSI/ESSIF services &#40;incl. presentation of "Verifiable Authorization"&#41;.
+Gaining access to protected EBSI/ESSIF services (incl. presentation of "Verifiable Authorization").
 
-![EBSI Auth API ](./ebsi-essif/puml/04_essif-auth-api.png)
+![EBSI Auth API](ebsi-essif/puml/04\_essif-auth-api.png)
 
 ### Issuance of Verifiable Credentials
 
 The ESSIF protocol for issuance of verifiable credentials aims to being compliant with the OIDC for credential issuance specification. Refer to the respective section for details:
 
-[**OIDC for credential issuance**](../ecosystems-interoperability/oidc.md#oidc-for-credential-issuance)
+[**OIDC for credential issuance**](oidc.md#oidc-for-credential-issuance)
 
 ### Exchange of Verifiable Presentations
 
-The ESSIF protocol for presentation of verifiable credentials to a Verifier or Relying Party, aims to being compliant with the OIDC/SIOPv2 specification.
-Refer to this section for details:
+The ESSIF protocol for presentation of verifiable credentials to a Verifier or Relying Party, aims to being compliant with the OIDC/SIOPv2 specification. Refer to this section for details:
 
-[**OIDC/SIOPv2 for verifiable presentations**](../ecosystems-interoperability/oidc.md#oidcsiopv2-for-verifiable-presentations)
+[**OIDC/SIOPv2 for verifiable presentations**](oidc.md#oidcsiopv2-for-verifiable-presentations)
 
-[comment]: <> (TODO: insert further flows)
+### Code examples
 
-### Code examples 
-
-::: tip
+{% hint style="success" %}
 Several code-examples how to use the ESSIF functionality of the SSI Kit are shown on [GitHub](https://github.com/walt-id/waltid-ssikit-examples)
-:::
-
-
+{% endhint %}
