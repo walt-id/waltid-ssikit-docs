@@ -119,7 +119,7 @@ ssikit oidc ci credential -i https://issuer.walt.id/issuer-api/oidc/ -m OIDC -t 
 Let's break down the important bits of the token response:
 * **access_token**: The token which we need to request the credentials
 * **id_token**: ID token, which should have been signed by the issuer, respecting the _nonce_ challenge we defined previously in the _auth_ subcommand.
-* **c_nonce**: The nonce challenge we need to use, to sign the DID possession proof in the credential request.
+* **c_nonce**: The nonce challenge we need to use, to sign the DID ownership proof in the credential request.
 * **expires_in**: expiration period (seconds), after which the token will become invalid.
 
 Let's now proceed with the credential request, like instructed by the command output.
@@ -142,8 +142,8 @@ Breakdown of above command:
 * **-i [...]**: Set the issuer base URL
 * **-m OIDC**: Follow the OIDC standard (default)
 * **-t [...]**: The access_token we received previously
-* **-n [...]**: The nonce used for signing the DID possession proof
-* **-d [...]**: The DID for which the credential should be issued
+* **-n [...]**: The nonce used for signing the DID ownership proof
+* **-d [...]**: The DID for which the credential should be issued (we have to proof DID ownership!)
 * **-s [...]**: The schema ID of the credential to retrieve
 * **--save**: We instruct the CLI to save the received credential to the credential store
 
