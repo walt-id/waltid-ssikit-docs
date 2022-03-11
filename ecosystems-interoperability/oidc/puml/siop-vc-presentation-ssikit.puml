@@ -67,10 +67,8 @@ SU->SU: Choose credentials to present
 SU->SK: Generate SIOP presentation response\n(ssikit oidc verify present [...])
 SK->SK: Create presentation
 SK->SK: Generates SIOP response
-alt via SDK
 SK-->SU: SIOP response: id_token, vp_token
 SU->SK: Post SIOP response
-end
 
 SK->RP: POST SIOP response to <redirect_uri>
 
