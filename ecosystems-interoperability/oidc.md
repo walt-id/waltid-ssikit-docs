@@ -2,6 +2,10 @@
 
 This section shows how the SSIKit can be used to interact with OpenID Connect identity providers for the exchange of verifiables credentials and presentation.
 
+Below you find **sequence diagrams**, for the issuance and verification flows.
+
+Examples of using the **SSIKit command line interface** to interact with OIDC issuers and verifiers, can be found in the [Usage examples](./oidc/usage-examples.md)
+
 ## OIDC for credential issuance
 
 The SSIKit implements the OIDC credential issuance flow, allowing SDK and/or CLI users to get credentials issued from OIDC compliant issuers.
