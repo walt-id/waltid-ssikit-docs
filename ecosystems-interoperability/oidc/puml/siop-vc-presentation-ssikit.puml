@@ -60,11 +60,11 @@ RP->RP: Generate SIOP request\nincluding <redirect_uri>
 
 RP-->SU: Redirect to/Copy SIOP request URL
 
-SU->SK: Parse SIOP request parameters\n(ssikit oidc verify parse [...])
+SU->SK: Parse SIOP request parameters\n(ssikit oidc vp parse [...])
 SK-->SU: SIOP vp_token claim\n(which credentials have to be presented)
 SU->SU: Choose credentials to present
 
-SU->SK: Generate SIOP presentation response\n(ssikit oidc verify present [...])
+SU->SK: Generate SIOP presentation response\n(ssikit oidc vp present [...])
 SK->SK: Create presentation
 SK->SK: Generates SIOP response
 SK-->SU: SIOP response: id_token, vp_token
