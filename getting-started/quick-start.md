@@ -22,9 +22,7 @@ cd waltid-ssikit/
 
 For a quick intro using the command line interface, refer to:
 
-{% content-ref url="cli.md" %}
-[cli.md](cli.md)
-{% endcontent-ref %}
+[**CLI - Command line interface**](./cli-command-line-interface.md)
 
 ## Build
 
@@ -52,6 +50,4 @@ Then run the build command using the wrapper script:
 
 For more detailed information about the build process and build options, refer to:
 
-{% content-ref url="../usage/build.md" %}
-[build.md](../usage/build.md)
-{% endcontent-ref %}
+[**Build**](./build.md)

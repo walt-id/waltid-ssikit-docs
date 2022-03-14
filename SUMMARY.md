@@ -3,29 +3,26 @@
 ## What is SSIKit
 
 * [Introduction](README.md)
+* [Guiding Principles](what-is-ssikit/guiding-principles.md)
+* [Functional overview](what-is-ssikit/functional-overview.md)
 
 ## Getting started
 
 * [Quick start](getting-started/quick-start.md)
-* [CLI](getting-started/cli.md)
+* [CLI (Command line interface)](getting-started/cli-command-line-interface.md)
+* [Build](getting-started/build.md)
+* [Configuration](getting-started/configuration.md)
+* [REST APIs](getting-started/rest-apis.md)
 
 ## Internals
 
-* [Guiding Principles](internals/guiding-principles.md)
 * [Architecture](internals/architecture.md)
 * [Technology Stack](internals/tech-stack.md)
 
-## Ecosystems Interoperability
+## Ecosystems / Interoperability
 
 * [EBSI/ESSIF - European SSI and blockchain infrastructures](ecosystems-interoperability/ebsi-essif.md)
-    * [Usage examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
+    * [EBSI/ESSIF usage examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
 * [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
-    * [Usage examples](ecosystems-interoperability/oidc/usage-examples.md)
+    * [OIDC usage examples](ecosystems-interoperability/oidc/usage-examples.md)
 
-## Usage
-
-* [Functional overview](usage/functional-overview.md)
-* [Build](usage/build.md)
-* [Configuration](usage/configuration.md)
-* [CLI (Command line interface)](usage/cli-command-line-interface.md)
-* [REST APIs](usage/rest-apis.md)
