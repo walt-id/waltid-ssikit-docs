@@ -25,9 +25,3 @@
 * [Key management](usage-examples/key-management.md)
 * [EBSI/ESSIF examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
 * [OIDC examples](ecosystems-interoperability/oidc/usage-examples.md)
-
-## Internals
-
-
-
-
