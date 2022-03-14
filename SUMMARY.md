@@ -3,7 +3,7 @@
 ## What is SSI Kit
 
 * [Introduction](README.md)
-* [SSI - Self sovereign identity](what-is-ssikit/what-is-ssi.md)
+* [SSI - Self-Sovereign Identity](what-is-ssikit/what-is-ssi.md)
 * [SSI Kit](what-is-ssikit/ssi-kit.md)
 
 ## Getting started
