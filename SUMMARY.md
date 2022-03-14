@@ -5,6 +5,8 @@
 * [Introduction](README.md)
 * [SSI - Self-Sovereign Identity](what-is-ssikit/what-is-ssi.md)
 * [SSI Kit](what-is-ssikit/ssi-kit.md)
+  * [Architecture](internals/architecture.md)
+  * [Technology Stack](internals/tech-stack.md)
 
 ## Getting started
 
@@ -26,7 +28,6 @@
 
 ## Internals
 
-* [Architecture](internals/architecture.md)
-* [Technology Stack](internals/tech-stack.md)
+
 
 
