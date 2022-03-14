@@ -14,6 +14,11 @@
 * [Configuration](getting-started/configuration.md)
 * [REST APIs](getting-started/rest-apis.md)
 
+## Ecosystems / Interoperability
+
+* [EBSI/ESSIF - European SSI and blockchain infrastructures](ecosystems-interoperability/ebsi-essif.md)
+* [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
+
 ## Usage examples
 * [Key management](usage-examples/key-management.md)
 * [EBSI/ESSIF examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
@@ -24,10 +29,4 @@
 * [Architecture](internals/architecture.md)
 * [Technology Stack](internals/tech-stack.md)
 
-## Ecosystems / Interoperability
-
-* [EBSI/ESSIF - European SSI and blockchain infrastructures](ecosystems-interoperability/ebsi-essif.md)
-    * [EBSI/ESSIF usage examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
-* [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
-    * [OIDC usage examples](ecosystems-interoperability/oidc/usage-examples.md)
 

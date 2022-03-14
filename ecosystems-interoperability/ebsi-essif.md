@@ -5,6 +5,8 @@ This section shows how you can use the SSI Kit to interact with Europe’s emerg
 * **EU Blockchain Service Infrastructure (EBSI)**
 * **EU Self-Sovereign Identity Framework (ESSIF)**
 
+Refer to [**EBSI/ESSIF usage examples**](../ecosystems-interoperability/ebsi-essif/usage-examples.md) for examples of using **SSI Kit command line interface** with the EBSI/ESSIF infrastructures.
+
 ## ESSIF Use Cases & Flow Diagrams
 
 ### State of the EBSI/ESSIF specifications
