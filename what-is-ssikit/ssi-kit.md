@@ -1,6 +1,6 @@
-# SSI Kit<sup>®</sup>
+# SSI Kit
 
-Before diving into the details of the SSI Kit<sup>®</sup>, here some of the principles that guide our product development:
+Before diving into the details of the SSI Kit, here some of the principles that guide our product development:
 
 * **Open Source**: Our products are open source under the permissive Apache 2 license, which means that anyone can use them free of charge.
 * **Holistic Solutions**: We offer holistic solutions that are easy to use for organisations and individuals enabling them to act as Holders, Issuers and Verifiers.
@@ -8,11 +8,11 @@ Before diving into the details of the SSI Kit<sup>®</sup>, here some of the pri
 * **Openness**: Our products are based on an open architecture that implements standardised interfaces which allow anyone to plug in third party solutions (from secure key or data stores to other SSI solutions) to prevent lock-in and ensure high flexibility.
 * **Integrability**: Our products are programmed in Kotlin/Java and can be integrated via native SDKs and REST APIs as well as tested manually via an interface (CLI).
 
-## What is the SSI Kit<sup>®</sup>?
+## What is the SSI Kit?
 
-The SSI Kit<sup>®</sup> bundles our products (“Signatory” for Issuers, “Custodian” for Holders, “Auditor” for Verifiers) in a unified solution that enables developers and organisations to use Self-Sovereign Identity (SSI) with ease.
+The SSI Kit bundles our products (“Signatory” for Issuers, “Custodian” for Holders, “Auditor” for Verifiers) in a unified solution that enables developers and organisations to use Self-Sovereign Identity (SSI) with ease.
 
-The SSI Kit<sup>®</sup> is a set of libraries that anyone can use to establish an identity infrastructure layer to power complex, low-level SSI operations for potentially any use case in any industry. In short, it enables all functionality required to use SSI, such as:
+The SSI Kit is a set of libraries that anyone can use to establish an identity infrastructure layer to power complex, low-level SSI operations for potentially any use case in any industry. In short, it enables all functionality required to use SSI, such as:
 
 * Interactions with Registries which can be based on different technologies like the European Blockchain “EBSI”.
 * Decentralised Identifiers (DIDs) and Keys, including generation, signing, anchoring, resolution and lifecycle management.
@@ -25,7 +25,7 @@ _Illustration:_&#x20;
 
 ## Functional overview
 
-The Walt.ID SSI Kit<sup>®</sup> is a holistic SSI solution, with primarily focus on the European EBSI/ESSIF ecosystem.
+The Walt.ID SSI Kit is a holistic SSI solution, with primarily focus on the European EBSI/ESSIF ecosystem.
 
 The core services are in the scope of:
 

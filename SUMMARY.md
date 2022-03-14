@@ -1,10 +1,10 @@
 # Table of contents
 
-## What is SSI Kit<sup>®</sup>
+## What is SSI Kit
 
 * [Introduction](README.md)
 * [SSI - Self sovereign identity](what-is-ssikit/what-is-ssi.md)
-* [SSI Kit<sup>®</sup>](what-is-ssikit/ssi-kit.md)
+* [SSI Kit](what-is-ssikit/ssi-kit.md)
 
 ## Getting started
 
