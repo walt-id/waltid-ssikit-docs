@@ -11,7 +11,8 @@ On a high-level, we can distinguish three different roles a party can play:
 - __Issuer__ - A party who “issues” identity data to a Holder.
 - __Verifier__ - A party who verifies identity data presented by a Holder.
 
-_Illustration:_
+_Illustration:_&#x20;
+
 ![](./Issuer-Holder-Verifier.png)
 
 Usually, a single party plays only one of these roles per interaction. However, it is perfectly normal for a party to take on different roles in different interactions. For example:
@@ -34,7 +35,8 @@ Self-Sovereign Identity (SSI) combines a number of novel technologies and concep
 4. __Protocols__ enable the exchange of data, particularly of VCs/VPs, between different parties.
 5. __Applications__ integrate SSI to provide value to end-users.
 
-_Illustration:_
+_Illustration:_&#x20;
+
 ![](./SSI-Tech-Stack.png)
 
 ### Registries
