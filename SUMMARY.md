@@ -1,15 +1,15 @@
 # Table of contents
 
-## What is SSIKit
+## What is SSI Kit<sup>®</sup>
 
 * [Introduction](README.md)
-* [Guiding Principles](what-is-ssikit/guiding-principles.md)
-* [Functional overview](what-is-ssikit/functional-overview.md)
+* [SSI - Self sovereign identity](what-is-ssikit/what-is-ssi.md)
+* [SSI Kit<sup>®</sup>](what-is-ssikit/ssi-kit.md)
 
 ## Getting started
 
 * [Quick start](getting-started/quick-start.md)
-* [CLI (Command line interface)](getting-started/cli-command-line-interface.md)
+* [CLI - Command line interface](getting-started/cli-command-line-interface.md)
 * [Build](getting-started/build.md)
 * [Configuration](getting-started/configuration.md)
 * [REST APIs](getting-started/rest-apis.md)
