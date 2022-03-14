@@ -5,7 +5,7 @@ This section shows how you can use the SSI Kit to interact with Europe’s emerg
 * **EU Blockchain Service Infrastructure (EBSI)**
 * **EU Self-Sovereign Identity Framework (ESSIF)**
 
-Refer to [**EBSI/ESSIF usage examples**](../ecosystems-interoperability/ebsi-essif/usage-examples.md) for examples of using **SSI Kit command line interface** with the EBSI/ESSIF infrastructures.
+Refer to [**EBSI/ESSIF usage examples**](../usage-examples/ebsi-essif/usage-examples.md) for examples of using **SSI Kit command line interface** with the EBSI/ESSIF infrastructures.
 
 ## ESSIF Use Cases & Flow Diagrams
 
@@ -19,21 +19,21 @@ Note, that some of the flows are not in their final version. Slight modification
 
 Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable Authorizations" and EBSI access tokens).
 
-![ESSIF DID registration](ebsi-essif/puml/02\_essif-register-did.png)
+![ESSIF DID registration](puml/02\_essif-register-did.png)
 
-For SSIKit usage examples, refer to: [**EBSI DID registration**](ebsi-essif/usage-examples.md#ebsi-did-registration)
+For SSIKit usage examples, refer to: [**EBSI DID registration**](usage-examples.md#ebsi-did-registration)
 
 ### ESSIF Onboarding
 
 Onboarding of a legal entity to the EBSI/ESSIF ecosystem (incl. combined VC request and DID registration).
 
-![ESSIF Onboarding](ebsi-essif/puml/essif-onboarding.png)
+![ESSIF Onboarding](puml/essif-onboarding.png)
 
 ### EBSI Auth API
 
 Gaining access to protected EBSI/ESSIF services (incl. presentation of "Verifiable Authorization").
 
-![EBSI Auth API](ebsi-essif/puml/04\_essif-auth-api.png)
+![EBSI Auth API](puml/04\_essif-auth-api.png)
 
 ### Issuance of Verifiable Credentials
 

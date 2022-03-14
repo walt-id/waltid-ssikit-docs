@@ -5,8 +5,8 @@
 * [Introduction](README.md)
 * [SSI - Self-Sovereign Identity](what-is-ssikit/what-is-ssi.md)
 * [SSI Kit](what-is-ssikit/ssi-kit.md)
-  * [Architecture](internals/architecture.md)
-  * [Technology Stack](internals/tech-stack.md)
+  * [Architecture](what-is-ssikit/ssi-kit/architecture.md)
+  * [Technology Stack](what-is-ssikit/ssi-kit/tech-stack.md)
 
 ## Getting started
 
@@ -23,8 +23,8 @@
 
 ## Usage examples
 * [Key management](usage-examples/key-management.md)
-* [EBSI/ESSIF examples](ecosystems-interoperability/ebsi-essif/usage-examples.md)
-* [OIDC examples](ecosystems-interoperability/oidc/usage-examples.md)
+* [EBSI/ESSIF examples](usage-examples/ebsi-essif/usage-examples.md)
+* [OIDC examples](usage-examples/oidc/usage-examples.md)
 
 ## Development
 

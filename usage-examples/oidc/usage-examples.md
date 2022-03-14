@@ -2,6 +2,8 @@
 
 The following subsections show several examples of interaction with OIDC compliant issuers and verifiers using the SSIKit command line interface.
 
+For more information about the OIDC support built into SSI Kit, refer to section [**OIDC - OpenID Connect**](ecosystems-interoperability/oidc.md).
+
 ## Credential issuance
 
 For interacting with an OIDC credential issuer, we need to know the OIDC base URL of the issuer service. The SSIKit tries to resolve the OIDC discovery document relative to that base URL like this:
