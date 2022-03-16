@@ -1,6 +1,8 @@
 # Configuration
 
-Services come with their own configuration files. For the configuration of service -> implementation mappings, [ServiceMatrix](https://github.com/walt-id/service-matrix) is used.
+Services come with their own configuration files.
+
+For the configuration of service -> implementation mappings, [ServiceMatrix](https://github.com/walt-id/service-matrix) is used.
 
 The default mapping file is "service-matrix.properties", and looks like this:
 
@@ -11,6 +13,14 @@ id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.SqlKeyStoreS
 id.walt.services.key.KeyService=id.walt.services.key.WaltIdKeyService
 ```
 
-e.g., to change the keystore service, simply replace the line `id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.SqlKeyStoreService` with your own implementation mapping, e.g. for the Azure HSM keystore: `id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.azurehsm.AzureHSMKeystoreService`
+e.g., to change the keystore service, simply replace the line
 
-To add a service configuration: `id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.SqlKeyStoreService:sql.conf` Service configuration is by default in HOCON format. Refer to the specific service on how their configuration is laid out.
+`id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.SqlKeyStoreService`
+
+with your own implementation mapping, e.g. for the Azure HSM keystore:
+
+`id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.azurehsm.AzureHSMKeystoreService`
+
+To add a service configuration:&#x20;
+
+`id.walt.services.keystore.KeyStoreService=id.walt.services.keystore.SqlKeyStoreService:sql.conf` Service configuration is by default in HOCON format. Refer to the specific service on how their configuration is laid out.

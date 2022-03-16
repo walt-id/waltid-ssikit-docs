@@ -2,7 +2,7 @@
 
 For building the project **Gradle 7** as well as **JDK 16 (or above)** is required.
 
-#### Building the application
+## Building the application
 
 First clone the Git repo and switch into the project folder:
 
@@ -11,7 +11,7 @@ git clone https://github.com/walt-id/waltid-ssikit.git
 cd waltid-ssikit/
 ```
 
-**walt.id Wrapper**
+## **Wrapper**
 
 The walt.id wrapper script **ssikit.sh** is a convenient way for building and using the library on **Linux**.
 
@@ -19,7 +19,9 @@ The walt.id wrapper script **ssikit.sh** is a convenient way for building and us
 ./ssikit.sh {build|build-docker|build-podman|extract|execute (default)}
 ```
 
-The script takes one of the the following arguments: build|build-docker|build-podman|extract|execute.
+The script takes one of the the following arguments:
+
+build|build-docker|build-podman|extract|execute.
 
 For example, for building the project, simply supply the "build" argument:
 
@@ -27,13 +29,18 @@ For example, for building the project, simply supply the "build" argument:
 ./ssikit.sh build
 ```
 
-#### Manually with gradle:
+## Gradle
+
+Manually with gradle:
 
 ```
 gradle clean build
 ```
 
-After the Gradle build you can run the executable. In `build/distributions/` you have two archives, a .tar, and a .zip.\
+After the Gradle build you can run the executable.
+
+In `build/distributions/` you have two archives, a .tar, and a .zip.
+
 Extract either one of them, and run `waltid-ssi-kit-1.0-SNAPSHOT/bin/waltid-ssi-kit`.
 
 ```
@@ -44,7 +51,9 @@ cd ../..  # go back to the root-directory
 ./build/distributions/waltid-ssi-kit-1.0-SNAPSHOT/bin/waltid-ssi-kit
 ```
 
-#### Building the Docker Container
+## Docker Container
+
+Building the Docker Container
 
 ```
 ./ssikit.sh build-docker
@@ -62,13 +71,13 @@ or without script
 docker build -t ssikit .
 ```
 
-#### Manually:
+Manually
 
 ```
 podman build -t ssikit .
 ```
 
-### Docker Compose
+## Docker Compose
 
 Run as RESTful service via Docker Compose:
 
