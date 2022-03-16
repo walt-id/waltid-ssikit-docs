@@ -42,7 +42,17 @@ The SSI Kit unifies three components:
 
 ### Signatory | For Issuers
 
-Signatory allows you to digitise paper credentials and automate data provision to stakeholders.
+Signatory allows you to digitize paper credentials and automate data provision to your stakeholders.
+
+It provides all functionality required by “Issuers”:
+
+* Process and authenticate data requests by people or organisations,
+* Import data (from local storage or third parties),
+* Create re-usable VC templates,
+* Create VCs in different formats (e.g. JSON/JWT, JSON-LD),
+* Sign VCs using different key types (e.g. ed25519, secp256K1, RSA),
+* Manage the lifecycle of VCs (e.g. revocation).
+* Issue VCs (e.g. via OIDC/SIOP)
 
 ![](../../what-is-ssikit/Signatory-Issuer.png)
 
