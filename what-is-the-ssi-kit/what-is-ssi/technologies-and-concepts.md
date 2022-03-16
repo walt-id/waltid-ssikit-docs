@@ -1,7 +1,3 @@
----
-description: Learn about the technologies and concepts on which SSI is based.
----
-
 # Technologies & Concepts
 
 ## TL;DR
@@ -55,15 +51,13 @@ Importantly, SSI can be implemented without registries, particularly without blo
 
 ### Decentralised Identifiers (DIDs)
 
-DIDs are **unique identifiers** (URIs) which are standardised by the [W3C](https://www.w3.org/TR/did-core). DIDs are typically linked to "DID Documents" which contain metadata like keys, service endpoints or proofs.
+DIDs are unique identifiers (URIs) which are globally standardised by the [W3C](https://www.w3.org/TR/did-core). They are usually linked to so-called "DID Documents" which contain not only DIDs, but also metadata like keys, service endpoints or signatures and proofs.
 
-DIDs are important because they **establish a (distributed) public key infrastructure** (DPKI) and allow parties to find each other, authenticate and encrypt and verifiably sign data.
+DIDs are important because they establish a (Distributed) Public Key Infrastructure (DPKI) and allow parties to find each other (discovery), authenticate, encrypt and verifiably sign data.
 
-A variety of “**DID methods**'', which are different implementations of the DID specification, exist. Considering that DID methods differ in terms of how they are created, registered and resolved, different methods come with different advantages and disadvantages.&#x20;
+Today, a variety of so-called “DID methods'', which are different implementations of the DID specification, exist. Considering that each DID method differs in terms of how it is created, registered and resolved, different methods come with different advantages and disadvantages. For example, while DIDs are traditionally anchored on registries, new methods emerged that do not require such registries because their distribution mechanism is based on peer-to-peer interactions (e.g. did:key).
 
-For example, while DIDs are often anchored on Registries, such as EBSI (did:ebsi) or the Domain Name Service (did:web), new methods emerged that do not require Registries because their distribution is based on peer-to-peer interactions (e.g. did:key).
-
-As example, the identifier _did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFvGD5y_ of the method **did:ebsi** would resolve to the following DID document:
+As example the identifier _did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFvGD5y_ of the method **did:ebsi** would resolve to the following DID document:
 
 ```json
 {
@@ -96,9 +90,9 @@ Our open source products enable you to use different DID methods for different i
 
 ### Verifiable Credentials (VCs) & Verifiable Presentations (VPs)
 
-Verifiable Credentials (VCs) and Verifiable Presentations (VPs) are digital credentials that **contain actual identity data** of people or organisations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
+Verifiable Credentials (VCs) and Verifiable Presentations (VPs) are digital credentials that contain actual identity data of individuals or organisations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
 
-**VCs are** **created and signed by “Issuers”**, the data sources within an SSI ecosystem. Issuers are typically organisations (e.g. governments, universities, banks) who provide people (or other organisations) with VCs that prove identity-related attributes.
+VCs are created and signed by so-called “Issuers”, who are the data sources within an identity ecosystem. Issuers are typically organisations (e.g. governments, universities, banks, …) who provide people (or other organisations) with VCs that prove identity-related attributes.
 
 For example, a university acts as an Issuer, if it issues diplomas (VCs) to its graduates.
 
@@ -110,7 +104,7 @@ VCs typically contain at least:
 * the recipient’s identity attributes (e.g. name, age, address, …)
 * the signature of Issuer (also called “proof”) other information (e.g. semantic contexts, issuance date, evidence related to the issuance process, references to external VC data models/templates)
 
-Here is an illustrative example of a VC:
+Here is an illustrative example of a Verifiable Credential:
 
 ```json
 {
@@ -160,7 +154,7 @@ Here is an illustrative example of a VC:
 }
 ```
 
-**VPs** are composed and signed by “Holders”. They can **contain identity information from one or multiple VCs** and are created for the purpose of presenting them to a “Verifier”. In other words, VPs are the format with which the contents of VCs are shared by the person or organisation that is described by the VCs.
+VPs are composed and signed by “Holders”. They can contain identity information from one or multiple VCs and are created for the purpose of presenting them to a relying party called “Verifier”. In other words: VPs are the format with which the contents of VCs are shared by the person or organisation that is described by the VCs.
 
 For example, a graduate presents a VP to an employer that contains information from her digital passport and diplomas.&#x20;
 
@@ -244,7 +238,7 @@ Our open source products enable you to act as an "Issuer" (create and issue VCs)
 
 ### Data Exchange (Protocols)
 
-Different authentication and data exchange protocols are used to **securely transfer identity data** (e.g. VCs, VPs) **between parties** (e.g. from an Issuer to a Holder). They typically establish a mutually authenticated and encrypted data channel between the communicating parties.
+Finally, different authentication and data exchange protocols can be used to securely transfer identity data (e.g. VCs, VPs) between different parties (e.g. from an Issuer to a Holder). They typically establish a mutually authenticated and encrypted data channel between the communicating parties.
 
 The most common data exchange protocols used for SSI are:
 
