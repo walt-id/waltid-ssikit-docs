@@ -1,5 +1,13 @@
 # SSI Kit
 
+The **SSI Kit** is an open source product that enables Self-Sovereign Identity (SSI) in any application.
+
+All components are written in **Kotlin/Java** and can directly be tied in JVM-based applications.
+
+Alternatively all functions can be accesses over the **RESTfull webservice interface**, making integration with other languages and deployment scenarios straigtforward.
+
+\--
+
 Before diving into the details of the SSI Kit, here some of the principles that guide our product development:
 
 * **Open Source**: Our products are open source under the permissive Apache 2 license, which means that anyone can use them free of charge.
@@ -19,9 +27,9 @@ The SSI Kit is a set of libraries that anyone can use to establish an identity i
 * Verifiable Credentials (VCs) and Verifiable Presentations (VP), including singing, issuance, verification, lifecycle management.
 * Data exchange based on different protocols, including the exchange of VCs and VPs.
 
-_Illustration:_&#x20;
+_Illustration:_
 
-![](SSI-Kit.png)
+![](../../what-is-ssikit/SSI-Kit.png)
 
 ## Functional overview
 
@@ -49,7 +57,7 @@ The **CLI tool** conveniently allows running all included functions manually.
 
 Signatory allows you to digitise paper credentials and automate data provision to stakeholders.
 
-![](Signatory-Issuer.png)
+![](../../what-is-ssikit/Signatory-Issuer.png)
 
 This product enables your organisation to
 
@@ -69,7 +77,7 @@ In short, this product provides all functionality required by “Issuers”.
 
 Custodian is a secure data hub for organisations and individuals.
 
-![](Custodian-Holder.png)
+![](../../what-is-ssikit/Custodian-Holder.png)
 
 This product enables your organisation, employees, customers or citisens to
 
@@ -91,7 +99,7 @@ In short, this product provides all functionality required by “Holders”.
 
 Auditor allows you to verify your customers’ or citisens’ identity data and offer frictionless access to services or products.
 
-![](Auditor-Verifier.png)
+![](../../what-is-ssikit/Auditor-Verifier.png)
 
 This product enables your organisation to
 
