@@ -16,7 +16,9 @@ In doing so, SSI enables decentralized ecosystems in which different parties can
 
 ![](https://images.squarespace-cdn.com/content/v1/609c0ddf94bcc0278a7cbdb4/5611be1d-4109-454f-89ea-c106c4f406ce/Screenshot+2022-03-06+at+17.51.47.png?format=2500w)
 
-Usually, a single party plays only one of these roles per interaction. However, it is perfectly normal for a party to take on different roles in different interactions. For example:
+Usually, a single party plays only one of these roles per interaction. However, it is perfectly normal for a party to take on different roles in different interactions.
+
+For example:
 
 * A university (Holder) is being accredited to issue certain types of educational credentials by a national authority (Issuer).
 * A university (Issuer) issues a digital diploma to a graduate (Holder), who can share this information with a recruiter (Verifier) in the course of a job application.

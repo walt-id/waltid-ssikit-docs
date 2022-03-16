@@ -4,13 +4,12 @@
 
 Understanding SSI requires the understanding of a few core concepts:
 
-* **Trust Registries**, which serve as a shared and trusted record of certain information. In other words, they serve as a “layer of trust” and a “single source of truth”.
+* **Registries**, which serve as a shared and trusted record of certain information. In other words, they serve as a “layer of trust” and a “single source of truth”.
 * **Cryptographic keys**, which convey control over digital identities and enable core functionality such as encryption and authentication.
 * **Decentralized Identifiers (DIDs)**, which establish a public key infrastructure by linking keys to unique identifiers that allow different parties to find and interact with each other.
 * **Verifiable Credentials** **(VCs)** which are digital identity documents that can easily and securely be shared with and verified (incl. validity, integrity, authenticity, provenance) by anyone in a privacy preserving way. Importantly, they are never (!) stored on a blockchain due to privacy and compliance reasons.
 * **Protocols** enable the exchange of data (VCs) between different parties.&#x20;
 * **Wallets**, which store our keys (control) and VCs (identity data) and enable the management and sharing of our digital identities and data via easy-to-use applications.
-* **Applications** integrate SSI to provide value to end-users.
 
 The following graphic shows the SSI tech stack:
 
@@ -22,41 +21,41 @@ The following graphic shows how SSI works and highlights the core concepts (in b
 
 ![](https://images.squarespace-cdn.com/content/v1/609c0ddf94bcc0278a7cbdb4/6276f3d0-2d29-4664-be03-65d555fb824c/Screenshot+2022-03-09+at+08.26.35.png?format=2500w)
 
-Think of these core concepts as different **building blocks** that are **available in different variations** and **can be put together in different ways**:
+Think of these core concepts as different building blocks that are available in different variations and can be put together in different ways:
 
 ![Different technologies can be used to establish Trust Registries like blockchains (EBSI, Ethereum) or the domain name service (DNS). SSI even works (for certain use cases) without any Trust Registries but purely on a peer-to-peer basis. Similarly different types of DIDs, keys, proofs, credential formats,  authentication and data exchange protocols can be used.](https://images.squarespace-cdn.com/content/v1/609c0ddf94bcc0278a7cbdb4/1646980697410-HI3ESFOZM2HT5DZ12HG8/Screenshot+2022-03-10+at+09.34.37.png?format=1500w)
 
 **As a result, there are** **different “flavours” of SSI** depending on which variations of which building blocks have been used and how they have been put together.
 
-Importantly, the differences in terms of technologies that are being used illustrate why interoperability has always been one of the most important topics within the industry and why the development and use of **open standards** (e.g. by the W3C, Decentralized Identity Foundation, OpenID Foundation and others) **are vital for technology and vendor selection**.
+Importantly, the differences in terms of technologies that are being used illustrate why interoperability has always been one of the most important topics within the industry and why the development and use of open standards (e.g. by the W3C, Decentralized Identity Foundation, OpenID Foundation and others) are vital for technology and vendor selection.
 
 ## Deep Dive
 
 The following section explains all concepts in more detail.
 
-### Trust Registries
+### Registries
 
-Registries serve as a **single source of truth** in which all participants of an SSI-based identity ecosystem can trust. Depending on the ecosystem, registries make certain information accessible to either anyone or just a limited group. This building block is important because it enables:
+Registries serve as a **single source of truth** in which all participants of an SSI ecosystem can trust. Depending on the ecosystem, registries make information accessible to anyone or just a limited group. Registries are important because they enable:
 
-* **Distributed Public Key Infrastructures (DPKIs)** which create an open distribution system for public keys which can be used for encryption and authentication.
-* **Trust Registries** which contain reliable information about people, organisations and digital credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
+* **(Distributed) Public Key Infrastructures (DPKIs)** which establishes an open distribution system for public keys which can be used for encryption and authentication among others.
+* **Trust Registries** which contain reliable information about people, organisations, things and even credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
 
-Different technologies can be used to serve as registries. For example:
+Different technologies can be used to implement Registries. For example:
 
-* **Blockchains**: Typically blockchains are used to establish registries, because it is unfeasible (or even impossible) to temper with them. The fact that no single organisation can simply change the contents of a blockchain or manipulate the terms by which it is governed are very aligned with the requirements for identity ecosystems. Today, we see more and more developers and organisations focusing on so-called public or private permissioned blockchains (i.e. only a selected group can “write”) like Ethereum Quorum/Enterprise or Hyperledger Indy/Fabric. Permissionless blockchains, like Bitcoin, are still used, but less than the permissioned alternatives for a variety of reasons like scalability, costs, lack of customisable governance frameworks.
-* **Sidetrees**: Sidetrees are so-called Layer 2 networks that sit on top of blockchains and aggregate data before anchoring it. The main idea behind Sidetrees is to circumvent common challenges of public, permissionless blockchains like scalability and cost issues. The most popular implementations are “ION” (for Bitcoin) and “Element” (for Ethereum).
+* **Blockchains** or **L1**: Typically blockchains are used because it is unfeasible (or even impossible) to tamper with them. The fact that no single organisation can change the contents of a blockchain or manipulate the terms by which it is governed are very aligned with the requirements for identity ecosystems. Today, we see a growing number of developers and organizations focusing on so-called permissioned blockchains (i.e. only a selected group can “write”) like Ethereum Quorum/Enterprise. Permissionless blockchains, like Ethereum, are still used, but less than the permissioned alternatives for a variety of reasons like scalability, costs, lack of customisable governance frameworks.
+* **L2**: Layer two networks sit on top of blockchains and aggregate data before anchoring it. The main idea behind them is to circumvent common challenges of public, permissionless blockchains like scalability and cost issues. The most popular implementations in the context of identity are “ION” (for Bitcoin) and “Element” (for Ethereum).
 * **Other Distributed Ledger Technologies (DLTs)**: Sometimes other DLTs are utilised like the Interplanetary File System (IPFS) though its use for digital identity remains limited.
-* **Domain Name Service (DNS)**: Considering certain drawbacks of DLTs and their relatively slow adoption by the mass market, DNS can also be used to serve as a registry. Though it is not fully decentralised (considering its underlying governance framework) DNS has many advantages like its maturity and global adoption.
+* **Domain Name Service (DNS)**: Considering certain drawbacks of DLTs and their relatively slow adoption by the mass market, DNS can also be used to serve as a registry. Though it is not fully decentralised (considering its underlying governance framework), DNS has many advantages like its maturity and global adoption.
 
-Note that SSI can be implemented without registries, particularly without blockchains, because identity data (or at least personal data of individuals) is never anchored due to privacy and compliance reasons. However, by combining SSI with blockchains (or other technologies), robust and trustworthy identity ecosystems that utilise transparent DPKIs and reliable Trust Registries can emerge.
+Importantly, SSI can be implemented without registries, particularly without blockchains, because identity data (or at least personal data of individuals) is never anchored due to privacy and compliance reasons. However, by combining SSI with blockchains (or other technologies), robust and trustworthy identity ecosystems that utilise transparent DPKIs and reliable Trust Registries can emerge.
 
 ### Decentralised Identifiers (DIDs)
 
 DIDs are unique identifiers (URIs) which are globally standardised by the [W3C](https://www.w3.org/TR/did-core). They are usually linked to so-called "DID Documents" which contain not only DIDs, but also metadata like keys, service endpoints or signatures and proofs.
 
-DIDs are important because they establish a Distributed Public Key Infrastructure (DPKI) and allow parties to find each other (discovery), authenticate, encrypt and verifiably sign data.
+DIDs are important because they establish a (Distributed) Public Key Infrastructure (DPKI) and allow parties to find each other (discovery), authenticate, encrypt and verifiably sign data.
 
-Today, a variety of so-called “DID methods'', i.e. different implementations of the DID specification, exist. Considering that each DID method differs in terms of how it is created, registered and resolved, different methods come with different advantages and disadvantages. For example, while DIDs are traditionally anchored on registries, like blockchains (e.g. did:ebsi) or DNS (e.g. did:web), new methods emerged that do not require such registries because their distribution mechanism is based on peer-to-peer interactions (e.g. did:key, did:peer).
+Today, a variety of so-called “DID methods'', which are different implementations of the DID specification, exist. Considering that each DID method differs in terms of how it is created, registered and resolved, different methods come with different advantages and disadvantages. For example, while DIDs are traditionally anchored on registries, new methods emerged that do not require such registries because their distribution mechanism is based on peer-to-peer interactions (e.g. did:key).
 
 As example the identifier _did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFvGD5y_ of the method **did:ebsi** would resolve to the following DID document:
 
@@ -86,16 +85,18 @@ As example the identifier _did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFv
 ```
 
 {% hint style="info" %}
-Our open source solutions enable you to use different DID methods for different identity ecosystems. Every relevant functionality is supported: from the generation of DIDs and DID Documents to anchoring or resolving them on/from Registries.
+Our open source products enable you to use different DID methods for different identity ecosystems. Every relevant functionality (e.g. generation, anchoring, resolution) is supported .
 {% endhint %}
 
 ### Verifiable Credentials (VCs) & Verifiable Presentations (VPs)
 
-VCs and VPs are digital credentials that contain actual identity data of individuals or organisations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
+Verifiable Credentials (VCs) and Verifiable Presentations (VPs) are digital credentials that contain actual identity data of individuals or organisations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
 
-VCs are created and signed by so-called “Issuers”, who are the data sources within an identity ecosystem. Issuers are typically organisations (e.g. governments, universities, banks, …) who provide people (or other organisations) with VCs that prove identity-related attributes. For example, a university acts as an Issuer, if it issues diplomas (VCs) to its graduates.
+VCs are created and signed by so-called “Issuers”, who are the data sources within an identity ecosystem. Issuers are typically organisations (e.g. governments, universities, banks, …) who provide people (or other organisations) with VCs that prove identity-related attributes.
 
-VCs typically contain:
+For example, a university acts as an Issuer, if it issues diplomas (VCs) to its graduates.
+
+VCs typically contain at least:
 
 * the Issuer’s DID
 * the recipient’s DID (also called “Holder”)
@@ -153,9 +154,13 @@ Here is an illustrative example of a Verifiable Credential:
 }
 ```
 
-VPs are composed and signed by so-called “Holders”. They contain identity information from one or multiple VCs and are created for the purpose of presenting them to another party, called “Verifier” or “Relying Party”. For example, a graduate presents a VP to an employer that contains information from her digital passport and diplomas. In other words: VPs are the format with which the contents of VCs are shared by the person or organisation that is described by the VCs. VPs typically contain:
+VPs are composed and signed by “Holders”. They can contain identity information from one or multiple VCs and are created for the purpose of presenting them to a relying party called “Verifier”. In other words: VPs are the format with which the contents of VCs are shared by the person or organisation that is described by the VCs.
 
-* VCs or parts of them (individual attributes)
+For example, a graduate presents a VP to an employer that contains information from her digital passport and diplomas.&#x20;
+
+VPs typically contain at least:
+
+* VCs or parts of VCs (individual attributes)
 * the recipient’s signature (to ensure so-called “Holder binding”)
 
 Here is an illustrative example of a Verifiable Presentation:
@@ -228,15 +233,21 @@ Here is an illustrative example of a Verifiable Presentation:
 ```
 
 {% hint style="info" %}
-Our open source solutions enable you to create an issue VCs (act as Issuer), manage and share VCs/VPs (act as a Holder) and request and verify VCs/VPs (act as a Verifier).
+Our open source products enable you to act as an "Issuer" (create and issue VCs), as a Holder (manage and share VCs/VPs) and as a Verifier (request and verify VCs/VPs).
 {% endhint %}
 
 ### Data Exchange (Protocols)
 
-Different protocols can be used to securely transfer identity data, such as DIDs, VCs and VPs, between parties within an identity ecosystem. They typically establish a mutually authenticated and encrypted data channel between the communicating parties. The most common data exchange protocols used for SSI are: Self-Issued OpenID Connect Provider (SIOP), an extension of a very mature authentication & authorisation protocol OpenID Connect (OIDC); DIDComm, a novel protocol specifically designed for SSI and maintained by the Decentralized Identity Foundation (DIF); Credential Handler API, a proposed browser-extension that may be used to connect the user's identity wallet to a web-application.
+Finally, different authentication and data exchange protocols can be used to securely transfer identity data (e.g. VCs, VPs) between different parties (e.g. from an Issuer to a Holder). They typically establish a mutually authenticated and encrypted data channel between the communicating parties.
+
+The most common data exchange protocols used for SSI are:
+
+* OIDC4SSI / SIOP (Self-Issued OpenID Connect Provider): An extension of a mature authentication and authorisation protocol called "OpenID Connect" (OIDC).
+* DIDComm: A novel protocol specifically designed for SSI and maintained by the Decentralized Identity Foundation (DIF).
+* Credential Handler API: A proposed browser-extension that may be used to connect the user's identity wallet to a web-application.
 
 {% hint style="info" %}
-Our solutions enable you to use different data exchange protocols as required by different ecosystems.
+Our solutions enable you to use different data exchange protocols like OIDC/SIOP as required by different ecosystems.
 {% endhint %}
 
 ##
