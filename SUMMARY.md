@@ -22,14 +22,14 @@
 
 ## Ecosystems / Interoperability
 
-* [EBSI/ESSIF - European SSI and blockchain infrastructures](ecosystems-interoperability/ebsi-essif.md)
-* [OIDC - OpenID Connect](ecosystems-interoperability/oidc.md)
+* [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](ecosystems-interoperability/ebsi-essif.md)
+* [OpenID Connect (OIDC)](ecosystems-interoperability/oidc.md)
 
 ## Usage examples
 
-* [Key management](usage-examples/key-management.md)
-* [EBSI/ESSIF examples](usage-examples/ebsi-essif/usage-examples.md)
-* [OIDC examples](usage-examples/oidc/usage-examples.md)
+* [Key Management | Examples](usage-examples/key-management.md)
+* [EBSI/ESSIF | Examples](usage-examples/ebsi-essif/usage-examples.md)
+* [OIDC | Examples](usage-examples/oidc/usage-examples.md)
 
 ## CONTACT & DEVELOPER RELATIONS
 
