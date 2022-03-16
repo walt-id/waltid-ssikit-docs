@@ -1,6 +1,8 @@
-# CLI (Command line interface)
+# CLI | Command Line Interface
 
-### For getting help, add "-h" to each command or sub-command e.g.:
+## Commands
+
+For getting help, add "-h" to each command or sub-command e.g.:
 
 ```
 ./ssikit.sh did create -h
@@ -8,7 +10,7 @@ or
 docker run -it -v $(pwd)/data:/app/data ssikit did create -h
 ```
 
-### For debug infos add "-v" e.g.:
+For debug infos add "-v" e.g.:
 
 ```
 ./ssikit.sh -v
@@ -16,7 +18,7 @@ or
 docker run -it -v $(pwd)/data:/app/data ssikit -v did create
 ```
 
-### Overwriting the default config:
+Overwriting the default config:
 
 ```
 Simply add a file named _lestrust.yaml_ in the root folder and run ./ssikit.sh
@@ -25,7 +27,7 @@ When using Docker, the following command will do the trick:
 docker run -it $(pwd)/data:/app/data -v $(pwd)/ssikit.yaml:/ssikit.yaml ssikit -v did create
 ```
 
-### walt.id wrapper commands
+walt.id wrapper commands
 
 ```
 ./ssikit.sh key gen --algorithm Ed25519
@@ -45,7 +47,7 @@ docker run -it $(pwd)/data:/app/data -v $(pwd)/ssikit.yaml:/ssikit.yaml ssikit -
 ./ssikit.sh vc verify -p data/vc/presented/vp-1614291892489.json
 ```
 
-### walt.id Docker / Podman commands
+walt.id Docker / Podman commands
 
 ```
 docker run -itv $(pwd)/data:/app/data ssikit key gen --algorithm Ed25519
@@ -71,24 +73,24 @@ docker run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
 podman run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
 ```
 
-### walt.id API service
+## API service
 
 To expose the API service using the CLI tool or the docker container, use one of the following commands:
 
-**Show all options for specifying bind address and ports**
+Show all options for specifying bind address and ports:
 
 ```
 ./ssikit.sh serve --help
 docker run -itv $(pwd)/data:/app/data -p 192.168.0.1:7000-7003:7000-7003 ssikit serve --help
 ```
 
-**On localhost only using the default ports 7000-7003**
+On localhost only using the default ports 7000-7003
 
 ```
 ./ssikit.sh serve
 ```
 
-**Binding on all network interfaces, using the default ports 7000-7003**
+Binding on all network interfaces, using the default ports 7000-7003
 
 ```
 ./ssikit.sh serve -b 0.0.0.0
@@ -96,19 +98,19 @@ docker run -itv $(pwd)/data:/app/data -p 192.168.0.1:7000-7003:7000-7003 ssikit 
 docker run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve -b 0.0.0.0
 ```
 
-**Binding on a specific network interface (e.g.: 192.168.0.1)**
+Binding on a specific network interface (e.g.: 192.168.0.1)
 
 ```
 ./ssikit.sh serve -b 192.168.0.1
 ```
 
-_Using docker one needs to bind to 0.0.0.0 in the container and limit the binding from outside using the docker run -p syntax like so:_
+Using docker one needs to bind to 0.0.0.0 in the container and limit the binding from outside using the docker run -p syntax like so:
 
 ```
 docker run -itv $(pwd)/data:/app/data -p 192.168.0.1:7000-7003:7000-7003 ssikit serve -b 0.0.0.0
 ```
 
-**Use custom ports by using the -p (Core API), -e (ESSIF API), -s (Signatory API) command options**
+Use custom ports by using the -p (Core API), -e (ESSIF API), -s (Signatory API) command options
 
 ```
 ./ssikit.sh serve -p 8000 -e 8001 -s 8002
