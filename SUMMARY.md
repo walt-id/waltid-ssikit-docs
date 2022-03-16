@@ -38,3 +38,9 @@
 * [Influence the Roadmap](contact-and-developer-relations/influence-the-roadmap.md)
 * [Contribute](contact-and-developer-relations/contribute.md)
 * [Contact](contact-and-developer-relations/contact.md)
+
+## Product Editions
+
+* [Open Source](product-editions/open-source.md)
+* [Enterprise](product-editions/enterprise.md)
+* [Cloud Platform](product-editions/cloud-platform.md)
