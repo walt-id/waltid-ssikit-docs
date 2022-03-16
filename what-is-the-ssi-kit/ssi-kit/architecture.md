@@ -4,7 +4,7 @@ The SSI Kit’s architecture is split in three abstraction layers:
 
 1. **Low-Level Services**: Abstracts cryptographic and core SSI operations.
 2. **Ecosystems**: Abstracts ecosystem-specific operations and business logic.
-3. **APIs**: Provides high-level interfaces that hide complexity and facilitate usage.
+3. **Interfaces / APIs**: Provides high-level interfaces that hide complexity and facilitate usage.
 
 Also, our architecture allows for the integration of third-party solutions throughout the stack, e.g.:
 
@@ -47,7 +47,7 @@ We currently support:
 
 Other selected ecosystems will be added over time.
 
-## Interfaces & APIs
+## Interfaces / APIs
 
 The SSI Kit exposes high-level APIs that hide complex low-level crypto and SSI operations as well as different flavours of SSI introduced by different ecosystems.
 
