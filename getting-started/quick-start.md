@@ -24,23 +24,21 @@ For a quick intro using the command line interface, refer to the [CLI - Command 
 
 ## Build
 
-### Prerequisites
+You need:
 
-* JDK 16 (or above)
-* Git
+* JDK 16 (or above),
+* Git.
 
-### Building the application
+The easiest way to build the SSI Kit on Linux is by using the wrapper script **`ssikit.sh`**
 
-The easiest way to build the SSIKit on Linux, is by using the wrapper script **`ssikit.sh`**
-
-First clone the Git repo and switch into the project folder:
+First, clone the Git repo and switch into the project folder:
 
 ```
 git clone https://github.com/walt-id/waltid-ssikit.git
 cd waltid-ssikit/
 ```
 
-Then run the build command using the wrapper script:
+Then, run the build command using the wrapper script:
 
 ```
 ./ssikit.sh build
