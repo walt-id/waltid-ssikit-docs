@@ -8,6 +8,7 @@
   * [How it works](what-is-the-ssi-kit/what-is-ssi/how-it-works.md)
   * [Technologies & Concepts](what-is-the-ssi-kit/what-is-ssi/technologies-and-concepts.md)
 * [SSI Kit](what-is-the-ssi-kit/ssi-kit/README.md)
+  * [SSI Kit 101](what-is-the-ssi-kit/ssi-kit/ssi-kit-101.md)
   * [Architecture](what-is-the-ssi-kit/ssi-kit/architecture.md)
   * [Technology Stack](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
