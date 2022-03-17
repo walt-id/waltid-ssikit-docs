@@ -1,5 +1,7 @@
 # Key Generation
 
+## Key Generation
+
 The SSI Kit facilitates the convenient generation of cryptographic keys. Currently, the following asymmetric key types are supported:
 
 * EdDSA E22519
@@ -7,13 +9,13 @@ The SSI Kit facilitates the convenient generation of cryptographic keys. Current
 
 By calling the key generation command the algorithm can be defined, whereas the default algorithm is _**EdDSA E22519**_ in case no parameter is provided.
 
-## CLI
+### CLI
 
 ```
 ./ssikit.sh key gen -a Secp256k1
 ```
 
-## REST API
+### REST API
 
 Body in GenKeyRequest.json: { "keyAlgorithm":"ECDSA\_Secp256k1" }
 
@@ -21,7 +23,7 @@ Body in GenKeyRequest.json: { "keyAlgorithm":"ECDSA\_Secp256k1" }
 curl --data "@GenKeyRequest.json" -X POST "http://0.0.0.0:7000/v1/key/gen"
 ```
 
-## Code example
+### Code example
 
 ```
 val keyId = KeyService.getService().generate(KeyAlgorithm.EdDSA_Ed25519)
