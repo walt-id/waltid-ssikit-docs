@@ -4,15 +4,15 @@ description: Learn about the technology stack.
 
 # SSI Flavours & Ecosystems
 
-Our goal is to provide the fastest and easiest way to use SSI. To do so, our solutions must abstract the complexity for developers and organizations. This is why we follow a "multi-stack approach" that enables you to use different SSI "flavours" (or implementations) in order to leverage different SSI ecosystems.&#x20;
+The SSI Kit abstracts complexity for developers by following a "multi-stack approach" that enables you to use different implementations or "flavours" of SSI. As a result, you can participate in different identity ecosystems (e.g. EBSI/ESSIF, Gaia-X, Velocity Network) and avoid technology-related lock-in effects.&#x20;
 
-Following the logic from our [Introduction to Self-Sovereign Identity (SSI)](../what-is-ssi/), we can look at the SSI tech stack through the following logic:
+Based on our [Introduction to Self-Sovereign Identity (SSI)](../what-is-ssi/), we distinguish the following concepts or building blocks: &#x20;
 
-![](<../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
+![Each building block is available in different variations and can be put together in different ways. The result: different "SSI flavours".](<../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
 
 ## **Registries**&#x20;
 
-Our products are agnostic towards the underlying technologies used to implement Registries, which means that our products are potentially compatible with any type of Registry.
+Our products are agnostic towards the underlying technologies used to implement Registries, which means that the SSI Kit is potentially compatible with any type of Registry.
 
 The SSI Kit supports:
 
@@ -64,18 +64,15 @@ The SSI Kit supports W3C Verifiable Credentials in different formats:
 
 _Note that we are continuously adding support for new VC types and formats._
 
-__
-
 You can learn more about VCs [here](../what-is-ssi/technologies-and-concepts.md).
 
 ## **Data Exchange Protocols**
 
 Authentication and data exchange protocols (e.g. OIDC/SIOP) enable the exchange of data (VCs) between different parties.
 
-The SSI Kit supports W3C Verifiable Credentials in different formats:
+The SSI Kit supports latest OpenID Connect extension for SSI:
 
-* JSON / JWT
-* JSON-LD
+* OpenID Connect for Credential Issuance (OIDC4CI)
+* OpenID Connect for Verifiable Presentations (OIDC4VP)
 
 You can learn more about protocols [here](../what-is-ssi/technologies-and-concepts.md).
-
