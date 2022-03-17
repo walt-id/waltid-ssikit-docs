@@ -65,5 +65,5 @@
 ## Product Editions
 
 * [Open Source | Always Free](product-editions/open-source.md)
-* [Enterprise](product-editions/enterprise.md)
+* [Enterprise | Self-Managed](product-editions/enterprise-or-self-managed.md)
 * [Cloud Platform](product-editions/cloud-platform.md)
