@@ -50,7 +50,7 @@
   * [Presentation](usage-examples/verifiable-credentials/presentation.md)
   * [Verification](usage-examples/verifiable-credentials/verification.md)
 * [Data Exchange Protocols](usage-examples/usage-examples/README.md)
-  * [OpenID Connect](usage-examples/usage-examples/usage-examples/README.md)
+  * [OpenID Connect](usage-examples/oidc/usage-examples.md)
     * [OIDC4CI | Credential Issuance](usage-examples/usage-examples/usage-examples/usage-examples.md)
     * [OIDC4VP | Verifiable Presentations](usage-examples/usage-examples/usage-examples/usage-examples-1.md)
 * [EBSI/ESSIF | Examples](usage-examples/ebsi-essif/usage-examples.md)
