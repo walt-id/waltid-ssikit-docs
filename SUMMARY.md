@@ -8,8 +8,8 @@
   * [Technologies & Concepts](what-is-the-ssi-kit/what-is-ssi/technologies-and-concepts.md)
 * [SSI Kit](what-is-the-ssi-kit/ssi-kit/README.md)
   * [SSI Kit 101](what-is-the-ssi-kit/ssi-kit/ssi-kit-101.md)
+  * [SSI Flavours & Ecosystems](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
   * [Architecture](what-is-the-ssi-kit/ssi-kit/architecture.md)
-  * [Technology Stack](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
 
 ## Getting started
@@ -23,7 +23,7 @@
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
   * [Ecosystems](getting-started/cli-command-line-interface/ecosystems.md)
-* [REST APIs](getting-started/rest-apis/README.md)
+* [REST APIs](getting-started/rest-apis.md)
   * [Core API](getting-started/rest-apis/core-api.md)
   * [Signatory API](getting-started/rest-apis/signatory-api.md)
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
@@ -35,13 +35,24 @@
 * [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](ecosystems-interoperability/ebsi-essif.md)
 * [OpenID Connect (OIDC)](ecosystems-interoperability/oidc.md)
 
-## Usage examples
+## Usage / Examples
 
 * [Key Management](usage-examples/key-management.md)
   * [Key Generation](usage-examples/key-management/key-generation.md)
   * [Key Export](usage-examples/key-management/key-export.md)
   * [Key Import](usage-examples/key-management/key-import.md)
-* [Protocols](usage-examples/oidc/usage-examples.md)
+* [Decentralized Identifiers](usage-examples/decentralized-identifiers/README.md)
+  * [did:key](usage-examples/decentralized-identifiers/did-key.md)
+  * [did:web](usage-examples/decentralized-identifiers/did-web.md)
+  * [did:ebsi](usage-examples/decentralized-identifiers/did-ebsi.md)
+* [Verifiable Credentials](usage-examples/verifiable-credentials/README.md)
+  * [Issuance](usage-examples/verifiable-credentials/issuance.md)
+  * [Presentation](usage-examples/verifiable-credentials/presentation.md)
+  * [Verification](usage-examples/verifiable-credentials/verification.md)
+* [Data Exchange Protocols](usage-examples/usage-examples/README.md)
+  * [OpenID Connect](usage-examples/usage-examples/usage-examples/README.md)
+    * [OIDC4CI | Credential Issuance](usage-examples/usage-examples/usage-examples/usage-examples.md)
+    * [OIDC4VP | Verifiable Presentations](usage-examples/usage-examples/usage-examples/usage-examples-1.md)
 * [EBSI/ESSIF | Examples](usage-examples/ebsi-essif/usage-examples.md)
 
 ## CONTACT & DEVELOPER RELATIONS

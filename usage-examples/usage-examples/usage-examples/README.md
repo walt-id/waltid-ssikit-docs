@@ -1,8 +1,8 @@
-# Protocols
+# OpenID Connect
 
 The following subsections show several examples of interaction with OIDC compliant issuers and verifiers using the SSIKit command line interface.
 
-For more information about the OIDC support built into SSI Kit, refer to section [**OIDC - OpenID Connect**](../../ecosystems-interoperability/oidc.md).
+For more information about the OIDC support built into SSI Kit, refer to section [**OIDC - OpenID Connect**](../../../ecosystems-interoperability/oidc.md).
 
 ## Credential issuance
 
@@ -82,7 +82,7 @@ After completing the issuance session in the issuer web portal, we continue with
 
 Once we completed the issuance session on the issuer web portal, we get redirected to the dummy address we specified, like we can see in this screenshot:
 
-![Issuer redirect screenshot](issuer-redirect-screenshot.png)
+![Issuer redirect screenshot](../../oidc/issuer-redirect-screenshot.png)
 
 We copy that URL from the browser and fetch the _id\_token_ and _access\_token_ from the issuer like so:
 
@@ -195,11 +195,11 @@ To obtain a valid SIOP request URL from the verifier, let's open the verifier po
 
 Hit the F12 button, to open the developer tools and navigate to the "Network" tab (make sure the request type filter shows _All_ requests), like shown in the following screenshot:
 
-![Verifier portal and network tab](verifier-portal-network-tab.png)
+![Verifier portal and network tab](../../oidc/verifier-portal-network-tab.png)
 
 Now hit the "Connect to wallet using VerifiableID" button. The verifier portal redirects to the web wallet, and you find the relevant SIOP request, in the network tab with the request URI starting as `/api/wallet/siopv2/initPresentation`, like shown in this screenshot:
 
-![Wallet SIOP redirection](wallet-siop-redirect.png)
+![Wallet SIOP redirection](../../oidc/wallet-siop-redirect.png)
 
 We want to copy the SIOP request URL, in this example it's:
 
@@ -253,7 +253,7 @@ The command prints the requested credentials and their schema IDs. Now we can cr
 
 ### SIOP response
 
-Using the SIOP request URL we got in the previous sections, we can now generate and post the SIOP response, using the DID and credential issued in the [issuance credential request example](usage-examples.md#credential-request), to the verifier portal like so:
+Using the SIOP request URL we got in the previous sections, we can now generate and post the SIOP response, using the DID and credential issued in the [issuance credential request example](./#credential-request), to the verifier portal like so:
 
 ```
 ssikit oidc vp present -u "https://wallet.walt.id/api/wallet/siopv2/initPresentation/?response_type=id_token&response_mode=form_post&client_id=https%3A%2F%2Fverifier.walt.id%2Fverifier-api%2Fverify%2F842b3286-d581-4d6b-ad1d-16a718c28015&redirect_uri=https%3A%2F%2Fverifier.walt.id%2Fverifier-api%2Fverify%2F842b3286-d581-4d6b-ad1d-16a718c28015&scope=openid&nonce=842b3286-d581-4d6b-ad1d-16a718c28015&claims=%7B%22vp_token%22+%3A+%7B%22presentation_definition%22+%3A+%7B%22id%22+%3A+%221%22%2C+%22input_descriptors%22+%3A+%5B%7B%22id%22+%3A+%221%22%2C+%22schema%22+%3A+%7B%22uri%22+%3A+%22https%3A%2F%2Fapi.preprod.ebsi.eu%2Ftrusted-schemas-registry%2Fv1%2Fschemas%2F0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba%22%7D%7D%5D%7D%7D%7D" -d did:key:z6Mktxjvto1vueoMXiiAtLQiCrDPd2Xoi47isAnjK12nETRX -c urn:uuid:aa1a51cd-3ad2-49fe-ae3e-5ae50c4aed3b
@@ -311,4 +311,4 @@ The command prints the SIOP response object and the **redirection address**, to 
 
 The verifier portal shows a successful verification, like shown by this screenshot:
 
-![verifier success page](verifier-success.png)
+![verifier success page](../../oidc/verifier-success.png)

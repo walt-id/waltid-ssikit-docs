@@ -2,7 +2,7 @@
 description: Learn about the technology stack.
 ---
 
-# Technology Stack
+# SSI Flavours & Ecosystems
 
 Our goal is to provide the fastest and easiest way to use SSI. To do so, our solutions must abstract the complexity for developers and organizations. This is why we follow a "multi-stack approach" that enables you to use different SSI "flavours" (or implementations) in order to leverage different SSI ecosystems.&#x20;
 
@@ -64,11 +64,18 @@ The SSI Kit supports W3C Verifiable Credentials in different formats:
 
 _Note that we are continuously adding support for new VC types and formats._
 
+__
+
 You can learn more about VCs [here](../what-is-ssi/technologies-and-concepts.md).
 
 ## **Data Exchange Protocols**
 
 Authentication and data exchange protocols (e.g. OIDC/SIOP) enable the exchange of data (VCs) between different parties.
+
+The SSI Kit supports W3C Verifiable Credentials in different formats:
+
+* JSON / JWT
+* JSON-LD
 
 You can learn more about protocols [here](../what-is-ssi/technologies-and-concepts.md).
 
