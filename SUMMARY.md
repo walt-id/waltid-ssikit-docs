@@ -3,12 +3,12 @@
 ## WHAT IS THE SSI KIT?
 
 * [Introduction](README.md)
-* [Self-Sovereign Identity](what-is-the-ssi-kit/what-is-ssi/README.md)
-  * [SSI 101](what-is-the-ssi-kit/what-is-ssi/ssi-101.md)
+* [Self-Sovereign Identity (SSI)](what-is-the-ssi-kit/what-is-ssi/README.md)
+  * [SSI | Basics](what-is-the-ssi-kit/what-is-ssi/ssi-or-basics.md)
   * [Technologies & Concepts](what-is-the-ssi-kit/what-is-ssi/technologies-and-concepts.md)
 * [SSI Kit](what-is-the-ssi-kit/ssi-kit/README.md)
-  * [SSI Kit 101](what-is-the-ssi-kit/ssi-kit/ssi-kit-101.md)
-  * [SSI Flavours & Ecosystems](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
+  * [SSI Kit | Basics](what-is-the-ssi-kit/ssi-kit/ssi-kit-or-basics.md)
+  * [SSI Flavors & Ecosystems](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
   * [Architecture](what-is-the-ssi-kit/ssi-kit/architecture.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
 
