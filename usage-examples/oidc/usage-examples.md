@@ -2,7 +2,7 @@
 
 The following subsections show several examples of interaction with OIDC compliant issuers and verifiers using the SSIKit command line interface.
 
-For more information about the OIDC support built into SSI Kit, refer to section [**OIDC - OpenID Connect**](../ecosystems-interoperability/oidc.md).
+For more information about the OIDC support built into SSI Kit, refer to section [**OIDC - OpenID Connect**](../../ecosystems-interoperability/oidc.md).
 
 ## Credential issuance
 
@@ -82,7 +82,7 @@ After completing the issuance session in the issuer web portal, we continue with
 
 Once we completed the issuance session on the issuer web portal, we get redirected to the dummy address we specified, like we can see in this screenshot:
 
-![Issuer redirect screenshot](oidc/issuer-redirect-screenshot.png)
+![Issuer redirect screenshot](issuer-redirect-screenshot.png)
 
 We copy that URL from the browser and fetch the _id\_token_ and _access\_token_ from the issuer like so:
 
@@ -195,11 +195,11 @@ To obtain a valid SIOP request URL from the verifier, let's open the verifier po
 
 Hit the F12 button, to open the developer tools and navigate to the "Network" tab (make sure the request type filter shows _All_ requests), like shown in the following screenshot:
 
-![Verifier portal and network tab](oidc/verifier-portal-network-tab.png)
+![Verifier portal and network tab](verifier-portal-network-tab.png)
 
 Now hit the "Connect to wallet using VerifiableID" button. The verifier portal redirects to the web wallet, and you find the relevant SIOP request, in the network tab with the request URI starting as `/api/wallet/siopv2/initPresentation`, like shown in this screenshot:
 
-![Wallet SIOP redirection](oidc/wallet-siop-redirect.png)
+![Wallet SIOP redirection](wallet-siop-redirect.png)
 
 We want to copy the SIOP request URL, in this example it's:
 
@@ -311,4 +311,4 @@ The command prints the SIOP response object and the **redirection address**, to 
 
 The verifier portal shows a successful verification, like shown by this screenshot:
 
-![verifier success page](oidc/verifier-success.png)
+![verifier success page](verifier-success.png)

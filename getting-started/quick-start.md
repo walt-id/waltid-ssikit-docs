@@ -22,7 +22,7 @@ cd waltid-ssikit/
 ./ssikit.sh -h
 ```
 
-For a quick intro using the command line interface, refer to the [CLI - Command Line Interface](../cli-command-line-interface/).
+For a quick intro using the command line interface, refer to the [CLI - Command Line Interface](cli-command-line-interface.md).
 
 ## Build
 
