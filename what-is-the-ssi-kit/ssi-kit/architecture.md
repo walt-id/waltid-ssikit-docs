@@ -4,7 +4,7 @@ The SSI Kit’s architecture is split in three abstraction layers:
 
 1. **Low-Level Services**: Abstracts cryptographic and core SSI operations.
 2. **Ecosystems**: Abstracts ecosystem-specific operations and business logic.
-3. **Interfaces / APIs**: Provides high-level interfaces that hide complexity and facilitate usage.
+3. **High-Level Interfaces / APIs**: Provides high-level interfaces that hide complexity and facilitate usage.
 
 Also, our architecture allows for the integration of third-party solutions throughout the stack, e.g.:
 
@@ -20,17 +20,19 @@ _Illustration:_
 
 ## Low-Level Service Abstraction
 
-### Key API
+[phil](https://app.gitbook.com/u/Xy5PETDzUVT9yjUrLtjs53z9wvW2 "mention") **Please explain core services! \[TO BE DONE]**
+
+### Key Interfaces
 
 Handles keys and cryptographic operations like the generation of signatures (e.g. linked data, JWT) with signature types such as ES256K or EdDSA.
 
 Keys can be stored in a file and database keystore, which is extendable to HSMs and WebKMS.
 
-### DID API
+### DID Interfaces
 
 Abstracts common functionality related to Decentralised Identifiers (DIDs, DID Documents) for methods like “did:web”, “did:key”, “did:ebsi”.
 
-### Credential API
+### Credential Interfaces
 
 Abstracts common functionality related to Verifiable Credentials (VCs) and Verifiable Presentations (VPs) in different formats like JSON and JSON-LD.
 
@@ -47,8 +49,11 @@ We currently support:
 
 Other selected ecosystems will be added over time.
 
-## Interfaces / APIs
+## High-Level Interfaces / APIs
 
 The SSI Kit exposes high-level APIs that hide complex low-level crypto and SSI operations as well as different flavours of SSI introduced by different ecosystems.
 
 Developers and implementers can simply call the same generic and robust interfaces they know even if new low-level services are added or new ecosystems supported.
+
+[phil](https://app.gitbook.com/u/Xy5PETDzUVT9yjUrLtjs53z9wvW2 "mention") **Please explain high level core services! \[TO BE DONE]**
+
