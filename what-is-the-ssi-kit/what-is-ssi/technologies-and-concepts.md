@@ -4,7 +4,7 @@ description: Learn about the technologies and concepts on which SSI is based.
 
 # Technologies & Concepts
 
-## TL;DR
+## Overview
 
 Understanding SSI requires the understanding of a few core concepts:
 
