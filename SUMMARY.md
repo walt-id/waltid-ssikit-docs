@@ -14,10 +14,15 @@
 
 ## Getting started
 
-* [Quick Start](getting-started/quick-start.md)
-* [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
-* [Build](getting-started/build.md)
-* [Configuration](getting-started/configuration.md)
+* [Quick Start](getting-started/quick-start/README.md)
+  * [Build](getting-started/quick-start/build.md)
+  * [Docker](getting-started/quick-start/docker.md)
+  * [Configuration](getting-started/quick-start/configuration.md)
+* [CLI | Command Line Interface](getting-started/cli-command-line-interface/README.md)
+  * [Key Management](getting-started/cli-command-line-interface/key-management.md)
+  * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
+  * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
+  * [Ecosystems](getting-started/cli-command-line-interface/ecosystems.md)
 * [REST APIs](getting-started/rest-apis.md)
 
 ## Ecosystems / Interoperability
@@ -27,9 +32,12 @@
 
 ## Usage examples
 
-* [Key Management | Examples](usage-examples/key-management.md)
-* [EBSI/ESSIF | Examples](usage-examples/ebsi-essif/usage-examples.md)
-* [OIDC | Examples](usage-examples/oidc/usage-examples.md)
+* [Key Management](usage-examples/key-management/README.md)
+  * [Key Generation](usage-examples/key-management/key-generation.md)
+  * [Key Export](usage-examples/key-management/key-export.md)
+  * [Key Import](usage-examples/key-management/key-import.md)
+* [Protocols](usage-examples/usage-examples.md)
+* [EBSI/ESSIF | Examples](usage-examples/usage-examples-1.md)
 
 ## CONTACT & DEVELOPER RELATIONS
 

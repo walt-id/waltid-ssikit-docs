@@ -73,7 +73,7 @@ docker run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
 podman run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
 ```
 
-## API service
+## API Service
 
 To expose the API service using the CLI tool or the docker container, use one of the following commands:
 

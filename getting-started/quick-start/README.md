@@ -4,6 +4,8 @@ description: Getting started with the SSI Kit.
 
 # Quick Start
 
+[phil](https://app.gitbook.com/u/Xy5PETDzUVT9yjUrLtjs53z9wvW2 "mention")Please write this page > You can use the Wallet/Quick Start section for inspiration.
+
 ## Run
 
 The simplest way of using the _SSI Kit_ library is by pulling the Docker Container and running it via **Docker**:
@@ -20,7 +22,7 @@ cd waltid-ssikit/
 ./ssikit.sh -h
 ```
 
-For a quick intro using the command line interface, refer to the [CLI - Command Line Interface](cli-command-line-interface.md).
+For a quick intro using the command line interface, refer to the [CLI - Command Line Interface](../cli-command-line-interface/).
 
 ## Build
 
