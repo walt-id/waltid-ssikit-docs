@@ -2,7 +2,7 @@
 description: Learn what the SSI Kit is.
 ---
 
-# SSI Kit 101
+# SSI Kit | Basics
 
 ## What is the SSI Kit?
 

@@ -2,7 +2,7 @@
 description: Learn what SSI is.
 ---
 
-# SSI 101
+# SSI | Basics
 
 ## What is SSI?
 
