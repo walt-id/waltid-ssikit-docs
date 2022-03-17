@@ -1,3 +1,7 @@
+---
+description: Let us run our products for you.
+---
+
 # Cloud Platform
 
 We offer our products as a managed cloud service for clients who do not want to deploy, manage and run our products by themselves.

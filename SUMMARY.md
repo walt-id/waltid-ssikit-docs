@@ -40,6 +40,6 @@
 
 ## Product Editions
 
-* [Open Source | Always Free](product-editions/open-source-or-always-free.md)
+* [Open Source | Always Free](product-editions/open-source.md)
 * [Enterprise](product-editions/enterprise.md)
 * [Cloud Platform](product-editions/cloud-platform.md)

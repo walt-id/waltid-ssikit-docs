@@ -34,7 +34,9 @@ _Illustration:_
 
 ## Components
 
-The SSI Kit unifies three components: Signatory, Custodian and Auditor.
+The SSI Kit unifies three components:
+
+![](<../../.gitbook/assets/Screenshot 2022-03-17 at 11.54.40.png>)
 
 ### Signatory | For Issuers
 
