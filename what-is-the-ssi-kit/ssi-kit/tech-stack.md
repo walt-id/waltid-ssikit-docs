@@ -4,3 +4,71 @@ description: Learn about the technology stack.
 
 # Technology Stack
 
+Our goal is to provide the fastest and easiest way to use SSI. To do so, our solutions must abstract the complexity for developers and organizations. This is why we follow a "multi-stack approach" that enables you to use different SSI "flavours" (or implementations) in order to leverage different SSI ecosystems.&#x20;
+
+Following the logic from our [Introduction to Self-Sovereign Identity (SSI)](../what-is-ssi/), we can look at the SSI tech stack through the following logic:
+
+![](<../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
+
+## **Registries**&#x20;
+
+Our products are agnostic towards the underlying technologies used to implement Registries, which means that our products are potentially compatible with any type of Registry.
+
+The SSI Kit supports:
+
+* Permissionless Blockchains (e.g. Ethereum),
+* Permissioned Blockchains (e.g. Ethereum Enterprise/Hyperledger Besu),
+* Domain Name Service (DNS),
+* Pure peer-to-peer approaches that do not require Registries.
+
+_Note that we are continuously adding support for new Registries and underlying technologies._
+
+&#x20;**** You can learn more about Registries [here](../what-is-ssi/technologies-and-concepts.md).
+
+## **Cryptographic keys**
+
+Keys convey control over digital identities and enable core functionality such as encryption and authentication.
+
+The SSI Kit supports:
+
+* ed25519
+* secp256k1
+* RSA
+
+_Note that we are continuously adding support for new key types._
+
+You can learn more about keys [here](../what-is-ssi/technologies-and-concepts.md).
+
+## **Decentralized Identifiers (DIDs)**
+
+Decentralized Identifiers (DIDs) establish a public key infrastructure by linking keys to unique identifiers that allow different parties to find and interact with each other.
+
+The SSI Kit supports:
+
+* did:ebsi
+* did:web
+* did:key
+
+_Note that we are continuously adding support for new DID methods._
+
+You can find more about DIDs [here](../what-is-ssi/technologies-and-concepts.md).
+
+## **Verifiable Credentials** **(VCs)**
+
+Verifiable Credentials (VCs) are digital identity documents that can easily and securely be shared with and verified (incl. validity, integrity, authenticity, provenance) by anyone in a privacy preserving way. Importantly, they are never (!) stored on a blockchain due to privacy and compliance reasons.
+
+The SSI Kit supports W3C Verifiable Credentials in different formats:
+
+* JSON / JWT
+* JSON-LD
+
+_Note that we are continuously adding support for new VC types and formats._
+
+You can learn more about VCs [here](../what-is-ssi/technologies-and-concepts.md).
+
+## **Data Exchange Protocols**
+
+Authentication and data exchange protocols (e.g. OIDC/SIOP) enable the exchange of data (VCs) between different parties.
+
+You can learn more about protocols [here](../what-is-ssi/technologies-and-concepts.md).
+
