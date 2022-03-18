@@ -22,6 +22,7 @@
     * [Ecosystem Abstraction](what-is-the-ssi-kit/ssi-kit/architecture/ecosystem-abstraction.md)
     * [High-Level Interfaces / APIs](what-is-the-ssi-kit/ssi-kit/architecture/high-level-interfaces-apis.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
+* [VC Library](what-is-the-ssi-kit/vc-library.md)
 
 ## Getting started
 
