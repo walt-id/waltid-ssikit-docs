@@ -42,11 +42,11 @@ The following section explains all concepts in more detail.
 Registries serve as a **single source of truth** in which all participants of an SSI ecosystem can trust. Depending on the ecosystem, registries make information accessible to anyone or just a limited group. Registries are important because they enable:
 
 * **(Distributed) Public Key Infrastructures (DPKIs)** which establishes an open distribution system for public keys which can be used for encryption and authentication among others.
-* **Trust Registries** which contain reliable information about people, organisations, things and even credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
+* **Trust Registries** which contain reliable information about people, organizations, things and even credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
 
 Different technologies can be used to implement Registries. For example:
 
-* **Blockchains** or **L1**: Typically blockchains are used because it is unfeasible (or even impossible) to tamper with them. The fact that no single organisation can change the contents of a blockchain or manipulate the terms by which it is governed are very aligned with the requirements for identity ecosystems. Today, we see a growing number of developers and organizations focusing on so-called permissioned blockchains (i.e. only a selected group can “write”) like Ethereum Quorum/Enterprise. Permissionless blockchains, like Ethereum, are still used, but less than the permissioned alternatives for a variety of reasons like scalability, costs, lack of customisable governance frameworks.
+* **Blockchains** or **L1**: Typically blockchains are used because it is unfeasible (or even impossible) to tamper with them. The fact that no single organization can change the contents of a blockchain or manipulate the terms by which it is governed are very aligned with the requirements for identity ecosystems. Today, we see a growing number of developers and organizations focusing on so-called permissioned blockchains (i.e. only a selected group can “write”) like Ethereum Quorum/Enterprise. Permissionless blockchains, like Ethereum, are still used, but less than the permissioned alternatives for a variety of reasons like scalability, costs, lack of customisable governance frameworks.
 * **L2**: Layer two networks sit on top of blockchains and aggregate data before anchoring it. The main idea behind them is to circumvent common challenges of public, permissionless blockchains like scalability and cost issues. The most popular implementations in the context of identity are “ION” (for Bitcoin) and “Element” (for Ethereum).
 * **Other Distributed Ledger Technologies (DLTs)**: Sometimes other DLTs are utilised like the Interplanetary File System (IPFS) though its use for digital identity remains limited.
 * **Domain Name Service (DNS)**: Considering certain drawbacks of DLTs and their relatively slow adoption by the mass market, DNS can also be used to serve as a registry. Though it is not fully decentralised (considering its underlying governance framework), DNS has many advantages like its maturity and global adoption.
@@ -96,9 +96,9 @@ Our open source products enable you to use different DID methods for different i
 
 ### Verifiable Credentials (VCs) & Verifiable Presentations (VPs)
 
-Verifiable Credentials (VCs) and Verifiable Presentations (VPs) are digital credentials that **contain actual identity data** of people or organisations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
+Verifiable Credentials (VCs) and Verifiable Presentations (VPs) are digital credentials that **contain actual identity data** of people or organizations and are standardized by the W3C. They are digital equivalents of paper-based identity documents like passports or diplomas.
 
-**VCs are** **created and signed by “Issuers”**, the data sources within an SSI ecosystem. Issuers are typically organisations (e.g. governments, universities, banks) who provide people (or other organisations) with VCs that prove identity-related attributes.
+**VCs are** **created and signed by “Issuers”**, the data sources within an SSI ecosystem. Issuers are typically organizations (e.g. governments, universities, banks) who provide people (or other organizations) with VCs that prove identity-related attributes.
 
 For example, a university acts as an Issuer, if it issues diplomas (VCs) to its graduates.
 
@@ -160,7 +160,7 @@ Here is an illustrative example of a VC:
 }
 ```
 
-**VPs** are composed and signed by “Holders”. They can **contain identity information from one or multiple VCs** and are created for the purpose of presenting them to a “Verifier”. In other words, VPs are the format with which the contents of VCs are shared by the person or organisation that is described by the VCs.
+**VPs** are composed and signed by “Holders”. They can **contain identity information from one or multiple VCs** and are created for the purpose of presenting them to a “Verifier”. In other words, VPs are the format with which the contents of VCs are shared by the person or organization that is described by the VCs.
 
 For example, a graduate presents a VP to an employer that contains information from her digital passport and diplomas.&#x20;
 
@@ -248,7 +248,7 @@ Different authentication and data exchange protocols are used to **securely tran
 
 The most common data exchange protocols used for SSI are:
 
-* OIDC4SSI / SIOP (Self-Issued OpenID Connect Provider): An extension of a mature authentication and authorisation protocol called "OpenID Connect" (OIDC).
+* OIDC4SSI / SIOP (Self-Issued OpenID Connect Provider): An extension of a mature authentication and authorization protocol called "OpenID Connect" (OIDC).
 * DIDComm: A novel protocol specifically designed for SSI and maintained by the Decentralized Identity Foundation (DIF).
 * Credential Handler API: A proposed browser-extension that may be used to connect the user's identity wallet to a web-application.
 
