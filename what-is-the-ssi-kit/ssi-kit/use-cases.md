@@ -4,7 +4,7 @@ description: Use cases you can build with the SSI Kit.
 
 # Use Cases
 
-You can use Self-Sovereign Identity (SSI) - and by extension the SSI Kit - to solve any identity-related problem:
+You can use Self-Sovereign Identity (SSI) - and by extension the SSI Kit - to solve any identity-related problem.
 
 ## Identity and Access Management (IAM, CIAM)
 
@@ -18,8 +18,7 @@ You can use the SSI Kit to identify people, organizations or even things to prov
 
 Identity proofing is particularly important in the AML (anti-money launder) regulated industries, but is seeing growing adoption by non-regulated industries and platforms to prevent fraud, SPAM and other malicious behaviour.
 
-Simply put, you can use SSI to **identify stakeholders you do not yet know**.\
-
+Simply put, you can use SSI to **identify stakeholders you do not yet know**.
 
 ## Risk and Compliance Checks
 

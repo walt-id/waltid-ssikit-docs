@@ -18,5 +18,4 @@ _Illustration:_
 
 ![The blue boxes symbolise our products and their interfaces. The green boxes symbolise third party solutions that can be integrated via open APIs to avoid rip-and-replace and extend functionality to meet diverse customer requirements.](../../../what-is-ssikit/ssi-kit/Architecture-SSIKit-by-waltid.png)
 
-##
-
+Read on to explore all three abstraction layers in more detail.

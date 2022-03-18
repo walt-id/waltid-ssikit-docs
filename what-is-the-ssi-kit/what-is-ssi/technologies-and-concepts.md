@@ -4,8 +4,6 @@ description: Learn about the technologies and concepts on which SSI is based.
 
 # Technologies & Concepts
 
-## Overview
-
 Understanding SSI requires the understanding of a few core concepts:
 
 * **Registries**, which serve as a shared and trusted record of certain information. In other words, they serve as a “layer of trust” and a “single source of truth”.
