@@ -42,10 +42,12 @@
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [ESSIF API](getting-started/rest-apis/essif-api.md)
 
-## Ecosystems / Interoperability
+## Concepts
 
-* [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](ecosystems-interoperability/ebsi-essif.md)
-* [OpenID Connect (OIDC)](ecosystems-interoperability/oidc.md)
+* [Decentralized Identifiers](concepts/decentralized-identifiers/README.md)
+  * [did:ebsi](concepts/decentralized-identifiers/did-ebsi.md)
+* [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](concepts/ebsi-essif.md)
+* [OpenID Connect (OIDC)](concepts/oidc.md)
 
 ## Usage / Examples
 
