@@ -28,6 +28,7 @@
 * [Quick Start](getting-started/quick-start.md)
   * [Build](getting-started/build.md)
   * [Docker](getting-started/quick-start/docker.md)
+  * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
   * [Configuration](getting-started/configuration.md)
 * [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
