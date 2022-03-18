@@ -9,7 +9,10 @@
 * [SSI Kit](what-is-the-ssi-kit/ssi-kit/README.md)
   * [SSI Kit | Basics](what-is-the-ssi-kit/ssi-kit/ssi-kit-or-basics.md)
   * [SSI Flavors & Ecosystems](what-is-the-ssi-kit/ssi-kit/tech-stack.md)
-  * [Architecture](what-is-the-ssi-kit/ssi-kit/architecture.md)
+  * [Architecture](what-is-the-ssi-kit/ssi-kit/architecture/README.md)
+    * [Low-Level Service Abstraction](what-is-the-ssi-kit/ssi-kit/architecture/low-level-service-abstraction.md)
+    * [Ecosystem Abstraction](what-is-the-ssi-kit/ssi-kit/architecture/ecosystem-abstraction.md)
+    * [High-Level Interfaces / APIs](what-is-the-ssi-kit/ssi-kit/architecture/high-level-interfaces-apis.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
 
 ## Getting started

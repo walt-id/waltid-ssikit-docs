@@ -1,8 +1,4 @@
----
-description: Learn about the technology stack.
----
-
-# SSI Flavours & Ecosystems
+# SSI Flavors & Ecosystems
 
 The SSI Kit abstracts complexity for developers by following a "multi-stack approach" that enables you to use different implementations or "flavours" of SSI. As a result, you can participate in different identity ecosystems (e.g. EBSI/ESSIF, Gaia-X, Velocity Network) and avoid technology-related lock-in effects.&#x20;
 
