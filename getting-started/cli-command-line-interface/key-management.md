@@ -9,4 +9,4 @@ Commands:&#x20;
 * **gen** Generate keys.&#x20;
 * **list** List keys.&#x20;
 * **import** Import key in JWK or PEM format.&#x20;
-* **export Export keys.**
+* **export** Export keys.
