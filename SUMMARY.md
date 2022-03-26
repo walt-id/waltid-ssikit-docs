@@ -36,7 +36,7 @@
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
-  * [Ecosystems](getting-started/cli-command-line-interface/ecosystems.md)
+  * [EBSI - Ecosystems](getting-started/cli-command-line-interface/ebsi-ecosystems.md)
 * [REST APIs](getting-started/rest-apis.md)
   * [Core API](getting-started/rest-apis/core-api.md)
   * [Signatory API](getting-started/rest-apis/signatory-api.md)
