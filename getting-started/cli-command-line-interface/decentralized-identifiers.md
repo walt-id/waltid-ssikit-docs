@@ -4,7 +4,7 @@ DID related operations, like registering, updating and deactivating DIDs.
 
 Supported DID methods are "key", "web" and "ebsi
 
-Options: -h, --help Show this message and exit
+
 
 Commands:&#x20;
 
