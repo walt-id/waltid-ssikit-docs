@@ -32,24 +32,25 @@
     * [Local Build](getting-started/quick-start/build/local-build.md)
   * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
   * [Configuration](getting-started/configuration.md)
-* [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
-  * [Key Management](getting-started/cli-command-line-interface/key-management.md)
-  * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
-  * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
-  * [EBSI - Ecosystems](getting-started/cli-command-line-interface/ebsi-ecosystems.md)
 * [REST APIs](getting-started/rest-apis.md)
   * [Core API](getting-started/rest-apis/core-api.md)
   * [Signatory API](getting-started/rest-apis/signatory-api.md)
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [ESSIF API](getting-started/rest-apis/essif-api.md)
+* [Open ID Connect](getting-started/open-id-connect.md)
+* [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
+  * [Key Management](getting-started/cli-command-line-interface/key-management.md)
+  * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
+  * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
+  * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/oidc.md)
+  * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem.md)
 
 ## Concepts
 
 * [Decentralized Identifiers](concepts/decentralized-identifiers/README.md)
   * [did:ebsi](concepts/decentralized-identifiers/did-ebsi.md)
 * [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](concepts/ebsi-essif.md)
-* [OpenID Connect (OIDC)](concepts/oidc.md)
 
 ## Usage / Examples
 
