@@ -1,22 +1,34 @@
 # CLI | Command Line Interface
 
-## Commands
+The CLI allows running the entire functionality of the SSI Kit by executing individual commands. The CLI can be used by the JVM or the Docker runtime.&#x20;
 
-For getting help, add "-h" to each command or sub-command e.g.:
+It is recommended to use an alias **ssikit** to easily run the CLI tool.
+
+Setting the alias for Docker:
+
+`alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"`
+
+Setting alias for the JVM runtime (wrapper script):
 
 ```
-./ssikit.sh did create -h
-or
-docker run -it -v $(pwd)/data:/app/data ssikit did create -h
+alias ssikit="./ssikit.sh"
+```
+
+Consequently the following help command provides an overview of the whole function set:
+
+```
+ssikit -h
 ```
 
 For debug infos add "-v" e.g.:
 
 ```
-./ssikit.sh -v
-or
-docker run -it -v $(pwd)/data:/app/data ssikit -v did create
+ssikit -v
+
+ssikit -v did create
 ```
+
+
 
 Overwriting the default config:
 
