@@ -25,3 +25,14 @@ Manually
 ```
 podman build -t ssikit .
 ```
+
+
+
+## Docker Compose
+
+Run as RESTful service via Docker Compose:
+
+```
+docker-compose build
+docker-compose up
+```
