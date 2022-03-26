@@ -1,10 +1,10 @@
 # Low-Level Service Abstraction
 
-This software-layer holds a set of generic core services for common SSI and cryptographic functions. The services are in the scope of cryptography, key management, digital signatures, data storage, decentralized identifierers and verifiable credentials. The common interfaces are designed that these functions can be conveniently used by components sitting in higher layers of the software stack.
+This software-layer holds a set of generic core services for common SSI and cryptographic functions. The services are in the scope of key management, decentralized identifiers, verifiable credentials and data storage.&#x20;
 
-The low-level services are can be unitized directly via the Kotlin/Java classes or via the REST API ( [Swagger doc of the core API](https://core.ssikit.walt.id/v1/swagger))
+The low-level services expose comon interfaces that can conviniently unitized directly via  Kotlin/Java or via the REST API ([Swagger doc of the core API](https://core.ssikit.walt.id/v1/swagger)).
 
-The following is a short summary of the interfaces available. The detailed functions are described in the further sections of the documentation.
+The following is a short summary of the interfaces available. The detailed functions are described in the documentation further on.
 
 ### Key Interfaces
 
