@@ -27,8 +27,8 @@
 ## Getting started
 
 * [Quick Start](getting-started/quick-start.md)
-  * [Build](getting-started/quick-start/build/README.md)
-    * [Docker Build](getting-started/quick-start/build/docker-build.md)
+  * [Build](getting-started/build.md)
+    * [Docker Build](getting-started/quick-start/docker.md)
     * [Local Build](getting-started/quick-start/build/local-build.md)
   * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
   * [Configuration](getting-started/configuration.md)

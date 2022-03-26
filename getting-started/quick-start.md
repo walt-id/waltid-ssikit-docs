@@ -54,4 +54,4 @@ Then, run the build command using the wrapper script:
 ./ssikit.sh build
 ```
 
-For more detailed information about the build process and build options, refer to [Build](quick-start/build/).
+For more detailed information about the build process and build options, refer to [Build](build.md).
