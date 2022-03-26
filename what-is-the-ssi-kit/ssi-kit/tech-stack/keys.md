@@ -4,8 +4,8 @@ Cryptographic keys convey control over digital identities and enable core functi
 
 The SSI Kit supports:
 
-* ed25519
-* secp256k1
+* EdDSA / ed25519
+* ECDSA / secp256k1
 * RSA
 
 _Note that we are continuously adding support for new key types._
