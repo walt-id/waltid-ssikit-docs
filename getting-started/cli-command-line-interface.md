@@ -1,12 +1,16 @@
 # CLI | Command Line Interface
 
-The CLI allows running the entire functionality of the SSI Kit by executing individual commands. The CLI can be used by the JVM or the Docker runtime.&#x20;
+The CLI allows running the entire functionality of the SSI Kit by executing individual commands.&#x20;
 
-It is recommended to use an alias **ssikit** to easily run the CLI tool.
+The CLI can be used by the JVM as well as in the Docker runtime.&#x20;
+
+It is recommended to use the alias "**ssikit"** to easily run the CLI tool. This alias will also be used throughout in the documentation .
 
 Setting the alias for Docker:
 
-`alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"`
+```
+alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"
+```
 
 Setting alias for the JVM runtime (wrapper script):
 
@@ -28,62 +32,27 @@ ssikit -v
 ssikit -v did create
 ```
 
-
-
-Overwriting the default config:
+### Example commands
 
 ```
-Simply add a file named _lestrust.yaml_ in the root folder and run ./ssikit.sh
+ssikit key gen --algorithm Ed25519
 
-When using Docker, the following command will do the trick:
-docker run -it $(pwd)/data:/app/data -v $(pwd)/ssikit.yaml:/ssikit.yaml ssikit -v did create
+ssikit key list
+
+ssikit did create -m web
+
+ssikit did resolve --did did:web:mattr.global
+
+ssikit -v vc issue --issuer-did did:key:z6MkmNMF2... --subject-did did:key:zjkl2sd...
+
+ssikit vc verify data/vc/created/vc-1614291790088-default.json
+
+ssikit -v vc present data/vc/created/vc-1614291790088-default.json
+
+ssikit vc verify -p data/vc/presented/vp-1614291892489.json
 ```
 
-walt.id wrapper commands
 
-```
-./ssikit.sh key gen --algorithm Ed25519
-
-./ssikit.sh key list
-
-./ssikit.sh did create -m web
-
-./ssikit.sh did resolve --did did:web:mattr.global
-
-./ssikit.sh -v vc issue --issuer-did did:key:z6MkmNMF2... --subject-did did:key:zjkl2sd...
-
-./ssikit.sh vc verify data/vc/created/vc-1614291790088-default.json
-
-./ssikit.sh -v vc present data/vc/created/vc-1614291790088-default.json
-
-./ssikit.sh vc verify -p data/vc/presented/vp-1614291892489.json
-```
-
-walt.id Docker / Podman commands
-
-```
-docker run -itv $(pwd)/data:/app/data ssikit key gen --algorithm Ed25519
-
-docker run -itv $(pwd)/data:/app/data ssikit key list
-
-docker run -itv $(pwd)/data:/app/data ssikit did create -m web
-
-docker run -itv $(pwd)/data:/app/data ssikit did resolve --did did:web:mattr.global
-
-docker run -itv $(pwd)/data:/app/data ssikit -v vc issue --issuer-did did:key:z6MkmNMF2... --subject-did did:key:zjkl2sd...
-
-docker run -itv $(pwd)/data:/app/data ssikit vc verify data/vc/created/vc-1614291790088-default.json
-
-docker run -itv $(pwd)/data:/app/data ssikit -v vc present data/vc/created/vc-1614291790088-default.json
-
-docker run -itv $(pwd)/data:/app/data ssikit vc verify -p data/vc/presented/vp-1614291892489.json
-
-docker run -itv $(pwd)/templates:/app/templates -v $(pwd)/data:/app/data ssikit vc templates list
-
-docker run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
-
-podman run -itv $(pwd)/data:/app/data -p 7000-7003:7000-7003 ssikit serve
-```
 
 ## API Service
 
