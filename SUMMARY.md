@@ -38,12 +38,11 @@
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [ESSIF API](getting-started/rest-apis/essif-api.md)
-* [Open ID Connect](getting-started/open-id-connect.md)
 * [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
-  * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/oidc.md)
+  * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
   * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem.md)
 
 ## Concepts
@@ -51,6 +50,7 @@
 * [Decentralized Identifiers](concepts/decentralized-identifiers/README.md)
   * [did:ebsi](concepts/decentralized-identifiers/did-ebsi.md)
 * [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](concepts/ebsi-essif.md)
+* [OpenID Connect](concepts/oidc.md)
 
 ## Usage / Examples
 
