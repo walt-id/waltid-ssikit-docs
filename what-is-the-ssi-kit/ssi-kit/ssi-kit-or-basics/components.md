@@ -42,3 +42,19 @@ Auditor allows you to verify your stakeholders’ identity data and offer fricti
 
 ![](https://files.gitbook.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F1k3zreXT6Nz41D1g1C6K%2Fuploads%2Fgit-blob-cfa46bc9aee08a2e799f66822eec66ca94c15ab6%2FAuditor-Verifier.png?alt=media)
 
+### **Verification Policies**
+
+The verification steps can be dynamically configured by passing "verification policies" to each verification attempt.&#x20;
+
+The SSI Kit comes with the following set of built-in verification polices:
+
+* **SignaturePolicy**: Loads or resolves DID, loads public key and verifies the credentials signature.
+* **JsonSchemaPolicy**: Validates the credential against the JSON schema.
+* &#x20;**TrustedSchemaRegistryPolicy**: Checks if the JSON schema is anchored in the EBSI Trusted Schema Registry.
+* **TrustedIssuerDidPolicy**: Checks if the issuer DID is anchored on the EBSI DID registry.
+* **TrustedIssuerRegistryPolicy**: Checks if the issuer got inserted in the EBSI TIR (Trusted Issuer Registry).
+* **TrustedSubjectDidPolicy**: Checks if the issuer DID is anchored on the EBSI DID registry.
+* **IssuedDateBeforePolicy**: Checks if issued date is in the past.
+* **ValidFromBeforePolicy**: Checks if valid-from date is in the past.
+* **ExpirationDateAfterPolicy**: Checks if expiration-date is in the futrue.
+* **CredentialStatusPolicy**: Checks if credential is revoked based on the credential-status list.
