@@ -73,11 +73,11 @@ E.g.
 
 Ed25519 JWK public key
 
-![Ed25519 JWK public key input](<../../.gitbook/assets/image (8).png>)
+![Ed25519 public key JWK input](<../../.gitbook/assets/image (8).png>)
 
 `key import ./ed25519jwk.json`
 
-![](<../../.gitbook/assets/image (3).png>)
+![JWK Ed25519 key import output](<../../.gitbook/assets/image (3).png>)
 
 Secp256k1 PEM key
 
