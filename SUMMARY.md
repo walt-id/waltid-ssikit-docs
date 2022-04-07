@@ -47,9 +47,7 @@
 
 ## Concepts
 
-* [Decentralized Identifiers](concepts/decentralized-identifiers/README.md)
-  * [did:ebsi](concepts/decentralized-identifiers/did-ebsi.md)
-* [EU Blockchain Service Infrastructure (EBSI, ESSIF) ](concepts/ebsi-essif.md)
+* [EU Blockchain Service Infrastructure (EBSI, ESSIF)](concepts/ebsi-essif.md)
 * [OpenID Connect](concepts/oidc.md)
 
 ## Usage / Examples
