@@ -68,8 +68,8 @@
   * [OpenID Connect](usage-examples/oidc/usage-examples.md)
     * [OIDC4CI | Credential Issuance](usage-examples/usage-examples/usage-examples/usage-examples.md)
     * [OIDC4VP | Verifiable Presentations](usage-examples/usage-examples/usage-examples/usage-examples-1.md)
-* [EBSI/ESSIF | Examples](usage-examples/usage-examples-1/README.md)
-  * [Decentralized Identifiers (DIDs)](usage-examples/usage-examples-1/decentralized-identifiers-dids.md)
+* [EBSI/ESSIF | Examples](usage-examples/ebsi-essif/usage-examples.md)
+  * [Onboarding](usage-examples/usage-examples-1/onboarding.md)
   * [Build end-to-end use cases](usage-examples/usage-examples-1/build-end-to-end-use-cases.md)
 
 ## CONTACT & DEVELOPER RELATIONS
