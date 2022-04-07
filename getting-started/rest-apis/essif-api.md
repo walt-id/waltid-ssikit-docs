@@ -1,9 +1,5 @@
 # ESSIF API
 
-[phil](https://app.gitbook.com/u/Xy5PETDzUVT9yjUrLtjs53z9wvW2 "mention")TODO
-
-## ESSIF API
-
 The _ESSIF API_ exposes the necessary endpoints for running the ESSIF specific flows between Issuers (incl. ESSIF Onboarding Services), Holders and Verifiers.
 
 Aligned with the ESSIF terminology, the API is grouped by the User Wallet (wallet API for consumers / natural persons) and Enterprise Wallet (wallet API for organisations / legal entities).
