@@ -47,8 +47,12 @@
 
 ## Concepts
 
-* [EU Blockchain Service Infrastructure (EBSI, ESSIF)](concepts/ebsi-essif.md)
-* [OpenID Connect](concepts/oidc.md)
+* [EBSI & ESSIF | EU Blockchain Services Infrastructure & SSI Framework](concepts/ebsi-essif/README.md)
+  * [EBSI/ESSIF | Basics](concepts/ebsi-essif/ebsi-essif-or-basics.md)
+  * [Use Cases & Flow Diagrams](concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
+* [OpenID Connect](concepts/oidc/README.md)
+  * [Credential Issuance](concepts/oidc/credential-issuance.md)
+  * [Presentation Exchange](concepts/oidc/presentation-exchange.md)
 
 ## Usage / Examples
 
