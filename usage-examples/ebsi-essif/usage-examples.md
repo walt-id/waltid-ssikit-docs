@@ -1,7 +1,7 @@
-# EBSI/ESSIF | Examples
+# EBSI/ESSIF
 
-The following subsections show several examples of interaction with the EBSI/ESSIF frameworks using the SSIKit command line interface, REST APIs and library SDK.
+The following subsections show examples of interactions with the EBSI/ESSIF frameworks using the SSI Kit command line interface, REST APIs and library SDK.
 
-For more information about the EBSI/ESSIF support built into SSI Kit, refer to section [**EBSI/ESSIF - European SSI and blockchain infrastructures**](../../concepts/ebsi-essif.md).
+You can find more information about EBSI/ESSIF [here](../../concepts/ebsi-essif.md).
 
 ##
