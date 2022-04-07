@@ -8,7 +8,7 @@ The respective **OIDC4VP/SIOPv2** specification can be found at:
 [**OIDC4VP - OIDC for verifiable presentations**](https://openid.net/specs/openid-connect-4-verifiable-presentations-1\_0.html)
 {% endhint %}
 
-![OIDC for VP](siop-vc-presentation-ssikit.png)
+![OIDC for VP](../../concepts/oidc/siop-vc-presentation-ssikit.png)
 
 {% hint style="info" %}
 Refer also to our **web wallet documentation**, for an example of an actual end-to-end integration of the OIDC verification flow:
