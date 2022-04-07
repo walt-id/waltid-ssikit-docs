@@ -50,7 +50,7 @@
 * [EBSI & ESSIF | EU Blockchain & EU SSI Framework](helpful-concepts/ebsi-essif/README.md)
   * [EBSI/ESSIF | Basics](helpful-concepts/ebsi-essif/ebsi-essif-or-basics.md)
   * [Use Cases & Flow Diagrams](helpful-concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
-* [OpenID Connect](helpful-concepts/oidc/README.md)
+* [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
   * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
 
