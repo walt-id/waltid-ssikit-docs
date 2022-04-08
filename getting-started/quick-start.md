@@ -4,15 +4,15 @@ description: Getting started with the SSI Kit.
 
 # Quick Start
 
-There are different ways to get started in using the SSI Kit.
+There are different ways to get started in using the Storage Kit.
 
 * Docker: Quick way to launch and try out the latest builds. No build environment required.
-* Local Build: Build and run the SSI Kit locally. Requires a JDK 16 build environment including, Gradle.
+* Local Build: Build and run the Storage Kit locally. Requires a JDK 16 build environment including, Gradle.
 * Dependency (JVM): The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
 
-[**CLI tool**](broken-reference):  The SSI Kit comes with a **command-line interface** tool, which offers a rich set of commands to run the enitre functionality the SSI Kit provides . The CLI interface can be used be running the Docker container or the executable by the local build.
+**CLI Tool**: The Storage Kit comes with a **** command-line interface (CLI) tool, which offers a rich set of commands to run the entire functionality the Storage Kit provides. The CLI tool can be used by running the Docker container or the executable by the local build.
 
-REST API: In case you want to run the SSI Kit as service, your application can access its' functionality via the REST API.
+**REST API**: In case you want to run the SSI Kit as a service, your application can access all functionalities via the REST API.
 
 ## Run
 
