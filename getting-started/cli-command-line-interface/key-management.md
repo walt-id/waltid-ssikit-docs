@@ -9,7 +9,7 @@ description: >-
 SSI-Kit CLI key management commands can be accessed with the `key` command. It provides the following functionality:
 
 * [Generate key](key-management.md#generate-key) - using **gen** command
-* [List keys](key-management.md#list-keys) - using **list** command&#x20;
+* [List keys](key-management.md#list-keys) - using **list** command
 * [Import key](key-management.md#import-key) - using **import** command
 * [Export key](key-management.md#export-key) - using **export** command
 * [Delete key](key-management.md#delete-key) - using **delete** command
@@ -111,7 +111,7 @@ Available export formats:
 
 The output will display the exported key in the specified format.
 
-E.g.&#x20;
+E.g.
 
 `key export 17592087c6f04c358b9b813dbe2ef027 --pub -f PEM`
 
@@ -123,7 +123,7 @@ E.g.&#x20;
 
 `key export 17592087c6f04c358b9b813dbe2ef027 --priv -f PEM`
 
-![Export output for PEM format private key](<../../.gitbook/assets/image (5).png>)
+![Export output for PEM format private key](<../../.gitbook/assets/image (5) (1).png>)
 
 `key export 17592087c6f04c358b9b813dbe2ef027 --priv`
 

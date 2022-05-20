@@ -12,7 +12,7 @@ In other words, SSI enables you to “**bring your own identity**” and this is
 
 Moreover, SSI can be used to model the **digital identities of people,** **organizations** and **things**.
 
-![](https://images.squarespace-cdn.com/content/v1/609c0ddf94bcc0278a7cbdb4/1646980496616-OXAC92MCIEPEILWNAWXC/Screenshot+2022-03-02+at+22.00.20.png?format=1500w)
+<img src="https://images.squarespace-cdn.com/content/v1/609c0ddf94bcc0278a7cbdb4/1646980496616-OXAC92MCIEPEILWNAWXC/Screenshot+2022-03-02+at+22.00.20.png?format=1500w" alt="" data-size="original">
 
 At the end of the day, SSI promises a digital world in which interactions are effortless and worry-free. It is **simply the next evolutionary step** in identity management, a new paradigm in which our digital identities are no longer fragmented and locked into silos that are under someone else’s control, but only at our own disposal to be shared securely and privately.
 

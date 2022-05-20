@@ -68,6 +68,7 @@
   * [Issuance](usage-examples/verifiable-credentials/issuance.md)
   * [Presentation](usage-examples/verifiable-credentials/presentation.md)
   * [Verification](usage-examples/verifiable-credentials/verification.md)
+  * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
 * [Data Exchange Protocols](usage-examples/usage-examples/README.md)
   * [OpenID Connect](usage-examples/oidc/usage-examples.md)
     * [OIDC4CI | Credential Issuance](usage-examples/usage-examples/usage-examples/usage-examples.md)

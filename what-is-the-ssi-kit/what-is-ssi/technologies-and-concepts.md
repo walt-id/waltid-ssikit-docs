@@ -15,7 +15,7 @@ Understanding SSI requires the understanding of a few core concepts:
 
 The following graphic shows the SSI tech stack:
 
-![](<../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
+![](<../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32.png>)
 
 The following graphic shows how SSI works and highlights the core concepts (in blue):
 
