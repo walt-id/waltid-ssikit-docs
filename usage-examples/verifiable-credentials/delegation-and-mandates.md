@@ -100,4 +100,56 @@ The credential body is afterwards signed by the private key of the issuer, which
 
 ### Verifying a Verifiable Mandate Credential
 
-todo
+#### **Verifying successfully a Verifiable Mandate Credential**
+
+The Auditor (verifying component of the SSI Kit) can simply be called by the "vc verfiy" command. It takes the filename as argument as well as a list of policies. For keeping this example as simple as possible only the "VerifiableMandatePolicy" is used. Note that the VerifiableMandatePolicy takes a list of arguments as well. This is the JSON document, which dynamically setup the verification engine
+
+```
+{ 
+  "user": "did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd", 
+  "action": "apply_to_masters", 
+  "location": "Germany"
+}  
+```
+
+The full command can be seen here:
+
+```
+./ssikit.sh vc verify vm.json -p VerifiableMandatePolicy='{"user": "did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd", "action": "apply_to_masters", "location": "Slovenia"}'
+```
+
+**Output:**
+
+```
+Verifying from file "vm.json"...
+
+rego payload: {"data":{"constraints":{"location":"Slovenia"},"grant":"apply_to_masters","id":"did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd","role":"family"},"input":{"user":"did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd","action":"apply_to_masters","location":"Slovenia"},"rego_modules":{"policy.rego":"package app.rbac\n\nimport future.keywords.in\nimport future.keywords.every\n\ndefault allow = false\n\nroles = [\"family\", \"friend\"]\ngrants = {\n    \"family\": [\"apply_to_masters\", \"get_grades\"],\n    \"friend\": [\"get_grades\"]\n}\nconstraints = {\n    \"get_grades\": [\"location\", \"time\"],\n    \"apply_to_masters\": [\"location\"]\n}\n\n# all inputs must contain user and actions\n\nallow {\n    input.user == data.id\n    data.role in roles\n    input.action in grants[data.role]\n\n    input.action == data.grant\n\n    every constraint in constraints[input.action] {\n        data.constraints[constraint] == input[constraint]\n    }\n}\n"},"strict":true}
+
+Results:
+
+VerifiableMandatePolicy:         true
+Verified:                        true
+
+```
+
+#### **Failing to verify a Verifiable Mandate Credential**
+
+In this case the constraint "location" is set from "Slovenia" to  "Germany":
+
+```
+./ssikit.sh vc verify vm.json -p VerifiableMandatePolicy='{"user": "did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd", "action": "apply_to_masters", "location": "Germany"}'
+```
+
+**Output:**
+
+```
+Verifying from file "vm.json"...
+
+
+rego payload: {"data":{"constraints":{"location":"Slovenia"},"grant":"apply_to_masters","id":"did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd","role":"family"},"input":{"user":"did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd","action":"apply_to_masters","location":"Germany"},"rego_modules":{"policy.rego":"package app.rbac\n\nimport future.keywords.in\nimport future.keywords.every\n\ndefault allow = false\n\nroles = [\"family\", \"friend\"]\ngrants = {\n    \"family\": [\"apply_to_masters\", \"get_grades\"],\n    \"friend\": [\"get_grades\"]\n}\nconstraints = {\n    \"get_grades\": [\"location\", \"time\"],\n    \"apply_to_masters\": [\"location\"]\n}\n\n# all inputs must contain user and actions\n\nallow {\n    input.user == data.id\n    data.role in roles\n    input.action in grants[data.role]\n\n    input.action == data.grant\n\n    every constraint in constraints[input.action] {\n        data.constraints[constraint] == input[constraint]\n    }\n}\n"},"strict":true}
+
+Results:
+
+VerifiableMandatePolicy:         false
+Verified:                        false
+```
