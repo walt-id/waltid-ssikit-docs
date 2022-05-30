@@ -1,16 +1,16 @@
 # Delegation and Mandates
 
-The SSI Kit contains and implementation of Authority Delegation (AD) or Verifiable Mandates (VM) – as referred within EBSI/ESSIF. Together with NETIS and the a team of the Faculty of Electrical Engineering and Computer Science, University of Maribor a concept and resarch paper "_A Comprehensive Novel Model for Self-Sovereign Identity Authority_" to outline a possible solution for archiving AD/VM was created. This was funded and support by eSSIF Lab:
+The SSI Kit contains and implementation of Authority Delegation (AD) or Verifiable Mandates (VM) – as referred within EBSI/ESSIF. Together with NETIS and the team of the Faculty of Electrical Engineering and Computer Science of the University of Maribor a concept and resarch paper "_A Comprehensive Novel Model for Self-Sovereign Identity Authority_" to outline a possible solution for archiving AD/VM was created. This was funded and support by eSSIF Lab:
 
 [https://essif-lab.eu/authority-delegation-verifiable-mandates-by-netis/](https://essif-lab.eu/authority-delegation-verifiable-mandates-by-netis/)
 
 ![](<../../.gitbook/assets/image (5).png>)
 
-The following example shows how to create and validate a Verifiable Mandate credential.
+The following example shows how to create and to validate a Verifiable Mandate credential.
 
 ### Issuing a Verifiable Mandate Credential
 
-Preliminary to the issuing command, the issuer (in this case an individual who wants to delegate authority to some other individual) needs to have control of an asymmetric key and also a DID (decentralized identifier). Both can be created via CLI tool that the SSI Kit is providing.
+Preliminary to the issuing command, the issuer (in this case an individual who wants to delegate authority to some other individual) needs to have control of an asymmetric key and also to a DID (decentralized identifier). Both can be created via CLI tool that the SSI Kit is providing.
 
 Creating a key (the key-id is used in the next command)
 
@@ -21,7 +21,7 @@ Creating a key (the key-id is used in the next command)
 Creating a DID. In this case a did:ebsi is created, which can be registered on the EBSI block chain (see [usage-examples.md](../ebsi-essif/usage-examples.md "mention")).
 
 ```
-./ssikit.sh create did -m ebsi -k <key-id>
+./ssikit.sh did create -m ebsi -k <key-id>
 ```
 
 By having access to the issuer key and DID the following issuing command can be entered. Note that the parameter "--interactive" will prompt for several parameter that needs to be applied for creating the Verifiable Mandate credential. Therefore one must have the DID of the recipient of the delegated authority available.
@@ -94,15 +94,15 @@ Credential document (below, JSON):
 
 ```
 
-Most importantly from the above shown example are the lines 5 to 6,  as they are created by an interactive dialog with user. The user (issuer of the credential) may define **who** gets **which** permissions. In this case the permissions are delegated to the DID:  did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd. This DID is classified as "family-member" and furthermore is granted to "apply for a master degreed" on behalf of the issuing party. Additionally the constrain "location" is defined by "Slovenia" instead of the default value "Spain".&#x20;
+Most importantly in the above shown example are the lines 5 to 6,  as they are created by an interactive dialog with the user (issuer of the credential). The user may define **who** gets **which** permissions. In this case the permissions are delegated to the DID:  did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd. This DID is classified as "family-member" and furthermore is granted to "apply for a master degree" on behalf of the issuing party. Additionally the constrain "location" is defined by "Slovenia" instead of the default value "Spain".&#x20;
 
 The credential body is afterwards signed by the private key of the issuer, which generate the JSON LD proof.
 
 ### Verifying a Verifiable Mandate Credential
 
-#### **Verifying successfully a Verifiable Mandate Credential**
-
 The Auditor (verifying component of the SSI Kit) can simply be called by the "vc verfiy" command. It takes the filename as argument as well as a list of policies. For keeping this example as simple as possible only the "VerifiableMandatePolicy" is used. Note that the VerifiableMandatePolicy takes a list of arguments as well. This is the JSON document, which dynamically setup the verification engine
+
+#### **Verifying successfully a Verifiable Mandate Credential**
 
 ```
 { 
