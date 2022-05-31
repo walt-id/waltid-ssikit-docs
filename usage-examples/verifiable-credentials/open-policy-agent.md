@@ -22,12 +22,18 @@ Further on the SSI Kit generates the verification request which is processed by 
 
 The Open Policy Agent processes the verification request and returns the result to the SSI Kit. The SSI Kit evaluates the result and composes an aggregated credential validation response (as aso other elements of the credential are verified) for the calling party.&#x20;
 
-## Example request
+## Example VC validation with the Open Policy Agent
 
 The following command shows how to validate a credential based on a Rego/OPA Policy.
 
 ```
 ./ssikit.sh vc verify rego-vc.json -p RegoPolicy='{"dataPath" : "$.credentialSubject.holder", "input" : "{\"user\": \"did:ebsi:ze2dC9GezTtVSzjHVMQzpkE\", \"action\": \"apply_to_masters\", \"location\": \"Slovenia\" }", "rego" : "src/test/resources/rego/test-policy.rego", "resultPath" : "$.result[0].expressions[0].value.allow"}'
+
+Results:
+
+RegoPolicy:         true
+Verified:           true
+
 ```
 
 Detailed explanation of parameters:
@@ -76,7 +82,7 @@ The standard command for validating VCs is: **./ssikit.sh vc verify \<vc-file>**
 }
 ```
 
-The argument "-p" is used for specifiying a built-in VerificationPolicy of the SSI Kit. To review the existing policies feel free to access the[ policy API of the Auditor](https://auditor.ssikit.walt.id/v1/swagger#/Verification%20Policies/listPolicies).
+The argument "-p" is used for specifying a built-in VerificationPolicy of the SSI Kit. To review the existing policies feel free to access the[ policy API of the Auditor](https://auditor.ssikit.walt.id/v1/swagger#/Verification%20Policies/listPolicies).
 
 The **RegoPolicy** indicates a validation process by utilizing the Open Policy Agent. As shown in the example the RegoPolicy can be parameterized in order to flexibly configure the validation request.&#x20;
 
@@ -93,8 +99,17 @@ In this example the RegoPolicy takes the following input:
 
 **dataPath**: This optional attribute is the Json-path to point-out which nested element of the Verifiable Credential that should be used as input data for the OPA engine.
 
-**input**: The validation request, which is the permission that is asked for.
+**input**: This data-object defines the permission that should be granted.
 
 **rego**: File path to the rego policy.
 
 **resultPath**: As the output of the OPA engine is a Json object, this optional parameter allows to specify which part of the object should be used to determine if the result is either **true** or **false**.
+
+The output of the example:
+
+```
+RegoPolicy:         true
+Verified:           true
+```
+
+The CLI tool prints the result of each validation policy (in this case only the RegoPolicy) and then the overall validation result (Verified), which is in this case **true**, indicating a valid Verfifiable credential.
