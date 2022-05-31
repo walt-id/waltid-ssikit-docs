@@ -12,7 +12,7 @@ The SSI Kit offers an integration with OPA and therefore allows the flexible val
 
 The following graphic illustrates the technical architecture how a custom application can verify credentials by utilizing the Open Policy Agent.
 
-![SSI Kit and the Open Policy Agent](<../../.gitbook/assets/opa (1).png>)
+![SSI Kit and the Open Policy Agent](<../.gitbook/assets/opa (1).png>)
 
 In order to verify W3C Verifiable Credentials and Presentations, the SSI Kit offers the [Auditor API](https://auditor.ssikit.walt.id/). This API serves as integration point for a Verifier application, but also can be used for testing by the built-in CLI tool. In either way a Verifiable Credential (VC) is forwarded to the SSI Kit in order to have it verified.
 
@@ -20,7 +20,7 @@ The SSI Kit loads a Rego Policy either from a file-system, database or a trusted
 
 Further on the SSI Kit generates the verification request which is processed by the OPA engine. This request consists of the policy, the input-data to be verified and the action. The input-data is just the relevant data-points of the credential - typically the nested Json object "credentialSubject" or part of it. The "action" is the request that should be granted by the policy.&#x20;
 
-The Open Policy Agent processes the verification request and returns the result to the SSI Kit. The SSI Kit evaluates the result and composes an aggregated credential validation response (as aso other elements of the credential are verified) for the calling party.&#x20;
+The Open Policy Agent processes the verification request and returns the result to the SSI Kit. The SSI Kit evaluates the result and composes an aggregated credential validation response (as also other validation checks are performed) for the calling party.&#x20;
 
 ## Example VC validation with the Open Policy Agent
 
@@ -36,9 +36,9 @@ Verified:           true
 
 ```
 
-Detailed explanation of parameters:
+_Detailed explanation of parameters:_
 
-The standard command for validating VCs is: **./ssikit.sh vc verify \<vc-file>**. In the case of above the following credential is placed in file **rego-vc.json**.&#x20;
+The standard command for validating Verifiable Credentials is: **./ssikit.sh vc verify \<vc-file>**. In the example above the credential is placed in file **rego-vc.json**.&#x20;
 
 ```
 {
@@ -82,7 +82,7 @@ The standard command for validating VCs is: **./ssikit.sh vc verify \<vc-file>**
 }
 ```
 
-The argument "-p" is used for specifying a built-in VerificationPolicy of the SSI Kit. To review the existing policies feel free to access the[ policy API of the Auditor](https://auditor.ssikit.walt.id/v1/swagger#/Verification%20Policies/listPolicies).
+The argument "-p" is used for specifying a specific built-in VerificationPolicy of the SSI Kit. To review the existing policies feel free to access the[ policy API of the Auditor](https://auditor.ssikit.walt.id/v1/swagger#/Verification%20Policies/listPolicies).
 
 The **RegoPolicy** indicates a validation process by utilizing the Open Policy Agent. As shown in the example the RegoPolicy can be parameterized in order to flexibly configure the validation request.&#x20;
 
@@ -112,4 +112,4 @@ RegoPolicy:         true
 Verified:           true
 ```
 
-The CLI tool prints the result of each validation policy (in this case only the RegoPolicy) and then the overall validation result (Verified), which is in this case **true**, indicating a valid Verfifiable credential.
+The CLI tool prints the result of each validation policy (in this case only the RegoPolicy) and then the overall validation result (Verified), which is in this case **true**, indicating a valid Verifiable credential.

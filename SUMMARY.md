@@ -69,7 +69,7 @@
   * [Presentation](usage-examples/verifiable-credentials/presentation.md)
   * [Verification](usage-examples/verifiable-credentials/verification.md)
   * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
-  * [Open Policy Agent](usage-examples/verifiable-credentials/open-policy-agent.md)
+* [Open Policy Agent](usage-examples/open-policy-agent.md)
 * [EBSI/ESSIF](usage-examples/usage-examples/README.md)
   * [Onboarding & DIDs](usage-examples/usage-examples/onboarding-and-dids.md)
   * [Build end-to-end use cases](usage-examples/usage-examples/build-end-to-end-use-cases.md)
