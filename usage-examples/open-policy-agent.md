@@ -18,7 +18,7 @@ In order to verify W3C Verifiable Credentials and Presentations, the SSI Kit off
 
 The SSI Kit loads a Rego Policy either from a file-system, database or a trusted registry that most likely is implemented using Distributed Ledger Technology.
 
-Further on the SSI Kit generates the verification request which is processed by the OPA engine. This request consists of the policy, the input-data to be verified and the action. The input-data is just the relevant data-points of the credential - typically the nested Json object "credentialSubject" or part of it. The "action" is the request that should be granted by the policy.&#x20;
+Further on the SSI Kit generates the verification request which is processed by the OPA engine. This request consists of the policy, the input-data to be verified and the action. The input-data is just the relevant data-points of the credential - typically the nested JSON-object "credentialSubject" or part of it. The "action" is the request that should be granted by the policy.&#x20;
 
 The Open Policy Agent processes the verification request and returns the result to the SSI Kit. The SSI Kit evaluates the result and composes an aggregated credential validation response (as also other validation checks are performed) for the calling party.&#x20;
 
@@ -38,7 +38,7 @@ Verified:           true
 
 _Detailed explanation of parameters:_
 
-The standard command for validating Verifiable Credentials is: **./ssikit.sh vc verify \<vc-file>**. In the example above the credential is placed in file **rego-vc.json**.&#x20;
+The standard command for validating Verifiable Credentials is: **./ssikit.sh vc verify \<vc-file>**. In the example the credential is placed in file **rego-vc.json**. Note that the relevant part for the validation is the nested object "credentialSubject.holder" as shown below.
 
 ```
 {
@@ -97,13 +97,56 @@ In this example the RegoPolicy takes the following input:
 }
 ```
 
-**dataPath**: This optional attribute is the Json-path to point-out which nested element of the Verifiable Credential that should be used as input data for the OPA engine.
+**dataPath**: This optional attribute is the JSON-path to point-out which nested element of the Verifiable Credential should be used as input data for the OPA engine. In this case it referes to the "credentialSubject.holder" structure, whereas the "credentialSubject" would be the default object in case this attribute is missing in the request.
 
-**input**: This data-object defines the permission that should be granted.
+**input**: This data-object defines the permission that should be granted. In the example the following input is used:
 
-**rego**: File path to the rego policy.
+```
+{
+    "user": "did:ebsi:ze2dC9GezTtVSzjHVMQzpkE", 
+    "action": "apply_to_masters", 
+    "location": "Slovenia" 
+},
+```
 
-**resultPath**: As the output of the OPA engine is a Json object, this optional parameter allows to specify which part of the object should be used to determine if the result is either **true** or **false**.
+The detail validation steps are determined by the policy below. The idea is that the the user (defined by the DID) is asking for permissions to apply to a Masters degree, with the constraint that the country is "Slovenia".
+
+**rego**: File path to the rego policy. The following Rego policy is used:
+
+```
+package app.rbac
+
+import future.keywords.in
+import future.keywords.every
+
+default allow = false
+
+roles = ["family", "friend"]
+grants = {
+    "family": ["apply_to_masters", "get_grades"],
+    "friend": ["get_grades"]
+}
+constraints = {
+    "get_grades": ["location", "time"],
+    "apply_to_masters": ["location"]
+}
+
+# all inputs must contain user and actions
+
+allow {
+    input.user == data.id
+    data.role in roles
+    input.action in grants[data.role]
+
+    input.action == data.grant
+
+    every constraint in constraints[input.action] {
+        data.constraints[constraint] == input[constraint]
+    }
+}
+```
+
+**resultPath**: As the output of the OPA engine is a JSON-object, this optional parameter allows to specify which part of the object should be used to determine if the result is either **true** or **false**.
 
 The output of the example:
 
@@ -112,4 +155,4 @@ RegoPolicy:         true
 Verified:           true
 ```
 
-The CLI tool prints the result of each validation policy (in this case only the RegoPolicy) and then the overall validation result (Verified), which is in this case **true**, indicating a valid Verifiable credential.
+The CLI tool prints the result of each validation policy (in this case only the RegoPolicy) and then the overall validation result (Verified), which evaluates to **true**, indicating a valid Verifiable credential.
