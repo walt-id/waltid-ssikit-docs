@@ -1,6 +1,6 @@
 # Table of contents
 
-## SSI KIT
+## What is the SSI KIT? <a href="#ssi-kit" id="ssi-kit"></a>
 
 * [Introduction](README.md)
 * [Self-Sovereign Identity (SSI)](ssi-kit/what-is-ssi/README.md)
