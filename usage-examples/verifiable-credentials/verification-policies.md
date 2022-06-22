@@ -205,3 +205,31 @@ Note, that we can still override the predefined input data like shown here:
 ```
 ssikit vc verify -p ItsMePolicy='{ "user": "did:key:xxxxxxxxx" }' src/test/resources/rego/VerifiableId.json
 ```
+
+#### Update or remove dynamic policies
+
+To update an existing policy use the `--force` flag of the create command like so:
+
+```
+ssikit vc policies create -n "ItsMePolicy" -D "Verifies credential subject against my DID" -p src/test/resources/rego/subject-policy.rego -i '{ "user": "did:key:z6MkgERd8hghGSBndxduiXtUdbYmtbcX9TeNdAL2BAhvXoAp" }' --force
+```
+
+To remove a previously created policy, use the remove command:
+
+```
+ssikit vc policies remove -n ItsMePolicy
+```
+
+**Note**: You can update and remove only dynamic policies that have been manually created. You cannot override existing predefined, static policies.
+
+The list command indicates mutable policies, by a leading `*`, and provides the `-m, --mutable` flags to filter by mutable policies only:
+
+```
+> ssikit vc policies list -m
+[...]
+
+* GaiaXPolicy    - no description -,     Argument: JsonObject
+* SubjectPolicy  Verifies credential subject,    Argument: JsonObject
+
+(*) ... mutable dynamic policy
+```
