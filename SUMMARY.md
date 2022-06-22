@@ -68,6 +68,7 @@
   * [Issuance](usage-examples/verifiable-credentials/issuance.md)
   * [Presentation](usage-examples/verifiable-credentials/presentation.md)
   * [Verification](usage-examples/verifiable-credentials/verification.md)
+  * [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
   * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
 * [Open Policy Agent](usage-examples/open-policy-agent.md)
 * [EBSI/ESSIF](usage-examples/usage-examples/README.md)
