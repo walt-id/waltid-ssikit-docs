@@ -40,15 +40,21 @@ walt.id SSI Kit 1.11.0-SNAPSHOT (running on Java 16.0.2+7-suse-lp153.30.15-x8664
 
 Some policies may require a parameter or argument for execution. The parameter is indicated in the policy list output, together with the expected data type.
 
-The **CLI** allows for specifying a parameter with the verification policy, by this special syntax:
+**CLI**
+
+The **CLI** allows for specifying a parameter with the verification policy, using the syntax: `PolicyName='{...}'`, where the argument is given as a JSON Object, shown here as `{...}`.
+
+In this example we verify a credential by the parameterless **SignaturePolicy** and the parameterized **ChallengePolicy**:
 
 ```
-ssikit vc verify -p ChallengePolicy='{ "challenges": [ "362df5ec-37ab-46a7-aa71-767d8f277b69" ] }' src/test/resources/rego/VerifiableId.json
+ssikit vc verify -p SignaturePolicy -p ChallengePolicy='{ "challenges": [ "362df5ec-37ab-46a7-aa71-767d8f277b69" ] }' src/test/resources/rego/VerifiableId.json
 ```
 
-In above example, we verify the challenge of the credential to be one of the challenges given in the ChallengePolicyArg argument.
+The challenge policy checks that the challenge of the credential is one of the challenges given in the ChallengePolicyArg argument.
 
-An example using the Auditor REST API, with the parameterless **SignaturePolicy** and the parameterized **ChallengePolicy** would look like this:
+**REST API**
+
+The same example using the **Auditor REST API**, with the parameterless **SignaturePolicy** and the parameterized **ChallengePolicy** would look like this:
 
 `POST /v1/verify`
 
