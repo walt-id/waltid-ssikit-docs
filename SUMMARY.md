@@ -23,7 +23,7 @@
     * [High-Level Interfaces / APIs](ssi-kit/ssi-kit/architecture/high-level-interfaces-apis.md)
   * [Use Cases](ssi-kit/ssi-kit/use-cases.md)
 * [VC Library](ssi-kit/vc-library.md)
-* [Open Policy Agent](ssi-kit/open-policy-agent.md)
+* [Open Policy Agent](usage-examples/open-policy-agent.md)
 
 ## Getting started
 
@@ -48,16 +48,16 @@
 
 ## Concepts
 
-* [Verification Policies](concepts/verification-policies/README.md)
+* [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
   * [Static Policies](concepts/verification-policies/static-policies.md)
   * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
   * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
-* [EBSI & ESSIF | EU Blockchain & EU SSI Framework](concepts/ebsi-essif/README.md)
-  * [EBSI/ESSIF | Basics](concepts/ebsi-essif/ebsi-essif-or-basics.md)
-  * [Use Cases & Flow Diagrams](concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
-* [OpenID Connect (OIDC)](concepts/oidc/README.md)
-  * [Credential Issuance](concepts/oidc/credential-issuance.md)
-  * [Presentation Exchange](concepts/oidc/presentation-exchange.md)
+* [EBSI & ESSIF | EU Blockchain & EU SSI Framework](helpful-concepts/ebsi-essif/README.md)
+  * [EBSI/ESSIF | Basics](helpful-concepts/ebsi-essif/ebsi-essif-or-basics.md)
+  * [Use Cases & Flow Diagrams](helpful-concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
+* [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
+  * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
+  * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
 
 ## Usage / Examples
 

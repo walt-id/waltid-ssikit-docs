@@ -15,5 +15,5 @@ Refer also to our **web wallet documentation**, for an example of an actual end-
 {% endhint %}
 
 {% content-ref url="https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/" %}
-[Wallet](https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/)
+[Wallet Kit](https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/)
 {% endcontent-ref %}

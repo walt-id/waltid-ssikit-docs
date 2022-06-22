@@ -24,4 +24,4 @@ The Open Policy Agent processes the verification request and returns the result 
 
 ## Example VC validation with the Open Policy Agent
 
-See the [Dynamic Verification Policies](../concepts/verification-policies/#dynamic-policies) section for a full example of verifying credentials with a Rego/OPA policy.
+See the [**Dynamic Verification Policies**](../concepts/verification-policies/dynamic-policies.md) section for a full example of verifying credentials with a Rego/OPA policy.
