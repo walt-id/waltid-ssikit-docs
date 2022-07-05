@@ -110,7 +110,7 @@ VCs typically contain at least:
 * the recipient’s identity attributes (e.g. name, age, address, …)
 * the signature of Issuer (also called “proof”) other information (e.g. semantic contexts, issuance date, evidence related to the issuance process, references to external VC data models/templates)
 
-Here is an illustrative **example of a Verifiable Credential (VCs)**:
+Here is an illustrative **example of a Verifiable Credential**:
 
 ```json
 {
@@ -160,7 +160,7 @@ Here is an illustrative **example of a Verifiable Credential (VCs)**:
 }
 ```
 
-#### **Verifiable Presentations (VPs)**
+#### **Verifiable Presentations**
 
 **VPs** are composed and signed by “Holders”. They can **contain identity information from one or multiple VCs** and are created for the purpose of presenting them to a “Verifier”. In other words, VPs are the format with which the contents of VCs are shared by the person or organization that is described by the VCs.
 

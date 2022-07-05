@@ -9,4 +9,4 @@ The SSI Kit supports W3C Verifiable Credentials in different formats:
 
 _Note that we are continuously adding support for new VC types and formats._
 
-You can learn more about VCs [here](../../what-is-ssi/technologies-and-concepts.md).
+You can learn more about VCs [here](verifiable-credentials-vcs.md).
