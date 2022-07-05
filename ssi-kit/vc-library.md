@@ -10,5 +10,5 @@ The following command prints all credential templates which are currently mainta
 
 `docker run -itv $(pwd)/data:/app/data waltid/ssikit:latest vc templates list`
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
