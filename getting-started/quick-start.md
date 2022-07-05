@@ -6,9 +6,9 @@ description: Getting started with the SSI Kit.
 
 There are different ways to get started in using the SSI Kit.
 
-* Docker: Quick way to launch and try out the latest builds. No build environment required.
-* Local Build: Build and run the SSI Kit locally. Requires a JDK 16 build environment including, Gradle.
-* Dependency (JVM): The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
+* **Docker**: Quick way to launch and try out the latest builds. No build environment required.
+* **Local Build**: Build and run the SSI Kit locally. Requires a JDK 16 build environment including, Gradle.
+* **Dependency (JVM)**: The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
 
 **CLI Tool**: The SSI Kit comes with a **** command-line interface (CLI) tool, which offers a rich set of commands to run the entire functionality the SSI Kit provides. The CLI tool can be used by running the Docker container or the executable by the local build.
 
