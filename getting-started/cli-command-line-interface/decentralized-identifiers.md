@@ -81,4 +81,4 @@ Use the `delete` command to delete a DID:
 
 E.g. `did delete -d "did:ebsi:zs79GYJvzEnQYxkAAj4UX1j"`
 
-![](<../../.gitbook/assets/image (14).png>)
+![](<../../.gitbook/assets/image (14) (1).png>)

@@ -21,7 +21,7 @@ All commands have the help option available:
 
 E.g. `key gen -h`
 
-![Generate key help command output](<../../.gitbook/assets/image (10).png>)
+![Generate key help command output](<../../.gitbook/assets/image (10) (1).png>)
 
 ### Generate key
 
@@ -81,7 +81,7 @@ Ed25519 JWK public key
 
 Secp256k1 PEM key
 
-![Secp256k1 key PEM input](<../../.gitbook/assets/image (7).png>)
+![Secp256k1 key PEM input](<../../.gitbook/assets/image (7) (1).png>)
 
 `key import ./secp256k1.pem`
 
@@ -127,7 +127,7 @@ E.g.
 
 `key export 17592087c6f04c358b9b813dbe2ef027 --priv`
 
-![Export output for JWK format private key](<../../.gitbook/assets/image (6).png>)
+![Export output for JWK format private key](<../../.gitbook/assets/image (6) (1).png>)
 
 ### Delete key
 
@@ -137,4 +137,4 @@ Use the `delete` command to delete a key with the specified ID:
 
 E.g. `key delete 17592087c6f04c358b9b813dbe2ef027`
 
-![Delete key output](<../../.gitbook/assets/image (1).png>)
+![Delete key output](<../../.gitbook/assets/image (1) (1).png>)
