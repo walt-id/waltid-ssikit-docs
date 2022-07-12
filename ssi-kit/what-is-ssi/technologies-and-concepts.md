@@ -40,7 +40,7 @@ The following section explains all concepts in more detail.
 Registries serve as a **single source of truth** which all participants of an SSI ecosystem can trust. Depending on the ecosystem, registries make information accessible to anyone or just a limited group. Registries are important because they enable:
 
 * **(Distributed) Public Key Infrastructures (DPKIs)** which establishes an open distribution system for public keys which can be used for encryption and authentication among others.
-* **Trust Registries** which contain reliable information about people, organizations, things and even credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
+* **Trust Registries** hold reliable information about people, organizations, things and even credentials (e.g. data models, status and validity information) to ensure that different parties can trust each other and the identity-related data they exchange.
 
 Different technologies can be used to implement Registries. For example:
 
