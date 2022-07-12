@@ -10,4 +10,4 @@ We currently support the following DID methods:
 
 _Note that we are continuously adding support for new DID methods._
 
-You can learn more about DIDs [here](../../../ssi-kit/what-is-ssi/technologies-and-concepts.md).
+You can learn more about DIDs [here](../../../ssi-kit/what-is-ssi/technologies-and-concepts/).
