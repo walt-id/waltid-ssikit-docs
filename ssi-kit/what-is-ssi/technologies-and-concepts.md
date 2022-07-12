@@ -6,7 +6,7 @@ description: Learn about the technologies and concepts on which SSI is based.
 
 Understanding SSI requires the understanding of a few core concepts:
 
-* **Registries**, which serve as a shared and trusted record of certain information. In other words, they serve as a “layer of trust” and a “single source of truth”.
+* **Registries** hold a shared and trusted record of information. In other words, they represent a “layer of trust” and can be referred to as the “single source of truth”.
 * **Cryptographic keys**, which convey control over digital identities and enable core functionality such as encryption and authentication.
 * **Decentralized Identifiers (DIDs)**, which establish a public key infrastructure by linking keys to unique identifiers that allow different parties to find and interact with each other.
 * **Verifiable Credentials** **(VCs)** which are digital identity documents that can easily and securely be shared with and verified (incl. validity, integrity, authenticity, provenance) by anyone in a privacy preserving way. Importantly, they are never (!) stored on a blockchain due to privacy and compliance reasons.
