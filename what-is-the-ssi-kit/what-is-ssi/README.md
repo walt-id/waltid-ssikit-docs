@@ -2,7 +2,7 @@
 description: Learn about Self-Sovereign Identity (SSI).
 ---
 
-# Self-Sovereign Identity
+# Self-Sovereign Identity (SSI)
 
 Welcome to our Introduction to Self-Sovereign Identity (SSI) for developers and technical readers.
 

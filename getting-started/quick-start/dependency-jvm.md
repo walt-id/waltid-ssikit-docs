@@ -1,8 +1,8 @@
 # Dependency (JVM)
 
-The SS Kit can also be used as direct dependency for JVM-based applications. In this case an existing application can easily be enhanced with SSI functionality.
+The SSI Kit can also be used as direct dependency for JVM-based applications. In this case an existing application can easily be enhanced with SSI functionality.
 
-The following illustrates how the SS Kit can be used via Gradle or Maven (look for the current version on GitHub [https://github.com/walt-id/waltid-ssikit](https://github.com/walt-id/waltid-ssikit))
+The following illustrates how the SSI Kit can be used via Gradle or Maven (look for the current version on GitHub [https://github.com/walt-id/waltid-ssikit](https://github.com/walt-id/waltid-ssikit))
 
 **Gradle**
 

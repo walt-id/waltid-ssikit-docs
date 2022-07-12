@@ -11,4 +11,4 @@ The SSI Kit supports:
 
 _Note that we are continuously adding support for new Registries and underlying technologies._
 
-&#x20;**** You can learn more about Trust Registries [here](../../what-is-ssi/technologies-and-concepts.md).
+&#x20;**** You can learn more about Trust Registries [here](../../../ssi-kit/what-is-ssi/technologies-and-concepts.md).

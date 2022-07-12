@@ -18,7 +18,7 @@ Creating a key (the key-id is used in the next command)
 ./ssikit.sh key gen -a Secp256k1
 ```
 
-Creating a DID. In this case a did:ebsi is created, which can be registered on the EBSI block chain (see [usage-examples](../usage-examples/ "mention")).
+Creating a DID. In this case a did:ebsi is created, which can be registered on the EBSI block chain (see [usage-examples.md](../ebsi-essif/usage-examples.md "mention")).
 
 ```
 ./ssikit.sh did create -m ebsi -k <key-id>
