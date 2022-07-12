@@ -10,6 +10,7 @@ Understanding SSI requires the understanding of a few core concepts:
 * **Cryptographic keys**, which convey control over digital identities and enable core functionality such as encryption and authentication.
 * **Decentralized Identifiers (DIDs)**, which give us the power of verifying information, for example credentials, anywhere, anytime, through the establishment of a public key infrastructure. They link keys to unique identifiers that allow different parties to find and interact with each other.
 * **Verifiable Credentials** **(VCs)** which are digital identity documents that can easily and securely be shared with and verified (incl. validity, integrity, authenticity, provenance) by anyone in a privacy preserving way. Importantly, they are never (!) stored on a blockchain due to privacy and compliance reasons.
+* **Verifiable Presentations (VPs)**, contain identity data for verification from one or multiple VCs and are mainly created by the holder of the VCs.
 * **Protocols** enable the exchange of data (VCs) between different parties.&#x20;
 * **Wallets**, which store our keys (control) and VCs (identity data) and enable the management and sharing of our digital identities and data via easy-to-use applications.
 
