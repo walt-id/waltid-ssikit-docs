@@ -14,7 +14,9 @@ A variety of “**DID methods**'', which are different implementations of the DI
 
 For example, while DIDs are often anchored on Registries, such as EBSI (did:ebsi) or the Domain Name Service (did:web), new methods emerged that do not require Registries because their distribution is based on peer-to-peer interactions (e.g. did:key).
 
-As example, the identifier _did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFvGD5y_ of the method **did:ebsi** would resolve to the following DID document:
+#### Example (did:ebsi)
+
+&#x20;The identifier _`did:ebsi:2A9RkiYZJsBHT1nSB3HZAwYMNfgM7Psveyodxrr8KgFvGD5y`_ of the method **did:ebsi** would resolve to the following DID document:
 
 ```json
 {
