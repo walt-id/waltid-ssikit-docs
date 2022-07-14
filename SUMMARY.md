@@ -50,6 +50,7 @@
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
   * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
   * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem.md)
+* [Demo](getting-started/demo.md)
 
 ## Concepts
 
