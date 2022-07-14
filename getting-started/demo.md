@@ -5,14 +5,14 @@ The demo shows an end-to-end SSI use case from the perspective of an individual 
 **Issuer Portal:** Shows issuance of Verifiable Credentials (VCs) to a Holder’s wallet.
 
 1. Visit our [Issuer Portal](https://issuer.walt.id/).
-2. Create an account.
-3. Select and request a VC.
+2. Click on "Sign in". You do not need to input an email or a password.
+3. Select and "confirm" your Verifiable Credential (VC) claim.
 
 **Wallet:** Shows the receipt and management of VCs by a Holder.
 
 1. Create an account / log into an existing account _(after being redirected from the Issuer Portal)._
-2. Accept the connection request (from the Issuer Portal).
-3. Review and accept the VCs.
+2. Accept the connection request (from the Issuer Portal), by clicking on "share".
+3. Review and accept the Verifiable Credential (VC).
 
 **Verifier Portal:** Shows the presentation of VCs by Holder in order to authenticate or identify towards a Relying Party (Verifier).
 
