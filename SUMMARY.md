@@ -54,16 +54,16 @@
 
 ## Concepts
 
-* [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
-  * [Static Policies](concepts/verification-policies/static-policies.md)
-  * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
-  * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
 * [EBSI & ESSIF | EU Blockchain & EU SSI Framework](helpful-concepts/ebsi-essif/README.md)
   * [EBSI/ESSIF | Basics](helpful-concepts/ebsi-essif/ebsi-essif-or-basics.md)
   * [Use Cases & Flow Diagrams](helpful-concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
   * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
+* [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
+  * [Static Policies](concepts/verification-policies/static-policies.md)
+  * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
+  * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
 
 ## Usage / Examples
 
