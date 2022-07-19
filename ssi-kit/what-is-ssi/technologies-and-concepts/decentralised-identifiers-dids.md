@@ -79,7 +79,7 @@ A variety of “**DID methods**'', which are different implementations of the DI
 
 For example, while DIDs are often anchored on Registries, such as EBSI (did:ebsi) or the Domain Name Service (did:web), new methods emerged that do not require Registries because their distribution is based on peer-to-peer interactions (e.g. did:key).
 
-Now we can take any did, look at the method and resolve it based on the framework around the method. The resolved content will most of the time be **JSON** or **JSON-LD**, although other data formats might also be added in the future. The resolved contented is called **DID Document**.&#x20;
+Now we can take any did, look at the method and resolve it based on the framework around the method. The resolved content will most of the time be **JSON** or **JSON-LD**, although other data formats might also be added in the future. The resolved content is called **DID Document**.&#x20;
 
 
 
@@ -143,5 +143,5 @@ The identifier _<mark style="color:blue;">`did`</mark>`:`<mark style="color:purp
 
 
 {% hint style="info" %}
-aOur open source products enable you to use different DID methods for different identity ecosystems. Every relevant functionality (e.g. generation, anchoring, resolution) is supported .
+Our open source products enable you to use different DID methods for different identity ecosystems. Every relevant functionality (e.g. generation, anchoring, resolution) is supported .
 {% endhint %}
