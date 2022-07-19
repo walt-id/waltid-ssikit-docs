@@ -25,3 +25,7 @@ or with Docker:
 * Custodian API: http://127.0.0.1:7002
 * Auditor API: http://127.0.0.1:7003
 * ESSIF API: http://127.0.0.1:7004
+
+{% hint style="info" %}
+The Core API exposes most of the funtionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
+{% endhint %}
