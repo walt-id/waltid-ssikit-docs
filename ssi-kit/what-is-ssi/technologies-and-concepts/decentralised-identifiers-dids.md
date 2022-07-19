@@ -97,7 +97,7 @@ A container of information holding:
 
 **Cryptographic data**
 
-* RSA, various elliptical curve keys, etc. (public keys). Those can be expressed using JWT or with DID specific terms and which will be used for authentication, verification or other use cases which would utilize public keys.
+* The DID document contains the public keys of the corresponding entity. The keys might be of any algorithm (typically elliptical curve keys or RSA keys are used), and are mostly encoded in the JWK format. However, other encoding formats such as PEM or Multibase are also supported. The keys can be classified to be used in certain use cases such as: authentication, verification, etc.
 
 **Service endpoints**
 
