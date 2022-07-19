@@ -8,7 +8,9 @@ This sections outlines the APIs of the SSI Kit:
 * Core API
 * ESSIF Connector API
 
-In order to review the Swagger doc of each API, run the **serve** command of the CLI tool and navigate to the corresponding web pages:
+To review the Swagger doc of each API, you can either use the API which is [general available](https://core.ssikit.walt-test.cloud/) to get an overview of the different endpoints or run the project locally: &#x20;
+
+&#x20;run the **serve** command of the CLI tool and navigate to the corresponding web pages:
 
 ```
     ./ssikit.sh serve
