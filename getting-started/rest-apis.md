@@ -18,7 +18,9 @@ To review the Swagger doc of each API, you can either use the API which is gener
 | Core API       | http://127.0.0.1:7000 | [https://core.ssikit.walt-test.cloud/](https://core.ssikit.walt-test.cloud/)           |
 | ESSIF API      | http://127.0.0.1:7004 | [https://essif.ssikit.walt-test.cloud/](https://essif.ssikit.walt-test.cloud/)         |
 
-
+{% hint style="info" %}
+The Core API exposes most of the funtionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
+{% endhint %}
 
 To have it locally served, run the **serve** command of the CLI tool and navigate to the corresponding web pages:
 
@@ -32,7 +34,3 @@ or with Docker:
     docker run -itv $(pwd)/data:/app/data -p 7000-7004:7000-7004 waltid/ssikit -v serve -b 0.0.0.0
     
 ```
-
-{% hint style="info" %}
-The Core API exposes most of the funtionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
-{% endhint %}
