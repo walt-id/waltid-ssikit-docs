@@ -1,28 +1,76 @@
 # CLI | Command Line Interface
 
-The CLI allows running the entire functionality of the SSI Kit by executing individual commands.&#x20;
 
-The CLI can be used by the JVM as well as in the Docker runtime.&#x20;
 
-It is recommended to use the alias "**ssikit"** to easily run the CLI tool. This alias will also be used throughout in the documentation .
+### Installation & Running the Project
 
-Setting the alias for Docker:
+Make sure you have Docker or a JDK 16 build environment including Gradle installed on your machine
+
+{% tabs %}
+{% tab title="Docker" %}
+1. Pulling the project directly from DockerHub
 
 ```
 alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"
 ```
 
-Setting alias for the JVM runtime (wrapper script):
+
+
+2\. Getting an overview of the commands and options available
+
+```
+ssikit -h
+```
+{% endtab %}
+
+{% tab title="Local" %}
+1. Clone the project
+
+```
+git clone https://github.com/walt-id/waltid-ssikit.git
+```
+
+
+
+2\. Change the folder
+
+```
+cd waltid-ssikit/
+```
+
+
+
+3\. Run the project&#x20;
+
+The first time you run the command you will be asked to built the project. You can confirm the prompt.
+
+```
+./ssikit.sh -h
+```
+
+You will now see an overview of all the different commands and options available.
+
+
+
+4\. Set an alias
+
+To make it more convient to use, you can also set an alias as follows for the wrapper script:
 
 ```
 alias ssikit="./ssikit.sh"
 ```
 
-Consequently the following help command provides an overview of the whole function set:
+
+
+5\. Get the overview again
 
 ```
 ssikit -h
 ```
+{% endtab %}
+{% endtabs %}
+
+### Response configuration
 
 For debug infos add "-v" e.g.:
 
