@@ -37,6 +37,7 @@
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
+  * [API Service](getting-started/cli-command-line-interface/api-service.md)
   * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
   * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem.md)
 * [REST API](getting-started/rest-apis.md)
