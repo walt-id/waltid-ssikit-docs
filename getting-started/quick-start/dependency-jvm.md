@@ -27,4 +27,4 @@ https://maven.walt.id/repository/waltid/
 https://maven.walt.id/repository/waltid-ssi-kit/
 ```
 
-If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to the [building the project](build/).
+If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to [building the project](../build.md).

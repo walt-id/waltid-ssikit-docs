@@ -4,7 +4,7 @@ For building the project **Gradle 7** as well as **JDK 16 (or above)** is requir
 
 ## Building the project:
 
-1. [Docker](docker.md)
-2. [Local](local-build.md)
+1. [Docker](quick-start/docker.md)
+2. [Local](quick-start/build/local-build.md)
 
 ****

@@ -1,4 +1,4 @@
-# REST APIs
+# REST API
 
 ### Installation & Running the Project
 
@@ -38,7 +38,7 @@ The first time you run the command you will be asked to built the project. You c
 {% endtab %}
 {% endtabs %}
 
-If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to the [building the project](build/).
+If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to [building the project](build.md).
 
 After successfully running the project, you will have the endpoints, described below, available for use. Make sure to get a general overview of the functionality exposed by each endpoint by visiting the URL and inspecting the swagger docs hosted thereunder. You can also use the publicly hosted version on walt.id for reference.
 
