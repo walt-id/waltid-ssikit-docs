@@ -5,6 +5,16 @@
 Make sure you have Docker or a JDK 16 build environment including Gradle installed on your machine
 
 {% tabs %}
+{% tab title="Docker" %}
+Pull the docker container directly from docker hub and run the project
+
+```
+docker run -itv $(pwd)/data:/app/data waltid/ssikit serve
+```
+
+This will create a folder called data in your current directory as storge for the VC, DIDs, Keys and other things which need to be stored in order to provide all the fuctionality.
+{% endtab %}
+
 {% tab title="Local" %}
 1. Clone the project
 
@@ -26,27 +36,15 @@ The first time you run the command you will be asked to built the project. You c
 ./ssikit.sh serve 
 ```
 {% endtab %}
-
-{% tab title="Docker" %}
-Pull the docker container directly from docker hub and run the project
-
-```
-docker run -itv $(pwd)/data:/app/data waltid/ssikit serve
-```
-
-This will create a folder called data in your current directory as storge for the VC, DIDs, Keys and other things which need to be stored in order to provide all the fuctionality.
-{% endtab %}
 {% endtabs %}
 
-
+If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to the [building the project](build/).
 
 After successfully running the project, you will have the endpoints, described below, available for use. Make sure to get a general overview of the functionality exposed by each endpoint by visiting the URL and inspecting the swagger docs hosted thereunder. You can also use the publicly hosted version on walt.id for reference.
 
 
 
 **Exposed endpoints:**
-
-
 
 | Type           | Locally               | General Available                                                                      |
 | -------------- | --------------------- | -------------------------------------------------------------------------------------- |

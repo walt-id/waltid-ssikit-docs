@@ -33,23 +33,23 @@
 ## Getting started
 
 * [Quick Start](getting-started/quick-start.md)
-  * [Build](getting-started/build.md)
-    * [Docker Build](getting-started/quick-start/docker.md)
-    * [Local Build](getting-started/quick-start/build/local-build.md)
-  * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
-  * [Configuration](getting-started/configuration.md)
 * [REST APIs](getting-started/rest-apis.md)
   * [Signatory API](getting-started/rest-apis/signatory-api.md)
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [Core API](getting-started/rest-apis/core-api.md)
   * [ESSIF API](getting-started/rest-apis/essif-api.md)
+* [Dependency (JVM)](getting-started/dependency-jvm.md)
 * [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
   * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
   * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem.md)
+* [Build](getting-started/build/README.md)
+  * [Docker Build](getting-started/build/docker.md)
+  * [Local Build](getting-started/build/local-build.md)
+* [Configurations](getting-started/configuration.md)
 * [Demo](getting-started/demo.md)
 
 ## Concepts

@@ -70,6 +70,8 @@ ssikit -h
 {% endtab %}
 {% endtabs %}
 
+If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to the [building the project](build/).
+
 ### Response configuration
 
 For debug infos add "-v" e.g.:

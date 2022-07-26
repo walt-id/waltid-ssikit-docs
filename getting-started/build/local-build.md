@@ -2,6 +2,15 @@
 
 For building the project **JDK 16+** is required.
 
+## Downloading the Project
+
+First clone the Git repo and switch into the project folder:
+
+```
+git clone https://github.com/walt-id/waltid-ssikit.git
+cd waltid-ssikit/
+```
+
 ## **Wrapper**
 
 The walt.id wrapper script **ssikit.sh** is a convenient way for building and using the library on **Linux**.
