@@ -104,5 +104,11 @@ ssikit vc verify -p data/vc/presented/vp-1614291892489.json
 
 
 
-###
+### Components
+
+You can now dive deeper into the different components forming the SSI Kit and their functionality provided:
+
+* [Key Management](cli-command-line-interface/key-management.md)
+* [Decentralized Identifiers](cli-command-line-interface/decentralized-identifiers.md)
+* [Verifiable Credentials](cli-command-line-interface/verifiable-credentials.md)
 
