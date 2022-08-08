@@ -1,19 +1,31 @@
 # Verifiable Presentations (VPs)
 
-Verifiable Presentations (VPs) are digital credentials that **contain actual identity data** of people or organizations and are standardized by the [W3C](https://www.w3.org/TR/vc-data-model/).
+A Verifiable Presentation (VP) is a collection from one or more Verifiable Credentials, whereas the authorship of the whole collection can be cryptographically verified. VPs are standardized as part of the [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/#presentations).
+
+## Why do we need Verifiable Presentations?
+
+Verifiable Credentials introduced credentials which are tamper-evident, easy to verify and privacy preserving by design. Verifiable Presentations make sure to take the idea of privacy even a step further, by giving us a way to only reveal the required data to make a transaction work with a service/product provider (verifier). Therefore, Alice can share in a Verifiable Presentation only her name and address with an e-commerce shop, so they can send her the package, but she doesn't have to share her birthday and other information present in her digital ID (Verifiable Credential).
+
+Another great benefit of Verifiable Presentations is, that they can compress multiple Verifiable Credentials into one verifiable document. Thereby, eliminating the need for different flows and multiple transactions. For example, a service provider could require a proof of employment, the address and a bank statement from Bob to give him access to the service. To provide this information, Bob might need to share multiple Verifiable Credentials, as none of them holds all the data. With the Verifiable Presentation, the data could be gathered from multiple Verifiable Credentials in your wallet and be composed into one shareable and verifiable document.
 
 
 
-**VPs** are composed and signed by “Holders”. They can **contain identity information from one or multiple VCs** and are created for the purpose of presenting them to a “Verifier”. In other words, VPs are the format with which the contents of VCs are shared by the person or organization that is described by the VCs.
+## How Verifiable Presentations are composed?
 
-For example, a graduate presents a VP to an employer that contains information from her digital passport and diplomas.&#x20;
+Verifiable Presentations represent a composition of claims, which can come from one or multiple Verifiable Credentials, of which the authorship is verified. This gives the holder of credentials the chance of composing context specify presentations, which only contain the data which is relevant in that context. When presenting the composition to a verifier, it can easily be validated.
 
-VPs typically contain at least:
+Taking a closer look at how they are built up. We will see four different layers:
 
-* VCs or parts of VCs (individual attributes)
-* the recipient’s signature (to ensure so-called “Holder binding”)
+1. Being the Verifiable Presentation itself with the required metadata
+2. Referenced by layer one, holding all the relevant credential metadata and claims
+3. Holding the proofs of the credentials and their signatures
+4. Holding the proof of the Verifiable Presentation and its signatures
 
-Here is an illustrative **example of a Verifiable Presentation**:
+![](<../../../.gitbook/assets/Verifiable Presentation Overview (3).jpg>)
+
+### Example of a Verifiable Presentation in code
+
+If you want to get a better understanding of the different attributes present, please visit our section about [VCs](https://docs.walt.id/v/idpkit/concepts/identity-provision-via-nfts#nft\_token-scope).
 
 ```json
 {
