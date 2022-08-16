@@ -12,16 +12,16 @@ Another great benefit of Verifiable Presentations is, that they can compress mul
 
 ## How Verifiable Presentations are composed?
 
-Verifiable Presentations represent a composition of claims, which can come from one or multiple Verifiable Credentials, of which the authorship is verified. This gives the holder of credentials the chance of composing context specify presentations, which only contain the data which is relevant in that context. When presenting the composition to a verifier, it can easily be validated.
+**Verifiable Presentations** represent a composition of claims, which can come from one or multiple Verifiable Credentials, of which the authorship is verified. This **gives the holder of credentials the chance of composing context specify presentations**, which only contain the data which is relevant in that context. When presenting the composition to a verifier, it can easily be validated.
 
 Taking a closer look at how they are built up. We will see four different layers:
 
-1. Being the Verifiable Presentation itself with the required metadata
-2. Referenced by layer one, holding all the relevant credential metadata and claims
-3. Holding the proofs of the credentials and their signatures
-4. Holding the proof of the Verifiable Presentation and its signatures
+* **Layer 1 -**  Being the Verifiable Presentation itself with the required metadata
+* **Layer 2 -** Referenced by Layer 1 and pointing to one or more credentials
+* **Layer 3 -** Holding the proofs of the credentials and the signatures from Layer 2
+* **Layer 4 -** Holding the proof of the Verifiable Presentation and its signatures
 
-![](<../../../.gitbook/assets/Verifiable Presentation Overview (3).jpg>)
+![](<../../../.gitbook/assets/Verifiable Presentation Overview (1).jpg>)
 
 ### Example of a Verifiable Presentation in code
 
