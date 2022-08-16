@@ -16,10 +16,10 @@ Another great benefit of Verifiable Presentations is, that they can compress mul
 
 Taking a closer look at how they are built up. We will see four different layers:
 
-* **Layer 1 -**  Being the Verifiable Presentation itself with the required metadata
-* **Layer 2 -** Referenced by Layer 1 and pointing to one or more credentials
-* **Layer 3 -** Holding the proofs of the credentials and the signatures from Layer 2
-* **Layer 4 -** Holding the proof of the Verifiable Presentation and its signatures
+1. **Presentation Layer  -**  Being the Verifiable Presentation itself with the required metadata
+2. **Credential Layer -** Referenced by Layer 1 and pointing to one or more credentials
+3. **Credential Proof Layer -** Holding the proofs of the credentials and the signatures from Layer
+4. **Presentation Proof Layer -** Holding the proof of the Verifiable Presentation and its signatures
 
 ![](<../../../.gitbook/assets/Verifiable Presentation Overview (1).jpg>)
 
