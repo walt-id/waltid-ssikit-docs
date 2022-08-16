@@ -4,11 +4,7 @@ A Verifiable Presentation (VP) is a collection from one or more Verifiable Crede
 
 ## Why do we need Verifiable Presentations?
 
-Verifiable Credentials introduced credentials which are tamper-evident, easy to verify and privacy preserving by design. Verifiable Presentations make sure to take the idea of privacy even a step further, by giving us a way to only reveal the required data to make a transaction work with a service/product provider (verifier). Therefore, Alice can share in a Verifiable Presentation only her name and address with an e-commerce shop, so they can send her the package, but she doesn't have to share her birthday and other information present in her digital ID (Verifiable Credential).
-
-Another great benefit of Verifiable Presentations is, that they can compress multiple Verifiable Credentials into one verifiable document. Thereby, eliminating the need for different flows and multiple transactions. For example, a service provider could require a proof of employment, the address and a bank statement from Bob to give him access to the service. To provide this information, Bob might need to share multiple Verifiable Credentials, as none of them holds all the data. With the Verifiable Presentation, the data could be gathered from multiple Verifiable Credentials in your wallet and be composed into one shareable and verifiable document.
-
-
+Verifiable Presentations, make it possible to combine and tamper-evident share data of one or more Verifiable Credentials. The shared presentation of the data will be encoded in such a way that authorship of the data can be trusted after a process of cryptographic verification. In situations where only a subset of the original Verifiable Credential data is reveled, for example, to enhance user privacy, [Zero-Knowledge Proofs](https://www.w3.org/TR/vc-data-model/#zero-knowledge-proofs) can help us keep that data verifiable.
 
 ## How Verifiable Presentations are composed?
 
