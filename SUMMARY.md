@@ -92,8 +92,8 @@
 
 ## CONTACT & DEVELOPER RELATIONS
 
+* [Join The Community](contact-and-developer-relations/join-the-community.md)
 * [Product & Dev Roadmap](contact-and-developer-relations/developer-relations.md)
-* [Influence the Roadmap](contact-and-developer-relations/influence-the-roadmap.md)
 * [Contribute](contact-and-developer-relations/contribute.md)
 * [Contact](contact-and-developer-relations/contact.md)
 
