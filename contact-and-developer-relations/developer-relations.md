@@ -6,7 +6,7 @@ description: Where you can find our product plans.
 
 Our product development process is public so that everyone can see what we are building. This way, we want to make it as easy as possible to
 
-* [influence our roadmap](https://github.com/walt-id/.github/discussions/2)
+* [influence our roadmap](influence-the-roadmap.md)
 * [contribute to our open source projects](contribute.md)
 
 You can find everything you need to know about our product and development plans in our _Roadmap_ and on our _Dev Board:_
