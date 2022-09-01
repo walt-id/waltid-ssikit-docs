@@ -1,6 +1,6 @@
 # Join The Community
 
-[Discord](https://discord.com/invite/zUnxncExF5) | [GitHub Discussions](https://github.com/walt-id/.github/discussions) | [Twitter](https://mobile.twitter.com/walt\_id)
+[Discord](https://discord.gg/AW8AgqJthZ) | [GitHub Discussions](https://github.com/walt-id/.github/discussions) | [Twitter](https://mobile.twitter.com/walt\_id)
 
 ## Why Join?
 
