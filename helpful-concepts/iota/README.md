@@ -37,7 +37,7 @@ This approach also facilitates portability of the wrapper library to all operati
 
 ## DID management
 
-For DID creation and management, the wrapper library implements a, interface method, called by the Iota Service component in the SSI Kit. 
+For DID creation and management, the wrapper library implements an interface method, called by the _IotaService_ component in the SSI Kit. 
 
 The public and private keys for creating the DID, should be managed by the SSI Kit and its key store abstraction layer, with support for various key store implementations (see also [Key management](#key-management) below).
 
