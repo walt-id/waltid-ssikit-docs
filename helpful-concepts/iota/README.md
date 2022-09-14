@@ -8,7 +8,7 @@ The [**IOTA identity framework**](https://wiki.iota.org/identity.rs/introduction
 
 In addition to the open standards for decentralized identity, the IOTA identity frameword implements a custom DID method, which needs to be supported by the walt.id SSI Kit to ensure compatibility.
 
-## Implementation overview
+## Integration overview
 
 Thanks to the use of W3C standards for DID documents and verifiable credentials, the SSI Kit is mostly compatible with the IOTA identity framework, with regards to DID documents and issuance/validation of verifiable credentials. Also the key type _Ed25519_, used in the IOTA framework is already supported by the SSI Kit.
 
