@@ -61,6 +61,6 @@ Thus, to be compatible with the credentials issued by the IOTA framework,the SSI
 
 ## DID documents and verification material
 
-To make the SSI Kit compatible with the DID documents created by the IOTA identity framework, it is required to support the multibase encoding of the verification material in the verification method objects, according to the latest [DID specification](https://www.w3.org/TR/did-core/#verification-material), as for the time being, and older version of said specification is implemented, using the Base58 encoding.
+To make the SSI Kit compatible with the DID documents created by the IOTA identity framework, it is required to support _Multibase_ encoding of the verification material in the verification method objects, according to the latest [DID specification](https://www.w3.org/TR/did-core/#verification-material), as for the time being, an older version of said specification is implemented, using _Base58_ encoding.
 
 Given the support of multibase encoded verification material, the DID documents should be fully compatible with the SSI Kit.
