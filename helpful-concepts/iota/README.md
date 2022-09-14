@@ -31,7 +31,7 @@ The following chart outlines the overall architecture of the integration between
 
 In order to overcome the native-to-managed-code gap between the IOTA identity framework libraries, written in Rust, and the SSI Kit in Kotlin/JVM, a wrapper library is implemented in Rust, which includes the IOTA libraries as a dependency and exposes a plain C-compatible application binary interface (ABI).
 
-The wrapper library can be loaded in Kotlin/JVM using the [JNR-FFI](https://github.com/jnr/jnr-ffi) abstracted foreign function layer library. The advantage compared to JNI (Java Native Interface) is that no Java-specific interface code needs to be written in the native wrapper library, such that the same library could be used from various other programming and scripting languages, that support loading of dynamic native libraries.
+The wrapper library can be loaded in Kotlin/JVM using the [JNR-FFI](https://github.com/jnr/jnr-ffi) abstracted foreign function layer library. The advantage compared to JNI (Java Native Interface) is that no Java-specific interface code needs to be written in the native wrapper library, such that the same library could be used from various other programming and scripting languages, that support loading of native dynamic libraries.
 
 This approach also facilitates portability of the wrapper library to all operating systems and platforms supported by the Rust compiler and the IOTA framework library.
 
