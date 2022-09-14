@@ -51,7 +51,7 @@ In order to be able to make full use of the SSI Kit together with the IOTA frame
 
 The SSI Kit provides a key store abstraction layer, that has support for various key store implementations, including an embedded key store and cryptography library, as well as cloud-based HSM stores, such as Azure key vault and the walt.id Storage Kit, a general-purpose distributed encrypted data store.
 
-In order to leverage the SSI Kit key store abstraction with the IOTA identity framework integration, we plan to implement a Key store mediator in the Rust wrapper library, that exposes the IOTA storage interface on the one hand, and communicates the signing or encryption/decryption requests to the SSI Kit via a native-to-managed callback function. The SSI Kit can then fulfill the cryptographic request using the configured key store implementation and hand back the result to the wrapper library and IOTA framework internals.
+In order to leverage the SSI Kit key store abstraction with the IOTA identity framework integration, we plan to implement a _key store mediator_ component in the Rust wrapper library, which exposes the IOTA [_storage interface_](https://wiki.iota.org/identity.rs/concepts/advanced/storage_interface) on the one hand, and, on the other hand, communicates the signing or encryption/decryption requests to the SSI Kit via a native-to-managed callback function. This _key store mediator_ can be passed to the _AccountBuilder_ as to storage interface to use for DID creation. The SSI Kit can then fulfill the cryptographic requests using the configured key store implementation and hand back the result to the wrapper library and IOTA framework internals.
 
 ## LD signature type
 
