@@ -11,12 +11,20 @@ Make sure you have Docker or a JDK 16 build environment including Gradle install
 1. Pulling the project directly from DockerHub
 
 ```
+docker pull waltid/ssiki
+```
+
+
+
+2\. Setting and alias for convenience
+
+```
 alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"
 ```
 
 
 
-2\. Getting an overview of the commands and options available
+3\. Getting an overview of the commands and options available
 
 ```
 ssikit -h
