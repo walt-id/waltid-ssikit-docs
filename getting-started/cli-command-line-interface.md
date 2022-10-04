@@ -11,7 +11,7 @@ Make sure you have Docker or a JDK 16 build environment including Gradle install
 1. Pulling the project directly from DockerHub
 
 ```
-docker pull waltid/ssiki
+docker pull waltid/ssikit
 ```
 
 
