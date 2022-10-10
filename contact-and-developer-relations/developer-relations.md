@@ -6,7 +6,7 @@ description: Where you can find our product plans.
 
 Our product development process is public so that everyone can see what we are building. This way, we want to make it as easy as possible to
 
-* [influence our roadmap](influence-the-roadmap.md)
+* [influence our roadmap](https://github.com/walt-id/.github/discussions/2)
 * [contribute to our open source projects](contribute.md)
 
 You can find everything you need to know about our product and development plans in our _Roadmap_ and on our _Dev Board:_
@@ -27,7 +27,7 @@ The _Roadmap_ in a nutshell:
 | **Perspective**     | High-level and functional (incl. key releases and benefits).                                          |
 | **Timeframe**       | Shows plans for the next 3 months.                                                                    |
 | **Update Cycle**    | Weekly (minor changes) and/or monthly (significant changes).                                          |
-| **Link**            | [GitHub](https://github.com/orgs/walt-id/projects/10/views/4)                                         |
+| **Link**            | [Notion](https://www.notion.so/fcde1687baab42378b3047d4a22eeaca?v=1140dd17c17b4726a70cc1465d20866d)   |
 
 ## The "Dev Board"
 
