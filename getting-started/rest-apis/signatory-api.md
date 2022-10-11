@@ -1,3 +1,379 @@
+---
+description: >-
+  Signatory REST API functions.
+---
 # Signatory API
+[Swagger](https://signatory.ssikit.walt.id/v1/swagger) | [Redoc](https://signatory.ssikit.walt.id/v1/redoc)
 
-The _Signatory API_ exposes the "issuance" endpoint, which provides flexible integration possibilities for anyone intending to act as an "Issuer" (i.e. create, sign and issue Verifiable Credentials).
+The _Signatory API_ exposes the "issuance" endpoint, which provides flexible integration possibilities for anyone intending to act as an "Issuer" (i.e. create, sign and issue Verifiable Credentials), as follows:
+* [Credentials](signatory-api.md#credentials) - issue credentials
+* [Templates](signatory-api.md#templates) - template related functions
+* [Revocations](signatory-api.md#revocations) - revocation related functions
+
+## Credentials
+The `/v1/credentials/issue` endpoint issues a specified credential.
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'POST' \
+  'https://signatory.ssikit.walt.id/v1/credentials/issue' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '<request-body>'
+```
+{% endtab %}
+{% tab title="Request body schema" %}
+```
+{
+    "templateId": "string",
+    "config":
+    {
+        "issuerDid": "string",
+        "subjectDid": "string",
+        "verifierDid": "string",
+        "issuerVerificationMethod": "string",
+        "proofType": "JWT",
+        "domain": "string",
+        "nonce": "string",
+        "proofPurpose": "string",
+        "credentialId": "string",
+        "issueDate": "2022-10-06T18:09:14.570Z",
+        "validDate": "2022-10-06T18:09:14.570Z",
+        "expirationDate": "2022-10-06T18:09:14.570Z",
+        "dataProviderIdentifier": "string"
+    },
+    "credentialData":
+    {
+        "additionalProp1":
+        {},
+        "additionalProp2":
+        {},
+        "additionalProp3":
+        {}
+    }
+}
+```
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+The issued credential displayed either in JSON-LD or JWT format
+```
+{% endtab %}
+{% endtabs %}
+
+E.g. Issue a `UniversityDegree` credential in the default JSON-LD format.
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'POST' \
+  'https://signatory.ssikit.walt.id/v1/credentials/issue' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "templateId": "UniversityDegree",
+    "config":
+    {
+        "issuerDid": "did:web:walt.id",
+        "subjectDid": "did:web:my.domain"
+    },
+    "credentialData":
+    {
+        "credentialSubject":
+        {
+            "degree":
+            {
+                "name": "Bachelor of Science and Arts",
+                "type": "BachelorDegree"
+            }
+        }
+    }
+}'
+```
+{% endtab %}
+{% tab title="Request body" %}
+```
+{
+    "templateId": "UniversityDegree",
+    "config":
+    {
+        "issuerDid": "did:web:walt.id",
+        "subjectDid": "did:web:my.domain"
+    },
+    "credentialData":
+    {
+        "credentialSubject":
+        {
+            "degree":
+            {
+                "name": "Bachelor of Science and Arts",
+                "type": "BachelorDegree"
+            }
+        }
+    }
+}
+```
+{% endtab %}
+{% tab title="Response body" %}
+```
+{
+    "@context":
+    [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1"
+    ],
+    "credentialSubject":
+    {
+        "degree":
+        {
+            "name": "Bachelor of Science and Arts",
+            "type": "BachelorDegree"
+        },
+        "id": "did:web:my.domain"
+    },
+    "id": "urn:uuid:d36986f1-3cc0-4156-b5a4-6d3deab84270",
+    "issued": "2022-10-07T09:53:41.369913097Z",
+    "issuer":
+    {
+        "id": "did:web:walt.id"
+    },
+    "validFrom": "2022-10-07T09:53:41.369917079Z",
+    "issuanceDate": "2022-10-07T09:53:41.369917079Z",
+    "type":
+    [
+        "VerifiableCredential",
+        "UniversityDegreeCredential"
+    ],
+    "proof":
+    {
+        "type": "Ed25519Signature2018",
+        "creator": "did:web:walt.id",
+        "created": "2022-10-07T09:53:41Z",
+        "domain": "https://api.preprod.ebsi.eu",
+        "nonce": "dc2be572-cca4-43dc-9903-0fec1dcf786f",
+        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..7EYkgjNRJ_hh0F5kONnPfrC4PLvg1g82czeANllDngsbk36a8lnHSlwersSqY0tdER4xIe7vbNVzi39C2DZTDQ"
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## Templates
+The currently available template functions are:
+* [list](signatory-api.md#list-templates) - display the list of Templates
+* [load](signatory-api.md#load-template) - display the content of the template having the specified `id`
+
+### List templates
+The `/v1/templates` endpoint returns the list of the available template `id`s
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/templates' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Request body schema" %}
+No parameter
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+[
+    "string"
+]
+```
+{% endtab %}
+{% endtabs %}
+
+E.g. List the templates
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/templates' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Response body" %}
+```
+[
+    "DataSelfDescription",
+    "VerifiableDiploma",
+    "VerifiableVaccinationCertificate",
+    "LegalPerson",
+    "VerifiableAuthorization",
+    "Europass",
+    "KybMonoCredential",
+    "KycCredential",
+    "VerifiableMandate",
+    "VerifiablePresentation",
+    "EuropeanBankIdentity",
+    "KybCredential",
+    "VerifiableAttestation",
+    "OpenBadgeCredential",
+    "PeerReview",
+    "DataConsortium",
+    "ProofOfResidence",
+    "AmletCredential",
+    "ParticipantCredential",
+    "PermanentResidentCard",
+    "UniversityDegree",
+    "VerifiableId",
+    "DataServiceOffering",
+    "GaiaxCredential",
+    "Iso27001Certificate"
+]
+```
+{% endtab %}
+{% endtabs %}
+
+### Load template
+The `/v1/templates/{id}` endpoint displays the content of the template having the parameters:
+* id path parameter (required) - `id` of the template
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/templates/{id}' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Request body schema" %}
+No parameter
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+The template content as JSON
+```
+{% endtab %}
+{% endtabs %}
+
+E.g. Load the template for the `id` set to _UniversityDegree_.
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/templates/UniversityDegree' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Response body" %}
+```
+{
+    "@context":
+    [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1"
+    ],
+    "credentialSubject":
+    {
+        "degree":
+        {
+            "name": "Bachelor of Science and Arts",
+            "type": "BachelorDegree"
+        },
+        "id": "did:example:123"
+    },
+    "id": "http://example.gov/credentials/3732",
+    "issued": "2020-03-10T04:24:12.164Z",
+    "issuer":
+    {
+        "id": "did:example:456"
+    },
+    "type":
+    [
+        "VerifiableCredential",
+        "UniversityDegreeCredential"
+    ]
+}
+```
+{% endtab %}
+{% endtabs %}
+
+## Revocations
+The following functions are availabel for revocations:
+* [check](signatory-api.md#check-revocation) - checks if a credential is revoked based on revocation token
+* [revoke](signatory-api.md#revoke) - revokes a credential
+
+### Check revocation
+The `/v1/revocations/{id}` endpoint checks if the specified token is revoked. The parameters are as follows:
+* id path parameter (required) - the derived revocation token id
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/revocations/{id}' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Request body schema" %}
+No parameters.
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+{
+    "token": "string",
+    "isRevoked": true,
+    "timeOfRevocation": 0
+}
+```
+{% endtab %}
+{% endtabs %}
+
+E.g. Check the revocation status for derived token id _WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA_
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'GET' \
+  'https://signatory.ssikit.walt.id/v1/revocations/WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA' \
+  -H 'accept: application/json'
+```
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+{
+    "isRevoked": false,
+    "token": "WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Revoke
+The `/v1/revocations/{id}` revokes a credential with the specified delegated revocation token as parameter:
+* id path parameter (required) - the base token id
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'POST' \
+  'https://signatory.ssikit.walt.id/v1/revocations/{id}' \
+  -H 'accept: text/plain'
+```
+{% endtab %}
+{% tab title="Request body schema" %}
+No parameters.
+{% endtab %}
+{% tab title="Response body schema" %}
+```
+Code 201
+```
+{% endtab %}
+{% endtabs %}
+
+E.g. Revoke a credential with the base revocation token equal to _d36986f1-3cc0-4156-b5a4-6d3deab84270d36986f1-3cc0-4156-b5a4-6d3deab84270_
+
+{% tabs %}
+{% tab title="curl" %}
+```
+curl -X 'POST' \
+  'https://signatory.ssikit.walt.id/v1/revocations/d36986f1-3cc0-4156-b5a4-6d3deab84270d36986f1-3cc0-4156-b5a4-6d3deab84270' \
+  -H 'accept: text/plain'
+```
+{% endtab %}
+{% endtabs %}

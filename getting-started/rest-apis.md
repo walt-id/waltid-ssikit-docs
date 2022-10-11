@@ -48,11 +48,11 @@ After successfully running the project, you will have the endpoints, described b
 
 | Type           | Locally               | General Available                                                                      |
 | -------------- | --------------------- | -------------------------------------------------------------------------------------- |
-| Signatory API  | http://127.0.0.1:7001 | [https://signatory.ssikit.walt-test.cloud/](https://signatory.ssikit.walt-test.cloud/) |
-| Custodian API  | http://127.0.0.1:7002 | [https://custodian.ssikit.walt-test.cloud/](https://custodian.ssikit.walt-test.cloud/) |
-| Auditor API    | http://127.0.0.1:7003 | [https://auditor.ssikit.walt-test.cloud/](https://auditor.ssikit.walt-test.cloud/)     |
-| Core API       | http://127.0.0.1:7000 | [https://core.ssikit.walt-test.cloud/](https://core.ssikit.walt-test.cloud/)           |
-| ESSIF API      | http://127.0.0.1:7004 | [https://essif.ssikit.walt-test.cloud/](https://essif.ssikit.walt-test.cloud/)         |
+| Signatory API  | http://127.0.0.1:7001 | [https://signatory.ssikit.walt.id/](https://signatory.ssikit.walt.id/) |
+| Custodian API  | http://127.0.0.1:7002 | [https://custodian.ssikit.walt.id/](https://custodian.ssikit.walt.id/) |
+| Auditor API    | http://127.0.0.1:7003 | [https://auditor.ssikit.walt.id/](https://auditor.ssikit.walt.id/)     |
+| Core API       | http://127.0.0.1:7000 | [https://core.ssikit.walt.id/](https://core.ssikit.walt.id/)           |
+| ESSIF API      | http://127.0.0.1:7004 | [https://essif.ssikit.walt.id/](https://essif.ssikit.walt.id/)         |
 
 {% hint style="info" %}
 The Core API exposes most of the funtionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
