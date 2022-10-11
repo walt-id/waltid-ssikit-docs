@@ -288,7 +288,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import key
-The `/keys/import` endpoint imports the key string specified in either `JWK` or `PEM` format.
+The `/keys/import` endpoint imports a key (_JWK_ or _PEM_ format) to the underlying keystore.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -301,7 +301,7 @@ curl -X 'POST' \
 ```
 {% endtab %}
 {% tab title="Request body schema" %}
-The key string in JWK or PEM format.
+The key string in JWK or PEM format
 {% endtab %}
 {% tab title="Response body schema" %}
 ```
@@ -405,12 +405,12 @@ curl -X 'POST' \
 {% endtab %}
 {% tab title="Response body schema" %}
 ```
-The key string in the specified format, JWK or PEM.
+The key in the specified format, JWK or PEM
 ```
 {% endtab %}
 {% endtabs %}
 
-E.g. Export the public key with `id` _e548f032cadf4145ab6886a57c2e87e6_ as _JWK_.
+E.g. Export the public key with id = _e548f032cadf4145ab6886a57c2e87e6_ as _JWK_.
 
 {% tabs %}
 {% tab title="curl" %}
