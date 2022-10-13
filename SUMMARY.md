@@ -39,14 +39,11 @@
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
   * [API Service](getting-started/cli-command-line-interface/api-service.md)
   * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
-  * [EBSI Ecosystem](getting-started/cli-command-line-interface/ebsi-ecosystem/README.md)
-    * [EBSI DID Registration (via CLI)](getting-started/cli-command-line-interface/ebsi-ecosystem/ebsi-did-registration-via-cli.md)
 * [REST API](getting-started/rest-apis.md)
   * [Signatory API](getting-started/rest-apis/signatory-api.md)
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [Core API](getting-started/rest-apis/core-api.md)
-  * [ESSIF API](getting-started/rest-apis/essif-api.md)
 * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
 * [Build](getting-started/build.md)
   * [Docker Build](getting-started/quick-start/docker.md)
@@ -54,11 +51,19 @@
 * [Configurations](getting-started/configuration.md)
 * [Demo](getting-started/demo.md)
 
-## Concepts
+## Ecosystems
+* [EBSI](ecosystems/ebsi-essif/README.md)
+  * [Basics](ecosystems/ebsi-essif/ebsi-essif-or-basics.md)
+  * [Use Cases & Flow Diagrams](ecosystems/ebsi-essif/use-cases/use-cases-and-flow-diagrams.md)
+  * [Command line interface](ecosystems/ebsi-essif/cli/README.md)
+    * [DID Registration](ecosystems/cli/ebsi-did-registration-via-cli.md)
+  * [REST API](getting-started/rest-apis/essif-api.md)
+  * [Usage / examples](ecosystems/ebsi-essif/usage-examples/usage-examples.md)
+    * [Onboarding & DIDs](ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md)
+    * [Build end-to-end use cases](ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md)
+* [IOTA](ecosystems/iota/README.md)
 
-* [EBSI & ESSIF | EU Blockchain & EU SSI Framework](helpful-concepts/ebsi-essif/README.md)
-  * [EBSI/ESSIF | Basics](helpful-concepts/ebsi-essif/ebsi-essif-or-basics.md)
-  * [Use Cases & Flow Diagrams](helpful-concepts/ebsi-essif/use-cases-and-flow-diagrams.md)
+## Concepts
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
   * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
@@ -82,13 +87,10 @@
   * [Presentation](usage-examples/verifiable-credentials/presentation.md)
   * [Verification](usage-examples/verifiable-credentials/verification.md)
   * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
-* [EBSI/ESSIF](usage-examples/ebsi-essif/usage-examples.md)
-  * [Onboarding & DIDs](usage-examples/usage-examples-1/onboarding-and-dids.md)
-  * [Build end-to-end use cases](usage-examples/usage-examples-1/build-end-to-end-use-cases.md)
-  * [Data Exchange Protocols](usage-examples/usage-examples/usage-examples/README.md)
-    * [OpenID Connect](usage-examples/usage-examples/usage-examples/usage-examples/README.md)
-      * [OIDC4CI | Credential Issuance](usage-examples/usage-examples/usage-examples/usage-examples/usage-examples.md)
-      * [OIDC4VP | Verifiable Presentations](usage-examples/usage-examples/usage-examples/usage-examples/usage-examples-1.md)
+* [Data Exchange Protocols](usage-examples/data-exchange-protocols/README.md)
+    * [OpenID Connect](usage-examples/data-exchange-protocols/oidc/README.md)
+      * [OIDC4CI | Credential Issuance](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
+      * [OIDC4VP | Verifiable Presentations](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
 
 ## CONTACT & DEVELOPER RELATIONS
 

@@ -50,10 +50,10 @@ DID document (below, JSON):
 
 ## Further examples
 
-{% content-ref url="../usage-examples-1/onboarding-and-dids.md" %}
-[onboarding-and-dids.md](../usage-examples-1/onboarding-and-dids.md)
+{% content-ref url="../../ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md %}
+[onboarding-and-dids.md](../../ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md)
 {% endcontent-ref %}
 
-{% content-ref url="../usage-examples-1/build-end-to-end-use-cases.md" %}
-[build-end-to-end-use-cases.md](../usage-examples-1/build-end-to-end-use-cases.md)
+{% content-ref url="../../ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md" %}
+[build-end-to-end-use-cases.md](../../ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md)
 {% endcontent-ref %}
