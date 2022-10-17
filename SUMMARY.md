@@ -62,6 +62,17 @@
     * [Onboarding & DIDs](ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md)
     * [Build end-to-end use cases](ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md)
 * [IOTA](ecosystems/iota/README.md)
+* [Velocity](ecosystems/velocity/README.md)
+  * [Basics](ecosystems/velocity/basics/README.md)
+    * [Onboarding](ecosystems/velocity/basics/onboarding.md)
+    * [Issuing](ecosystems/velocity//basics//issuing.md)
+    * [Inspection](ecosystems/velocity/basics/inspection.md)
+  * [Integration with SSIKit](ecosystems/velocity//integration//README.md)
+  * [Command line interface](ecosystems/velocity/cli/README.md)
+    * [Onboarding](ecosystems/velocity//cli/onboarding.md)
+    * [Issuing](ecosystems/velocity/cli/issuance.md)
+    * [Inspection](ecosystems/velocity/cli/verification.md)
+
 
 ## Concepts
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
