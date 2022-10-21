@@ -52,11 +52,12 @@
 * [Demo](getting-started/demo.md)
 
 ## Ecosystems
+
 * [EBSI](ecosystems/ebsi-essif/README.md)
   * [Basics](ecosystems/ebsi-essif/ebsi-essif-or-basics.md)
   * [Use Cases & Flow Diagrams](ecosystems/ebsi-essif/use-cases/use-cases-and-flow-diagrams.md)
   * [Command line interface](ecosystems/ebsi-essif/cli/README.md)
-    * [DID Registration](ecosystems/cli/ebsi-did-registration-via-cli.md)
+    * [DID Registration](ecosystems/ebsi-essif/cli/did-registration.md)
   * [REST API](getting-started/rest-apis/essif-api.md)
   * [Usage / examples](ecosystems/ebsi-essif/usage-examples/usage-examples.md)
     * [Onboarding & DIDs](ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md)
@@ -65,16 +66,16 @@
 * [Velocity](ecosystems/velocity/README.md)
   * [Basics](ecosystems/velocity/basics/README.md)
     * [Onboarding](ecosystems/velocity/basics/onboarding.md)
-    * [Issuing](ecosystems/velocity//basics//issuing.md)
+    * [Issuing](ecosystems/velocity/basics/issuing.md)
     * [Inspection](ecosystems/velocity/basics/inspection.md)
-  * [Integration with SSIKit](ecosystems/velocity//integration//README.md)
+  * [Integration with SSIKit](ecosystems/velocity/integration/README.md)
   * [Command line interface](ecosystems/velocity/cli/README.md)
-    * [Onboarding](ecosystems/velocity//cli/onboarding.md)
+    * [Onboarding](ecosystems/velocity/cli/onboarding.md)
     * [Issuing](ecosystems/velocity/cli/issuance.md)
     * [Inspection](ecosystems/velocity/cli/verification.md)
 
-
 ## Concepts
+
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
   * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
@@ -99,9 +100,9 @@
   * [Verification](usage-examples/verifiable-credentials/verification.md)
   * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
 * [Data Exchange Protocols](usage-examples/data-exchange-protocols/README.md)
-    * [OpenID Connect](usage-examples/data-exchange-protocols/oidc/README.md)
-      * [OIDC4CI | Credential Issuance](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
-      * [OIDC4VP | Verifiable Presentations](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
+  * [OpenID Connect](usage-examples/data-exchange-protocols/oidc/README.md)
+    * [OIDC4CI | Credential Issuance](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
+    * [OIDC4VP | Verifiable Presentations](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
 
 ## CONTACT & DEVELOPER RELATIONS
 

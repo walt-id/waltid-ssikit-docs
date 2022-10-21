@@ -27,7 +27,7 @@ E.g. `vc issue -h`
 
 ### Issues and save VC
 
-Use the `issue` command to issue a verifiable credential to a custodian
+Use the `issue` command to issue a W3C Verifiable Credential with either a JWT or a JSON\_LD signature.
 
 options:&#x20;
 
@@ -42,6 +42,9 @@ options:&#x20;
 * `-v, --issuer-verification-method TEXT` KeyId of the issuers' signing key
 * `-y, --proof-type [JWT|LD_PROOF]` Proof type to be used \[LD\_PROOF]
 * `-p, --proof-purpose TEXT` Proof purpose to be used \[assertion]
+* \--interactive Interactively prompt for VC data to fill in&#x20;
+* \--ld-signature, --ld-sig \[Ed25519Signature2018|Ed25519Signature2020|EcdsaSecp256k1Signature2019|RsaSignature2018|JsonWebSignature2020|JcsEd25519Signature2020]&#x20;
+* \--ecosystem \[DEFAULT|ESSIF|GAIAX|IOTA] Specify ecosystem, for specific defaults of issuing parameters
 
 ### Present VC
 

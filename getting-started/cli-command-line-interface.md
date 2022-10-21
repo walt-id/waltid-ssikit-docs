@@ -1,13 +1,15 @@
 # CLI | Command Line Interface
 
-
-
 ### Installation & Running the Project
 
-Make sure you have Docker or a JDK 16 build environment including Gradle installed on your machine
+Choos between a Docker or a JVM-based runtime.
 
 {% tabs %}
 {% tab title="Docker" %}
+Make sure you have Docker build environment installed on your machine.
+
+
+
 1. Pulling the project directly from DockerHub
 
 ```
@@ -32,6 +34,10 @@ ssikit -h
 {% endtab %}
 
 {% tab title="Local" %}
+Make sure you have  a JDK 16+ build environment including Gradle installed on your machine.
+
+
+
 1. Clone the project
 
 ```
