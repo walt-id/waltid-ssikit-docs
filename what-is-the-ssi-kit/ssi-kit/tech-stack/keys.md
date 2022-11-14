@@ -6,6 +6,7 @@ The SSI Kit supports:
 
 * EdDSA / ed25519
 * ECDSA / secp256k1
+* ECDSA / secp256r1
 * RSA
 
 _Note that we are continuously adding support for new key types._
