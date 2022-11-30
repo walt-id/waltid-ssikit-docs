@@ -68,10 +68,7 @@ The DID is a simple text string built up of three parts:&#x20;
 
 ![](../../../.gitbook/assets/did-format-example.png)
 
-| Schema                         | The did **** URI scheme identifier                        |   |
-| ------------------------------ | --------------------------------------------------------- | - |
-| DID Method                     | The identifier for the did method                         |   |
-| DID Method-Specific Identifier | An identifier based on the requirements of the did method |   |
+<table data-header-hidden><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>Schema</td><td>The did <strong></strong> URI scheme identifier</td><td></td></tr><tr><td>DID Method</td><td>The identifier for the did method</td><td></td></tr><tr><td>DID Method-Specific Identifier</td><td>An identifier based on the requirements of the did method</td><td></td></tr></tbody></table>
 
 &#x20;
 

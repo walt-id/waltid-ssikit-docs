@@ -16,7 +16,7 @@ Understanding SSI requires the understanding of a few core concepts:
 
 #### The SSI tech stack:
 
-![](<../../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32.png>)
+![](<../../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
 
 
 

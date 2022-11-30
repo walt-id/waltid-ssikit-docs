@@ -6,7 +6,7 @@ As a result, you can participate in different identity ecosystems (e.g. EBSI/ESS
 
 Based on our [Introduction to Self-Sovereign Identity (SSI)](../../what-is-ssi/), we distinguish the following concepts or building blocks: &#x20;
 
-![Each building block is available in different variations and can be put together in different ways. The result: different "SSI flavours".](<../../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32 (1).png>)
+![Each building block is available in different variations and can be put together in different ways. The result: different "SSI flavours".](<../../../.gitbook/assets/Screenshot 2022-03-16 at 13.16.32.png>)
 
 Read on to learn which concrete technologies and implementations we support on the level of
 
