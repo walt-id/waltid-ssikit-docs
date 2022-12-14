@@ -94,10 +94,10 @@ Use the `export` command to export a specified key type with the specified id an
 Available key type:
 
 * public (default):
-  * `key export <your-key-id> --pub`
-* private:
   * `key export <your-key-id>`
-  * or `key export <your-key-id> --priv`
+  * or `key export <your-key-id> --pub`
+* private:
+  * `key export <your-key-id> --priv`
 
 Available export formats:
 
