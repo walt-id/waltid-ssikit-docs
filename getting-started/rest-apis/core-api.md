@@ -1,8 +1,9 @@
 ---
-description: >-
-  Core REST API functions.
+description: Core REST API functions.
 ---
+
 # Core API
+
 [Swagger](https://core.ssikit.walt.id/v1/swagger) | [Redoc](https://core.ssikit.walt.id/v1/redoc)
 
 The _Core API_ exposes wallet core functionality in the scope of storing and managing:
@@ -16,7 +17,9 @@ The Core API exposes most of the funtionalities provided by the SSI Kit, however
 {% endhint %}
 
 ## Cryptographic keys
+
 The following key management functions are available:
+
 * [list](core-api.md#list-key-ids) - list of key ids
 * [load](core-api.md#load-key) - load the public key in _JWK_ format
 * [delete](core-api.md#delete-key) - delete key
@@ -25,6 +28,7 @@ The following key management functions are available:
 * [export](core-api.md#export-key) - export key
 
 ### List key ids
+
 The `/v1/key` endpoint lists the available key ids.
 
 {% tabs %}
@@ -35,11 +39,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The list of key ids
@@ -48,6 +54,7 @@ The list of key ids
 {% endtabs %}
 
 E.g. List the available key ids.
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -56,6 +63,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -76,7 +84,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load key
+
 The `/v1/key/{id}` endpoint loads the public component of the provided key id in _JWK_ format:
+
 * id - path parameter (required) - the key id
 
 {% tabs %}
@@ -87,11 +97,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The string for the public component of the key
@@ -100,6 +112,7 @@ The string for the public component of the key
 {% endtabs %}
 
 E.g. Load the key having id = _e548f032cadf4145ab6886a57c2e87e6_.
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -108,6 +121,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 "{\"kty\":\"OKP\",\"use\":\"sig\",\"crv\":\"Ed25519\",\"kid\":\"e548f032cadf4145ab6886a57c2e87e6\",\"x\":\"jT8YleOQnaABpZTnvId3WoID4Pia9Lex9OndqQ22Xxs\",\"alg\":\"EdDSA\"}"
@@ -116,6 +130,7 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Delete key
+
 The `/v1/key/{id}` endpoint deletes the specified key.
 
 {% tabs %}
@@ -128,11 +143,13 @@ curl -X 'DELETE' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The key id string
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -152,6 +169,7 @@ curl -X 'DELETE' \
   -d 'e548f032cadf4145ab6886a57c2e87e6'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 e548f032cadf4145ab6886a57c2e87e6
@@ -160,6 +178,7 @@ e548f032cadf4145ab6886a57c2e87e6
 {% endtabs %}
 
 ### Generate key
+
 The `/v1/key/gen` generates a new key using the specified algorithm.
 
 {% tabs %}
@@ -172,6 +191,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -179,6 +199,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -188,7 +209,7 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-E.g. Generate a new key using the _EdDSA_Ed25519_ algorithm.
+E.g. Generate a new key using the _EdDSA\_Ed25519_ algorithm.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -202,6 +223,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -209,6 +231,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -219,6 +242,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import key
+
 The `/v1/key/import` endpoint imports a key (_JWK_ or _PEM_ format) to the underlying keystore.
 
 {% tabs %}
@@ -231,11 +255,13 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The key string in JWK or PEM format
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -257,6 +283,7 @@ curl -X 'POST' \
   -d '{"kty":"OKP","use":"sig","crv":"Ed25519","kid":"bc6fa6b0593648238c4616800bed7746","x":"YyswAyRO2Aur8Jmzc8aOvI3AWFka3ZynJwB84a0FJVU","alg":"EdDSA"}'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -269,6 +296,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -279,6 +307,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Export key
+
 The `/v1/key/export` endpoint exports public and private key part (if supported by underlying keystore).
 
 {% tabs %}
@@ -289,9 +318,9 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '<request-body>'
-
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -301,6 +330,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The key in the specified format, JWK or PEM
@@ -322,9 +352,9 @@ curl -X 'POST' \
   "format": "JWK",
   "exportPrivate": false
 }'
-
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -334,6 +364,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -349,7 +380,9 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## Decentralised identifiers
+
 The following DID management functions are available:
+
 * [list](core-api.md#list-dids) - list DIDs
 * [load](core-api.md#load-did) - load DID
 * [delete by url](core-api.md#delete-did) - delete by DID url
@@ -358,6 +391,7 @@ The following DID management functions are available:
 * [import](core-api.md#import-did) - import DID
 
 ### List DIDs
+
 The `/v1/did` endpoint lists the available DIDs.
 
 {% tabs %}
@@ -368,11 +402,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 [
@@ -392,6 +428,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -407,7 +444,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load DID
+
 The `/v1/did/{id}` endpoint loads a DID specified by:
+
 * id - path parameter (required) - the DID url string
 
 {% tabs %}
@@ -418,11 +457,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The DID document
@@ -430,7 +471,7 @@ The DID document
 {% endtab %}
 {% endtabs %}
 
-E.g. Load the DID = _did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Load the DID = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -440,6 +481,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -489,7 +531,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Delete DID
+
 The `/v1/did/{id}` endpoint deletes the DID by:
+
 * id - path parameter (required) - the DID url string
 
 {% tabs %}
@@ -500,11 +544,13 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -512,7 +558,7 @@ Code 200
 {% endtab %}
 {% endtabs %}
 
-E.g. Delete the DID = _did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Delete the DID = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -525,6 +571,7 @@ curl -X 'DELETE' \
 {% endtabs %}
 
 ### Create DID
+
 The `/v1/did/create` creates a DID.
 
 {% tabs %}
@@ -537,6 +584,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -547,6 +595,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The DID url string
@@ -568,6 +617,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -575,6 +625,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 did:key:z6MkqJfAPYYDiDeNERPMufpS1gxgzqiG5fvQnqbYTwY5xJDE
@@ -583,6 +634,7 @@ did:key:z6MkqJfAPYYDiDeNERPMufpS1gxgzqiG5fvQnqbYTwY5xJDE
 {% endtabs %}
 
 ### Resolve DID
+
 The `/v1/did/resolve` resolves a DID url string to a DID document.
 
 {% tabs %}
@@ -595,6 +647,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -602,6 +655,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The DID document
@@ -609,7 +663,7 @@ The DID document
 {% endtab %}
 {% endtabs %}
 
-E.g. Resolve the DID = _did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
+E.g. Resolve the DID = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -623,6 +677,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -630,6 +685,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -679,6 +735,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import DID
+
 The `/v1/did/import` endpoint resolves and imports the specified DID url to the underlying data store.
 
 {% tabs %}
@@ -691,11 +748,13 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The DID url string
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 201
@@ -703,7 +762,7 @@ Code 201
 {% endtab %}
 {% endtabs %}
 
-E.g. Import the DID = _did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
+E.g. Import the DID = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -715,6 +774,7 @@ curl -X 'POST' \
   -d 'did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa
@@ -723,7 +783,9 @@ did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa
 {% endtabs %}
 
 ## Verifiable credentials
+
 The following credentials management functions are available:
+
 * [list](core-api.md#list-credentials) - list verifiable credentials
 * [load](core-api.md#load-credential) - load the verifiable credential
 * [delete](core-api.md#delete-credential) - delete the verifiable credential
@@ -733,6 +795,7 @@ The following credentials management functions are available:
 * [import](core-api.md#import-credential) - import the verifiable credential
 
 ### List credentials
+
 The `/v1/vc` endpoint lists the available credentials.
 
 {% tabs %}
@@ -743,11 +806,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The list of credential names (file names)
@@ -765,6 +830,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -775,7 +841,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load credential
+
 The `/v1/vc/{id}` endpoint loads a credential specified by:
+
 * id - path parameter (required) - the credential id
 
 {% tabs %}
@@ -786,11 +854,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The credential string
@@ -808,6 +878,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -853,7 +924,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Delete credential
+
 The `/v1/vc/{id}` deletes a credential by:
+
 * id - path parameter (required) - the credential's id
 
 {% tabs %}
@@ -864,11 +937,13 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -889,11 +964,10 @@ curl -X 'DELETE' \
 {% endtabs %}
 
 ### Create credential
+
 The `/v1/vc/create` endpoint creates a credential.
 
 {% tabs %}
-{% tab title="curl" %}
-{% endtab %}
 {% tab title="Request body schema" %}
 ```
 {
@@ -906,6 +980,7 @@ The `/v1/vc/create` endpoint creates a credential.
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The verifiable credential
@@ -913,11 +988,9 @@ The verifiable credential
 {% endtab %}
 {% endtabs %}
 
-E.g. Create a credential from the _UniveristyDegree_ template, having issuer = _did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_ and holder = _did:key:z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
+E.g. Create a credential from the _UniveristyDegree_ template, having issuer = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_ and holder = _did_:key:_z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
 
 {% tabs %}
-{% tab title="curl" %}
-{% endtab %}
 {% tab title="Request body" %}
 ```
 {
@@ -927,6 +1000,7 @@ E.g. Create a credential from the _UniveristyDegree_ template, having issuer = _
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -972,6 +1046,7 @@ E.g. Create a credential from the _UniveristyDegree_ template, having issuer = _
 {% endtabs %}
 
 ### Present credentials
+
 The `/v1/vc/present` endpoint creates a verifiable presentation from the supplied credential. Only _JSON-LD_ format is supported.
 
 {% tabs %}
@@ -984,6 +1059,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -994,6 +1070,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -1419,6 +1496,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -1427,6 +1505,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -1524,8 +1603,8 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-
 ### Verify credentials
+
 The `/v1/vc/verify` endpoint verifies the supplied credential or presentation against the signature policy.
 
 {% tabs %}
@@ -1538,6 +1617,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -1545,6 +1625,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -1569,6 +1650,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -1576,6 +1658,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -1587,6 +1670,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import credential
+
 The `/v1/vc/import` endpoint imports a verifiable credential.
 
 {% tabs %}
@@ -1599,11 +1683,13 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The credential string
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -1623,6 +1709,7 @@ curl -X 'POST' \
   -d '"{\"@context\":[\"https:\/\/www.w3.org\/2018\/credentials\/v1\",\"https:\/\/www.w3.org\/2018\/credentials\/examples\/v1\"],\"credentialSubject\":{\"degree\":{\"name\":\"Bachelor of Science and Arts\",\"type\":\"BachelorDegree\"},\"id\":\"did:web:my.domain\"},\"id\":\"urn:uuid:d36986f1-3cc0-4156-b5a4-6d3deab84270\",\"issued\":\"2022-10-07T09:53:41.369913097Z\",\"issuer\":{\"id\":\"did:web:walt.id\"},\"validFrom\":\"2022-10-07T09:53:41.369917079Z\",\"issuanceDate\":\"2022-10-07T09:53:41.369917079Z\",\"type\":[\"VerifiableCredential\",\"UniversityDegreeCredential\"],\"proof\":{\"type\":\"Ed25519Signature2018\",\"creator\":\"did:web:walt.id\",\"created\":\"2022-10-07T09:53:41Z\",\"domain\":\"https:\/\/api.preprod.ebsi.eu\",\"nonce\":\"dc2be572-cca4-43dc-9903-0fec1dcf786f\",\"jws\":\"eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..7EYkgjNRJ_hh0F5kONnPfrC4PLvg1g82czeANllDngsbk36a8lnHSlwersSqY0tdER4xIe7vbNVzi39C2DZTDQ\"}}"'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 "{\"@context\":[\"https:\/\/www.w3.org\/2018\/credentials\/v1\",\"https:\/\/www.w3.org\/2018\/credentials\/examples\/v1\"],\"credentialSubject\":{\"degree\":{\"name\":\"Bachelor of Science and Arts\",\"type\":\"BachelorDegree\"},\"id\":\"did:web:my.domain\"},\"id\":\"urn:uuid:d36986f1-3cc0-4156-b5a4-6d3deab84270\",\"issued\":\"2022-10-07T09:53:41.369913097Z\",\"issuer\":{\"id\":\"did:web:walt.id\"},\"validFrom\":\"2022-10-07T09:53:41.369917079Z\",\"issuanceDate\":\"2022-10-07T09:53:41.369917079Z\",\"type\":[\"VerifiableCredential\",\"UniversityDegreeCredential\"],\"proof\":{\"type\":\"Ed25519Signature2018\",\"creator\":\"did:web:walt.id\",\"created\":\"2022-10-07T09:53:41Z\",\"domain\":\"https:\/\/api.preprod.ebsi.eu\",\"nonce\":\"dc2be572-cca4-43dc-9903-0fec1dcf786f\",\"jws\":\"eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..7EYkgjNRJ_hh0F5kONnPfrC4PLvg1g82czeANllDngsbk36a8lnHSlwersSqY0tdER4xIe7vbNVzi39C2DZTDQ\"}}"

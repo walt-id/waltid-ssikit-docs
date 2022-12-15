@@ -104,13 +104,19 @@
     * [OIDC4CI | Credential Issuance](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
     * [OIDC4VP | Verifiable Presentations](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
 
-## CONTACT & DEVELOPER RELATIONS
+## Community
 
-* [Join The Community](contact-and-developer-relations/join-the-community.md)
+* [Discord](https://walt.id/discord)
+* [Twitter](https://twitter.com/walt\_id)
+* [Newsletter](https://walt.id/community)
+* [GitHub Discussions](https://github.com/walt-id/.github/discussions)
+
+## DEVELOPER RELATIONS
+
 * [Contribute](https://github.com/walt-id/.github/discussions/6)
 * [Roadmap](https://walt-id.notion.site/fcde1687baab42378b3047d4a22eeaca?v=1140dd17c17b4726a70cc1465d20866d)
 * [Share Feedback](https://walt.id/feedback)
-* [Contact](contact-and-developer-relations/contact.md)
+* [Contact](https://github.com/walt-id/.github/discussions)
 
 ## Product Editions
 

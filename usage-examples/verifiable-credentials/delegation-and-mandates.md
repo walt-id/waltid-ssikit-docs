@@ -18,7 +18,7 @@ Creating a key (the key-id is used in the next command)
 ./ssikit.sh key gen -a Secp256k1
 ```
 
-Creating a DID. In this case a did:ebsi is created, which can be registered on the EBSI block chain (see [usage-examples.md](../../ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md "mention")).
+Creating a DID. In this case a did:ebsi is created, which can be registered on the EBSI block chain (see [onboarding-and-dids.md](../../ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md "mention")).
 
 ```
 ./ssikit.sh did create -m ebsi -k <key-id>
@@ -91,10 +91,9 @@ Credential document (below, JSON):
     "jws" : "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFUzI1NksifQ..OPHTDcz6AWSF8SODePIRM9xCCvmOqbOuUk88E6piCALT0QticpiHnfnOZiYZRAvXmXEJ1iDjI6tVrNAq2kKTug"
   }
 }
-
 ```
 
-Most importantly in the above shown example are the lines 5 to 6,  as they are created by an interactive dialog with the user (issuer of the credential). The user may define **who** gets **which** permissions. In this case the permissions are delegated to the DID:  did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd. This DID is classified as "family-member" and furthermore is granted to "apply for a master degree" on behalf of the issuing party. Additionally the constrain "location" is defined by "Slovenia" instead of the default value "Spain".&#x20;
+Most importantly in the above shown example are the lines 5 to 6, as they are created by an interactive dialog with the user (issuer of the credential). The user may define **who** gets **which** permissions. In this case the permissions are delegated to the DID: did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd. This DID is classified as "family-member" and furthermore is granted to "apply for a master degree" on behalf of the issuing party. Additionally the constrain "location" is defined by "Slovenia" instead of the default value "Spain".
 
 The credential body is afterwards signed by the private key of the issuer, which generate the JSON LD proof.
 
@@ -129,12 +128,11 @@ Results:
 
 VerifiableMandatePolicy:         true
 Verified:                        true
-
 ```
 
 #### **Failing to verify a Verifiable Mandate Credential**
 
-In this case the constraint "location" is set from "Slovenia" to  "Germany":
+In this case the constraint "location" is set from "Slovenia" to "Germany":
 
 ```
 ./ssikit.sh vc verify vm.json -p VerifiableMandatePolicy='{"user": "did:key:z6MkvUtihkikPAdwzs18AExS4GFr6t4owyHFRrLFdpRScZDd", "action": "apply_to_masters", "location": "Germany"}'
