@@ -51,6 +51,8 @@ The parameters for a _Login-with-IOTA_ authorization request, are a subset of th
 
 * `nonce`: _REQUIRED_. This parameter follows the definition given in [[OIDC](#oidc)]. It is used to securely bind the verifiable presentation(s) provided by the AS to the particular transaction.
 
+* `state`: _OPTIONAL_. State provided by the authorization client, that is passed through to the response.
+
 A request MUST contain either a `presentation_definition` or a `presentation_definition_uri`. Those two ways to request credential presentations are mutually exclusive. The wallet MUST refuse any request violating this requirement.
 
 #### presentation_definition
@@ -111,17 +113,190 @@ GET /authorize?
 
 ### Response
 
+The response parameters depend on the `response_type` defined in the authorization request. Possible response parameters include:
 
+* `vp_token`: The verifiable presentation or array of presentations matching the presentation definition in the request. The required format in this profile is [[`ldp_vc`](#vc_data_integrity)] / [[JSON-LD](#json_ld)]. The JSON data must be URL encoded. See also section 7.3 of [[OIDC4VP](#oidc4vp)].
+* `id_token`: The ID token as defined by section 2 of the [[OIDC](#oidc)] core specification.
+* `presentation_submission`: The presentation submission object, as defined in [[DIF.PresentationExchange](#difpresentationexchange)], which links the input descriptors of the presentation definition in the request to the corresponding presentation(s) in the `vp_token` response.
+* `state`: Optional state parameter passed through from the authorization request.
+
+#### Response types
+
+Depending of the `response_type` given in the authorization request, the response should contain the following parameters, like described in section 6.1 of [[OIDC4VP](#oidc4vp)]:
+
+* If only `vp_token` is used as the `response_type`, the VP Token is provided in the authorization response.
+* If `id_token` is used as the `response_type` alongside `vp_token`, the VP Token is provided in the OpenID Connect authentication response along with the ID Token.
+* In all other cases, if `vp_token` is not used, but `presentation_definition` parameter is present, the VP Token is provided in the Token Response.
+
+Any combination of `vp_token` with a `response_type` other than `id_token` is undefined.
 
 #### vp_token
 
-### Same-device flow
+The `vp_token` response parameter contains the verifiable presentation or array of verifiable presentations, matching the input descriptors of the presentation definition, specified in the authorization request.
 
+The only supported format of the verifiable presentation in this specification is the [[`ldp_vc`](#vc_data_integrity)] / [[JSON-LD](#json_ld)] format.  The JSON data can be either a single presentation object or an array of JSON objects and must be URL encoded.
 
+#### presentation_submission
+
+The presentation submission object contains the correlations of the input descriptors, specified in the presentation definition of the authorization request, with the verifiable presentations in the VP token of the response. The format of the presentation submission objects is defined in section 6 of [[DIF.PresentationExchange](#difpresentationexchange)].
+
+#### Example responses
+
+This is an example response for the `respones_type=vp_token` request parameter, with the `presentation_submission` and `vp_token` response parameters:
+
+```
+HTTP/1.1 302 Found
+  Location: https://client.example.org/cb#
+    presentation_submission=[...]
+    &vp_token=[...]
+    &state=9925f001-9010-4dd3-9a58-5c140c85d824
+```
+
+An example `vp_token`, containing a presentation with a VerifiableId credential:
+
+```
+{
+  "type": [
+    "VerifiablePresentation"
+  ],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/security/suites/jws-2020/v1"
+  ],
+  "id": "urn:uuid:73c01e73-6f18-4e8c-a751-ec9f4d25855e",
+  "holder": "did:iota:6Nte6ZfQGQ81UZNGBLtDAJnFui8nBgEMjtMKDadYYexS",
+  "verifiableCredential": [
+    {
+      "type": [
+        "VerifiableCredential",
+        "VerifiableAttestation",
+        "VerifiableId"
+      ],
+      "@context": [
+        "https://www.w3.org/2018/credentials/v1",
+        "https://w3id.org/security/suites/jws-2020/v1"
+      ],
+      "id": "urn:uuid:4be3b79e-16aa-4562-883c-e5e1c11fd623",
+      "issuer": "did:iota:z6MkiprkVjgTngmWh6y2cEPDBPWiWpnSxaPiL4HR8vQRoR3h",
+      "issuanceDate": "2022-12-20T10:02:57Z",
+      "issued": "2022-12-20T10:02:57Z",
+      "validFrom": "2022-12-20T10:02:57Z",
+      "credentialSchema": {...},
+      "credentialSubject": {
+        "id": "did:iota:6Nte6ZfQGQ81UZNGBLtDAJnFui8nBgEMjtMKDadYYexS",
+        "currentAddress": [...],
+        "dateOfBirth": "1993-04-08",
+        "familyName": "DOE",
+        "firstName": "Jane",
+        "gender": "FEMALE",
+        "nameAndFamilyNameAtBirth": "Jane+DOE",
+        "personalIdentifier": "0904008084H",
+        "placeOfBirth": "LILLE,+FRANCE"
+      },
+      "evidence": [...],
+      "proof": {
+        "type": "JcsEd25519Signature2020",
+        [...]
+        "verificationMethod": "did:iota:[...]",
+        "signatureValue": "[...]"
+      }
+    }
+  ],
+  "proof": {
+    "type": "JcsEd25519Signature2020",
+    [...]
+    "proofPurpose": "authentication",
+    "verificationMethod": "did:iota:[...]",
+    "signatureValue": "[...]"
+  }
+}
+```
+
+An example `presentation_submission` object:
+
+```
+{
+  "definition_id": "1",
+  "descriptor_map": [
+    {
+      "format": "ldp_vp",
+      "id": "0",
+      "path": "$",
+      "path_nested": {
+        "format": "ldp_vc",
+        "id": "0",
+        "path": "$.verifiableCredential[0]"
+      }
+    }
+  ],
+  "id": "1"
+}
+```
+
+#### Error response
+
+For creating compliant error responses, please refer to section 6.3 of [[OIDC4VP](#oidc4vp)].
+
+### Same-device flow (Web)
+
+For the same device flow, the verifier or relying party, links directly to the authorization endpoint of the wallet, passing the request parameters, as specified in the [Authorization request](#request) section.
+
+The `response_mode` should be set to `form_post`. After getting the user consent, the wallet will generate the response parameters, as specified in the [Authorization response](#response) section, and performs a HTTP FORM POST action to the `redirect_uri` specified in the authorization request. The relying party can now verify the authorization response and redirect the user to the protected web page.
+
+#### Example request
+
+```
+https://wallet.walt-test.cloud/api/siop/initiatePresentation/
+  ?scope=openid
+  &presentation_definition=[...]
+  &response_type=vp_token
+  &redirect_uri=https%3A%2F%2Fverifier.walt-test.cloud%2Fverifier-api%2Fverify
+  &state=f3265a8c-4dff-4252-8df9-6569286e109a
+  &nonce=f3265a8c-4dff-4252-8df9-6569286e109a
+  &client_id=https%3A%2F%2Fverifier.walt-test.cloud%2Fverifier-api%2Fverify
+  &response_mode=form_post
+```
+
+#### Example response
+
+```
+POST https://verifier.walt-test.cloud/verifier-api/verify
+
+vp_token=[...]
+&presentation_submission=[...]
+&state=f3265a8c-4dff-4252-8df9-6569286e109a
+```
 
 ### Cross-device flow
 
+For the cross-device flow, the verifier or relying party initiates an internally cached authorization session and displays a QR code containing the authorization request URI with the request parameters, as specified in the [Authorization request](#request) section.
 
+The `response_mode` should be set to `post`. The wallet scans the QR code and parses the authorization request. After getting the user consent, the wallet will generate the response parameters, as specified in the [Authorization response](#response) section, and posts the response to the `redirect_uri` specified in the authorization request, via the HTTP POST method. The relying party can now verify the authorization response and update the state of the internally cached authorization session.
+Depending on the concrete implementation (for example by polling for the session state), the relying party UI can now be refreshed and redirected to the protected page.
+
+#### Example request
+
+```
+openid://
+  ?scope=openid
+  &presentation_definition=[...]
+  &response_type=vp_token
+  &redirect_uri=https%3A%2F%2Fverifier.walt-test.cloud%2Fverifier-api%2Fverify
+  &state=663667ae-fc5c-4cb8-87ab-1f506ca142e7
+  &nonce=663667ae-fc5c-4cb8-87ab-1f506ca142e7
+  &client_id=https%3A%2F%2Fverifier.walt-test.cloud%2Fverifier-api%2Fverify
+  &response_mode=post
+```
+
+#### Example response
+
+```
+POST https://verifier.walt-test.cloud/verifier-api/verify
+
+vp_token=[...]
+&presentation_submission=[...]
+&state=f3265a8c-4dff-4252-8df9-6569286e109a
+```
 
 ## References
 
@@ -158,5 +333,5 @@ N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore, "OpenID Connect
 #### [[SIOPv2](https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1_0.html)]
 K. Yasuda, M. Jones, T. Lodderstedt, "Self-Issued OpenID Provider v2", September 2022, <https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1_0.html>
 
-#### [[DIF.PresentationExchange](https://identity.foundation/presentation-exchange)]
-Buchner, D., Zundel, B., Riedel, M., and K. H. Duffy, "Presentation Exchange 2.0.0", , <https://identity.foundation/presentation-exchange>. 
+#### [[DIF.PresentationExchange](https://identity.foundation/presentation-exchange/spec/v2.0.0/)]
+Buchner, D., Zundel, B., Riedel, M., and K. H. Duffy, "Presentation Exchange 2.0.0", , <https://identity.foundation/presentation-exchange/spec/v2.0.0/>. 
