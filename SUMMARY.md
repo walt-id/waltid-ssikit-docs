@@ -63,6 +63,7 @@
     * [Onboarding & DIDs](ecosystems/ebsi-essif/usage-examples/onboarding-and-dids.md)
     * [Build end-to-end use cases](ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md)
 * [IOTA](ecosystems/iota/README.md)
+  * [OIDC4VP profile for _Login-with-IOTA_](ecosystems/iota/oidc4vp-profile.md)
 * [Velocity](ecosystems/velocity/README.md)
   * [Basics](ecosystems/velocity/basics/README.md)
     * [Onboarding](ecosystems/velocity/basics/onboarding.md)
