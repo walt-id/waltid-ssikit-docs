@@ -23,11 +23,11 @@ To ensure compatibility with the IOTA identity framework [[IOTA_IDENTITY](#iota_
 
 The credentials used by the _IOTA identity framework_ [[IOTA_IDENTITY](#iota_identity)] are in line with the W3C specification for Verifiable Credentials [[VC_DATA_MODEL](#vc_data_model)]. Every type of credential, that is compatible with the W3C specification, should in theory be supported.
 
-**Proofs** for the credentials are created in the linked data format, **ldp_vc**, as described by the _W3C data integrity_ specification [[VC_DATA_INTEGRITY](#vc_data_integrity)], using [[JSON-LD](#json_ld)] as the credential format and the _JCS Ed25519 Signature 2020_ [[JcsEd25519Signature2020](#jcsed25519signature2020)] signature type.
+**Proofs** for the credentials are created in the linked data format, **ldp_vc** or **ldp_vp**, as described by the _W3C data integrity_ specification [[VC_DATA_INTEGRITY](#vc_data_integrity)], using [[JSON-LD](#json_ld)] as the credential format and the _JCS Ed25519 Signature 2020_ [[JcsEd25519Signature2020](#jcsed25519signature2020)] signature type.
 
 | Format  | Signature type |
 |---          |---            |
-| [ldp_vc](#vc_data_integrity)    | [JcsEd25519Signature2020](#jcsed25519signature2020) |
+| [ldp_vc / ldp_vp](#vc_data_integrity)    | [JcsEd25519Signature2020](#jcsed25519signature2020) |
 
 ## Authorization flow
 
@@ -115,7 +115,7 @@ GET /authorize?
 
 The response parameters depend on the `response_type` defined in the authorization request. Possible response parameters include:
 
-* `vp_token`: The verifiable presentation or array of presentations matching the presentation definition in the request. The required format in this profile is [[`ldp_vc`](#vc_data_integrity)] / [[JSON-LD](#json_ld)]. The JSON data must be URL encoded. See also section 7.3 of [[OIDC4VP](#oidc4vp)].
+* `vp_token`: The verifiable presentation or array of presentations matching the presentation definition in the request. The required format in this profile is [[`ldp_vp`](#vc_data_integrity)] / [[JSON-LD](#json_ld)]. The JSON data must be URL encoded. See also section 7.3 of [[OIDC4VP](#oidc4vp)].
 * `id_token`: The ID token as defined by section 2 of the [[OIDC](#oidc)] core specification.
 * `presentation_submission`: The presentation submission object, as defined in [[DIF.PresentationExchange](#difpresentationexchange)], which links the input descriptors of the presentation definition in the request to the corresponding presentation(s) in the `vp_token` response.
 * `state`: Optional state parameter passed through from the authorization request.
@@ -134,7 +134,7 @@ Any combination of `vp_token` with a `response_type` other than `id_token` is un
 
 The `vp_token` response parameter contains the verifiable presentation or array of verifiable presentations, matching the input descriptors of the presentation definition, specified in the authorization request.
 
-The only supported format of the verifiable presentation in this specification is the [[`ldp_vc`](#vc_data_integrity)] / [[JSON-LD](#json_ld)] format.  The JSON data can be either a single presentation object or an array of JSON objects and must be URL encoded.
+The only supported format of the verifiable presentation in this specification is the [[`ldp_vp`](#vc_data_integrity)] / [[JSON-LD](#json_ld)] format.  The JSON data can be either a single presentation object or an array of JSON objects and must be URL encoded.
 
 #### presentation_submission
 
