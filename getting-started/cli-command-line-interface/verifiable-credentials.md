@@ -102,19 +102,13 @@ e.g.  `vc templates export VerifiableId`
 
 * `import <customCredentialPath.json>`
 
-
-
 Options:&#x20;
 
 * `-n, --name <Name>` Name of the template
 
-
-
 Arguments:&#x20;
 
 * `credential path` the last argument of the command references the path to the custom credential, which should be imported
-
-
 
 e.g `vc templates import MyCustomCredential custom.json`&#x20;
 
@@ -147,15 +141,17 @@ e.g `vc templates import MyCustomCredential custom.json`&#x20;
 
 ```
 
-
-
 **Output of the command**
 
 <figure><img src="../../.gitbook/assets/Screenshot on 2022-12-22 at 08-18-42.png" alt=""><figcaption></figcaption></figure>
 
 ### List VCs&#x20;
 
+* `list` VCs saved in the custodian store
 
+e.g. `vc list`
+
+<figure><img src="../../.gitbook/assets/Screenshot on 2022-12-22 at 08-57-11.png" alt=""><figcaption></figcaption></figure>
 
 &#x20;
 
