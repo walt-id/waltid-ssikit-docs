@@ -31,7 +31,7 @@ Use the `issue` command to issue a W3C Verifiable Credential with either a JWT o
 
 options:&#x20;
 
-* `-t, --template TEXT` specify the VC template. To create your own template, have a look [here](verifiable-credentials.md#import-vc-to-custodian-store-1)  \[Required]
+* `-t, --template TEXT` specify the VC template. To create your own template, have a look [here](verifiable-credentials.md#import-vc-template-to-custodian-store)  \[Required]
 * `-i, --issuer-did TEXT` DID of the issuer (associated with signing key). \[Required]
 * `-s, --subject-did TEXT` DID of the VC subject (receiver of VC). \[Required] \
   e.g.
