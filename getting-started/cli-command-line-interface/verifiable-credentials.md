@@ -98,7 +98,7 @@ e.g.  `vc templates export VerifiableId`
 
 ![](<../../.gitbook/assets/image (11).png>)
 
-#### Import VC to custodian store
+#### Import VC template to custodian store
 
 * `import <customCredentialPath.json>`
 
