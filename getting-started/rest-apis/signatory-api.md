@@ -1,16 +1,19 @@
 ---
-description: >-
-  Signatory REST API functions.
+description: Signatory REST API functions.
 ---
+
 # Signatory API
+
 [Swagger](https://signatory.ssikit.walt.id/v1/swagger) | [Redoc](https://signatory.ssikit.walt.id/v1/redoc)
 
 The _Signatory API_ exposes the "issuance" endpoint, which provides flexible integration possibilities for anyone intending to act as an "Issuer" (i.e. create, sign and issue Verifiable Credentials), as follows:
+
 * [Credentials](signatory-api.md#credentials) - issue credentials
 * [Templates](signatory-api.md#templates) - template related functions
 * [Revocations](signatory-api.md#revocations) - revocation related functions
 
 ## Credentials
+
 The `/v1/credentials/issue` endpoint issues a specified credential.
 
 {% tabs %}
@@ -23,6 +26,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -55,6 +59,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The issued credential displayed either in JSON-LD or JWT format
@@ -92,6 +97,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -115,6 +121,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -160,12 +167,17 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## Templates
+
 The currently available template functions are:
+
 * [list](signatory-api.md#list-templates) - display the list of Templates
+* [import](signatory-api.md#import-template) - import a custom template
 * [load](signatory-api.md#load-template) - display the content of the template having the specified `id`
 
 ### List templates
+
 The `/v1/templates` endpoint returns the list of the available template `id`s
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -174,9 +186,11 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 No parameter
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 [
@@ -187,6 +201,7 @@ No parameter
 {% endtabs %}
 
 E.g. List the templates
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -195,6 +210,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -228,8 +244,83 @@ curl -X 'GET' \
 {% endtab %}
 {% endtabs %}
 
+### Import template
+
+The `/v1/templates/{id}` endpoint to import your custom credential
+
+* id path parameter (required) - `id` of the template, e.g. `MyCustomCredential`
+
+{% tabs %}
+{% tab title="curl" %}
+```bash
+curl -X 'POST' \
+  'https://signatory.ssikit.walt.id/v1/templates/{id}' \
+  -H 'accept: application/json'
+  -H 'Content-Type: application/json' \
+  -d '<request-body>'
+```
+{% endtab %}
+
+{% tab title="Request body schema" %}
+```json
+{
+  "type": [
+    "VerifiableCredential",
+    "MyCustomCredential"
+  ],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1"
+  ],
+  "id": "string",
+  "issuer": {
+    "id": "string"
+  },
+  "issued": "2020-03-10T04:24:12.164Z",
+  ... // custom data in json
+}
+
+```
+{% endtab %}
+
+{% tab title="Request body example" %}
+```json
+{
+  "type": [
+    "VerifiableCredential",
+    "MyCustomCredential"
+  ],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1"
+  ],
+  "id": "http://example.gov/credentials/3732",
+  "issuer": {
+    "id": "did:example:456"
+  },
+  "issued": "2020-03-10T04:24:12.164Z",
+  "credentialSubject": {
+    "id": "did:example:123",
+    "firstName": "",
+    "lastName": "",
+    "country": "Austria"
+  }
+}
+
+```
+{% endtab %}
+
+{% tab title="Response body schema" %}
+```json
+null
+```
+{% endtab %}
+{% endtabs %}
+
 ### Load template
+
 The `/v1/templates/{id}` endpoint displays the content of the template having the parameters:
+
 * id path parameter (required) - `id` of the template
 
 {% tabs %}
@@ -240,9 +331,11 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 No parameter
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The template content as JSON
@@ -260,6 +353,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -294,12 +388,16 @@ curl -X 'GET' \
 {% endtabs %}
 
 ## Revocations
+
 The following functions are availabel for revocations:
+
 * [check](signatory-api.md#check-revocation) - checks if a credential is revoked based on revocation token
 * [revoke](signatory-api.md#revoke) - revokes a credential
 
 ### Check revocation
+
 The `/v1/revocations/{id}` endpoint checks if the specified token is revoked. The parameters are as follows:
+
 * id path parameter (required) - the derived revocation token id
 
 {% tabs %}
@@ -310,9 +408,11 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 No parameters.
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -334,6 +434,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -345,7 +446,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Revoke
+
 The `/v1/revocations/{id}` revokes a credential with the specified delegated revocation token as parameter:
+
 * id path parameter (required) - the base token id
 
 {% tabs %}
@@ -356,9 +459,11 @@ curl -X 'POST' \
   -H 'accept: text/plain'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 No parameters.
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 201
