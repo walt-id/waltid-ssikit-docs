@@ -31,7 +31,7 @@ Use the `issue` command to issue a W3C Verifiable Credential with either a JWT o
 
 options:&#x20;
 
-* `-t, --template TEXT` specify the VC template.  \[Required]
+* `-t, --template TEXT` specify the VC template. To create your own template, have a look [here](verifiable-credentials.md#import-vc-to-custodian-store-1)  \[Required]
 * `-i, --issuer-did TEXT` DID of the issuer (associated with signing key). \[Required]
 * `-s, --subject-did TEXT` DID of the VC subject (receiver of VC). \[Required] \
   e.g.
@@ -84,7 +84,7 @@ Options:&#x20;
 
 ### VC templates&#x20;
 
-VC templates related operations e.g.: list & export.
+Learn about VC template related functions like the listing and exporting of templates, as well as how to create/import your own custom VC template.
 
 * `list` List VC Templates.
 
@@ -97,6 +97,61 @@ VC templates related operations e.g.: list & export.
 e.g.  `vc templates export VerifiableId`
 
 ![](<../../.gitbook/assets/image (11).png>)
+
+#### Import VC to custodian store
+
+* `import <customCredentialPath.json>`
+
+
+
+Options:&#x20;
+
+* `-n, --name <Name>` Name of the template
+
+
+
+Arguments:&#x20;
+
+* `credential path` the last argument of the command references the path to the custom credential, which should be imported
+
+
+
+e.g `vc templates import MyCustomCredential custom.json`&#x20;
+
+
+
+**custom.json**
+
+```json
+{
+  "type": [
+    "VerifiableCredential",
+    "MyCustomCredential" // name of the credential
+  ],
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1"
+  ],
+  "id": "http://example.gov/credentials/3732",
+  "issuer": {
+    "id": "did:example:456"
+  },
+  "issued": "2020-03-10T04:24:12.164Z",
+  "credentialSubject": { //custom credential subject
+    "id": "",
+    "firstName": "",
+    "lastName": "",
+    "country": "Austria"
+  }
+}
+
+```
+
+
+
+**Output of the command**
+
+<figure><img src="../../.gitbook/assets/Screenshot on 2022-12-22 at 08-18-42.png" alt=""><figcaption></figcaption></figure>
 
 ### List VCs&#x20;
 
