@@ -64,6 +64,7 @@
     * [Build end-to-end use cases](ecosystems/ebsi-essif/usage-examples/build-end-to-end-use-cases.md)
 * [IOTA](ecosystems/iota/README.md)
   * [OIDC4VP profile for Login-with-IOTA](ecosystems/iota/oidc4vp-profile.md)
+  * [Login With IOTA Demo](https://youtu.be/samp2o65nX8)
 * [Velocity](ecosystems/velocity/README.md)
   * [Basics](ecosystems/velocity/basics/README.md)
     * [Onboarding](ecosystems/velocity/basics/onboarding.md)
