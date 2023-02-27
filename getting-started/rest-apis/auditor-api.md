@@ -1,21 +1,22 @@
 ---
-description: >-
-  Auditor REST API functions.
+description: Auditor REST API functions.
 ---
 
 # Auditor API
+
 [Swagger](https://auditor.ssikit.walt.id/v1/swagger) | [ReDoc](https://auditor.ssikit.walt.id/v1/redoc)
 
 The _Auditor API_ enables anybody to act as a "Verifier" (i.e. verify Verifiable Credentials or Verifiable Presentations). The validation steps can be easily configured by existing or custom _policies_.
 
 The following functionality is available:
+
 * [Verification](auditor-api.md#verification) - credential / presentation verification
 * [Policy](auditor-api.md#policies) - policy related functions
 
 ## Verification
-The `/v1/verify` endpoint verifies a list of credentials / presentations specified in the `JSON-LD` format against a set of policies.
-Each of the policy should be registered with the Auditor before being used in the verification.
-If at least one of the listed policies fails the verification, then the entire credential is considered to be invalid.
+
+The `/v1/verify` endpoint verifies a list of credentials / presentations specified in the `JSON-LD` format against a set of policies. Each of the policy should be registered with the Auditor before being used in the verification. If at least one of the listed policies fails the verification, then the entire credential is considered to be invalid.
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -26,7 +27,8 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
-{% tab title="Request body schema" %}
+
+{% tab title="Request body" %}
 ```
 {
     "policies":
@@ -249,7 +251,7 @@ curl -X 'POST' \
 ```
 {% endtab %}
 
-{% tab title="Response body schema" %}
+{% tab title="Response body" %}
 ```
 [
     {
@@ -273,6 +275,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 E.g Verification of a UniversityDegree credential against Signature and JsonSchema policies, where SignaturePolicy is failing.
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -285,9 +288,6 @@ curl -X 'POST' \
     [
         {
             "policy": "SignaturePolicy"
-        },
-        {
-            "policy": "JsonSchemaPolicy"
         }
     ],
     "credentials":
@@ -334,6 +334,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -390,7 +391,8 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
-{% tab title="Response body %}
+
+{% tab title="Response body" %}
 ```
 {
     "valid": false,
@@ -400,8 +402,7 @@ curl -X 'POST' \
             "valid": false,
             "policyResults":
             {
-                "SignaturePolicy": false,
-                "JsonSchemaPolicy": true
+                "SignaturePolicy": true
             }
         }
     ]
@@ -411,14 +412,16 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## Policies
+
 The Auditor Rest API also enables policy management with the following methods:
+
 * [list](auditor-api.md#list-policies) - display the available verification policies
 * [create](auditor-api.md#create-policy) - create a dynamic verification policy
 * [delete](auditor-api.md#delete-policy) - remove a dynamic verification policy
 
 ### List policies
-The `/v1/policies` endpoint lists the available verification policies.
-The policy `id` field is used to reference the policy during verification.
+
+The `/v1/policies` endpoint lists the available verification policies. The policy `id` field is used to reference the policy during verification.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -428,12 +431,14 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
-{% tab title="Request body schema" %}
+
+{% tab title="Request body" %}
 ```
 No parameters
 ```
 {% endtab %}
-{% tab title="Response body schema" %}
+
+{% tab title="Response body " %}
 ```
 [
     {
@@ -448,6 +453,7 @@ No parameters
 {% endtabs %}
 
 E.g. Listing of the verification policies
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -456,6 +462,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -561,8 +568,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ## Create policy
-The `/v1/create/{name}` creates a dynamic policy.
-The following parameters can be specified:
+
+The `/v1/create/{name}` creates a dynamic policy. The following parameters can be specified:
+
 * `name` path parameter (required) - specifies the value to be used as the policy `id`
 * `update` query parameter (optional, defualts to `false`) - accepts `boolean` values and specifies whether it should override an existing policy with the same `name` (only if the policy is mutable)
 * `downloadPolicy` query parameter (optional, defaults to `false`) - accepts `boolean` values and identifies the scope of the `policy` field:
@@ -572,32 +580,7 @@ The following parameters can be specified:
 More details on creating verification policies and fields definitions can be found at [Verification Policies](https://docs.walt.id/v/ssikit/concepts/verification-policies).
 
 {% tabs %}
-{% tab title="curl" %}
-{% endtab %}
 {% tab title="Request body schema" %}
-```
-{
-    "name": "string",
-    "description": "string",
-    "input":
-    {
-        "additionalProp1":
-        {},
-        "additionalProp2":
-        {},
-        "additionalProp3":
-        {}
-    },
-    "policy": "string",
-    "dataPath": "string",
-    "policyQuery": "string",
-    "policyEngine": "OPA",
-    "applyToVC": true,
-    "applyToVP": true
-}
-```
-{% endtab %}
-{% tab title="Response body schema" %}
 ```
 {
     "name": "string",
@@ -623,6 +606,7 @@ More details on creating verification policies and fields definitions can be fou
 {% endtabs %}
 
 E.g. Creating a Rego policy that checks if a credential subject id is not null or empty
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -643,6 +627,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -657,13 +642,16 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 Code 200
 {% endtab %}
 {% endtabs %}
 
 ## Delete policy
+
 The `/v1/delete/{name}` endpoint deletes a dynamic policy. The following parameters can be specified:
+
 * `name` path parameter (required) - specifies the `id` value of the policy
 
 {% tabs %}
@@ -674,9 +662,14 @@ curl -X 'DELETE' \
   -H 'accept: */*'
 ```
 {% endtab %}
+
+{% tab title="Response body" %}
+Policy removed / Policy not found
+{% endtab %}
 {% endtabs %}
 
 E.g. Removing the policy having 'MyPolicy' name
+
 {% tabs %}
 {% tab title="curl" %}
 ```
@@ -685,7 +678,8 @@ curl -X 'DELETE' \
   -H 'accept: */*'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
-`Policy removed`
+Policy removed / Policy not found
 {% endtab %}
 {% endtabs %}
