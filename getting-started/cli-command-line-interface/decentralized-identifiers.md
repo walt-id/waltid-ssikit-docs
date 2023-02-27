@@ -29,7 +29,7 @@ Creates a DID document using `did create [options]` command based on the corresp
 
 #### Options
 
-* `-m, --did-method [key | web | ebsi]` - Specify DID method \[key], Supported DID methods are "key", "web" and "ebsi
+* `-m, --did-method [key | web | ebsi | iota | jwk]` - Specify DID method \[key], Supported DID methods are: "key", "web", "ebsi", "iota", "jwk"
 * `-k, --key TEXT` - Specific key (ID or alias)
 * `-d, --domain TEXT` - Domain for did:web
 * `-p, --path TEXT` - Path for did:web
@@ -40,6 +40,18 @@ The returned value represents the DID document.
 E.g. `did create -m ebsi -k 8a2c3628acdd45999b4c0b5a69911437`&#x20;
 
 ![](<../../.gitbook/assets/Capture (2).PNG>)
+
+{% hint style="info" %}
+**IOTA support**
+
+For creating IOTA DIDs and registering them on the IOTA tangle, a wrapper library needs to be installed and available in the local library path.
+
+The wrapper library is included in the SSIKit Docker image, such that for Docker users no additional setup is required.
+
+CLI users can find instructions for build and SSIKit integration at:
+
+[https://github.com/walt-id/waltid-iota-identity-wrapper](https://github.com/walt-id/waltid-iota-identity-wrapper)
+{% endhint %}
 
 ### Resolve DID
 
