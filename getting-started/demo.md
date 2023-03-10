@@ -10,7 +10,7 @@ The demo shows an end-to-end SSI use case from the perspective of an individual 
 
 **Wallet:** Shows the receipt and management of VCs by a Holder.
 
-1. Create an account / log into an existing account _(after being redirected from the Issuer Portal)._
+1. Log into the [Web Wallet](https://wallet.walt.id/) _(after being redirected from the Issuer Portal)._ The demo does not require the account-creation nor a valid passord. Just type a email address to log in you demo account.
 2. Accept the connection request (from the Issuer Portal), by clicking on "share".
 3. Review and accept the Verifiable Credential (VC).
 
