@@ -7,6 +7,9 @@ We currently support the following DID methods:
 * did:ebsi
 * did:web
 * did:key
+* did:jwk
+* did:iota
+* did:cheqd
 
 _Note that we are continuously adding support for new DID methods._
 
