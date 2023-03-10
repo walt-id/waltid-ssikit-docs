@@ -9,5 +9,7 @@ We currently support:
 * EBSI/ESSIF (EU's new decentralized identity ecosystem)
 * Gaia-X (EU's new cloud infrastructure)
 * Velocity Network
+* Cheqd Netowork
+* IOTA
 
 _Note that we are continuously adding new ecosystems._
