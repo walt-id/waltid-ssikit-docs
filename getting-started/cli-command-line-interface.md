@@ -2,7 +2,7 @@
 
 ### Installation & Running the Project
 
-Choos between a Docker or a JVM-based runtime.
+Choose between a Docker or a JVM-based runtime.
 
 {% tabs %}
 {% tab title="Docker" %}

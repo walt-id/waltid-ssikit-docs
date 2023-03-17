@@ -74,6 +74,11 @@
     * [Onboarding](ecosystems/velocity/cli/onboarding.md)
     * [Issuing](ecosystems/velocity/cli/issuance.md)
     * [Inspection](ecosystems/velocity/cli/verification.md)
+* [Cheqd](ecosystems/cheqd/README.md)
+  * [Integration architecture](ecosystems/cheqd/integration-architecture.md)
+  * [Create DID](ecosystems/cheqd/create-did.md)
+  * [Issue VC](ecosystems/cheqd/issue-vc.md)
+  * [Verify VC](ecosystems/cheqd/verify-vc.md)
 
 ## Concepts
 

@@ -29,7 +29,7 @@ Creates a DID document using `did create [options]` command based on the corresp
 
 #### Options
 
-* `-m, --did-method [key | web | ebsi | iota | jwk]` - Specify DID method \[key], Supported DID methods are: "key", "web", "ebsi", "iota", "jwk"
+* `-m, --did-method [key | web | ebsi | iota | jwk | cheqd]` - Specify DID method \[key], Supported DID methods are: "key", "web", "ebsi", "iota", "jwk"
 * `-k, --key TEXT` - Specific key (ID or alias)
 * `-d, --domain TEXT` - Domain for did:web
 * `-p, --path TEXT` - Path for did:web
