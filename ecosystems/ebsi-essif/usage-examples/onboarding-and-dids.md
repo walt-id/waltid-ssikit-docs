@@ -20,7 +20,7 @@ Generation of the DID document
 
 EBSI/ESSIF Onboarding flow.
 
-> As prerequisite, the bearer token (validity of 15 min) from https://app.preprod.ebsi.eu/users-onboarding must be placed in file `data/ebsi/bearer-token.txt`
+> As prerequisite, the bearer token (validity of 15 min) from [https://app-pilot.ebsi.eu/users-onboarding/v2](https://app-pilot.ebsi.eu/users-onboarding/v2) must be placed in file `data/ebsi/bearer-token.txt`
 
 ```
 ./ssikit.sh essif onboard --did did:ebsi:241ou8rtrYnBokFALv3PGFeTRYQuLdyZnpFk3wFFhhiDKdLg
