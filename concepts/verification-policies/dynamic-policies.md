@@ -16,7 +16,7 @@ data class DynamicPolicyArg (
     val description: String? = null,
     val input: Map<String, Any?>,
     val policy: String,
-    val dataPath: String = "\$.credentialSubject",
+    val dataPath: String = "\$",
     val policyQuery: String = "data.system.main",
     val policyEngine: PolicyEngineType = PolicyEngineType.OPA,
     val applyToVC: Boolean = true,
@@ -30,7 +30,7 @@ data class DynamicPolicyArg (
 * `description`: Optional description of the policy
 * `input`: A generic map (JSON object), holding the input data required by the policy (or an empty map if no input is required)
 * `policy`: the policy definition (e.g. rego file), which can be a file path, URL, JSON Path (if policy is defined in a credential property) or the code/script directly.
-* `dataPath`: The path to the credential data, which should be verified, by default it's the credential subject: `$.credentialSubject`. To use the entire credential as verification data, specify the path `$`.
+* `dataPath`: The path to the credential data, which should be verified, by default it's the whole credential object `$`. To use e.g. only the credential subject as verification data, specify the JSON path like this: `$.credentialSubject`.
 * `policyQuery`: The query string in the policy engine lingo, defaults to "data.system.main"
 * `policyEngine`: The engine to use for execution of the policy. By default `OPA` (Open Policy Agent) is used.
 * `applyToVC`: Apply this policy to verifiable credentials (Default: true)
