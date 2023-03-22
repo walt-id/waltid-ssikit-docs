@@ -36,6 +36,29 @@ data class DynamicPolicyArg (
 * `applyToVC`: Apply this policy to verifiable credentials (Default: true)
 * `applyToVP`: Apply this policy to verifiable presentations (Default: false)
 
+### Policy execution and input data
+
+The policy is executed by the specified policy engine. Currently the only supported engine is Open Policy Agent.
+
+The Open Policy Agent receives an input object that contains the input parameter of the dynamic policy and the credential data, as configured in the policy argument.
+
+The input object for the policy engine looks like this:
+
+```
+data class PolicyEngineInput(
+    val credentialData: Map<String, Any?>,
+    val parameter: Map<String, Any?>?
+)
+```
+
+This means, in the definition of the REGO policy, one can access the input parameter and the credential data selected for evaluation, by these input properties:
+
+`input.parameter`: The input object as defined in the `input` property of the Dynamic Policy Argument
+
+`input.credentialData`: The credential data selected by the JSON path given in the `dataPath` property of the Dynamic Policy Argument
+
+See the next section for a simple example.
+
 ### Sample policy
 
 This simple rego policy takes a credential subject as input and verifies the subject DID against a given parameter.
@@ -46,7 +69,7 @@ package system
 default main = false
 
 main {
-    input.user == data.id
+    input.parameter.user == input.credentialData.credentialSubject.id
 }
 ```
 
