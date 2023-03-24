@@ -80,6 +80,10 @@
   * [Issue VC](ecosystems/cheqd/issue-vc.md)
   * [Verify VC](ecosystems/cheqd/verify-vc.md)
 
+## Tutorials
+
+* [Your First VC](tutorials/your-first-vc.md)
+
 ## Concepts
 
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
