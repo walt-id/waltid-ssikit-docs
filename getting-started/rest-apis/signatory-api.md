@@ -244,7 +244,7 @@ curl -X 'GET' \
 {% endtab %}
 {% endtabs %}
 
-### Create template
+### Import template
 
 The `/v1/templates/{id}` endpoint to import your custom credential template
 
