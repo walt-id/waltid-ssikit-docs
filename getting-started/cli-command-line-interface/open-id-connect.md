@@ -9,6 +9,6 @@ Commands:
 * **ci** OIDC for Credential Issuance
 * **vp** OIDC for Verifiable Presentations
 
-Usage examples:
+### Examples
 
-Examples of using the **SSIKit command line interface** to interact with OIDC issuers and verifiers, can be found in the [**OIDC usage examples**](broken-reference).
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>OIDC For Credential Issuance</strong></td><td></td><td></td><td><a href="../../usage-examples/data-exchange-protocols/oidc/usage-examples.md">usage-examples.md</a></td></tr><tr><td><strong>OIDC for Verifiable Presentations</strong></td><td></td><td></td><td><a href="../../usage-examples/data-exchange-protocols/oidc/usage-examples-1.md">usage-examples-1.md</a></td></tr></tbody></table>

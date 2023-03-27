@@ -1,4 +1,4 @@
-# Your First VC
+# My First VC
 
 In this tutorial, our fictional SSI Use-Case involves Emma, a recent university graduate, who wants to apply for a job. The employer requires proof of her academic credentials. To achieve this, she will use her Verifiable Degree Credential issued by her university.
 
@@ -8,10 +8,10 @@ Utilizing the walt.id SSI-Kit's REST-API, we will provide Emma with the Verifiab
 
 **What we do:**
 
-1. [Run the SSI-Kit and expose API](your-first-vc.md#running-the-ssi-kit)
-2. [Create DIDs](your-first-vc.md#creating-the-did) - for Emma + University
-3. [Issue Credential](your-first-vc.md#issuing-a-verifiable-university-degree-credential) to Emma
-4. [Verify Credential](your-first-vc.md#verify-the-university-degree-credential) from Emma
+1. [Run the SSI-Kit and expose API](my-first-vc.md#running-the-ssi-kit)
+2. [Create DIDs](my-first-vc.md#creating-the-did) - for Emma + University
+3. [Issue Credential](my-first-vc.md#issuing-a-verifiable-university-degree-credential) to Emma
+4. [Verify Credential](my-first-vc.md#verify-the-university-degree-credential) from Emma
 
 
 

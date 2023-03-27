@@ -31,20 +31,20 @@
 ## Getting started
 
 * [Quick Start](getting-started/quick-start.md)
+* [REST API](getting-started/rest-apis.md)
+  * [Signatory API - For Issuers](getting-started/rest-apis/signatory-api.md)
+  * [Custodian API - For Holders](getting-started/rest-apis/custodian-api.md)
+  * [Auditor API - For Verifiers](getting-started/rest-apis/auditor-api.md)
+  * [Core API](getting-started/rest-apis/core-api.md)
+  * [API Serving Configs](getting-started/rest-apis/api-service.md)
+* [Dependency (JVM)](getting-started/dependency-jvm/README.md)
+  * [Java Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/java/id/walt/ssikitexamples)
+  * [Kotlin Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/kotlin/id/walt/ssikitexamples)
 * [CLI | Command Line Interface](getting-started/cli-command-line-interface.md)
   * [Key Management](getting-started/cli-command-line-interface/key-management.md)
   * [Decentralized Identifiers](getting-started/cli-command-line-interface/decentralized-identifiers.md)
   * [Verifiable Credentials](getting-started/cli-command-line-interface/verifiable-credentials.md)
-  * [API Service](getting-started/cli-command-line-interface/api-service.md)
   * [OpenID Connect (OIDC)](getting-started/cli-command-line-interface/open-id-connect.md)
-* [REST API](getting-started/rest-apis.md)
-  * [Signatory API](getting-started/rest-apis/signatory-api.md)
-  * [Custodian API](getting-started/rest-apis/custodian-api.md)
-  * [Auditor API](getting-started/rest-apis/auditor-api.md)
-  * [Core API](getting-started/rest-apis/core-api.md)
-* [Dependency (JVM)](getting-started/dependency-jvm/README.md)
-  * [Java Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/java/id/walt/ssikitexamples)
-  * [Kotlin Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/kotlin/id/walt/ssikitexamples)
 * [Building the Project](getting-started/build.md)
   * [Docker Build](getting-started/quick-start/docker.md)
   * [Local Build](getting-started/quick-start/build/local-build.md)
@@ -83,7 +83,7 @@
 
 ## Tutorials
 
-* [Your First VC](tutorials/your-first-vc.md)
+* [My First VC](tutorials/my-first-vc.md)
 
 ## Concepts
 

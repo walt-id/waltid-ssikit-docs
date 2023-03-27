@@ -4,13 +4,11 @@ description: Getting started with the SSI Kit.
 
 # Quick Start
 
-There are different options to utilize the functionalities the SSI Kit provides.
+The SSI-Kit's functionality can be used in a variety of ways. Select your preference to get started
 
-****[**CLI Tool**](cli-command-line-interface.md): The SSI Kit comes with a **** command-line interface (CLI) tool, which offers a rich set of commands to run the entire functionality the SSI Kit provides. The CLI tool can be used by running the Docker container or the executable by the local build.
+<table data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>REST API</strong></td><td>Learn how to issue, verify and manage Verifiable Credentials, Keys and DIDs  via API.</td><td></td><td><a href="rest-apis.md">rest-apis.md</a></td></tr><tr><td><strong>Java | Kotlin</strong></td><td>Learn how to issue, verify and manage Verifiable Credentials, Keys and DIDs  directly in a Java or Kotlin Application. Adding the SSI-Kit as a direct dependency.</td><td></td><td><a href="dependency-jvm/">dependency-jvm</a></td></tr><tr><td><strong>CLI - Command Line Tool</strong></td><td>Learn how to issue, verify and manage Verifiable Credentials, Keys and DIDs  via the CLI.</td><td></td><td><a href="cli-command-line-interface.md">cli-command-line-interface.md</a></td></tr></tbody></table>
 
-****[**REST API**](rest-apis.md): In case you want to run the SSI Kit as a service, your application can access all functionalities via the REST API.
+### Tutorials
 
-****[**Dependency (JVM)**](dependency-jvm/): The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
-
-
+* [My First Verifiable Credential (VC)](../tutorials/my-first-vc.md) - Issue and verify your first VC using the SSI-Kit Api
 

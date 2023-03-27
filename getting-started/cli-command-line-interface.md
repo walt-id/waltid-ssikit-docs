@@ -1,5 +1,7 @@
 # CLI | Command Line Interface
 
+Manage keys, DIDs, issue Verifiable Credentials, and verify them using the SSI-Kit command line tool.
+
 ### Installation & Running the Project
 
 Choose between a Docker or a JVM-based runtime.
@@ -96,33 +98,12 @@ ssikit -v
 ssikit -v did create
 ```
 
-### Example commands
+### Getting Started
 
-```
-ssikit key gen --algorithm Ed25519
-
-ssikit key list
-
-ssikit did create -m web
-
-ssikit did resolve --did did:web:mattr.global
-
-ssikit -v vc issue --issuer-did did:key:z6MkmNMF2... --subject-did did:key:zjkl2sd...
-
-ssikit vc verify data/vc/created/vc-1614291790088-default.json
-
-ssikit -v vc present data/vc/created/vc-1614291790088-default.json
-
-ssikit vc verify -p data/vc/presented/vp-1614291892489.json
-```
-
-
-
-### Components
-
-You can now dive deeper into the different components forming the SSI Kit and their functionality provided:
+Explore the components of the SSI Kit and their functionality:
 
 * [Key Management](cli-command-line-interface/key-management.md)
 * [Decentralized Identifiers](cli-command-line-interface/decentralized-identifiers.md)
 * [Verifiable Credentials](cli-command-line-interface/verifiable-credentials.md)
+* [OpenID Connect (OIDC)](cli-command-line-interface/open-id-connect.md)
 

@@ -2,7 +2,7 @@
 
 The SSI Kit abstracts complexity for developers by following a "multi-stack approach" that enables you to use different implementations or "flavours" of SSI.
 
-As a result, you can participate in different identity ecosystems (e.g. EBSI/ESSIF, Gaia-X, Velocity Network) and avoid technology-related lock-in effects.&#x20;
+As a result, you can participate in different identity ecosystems (e.g. EBSI/ESSIF, Gaia-X, Velocity Network, cheqd and IOTA) and avoid technology-related lock-in effects.&#x20;
 
 Based on our [Introduction to Self-Sovereign Identity (SSI)](../../what-is-ssi/), we distinguish the following concepts or building blocks: &#x20;
 

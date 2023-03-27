@@ -2,14 +2,14 @@
 description: Signatory REST API functions.
 ---
 
-# Signatory API
+# Signatory API - For Issuers
 
 [Swagger](https://signatory.ssikit.walt.id/v1/swagger) | [Redoc](https://signatory.ssikit.walt.id/v1/redoc)
 
 The _Signatory API_ exposes the "issuance" endpoint, which provides flexible integration possibilities for anyone intending to act as an "Issuer" (i.e. create, sign and issue Verifiable Credentials), as follows:
 
 * [Credentials](signatory-api.md#credentials) - issue credentials
-* [Templates](signatory-api.md#templates) - template related functions
+* [Templates](signatory-api.md#templates) - create and mange credential templates
 * [Revocations](signatory-api.md#revocations) - revocation related functions
 
 ## Credentials
@@ -244,9 +244,9 @@ curl -X 'GET' \
 {% endtab %}
 {% endtabs %}
 
-### Import template
+### Create template
 
-The `/v1/templates/{id}` endpoint to import your custom credential
+The `/v1/templates/{id}` endpoint to import your custom credential template
 
 * id path parameter (required) - `id` of the template, e.g. `MyCustomCredential`
 
