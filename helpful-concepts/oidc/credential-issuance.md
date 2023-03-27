@@ -8,7 +8,7 @@ The respective **OIDC4CI** specification can be found at:
 [**OIDC4CI - OIDC for credential issuance**](https://tlodderstedt.github.io/openid-connect-4-verifiable-credential-issuance-1\_0-01.html)
 {% endhint %}
 
-![OIDC for CI](../oidc-credential-issuance-ssikit.png)
+![OIDC for CI](../../concepts/oidc/oidc-credential-issuance-ssikit.png)
 
 {% hint style="info" %}
 Refer also to our **web wallet documentation**, for an example of an actual end-to-end integration of the OIDC issuance flow:

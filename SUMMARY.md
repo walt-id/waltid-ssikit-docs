@@ -42,7 +42,9 @@
   * [Custodian API](getting-started/rest-apis/custodian-api.md)
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [Core API](getting-started/rest-apis/core-api.md)
-* [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
+* [Dependency (JVM)](getting-started/dependency-jvm/README.md)
+  * [Java Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/java/id/walt/ssikitexamples)
+  * [Kotlin Examples](https://github.com/walt-id/waltid-ssikit-examples/tree/master/src/main/kotlin/id/walt/ssikitexamples)
 * [Building the Project](getting-started/build.md)
   * [Docker Build](getting-started/quick-start/docker.md)
   * [Local Build](getting-started/quick-start/build/local-build.md)
@@ -85,17 +87,17 @@
 
 ## Concepts
 
-* [Open Policy Agent](concepts/open-policy-agent.md)
+* [Open Policy Agent](usage-examples/open-policy-agent.md)
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
-  * [Credential Issuance](concepts/oidc/credential-issuance/README.md)
-    * [OIDC4CI | Example](concepts/oidc/credential-issuance/usage-examples.md)
-  * [Presentation Exchange](concepts/oidc/presentation-exchange/README.md)
-    * [OIDC4VP | Example](concepts/oidc/presentation-exchange/usage-examples-1.md)
+  * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
+    * [OIDC4CI | Example](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
+  * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
+    * [OIDC4VP | Example](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
 * [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
   * [Static Policies](concepts/verification-policies/static-policies.md)
   * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
   * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
-* [Delegation and Mandates](concepts/delegation-and-mandates.md)
+* [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
 
 ## Community
 

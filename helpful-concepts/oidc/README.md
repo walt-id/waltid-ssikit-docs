@@ -6,5 +6,5 @@ Below you find **sequence diagrams**, for the issuance and verification flows.
 
 Examples of using the **SSIKit command line interface** to interact with OIDC issuers and verifiers, can be found here:&#x20;
 
-1. [OIDC4CI](../../concepts/oidc/credential-issuance/usage-examples.md) - Credential Issuance
-2. [OIDC4VP](../../concepts/oidc/presentation-exchange/usage-examples-1.md) - Presentation Exchange
+1. [OIDC4CI](../../usage-examples/data-exchange-protocols/oidc/usage-examples.md) - Credential Issuance
+2. [OIDC4VP](../../usage-examples/data-exchange-protocols/oidc/usage-examples-1.md) - Presentation Exchange

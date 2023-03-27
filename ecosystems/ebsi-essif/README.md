@@ -37,13 +37,13 @@ Gaining access to protected EBSI/ESSIF services (incl. presentation of "Verifiab
 
 The ESSIF protocol for issuance of verifiable credentials aims to being compliant with the OIDC for credential issuance specification. Refer to the respective section for details:
 
-[**OIDC for credential issuance**](../../concepts/oidc/credential-issuance/)
+[**OIDC for credential issuance**](../../helpful-concepts/oidc/credential-issuance.md)
 
 ### Exchange of Verifiable Presentations
 
 The ESSIF protocol for presentation of verifiable credentials to a Verifier or Relying Party, aims to being compliant with the OIDC/SIOPv2 specification. Refer to this section for details:
 
-[**OIDC/SIOPv2 for verifiable presentations**](../../concepts/oidc/presentation-exchange/)
+[**OIDC/SIOPv2 for verifiable presentations**](../../helpful-concepts/oidc/presentation-exchange.md)
 
 ### Code examples
 

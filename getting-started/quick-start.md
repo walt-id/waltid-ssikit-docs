@@ -10,7 +10,7 @@ There are different options to utilize the functionalities the SSI Kit provides.
 
 ****[**REST API**](rest-apis.md): In case you want to run the SSI Kit as a service, your application can access all functionalities via the REST API.
 
-****[**Dependency (JVM)**](quick-start/dependency-jvm.md): The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
+****[**Dependency (JVM)**](dependency-jvm/): The SSI Kit can be used directly as JVM-dependency **** via Maven or Gradle.&#x20;
 
 
 
