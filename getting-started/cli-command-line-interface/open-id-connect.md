@@ -11,4 +11,4 @@ Commands:
 
 Usage examples:
 
-Examples of using the **SSIKit command line interface** to interact with OIDC issuers and verifiers, can be found in the [**OIDC usage examples**](../../usage-examples/data-exchange-protocols/oidc/README.md).
+Examples of using the **SSIKit command line interface** to interact with OIDC issuers and verifiers, can be found in the [**OIDC usage examples**](broken-reference).

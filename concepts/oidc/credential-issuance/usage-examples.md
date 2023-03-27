@@ -1,4 +1,4 @@
-# OIDC4CI | Credential Issuance
+# OIDC4CI | Example
 
 For interacting with an OIDC credential issuer, we need to know the OIDC base URL of the issuer service. The SSIKit tries to resolve the OIDC discovery document relative to that base URL like this:
 
@@ -76,7 +76,7 @@ After completing the issuance session in the issuer web portal, we continue with
 
 Once we completed the issuance session on the issuer web portal, we get redirected to the dummy address we specified, like we can see in this screenshot:
 
-![Issuer redirect screenshot](issuer-redirect-screenshot.png)
+![Issuer redirect screenshot](../../../usage-examples/data-exchange-protocols/oidc/issuer-redirect-screenshot.png)
 
 We copy that URL from the browser and fetch the _id\_token_ and _access\_token_ from the issuer like so:
 

@@ -1,4 +1,4 @@
-# OIDC4VP | Verifiable Presentations
+# OIDC4VP | Example
 
 The credential presentation flow is triggered from a Verifier portal, sending an OIDC/SIOP authorization request to the wallet, which acts as a Self-Issued OpenID Provider (SIOP).
 
@@ -12,11 +12,11 @@ To obtain a valid SIOP request URL from the verifier, let's open the verifier po
 
 Hit the F12 button, to open the developer tools and navigate to the "Network" tab (make sure the request type filter shows _All_ requests), like shown in the following screenshot:
 
-![Verifier portal and network tab](verifier-portal-network-tab.png)
+![Verifier portal and network tab](../../../usage-examples/data-exchange-protocols/oidc/verifier-portal-network-tab.png)
 
 Now hit the "Connect to wallet using VerifiableID" button. The verifier portal redirects to the web wallet, and you find the relevant SIOP request, in the network tab with the request URI starting as `/api/wallet/siopv2/initPresentation`, like shown in this screenshot:
 
-![Wallet SIOP redirection](wallet-siop-redirect.png)
+![Wallet SIOP redirection](../../../usage-examples/data-exchange-protocols/oidc/wallet-siop-redirect.png)
 
 We want to copy the SIOP request URL, in this example it's:
 
@@ -128,4 +128,4 @@ The command prints the SIOP response object and the **redirection address**, to 
 
 The verifier portal shows a successful verification, like shown by this screenshot:
 
-![verifier success page](verifier-success.png)
+![verifier success page](../../../usage-examples/data-exchange-protocols/oidc/verifier-success.png)

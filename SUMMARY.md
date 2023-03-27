@@ -27,7 +27,6 @@
     * [Ecosystem Abstraction](what-is-the-ssi-kit/ssi-kit/architecture/ecosystem-abstraction.md)
     * [High-Level Interfaces / APIs](what-is-the-ssi-kit/ssi-kit/architecture/high-level-interfaces-apis.md)
   * [Use Cases](what-is-the-ssi-kit/ssi-kit/use-cases.md)
-* [Open Policy Agent](usage-examples/open-policy-agent.md)
 
 ## Getting started
 
@@ -86,22 +85,17 @@
 
 ## Concepts
 
+* [Open Policy Agent](concepts/open-policy-agent.md)
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
-  * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
-  * [Presentation Exchange](helpful-concepts/oidc/presentation-exchange.md)
+  * [Credential Issuance](concepts/oidc/credential-issuance/README.md)
+    * [OIDC4CI | Example](concepts/oidc/credential-issuance/usage-examples.md)
+  * [Presentation Exchange](concepts/oidc/presentation-exchange/README.md)
+    * [OIDC4VP | Example](concepts/oidc/presentation-exchange/usage-examples-1.md)
 * [Verification Policies](usage-examples/verifiable-credentials/verification-policies.md)
   * [Static Policies](concepts/verification-policies/static-policies.md)
   * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
   * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
-
-## Usage / Examples
-
-* [Verifiable Credentials](usage-examples/verifiable-credentials/README.md)
-  * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
-* [Data Exchange Protocols](usage-examples/data-exchange-protocols/README.md)
-  * [OpenID Connect](usage-examples/data-exchange-protocols/oidc/README.md)
-    * [OIDC4CI | Credential Issuance](usage-examples/data-exchange-protocols/oidc/usage-examples.md)
-    * [OIDC4VP | Verifiable Presentations](usage-examples/data-exchange-protocols/oidc/usage-examples-1.md)
+* [Delegation and Mandates](concepts/delegation-and-mandates.md)
 
 ## Community
 
