@@ -47,7 +47,7 @@
 * [Building the Project](getting-started/build.md)
   * [Docker Build](getting-started/quick-start/docker.md)
   * [Local Build](getting-started/quick-start/build/local-build.md)
-* [Configurations](getting-started/configuration.md)
+* [Project Configurations](getting-started/configuration.md)
 * [Demo](getting-started/demo.md)
 
 ## Ecosystems
