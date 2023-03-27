@@ -44,7 +44,7 @@
   * [Auditor API](getting-started/rest-apis/auditor-api.md)
   * [Core API](getting-started/rest-apis/core-api.md)
 * [Dependency (JVM)](getting-started/quick-start/dependency-jvm.md)
-* [Build](getting-started/build.md)
+* [Building the Project](getting-started/build.md)
   * [Docker Build](getting-started/quick-start/docker.md)
   * [Local Build](getting-started/quick-start/build/local-build.md)
 * [Configurations](getting-started/configuration.md)
