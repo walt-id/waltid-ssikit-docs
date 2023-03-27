@@ -4,8 +4,8 @@ DID _cheqd_ scheme is supported with the same functionality as the other DID sch
 
 `did:cheqd` requires keys of type `Ed25519`. They can be either:
 
-* [imported](../../usage-examples/key-management/key-import.md) into SSIKit - and further used when creating the did by specifying the `kid`
-* or [created](../../usage-examples/key-management/key-generation.md) with SSIKit
+* [imported](broken-reference) into SSIKit - and further used when creating the did by specifying the `kid`
+* or [created](broken-reference) with SSIKit
   * standalone
   * by default when running the did-create command
 

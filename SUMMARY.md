@@ -96,18 +96,7 @@
 
 ## Usage / Examples
 
-* [Key Management](usage-examples/key-management.md)
-  * [Key Generation](usage-examples/key-management/key-generation.md)
-  * [Key Export](usage-examples/key-management/key-export.md)
-  * [Key Import](usage-examples/key-management/key-import.md)
-* [Decentralized Identifiers](usage-examples/decentralized-identifiers/README.md)
-  * [did:key](usage-examples/decentralized-identifiers/did-key.md)
-  * [did:web](usage-examples/decentralized-identifiers/did-web.md)
-  * [did:ebsi](usage-examples/decentralized-identifiers/did-ebsi.md)
 * [Verifiable Credentials](usage-examples/verifiable-credentials/README.md)
-  * [Issuance](usage-examples/verifiable-credentials/issuance.md)
-  * [Presentation](usage-examples/verifiable-credentials/presentation.md)
-  * [Verification](usage-examples/verifiable-credentials/verification.md)
   * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
 * [Data Exchange Protocols](usage-examples/data-exchange-protocols/README.md)
   * [OpenID Connect](usage-examples/data-exchange-protocols/oidc/README.md)
