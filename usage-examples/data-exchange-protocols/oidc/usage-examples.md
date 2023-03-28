@@ -7,7 +7,7 @@ For interacting with an OIDC credential issuer, we need to know the OIDC base UR
 For this example, let's use our demo issuance service published on:
 
 ```
-https://issuer.walt.id/issuer-api/default/oidc/.well-known/openid-configuration
+https://issuer.walt.id/issuer-api/default/oidc
 ```
 
 ## Issuer info
@@ -15,7 +15,7 @@ https://issuer.walt.id/issuer-api/default/oidc/.well-known/openid-configuration
 First let's get some information about the credentials, the issuer provides, and possibly, which types of credentials we must present, in order to obtain the issued credentials.
 
 ```
-ssikit oidc ci info -i "https://issuer.walt.id/issuer-api/oidc/"
+ssikit oidc ci info -i "https://issuer.walt.id/issuer-api/default/oidc"
 ```
 
 _Output_
