@@ -6,7 +6,9 @@ For interacting with an OIDC credential issuer, we need to know the OIDC base UR
 
 For this example, let's use our demo issuance service published on:
 
-`https://issuer.walt.id/issuer-api/oidc/`
+```
+https://issuer.walt.id/issuer-api/default/oidc/.well-known/openid-configuration
+```
 
 ## Issuer info
 
