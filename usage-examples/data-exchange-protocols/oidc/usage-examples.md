@@ -14,7 +14,7 @@ https://issuer.walt.id/issuer-api/default/oidc
 
 First let's get some information about the credentials, the issuer provides, and possibly, which types of credentials we must present, in order to obtain the issued credentials.
 
-```
+```bash
 ssikit oidc ci info -i "https://issuer.walt.id/issuer-api/default/oidc"
 ```
 
@@ -23,27 +23,25 @@ _Output_
 ```
 [...]
 Issuer:
-walt.id Issuer Portal
+https://issuer.walt.id/issuer-api/default
 ---
 Issuable credentials:
-[...]
-- VerifiableId
-Schema ID: https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba
-- EuropeanBankIdentity
-Schema ID: https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/EuropeanBankCredential.json
+- ProofOfResidence
 ---
-Required VP:
-<None>
+[...]
 ```
 
-The issuer lists the supported credential types and their schema IDs, as well as required VPs, which are _None_ in our demo service.
+The issuer lists the supported credential types, as well as required VPs, which are _None_ in our demo service.
 
 ## Initiate credential issuance session
 
 To initiate a credential issuance session, we have to push an authorization request to the issuer service, containing information about which credential we want to get issued, and a possibly required verifiable presentation:
 
-```
-ssikit oidc ci auth -i "https://issuer.walt.id/issuer-api/oidc/" -n "FOO" -r "https://blank" -s "https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba"
+```bash
+ssikit oidc ci auth -i "https://issuer.walt.id/issuer-api/default/oidc" -n "FOO" \
+-r "https://blank" \
+-c ProofOfResidence
+
 ```
 
 {% hint style="info" %}
@@ -57,7 +55,7 @@ Let's break up the above command:
 * **-i \[...]**: Set the issuer base URL
 * **-n \[...]**: A nonce we define, for the issuer to sign the id\_token in a later step
 * **-r \[...]**: Set a dummy redirect address, as we just need to copy the final redirection URL from the browser lateron.
-* **-s \[...]**: Request issuance of a VerifiableID credential, by specifying its schema ID
+* **-c \[...]**: Credential type of credential to be issued, like given by issuer metadata supported\_credentials
 
 _Output_
 
@@ -82,8 +80,9 @@ Once we completed the issuance session on the issuer web portal, we get redirect
 
 We copy that URL from the browser and fetch the _id\_token_ and _access\_token_ from the issuer like so:
 
-```
-ssikit oidc ci token -i https://issuer.walt.id/issuer-api/oidc/ -r "https://blank/?code=a58b8919-4922-4140-a46b-e89f7b36d87c&state=XqLV33eiLjSJSJf58KC9m2U9PYfT6jmmMcnRfJaz_ow"
+```bash
+ssikit oidc ci token -i https://issuer.walt.id/issuer-api/default/oidc/ \
+-r "https://blank/?code=a58b8919-4922-4140-a46b-e89f7b36d87c&state=XqLV33eiLjSJSJf58KC9m2U9PYfT6jmmMcnRfJaz_ow"
 ```
 
 {% hint style="info" %}
@@ -128,8 +127,13 @@ Let's now proceed with the credential request, like instructed by the command ou
 
 Once we retrieved the _access\_token_, we can fetch the actual credential from the issuer. This command can be repeated for each credential schema type we requested in the _auth_ subcommand previously.
 
-```
-ssikit oidc ci credential -i https://issuer.walt.id/issuer-api/oidc/ -m OIDC -t a58b8919-4922-4140-a46b-e89f7b36d87c -n 5685e1d3-7da7-453c-9776-555217564f21 -d did:key:z6Mktxjvto1vueoMXiiAtLQiCrDPd2Xoi47isAnjK12nETRX -s "https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0xb77f8516a965631b4f197ad54c65a9e2f9936ebfb76bae4906d33744dbcc60ba" --save
+```bash
+ssikit oidc ci credential -i https://issuer.walt.id/issuer-api/default/oidc/ \
+-m OIDC \
+-t a58b8919-4922-4140-a46b-e89f7b36d87c -n 5685e1d3-7da7-453c-9776-555217564f21 \
+-d did:key:z6Mktxjvto1vueoMXiiAtLQiCrDPd2Xoi47isAnjK12nETRX \
+-c ProofOfResidence \
+--save
 ```
 
 {% hint style="info" %}
@@ -145,7 +149,7 @@ Breakdown of above command:
 * **-t \[...]**: The access\_token we received previously
 * **-n \[...]**: The nonce used for signing the DID ownership proof
 * **-d \[...]**: The DID for which the credential should be issued (we have to proof DID ownership!)
-* **-s \[...]**: The schema ID of the credential to retrieve
+* **-c \[...]**: Credential type of credential to be issued, like given by issuer metadata supported\_credentials
 * **--save**: We instruct the CLI to save the received credential to the credential store
 
 _Output_
