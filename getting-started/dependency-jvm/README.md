@@ -9,7 +9,7 @@ The following illustrates how the SSI Kit can be used via Gradle or Maven (look 
 **Gradle**
 
 ```
-implementation("id.walt:waltid-ssi-kit:VERSION")
+implementation("id.walt:waltid-ssikit:VERSION")
 ```
 
 **Maven**
@@ -17,7 +17,7 @@ implementation("id.walt:waltid-ssi-kit:VERSION")
 ```
   <dependency>
         <groupId>id.walt</groupId>
-        <artifactId>waltid-ssi-kit</artifactId>
+        <artifactId>waltid-ssikit</artifactId>
         <version>VERSION</version>
    </dependency>
 ```
@@ -26,8 +26,12 @@ Required Maven repos:
 
 ```
 https://maven.walt.id/repository/waltid/
-https://maven.walt.id/repository/waltid-ssi-kit/
+https://maven.walt.id/repository/waltid-ssikit/
 ```
+
+{% hint style="info" %}
+You can find the latest version [here](https://github.com/walt-id/waltid-ssikit/releases). Make sure when adding the version you add it without the 'v' in front.
+{% endhint %}
 
 ### Examples
 
