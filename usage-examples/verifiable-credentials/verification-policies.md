@@ -16,10 +16,11 @@ walt.id SSI Kit 1.11.0-SNAPSHOT (running on Java 16.0.2+7-suse-lp153.30.15-x8664
 
 - SignaturePolicy       Verify by signature,    Argument: None
 - JsonSchemaPolicy       Verify by JSON schema,  Argument: None
-- TrustedSchemaRegistryPolicy    Verify by EBSI Trusted Schema Registry,         Argument: None
-- TrustedIssuerDidPolicy         Verify by trusted issuer did,   Argument: None
-- TrustedIssuerRegistryPolicy    Verify by trusted EBSI Trusted Issuer Registry record,  Argument: None
-- TrustedSubjectDidPolicy        Verify by trusted subject did,  Argument: None
+- EbsiTrustedSchemaRegistryPolicy    Verify by EBSI Trusted Schema Registry,         Argument: None
+- EbsiTrustedIssuerDidPolicy         Verify by trusted issuer did,   Argument: None
+- EbsiTrustedIssuerRegistryPolicy    Verify by trusted EBSI Trusted Issuer Registry record,  Argument: None
+- EbsiTrustedSubjectDidPolicy        Verify by trusted subject did,  Argument: None
+- EbsiTrustedIssuerAccreditationPolicy    Verify by issuer's authorized claims,  Argument: None
 - IssuedDateBeforePolicy         Verify by issuance date,        Argument: None
 - ValidFromBeforePolicy  Verify by valid from,   Argument: None
 - ExpirationDateAfterPolicy      Verify by expiration date,      Argument: None

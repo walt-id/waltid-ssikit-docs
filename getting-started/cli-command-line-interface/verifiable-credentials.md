@@ -62,7 +62,7 @@ Use present command to present a VC or VP to a verifier.
 
 use verify command to verify&#x20;
 
-`-p, --policy VALUE` Verification policy. Can be specified multiple times. By default, SignaturePolicy is used.
+`-p, --policy VALUE` Verification policy. Can be specified multiple times. By default, SignaturePolicy is used. For more details on how to specify the policies, refer to [verification-policies.md](../../usage-examples/verifiable-credentials/verification-policies.md "mention").
 
 ### List verification policies&#x20;
 
