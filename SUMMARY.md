@@ -87,6 +87,7 @@
 
 ## Concepts
 
+* [Credential Templates](concepts/credential-templates.md)
 * [Open Policy Agent](usage-examples/open-policy-agent.md)
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
