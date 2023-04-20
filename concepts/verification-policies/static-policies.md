@@ -10,7 +10,7 @@ Argument: _None_.
 
 ### JsonSchemaPolicy
 
-Verifies against the associated JSON schema. Note that the attribute _credentialSchema_ must be set an the JSON schema must be accessible by the http URL.
+Verifies against the associated JSON schema. Note that the attribute _credentialSchema_ must be set and the JSON schema must be accessible by the http URL.
 
 Argument: _None_.
 
@@ -29,8 +29,6 @@ Argument: _None_.
 ### ChallengePolicy&#x20;
 
 Verify challenge.
-
-Argument: _None_.
 
 Argument: `ChallengePolicyArg`
 
