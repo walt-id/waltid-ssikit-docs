@@ -2,7 +2,7 @@
 description: Auditor REST API functions.
 ---
 
-# Auditor API
+# Auditor API - For Verifiers
 
 [Swagger](https://auditor.ssikit.walt.id/v1/swagger) | [ReDoc](https://auditor.ssikit.walt.id/v1/redoc)
 
@@ -343,9 +343,6 @@ curl -X 'POST' \
         {
             "policy": "SignaturePolicy"
         },
-        {
-            "policy": "JsonSchemaPolicy"
-        }
     ],
     "credentials":
     [
