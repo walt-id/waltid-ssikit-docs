@@ -18,3 +18,8 @@ _book
 .vscode
 
 out
+
+# Intellij
+.idea/
+*.iml
+*.iws
