@@ -3,7 +3,7 @@
 Checking the status of a verifiable credential can be done using the command-line interface with the
 following command:
 ```shell
-ssikit.sh vc revocation check {vc-filepath}
+ssikit vc revocation check {vc-filepath}
 ```
 
 where _{vc-filepath}_ is the path to the verifiable credential to be checked.
@@ -14,63 +14,36 @@ e.g. Verifiable Credential - vc.json
   "type":
   [
     "VerifiableCredential",
-    "VerifiableAttestation",
-    "VerifiableId"
+    "UniversityDegreeCredential"
   ],
   "@context":
   [
     "https://www.w3.org/2018/credentials/v1",
+    "https://www.w3.org/2018/credentials/examples/v1",
     "https://w3id.org/security/suites/jws-2020/v1"
   ],
-  "id": "urn:uuid:07f73ca8-6277-4335-a3ec-05152c16b841",
-  "issuer": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-  "issuanceDate": "2023-04-28T09:50:00Z",
-  "issued": "2023-04-28T09:50:00Z",
-  "validFrom": "2023-04-28T09:50:00Z",
-  "credentialSchema":
+  "id": "urn:uuid:3c89d819-49b0-41b0-a5c3-4386eb0cddbf",
+  "issuer":
   {
-    "id": "https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/VerifiableId.json",
-    "type": "FullJsonSchemaValidator2021"
+    "id": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK"
   },
+  "issuanceDate": "2023-04-28T15:35:36Z",
+  "issued": "2023-04-28T15:35:36Z",
+  "validFrom": "2023-04-28T15:35:36Z",
   "credentialSubject":
   {
     "id": "did:key:z6MkiWE3zZaTkDYLBwrPeZ94bXC9CnDVVeRcX12tncBh9q2X",
-    "currentAddress":
-    [
-      "1 Boulevard de la Liberté, 59800 Lille"
-    ],
-    "dateOfBirth": "1993-04-08",
-    "familyName": "DOE",
-    "firstName": "Jane",
-    "gender": "FEMALE",
-    "nameAndFamilyNameAtBirth": "Jane DOE",
-    "personalIdentifier": "0904008084H",
-    "placeOfBirth": "LILLE, FRANCE"
-  },
-  "evidence":
-  [
+    "degree":
     {
-      "documentPresence":
-      [
-        "Physical"
-      ],
-      "evidenceDocument":
-      [
-        "Passport"
-      ],
-      "subjectPresence": "Physical",
-      "type":
-      [
-        "DocumentVerification"
-      ],
-      "verifier": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN"
+      "name": "Bachelor of Science and Arts",
+      "type": "BachelorDegree"
     }
-  ],
+  },
   "credentialStatus":
   {
-    "id": "http://127.0.0.1:7001/v1/credentials/status/revocation#6",
+    "id": "http://127.0.0.1:7001/v1/credentials/status/revocation#12",
     "statusListCredential": "http://127.0.0.1:7001/v1/credentials/status/revocation",
-    "statusListIndex": "6",
+    "statusListIndex": "12",
     "statusPurpose": "revocation",
     "type": "StatusList2021Entry"
   },
@@ -78,16 +51,16 @@ e.g. Verifiable Credential - vc.json
   {
     "type": "JsonWebSignature2020",
     "creator": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-    "created": "2023-04-28T09:50:02Z",
+    "created": "2023-04-28T15:35:38Z",
     "verificationMethod": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK#z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-    "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9.._ed-3UyXh-Km9xanh0H2J_HJr9WRIH0dyJg-uKXAz3cvQVk1WSeMv-QdApNvXuaMUKEvtBakVc5NzhcoBA9hBw"
+    "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..Im6fYtggnBdooYMj0SNUEEZ6OGLfj7OHW6ZBaOusOR4HL6AqRdK7Sbm9vya8H_g6XQR8aeH1VXM5OTh5_P-eAA"
   }
 }
 ```
 
 e.g. Execute the status checking for a credential
 ```shell
-ssikit.sh vc revocation check vc.json
+ssikit vc revocation check vc.json
 ```
 
 e.g. Status checking result

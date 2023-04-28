@@ -45,7 +45,11 @@ curl -X 'POST' \
         "issueDate": "2022-10-06T18:09:14.570Z",
         "validDate": "2022-10-06T18:09:14.570Z",
         "expirationDate": "2022-10-06T18:09:14.570Z",
-        "dataProviderIdentifier": "string"
+        "dataProviderIdentifier": "string",
+        "ldSignatureType": "string",
+        "creator": "string",
+        "ecosystem": "string",
+        "statusType": "string"
     },
     "credentialData":
     {
@@ -165,6 +169,10 @@ curl -X 'POST' \
 ```
 {% endtab %}
 {% endtabs %}
+
+\
+Check out the [Issue with status](/concepts/credential-statuses/issue-with-status.md) section to learn about
+how to issue a verifiable credential with a _credentialStatus_ property.
 
 ## Templates
 
@@ -389,96 +397,5 @@ curl -X 'GET' \
 
 ## Revocations
 
-The following functions are availabel for revocations:
-
-* [check](signatory-api.md#check-revocation) - checks if a credential is revoked based on revocation token
-* [revoke](signatory-api.md#revoke) - revokes a credential
-
-### Check revocation
-
-The `/v1/revocations/{id}` endpoint checks if the specified token is revoked. The parameters are as follows:
-
-* id path parameter (required) - the derived revocation token id
-
-{% tabs %}
-{% tab title="curl" %}
-```
-curl -X 'GET' \
-  'https://signatory.ssikit.walt.id/v1/revocations/{id}' \
-  -H 'accept: application/json'
-```
-{% endtab %}
-
-{% tab title="Request body schema" %}
-No parameters.
-{% endtab %}
-
-{% tab title="Response body schema" %}
-```
-{
-    "token": "string",
-    "isRevoked": true,
-    "timeOfRevocation": 0
-}
-```
-{% endtab %}
-{% endtabs %}
-
-E.g. Check the revocation status for derived token id _WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA_
-
-{% tabs %}
-{% tab title="curl" %}
-```
-curl -X 'GET' \
-  'https://signatory.ssikit.walt.id/v1/revocations/WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA' \
-  -H 'accept: application/json'
-```
-{% endtab %}
-
-{% tab title="Response body schema" %}
-```
-{
-    "isRevoked": false,
-    "token": "WB2STHPSQVCS2SMEDMOMALFVTOIYS2TKCDA4AWJSTQAOMEBEU6TA"
-}
-```
-{% endtab %}
-{% endtabs %}
-
-### Revoke
-
-The `/v1/revocations/{id}` revokes a credential with the specified delegated revocation token as parameter:
-
-* id path parameter (required) - the base token id
-
-{% tabs %}
-{% tab title="curl" %}
-```
-curl -X 'POST' \
-  'https://signatory.ssikit.walt.id/v1/revocations/{id}' \
-  -H 'accept: text/plain'
-```
-{% endtab %}
-
-{% tab title="Request body schema" %}
-No parameters.
-{% endtab %}
-
-{% tab title="Response body schema" %}
-```
-Code 201
-```
-{% endtab %}
-{% endtabs %}
-
-E.g. Revoke a credential with the base revocation token equal to _d36986f1-3cc0-4156-b5a4-6d3deab84270d36986f1-3cc0-4156-b5a4-6d3deab84270_
-
-{% tabs %}
-{% tab title="curl" %}
-```
-curl -X 'POST' \
-  'https://signatory.ssikit.walt.id/v1/revocations/d36986f1-3cc0-4156-b5a4-6d3deab84270d36986f1-3cc0-4156-b5a4-6d3deab84270' \
-  -H 'accept: text/plain'
-```
-{% endtab %}
-{% endtabs %}
+Refer to [Credential Statuses](/concepts/credential-statuses/readme.md) section for more details on 
+verifiable credential revocations.
