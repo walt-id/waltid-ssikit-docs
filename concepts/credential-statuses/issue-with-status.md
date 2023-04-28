@@ -7,7 +7,7 @@ If no _statusType_ is provided, the credential will be issued without any _crede
 ### Rest API interface
 
 e.g. Issue a _VerifiableId_ credential having a `StatusList2021Entry` _credentialStatus_ using the REST API
-interface issue endpoint: `<signatory-ssikithost>/v1/credentials/issue`. The request-body is presented below.
+interface issue endpoint: `{signatory-ssikithost}/v1/credentials/issue`. The request-body is presented below.
 
 ```json
 {

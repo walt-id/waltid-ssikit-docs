@@ -4,10 +4,10 @@ Revoking a verifiable credential can be done using the command-line interface wi
 following command:
 
 ```shell
-ssikit.sh vc revocation revoke <vc-filepath>
+ssikit.sh vc revocation revoke {vc-filepath}
 ```
 
-where _<vc-filepath>_ is the path to the verifiable credential to be checked.
+where _{vc-filepath}_ is the path to the verifiable credential to be checked.
 
 e.g. Verifiable Credential - vc.json
 

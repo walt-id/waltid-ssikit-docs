@@ -1,7 +1,7 @@
 # Check the status of a verifiable credential
 
 Checking the status of a verifiable credential can be done using the REST API interface by supplying the
-credential as the body to the following `POST` request `<signatory.ssikithost>/v1/revocations/check`. 
+credential as the body to the following `POST` request `{signatory.ssikithost}/v1/revocations/check`. 
 
 e.g. Execute the status check for a credential with a _credentialStatus_ property
 
