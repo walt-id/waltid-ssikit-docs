@@ -3,10 +3,10 @@
 Checking the status of a verifiable credential can be done using the command-line interface with the
 following command:
 ```shell
-ssikit.sh vc revocation check <vc-filepath>
+ssikit.sh vc revocation check {vc-filepath}
 ```
 
-where _<vc-filepath>_ is the path to the verifiable credential to be checked.
+where _{vc-filepath}_ is the path to the verifiable credential to be checked.
 
 e.g. Verifiable Credential - vc.json
 ```json

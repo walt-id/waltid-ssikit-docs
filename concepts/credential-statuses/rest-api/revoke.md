@@ -1,7 +1,7 @@
 # Revoke a verifiable credential
 
 Revoking a verifiable credential can be done using the REST API interface by supplying the
-credential as the body to the following `POST` request `<ssikit-host>/v1/revocations/revoke`.
+credential as the body to the following `POST` request `{signatory.ssikithost}/v1/revocations/revoke`.
 
 e.g. Execute the status check for a credential with a _credentialStatus_ property
 
