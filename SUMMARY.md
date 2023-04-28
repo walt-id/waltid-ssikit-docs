@@ -97,7 +97,7 @@
   * [CLI](concepts/credential-statuses/cli/readme.md)
     * [Checking the status of a credential](concepts/credential-statuses/cli/check-status.md)
     * [Revoking a credential](concepts/credential-statuses/cli/revoke.md)
-  * [Issuer credentials with _credentialStatus_](concepts/credential-statuses/issue-with-status.md)
+  * [Issue credentials with _credentialStatus_](concepts/credential-statuses/issue-with-status.md)
 * [Open Policy Agent](usage-examples/open-policy-agent.md)
 * [OpenID Connect (OIDC)](helpful-concepts/oidc/README.md)
   * [Credential Issuance](helpful-concepts/oidc/credential-issuance.md)
