@@ -1,7 +1,7 @@
 # Revoke a verifiable credential
 
 Revoking a verifiable credential can be done using the REST API interface by supplying the
-credential as the body to the following `POST` request `{signatory.ssikithost}/v1/revocations/revoke`.
+credential as the body to the following `POST` request `https://signatory.ssikit.walt.id/v1/revocations/revoke`.
 
 e.g. Execute the status check for a credential with a _credentialStatus_ property
 
@@ -9,70 +9,43 @@ e.g. Execute the status check for a credential with a _credentialStatus_ propert
 {% tab title="Request" %}
 ```shell
 curl -X 'POST' \
-  'http://127.0.0.1:7001/v1/revocations/revoke' \
+  'https://signatory.ssikit.walt.id/v1/revocations/revoke' \
   -H 'accept: application/json' \
   -H 'Content-Type: text/plain' \
   -d '{
     "type":
     [
         "VerifiableCredential",
-        "VerifiableAttestation",
-        "VerifiableId"
+        "UniversityDegreeCredential"
     ],
     "@context":
     [
         "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1",
         "https://w3id.org/security/suites/jws-2020/v1"
     ],
-    "id": "urn:uuid:f85f6758-8de4-4c4c-8a08-a7d4ed3574fb",
-    "issuer": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-    "issuanceDate": "2023-04-28T10:15:16Z",
-    "issued": "2023-04-28T10:15:16Z",
-    "validFrom": "2023-04-28T10:15:16Z",
-    "credentialSchema":
+    "id": "urn:uuid:3c89d819-49b0-41b0-a5c3-4386eb0cddbf",
+    "issuer":
     {
-        "id": "https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/VerifiableId.json",
-        "type": "FullJsonSchemaValidator2021"
+        "id": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK"
     },
+    "issuanceDate": "2023-04-28T15:35:36Z",
+    "issued": "2023-04-28T15:35:36Z",
+    "validFrom": "2023-04-28T15:35:36Z",
     "credentialSubject":
     {
         "id": "did:key:z6MkiWE3zZaTkDYLBwrPeZ94bXC9CnDVVeRcX12tncBh9q2X",
-        "currentAddress":
-        [
-            "1 Boulevard de la Liberté, 59800 Lille"
-        ],
-        "dateOfBirth": "1993-04-08",
-        "familyName": "DOE",
-        "firstName": "John",
-        "gender": "MALE",
-        "nameAndFamilyNameAtBirth": "John DOE",
-        "personalIdentifier": "0904008084H",
-        "placeOfBirth": "LILLE, FRANCE"
-    },
-    "evidence":
-    [
+        "degree":
         {
-            "documentPresence":
-            [
-                "Physical"
-            ],
-            "evidenceDocument":
-            [
-                "Passport"
-            ],
-            "subjectPresence": "Physical",
-            "type":
-            [
-                "DocumentVerification"
-            ],
-            "verifier": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN"
+            "name": "Bachelor of Science and Arts",
+            "type": "BachelorDegree"
         }
-    ],
+    },
     "credentialStatus":
     {
-        "id": "http://127.0.0.1:7001/v1/credentials/status/revocation#7",
-        "statusListCredential": "http://127.0.0.1:7001/v1/credentials/status/revocation",
-        "statusListIndex": "7",
+        "id": "https://signatory.ssikit.walt.id/v1/credentials/status/revocation#12",
+        "statusListCredential": "https://signatory.ssikit.walt.id/v1/credentials/status/revocation",
+        "statusListIndex": "12",
         "statusPurpose": "revocation",
         "type": "StatusList2021Entry"
     },
@@ -80,9 +53,9 @@ curl -X 'POST' \
     {
         "type": "JsonWebSignature2020",
         "creator": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-        "created": "2023-04-28T10:15:16Z",
+        "created": "2023-04-28T15:35:38Z",
         "verificationMethod": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK#z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..PBOY-LMZ1zX4WlNBRbrjJ5JC8rrP9ZJJatjcDe72_pIIP7ggbSr1pMx9PMJKwKyLIt0-M0VF3pCZssVs_Sa8AA"
+        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..Im6fYtggnBdooYMj0SNUEEZ6OGLfj7OHW6ZBaOusOR4HL6AqRdK7Sbm9vya8H_g6XQR8aeH1VXM5OTh5_P-eAA"
     }
 }'
 ```
@@ -98,72 +71,45 @@ e.g. Execute the status check for a credential without a _credentialStatus_ prop
 {% tab title="Request" %}
 ```shell
 curl -X 'POST' \
-  'http://127.0.0.1:7001/v1/revocations/revoke' \
+  'https://signatory.ssikit.walt.id/v1/revocations/revoke' \
   -H 'accept: application/json' \
   -H 'Content-Type: text/plain' \
   -d '{
     "type":
     [
         "VerifiableCredential",
-        "VerifiableAttestation",
-        "VerifiableId"
+        "UniversityDegreeCredential"
     ],
     "@context":
     [
         "https://www.w3.org/2018/credentials/v1",
+        "https://www.w3.org/2018/credentials/examples/v1",
         "https://w3id.org/security/suites/jws-2020/v1"
     ],
-    "id": "urn:uuid:0decd79e-362e-4587-8fe9-ed058435dfb4",
-    "issuer": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-    "issuanceDate": "2023-04-28T10:28:20Z",
-    "issued": "2023-04-28T10:28:20Z",
-    "validFrom": "2023-04-28T10:28:20Z",
-    "credentialSchema":
+    "id": "urn:uuid:22eefe7d-8467-46dc-9036-29d2d7597829",
+    "issuer":
     {
-        "id": "https://raw.githubusercontent.com/walt-id/waltid-ssikit-vclib/master/src/test/resources/schemas/VerifiableId.json",
-        "type": "FullJsonSchemaValidator2021"
+        "id": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK"
     },
+    "issuanceDate": "2023-04-28T15:42:31Z",
+    "issued": "2023-04-28T15:42:31Z",
+    "validFrom": "2023-04-28T15:42:31Z",
     "credentialSubject":
     {
         "id": "did:key:z6MkiWE3zZaTkDYLBwrPeZ94bXC9CnDVVeRcX12tncBh9q2X",
-        "currentAddress":
-        [
-            "1 Boulevard de la Liberté, 59800 Lille"
-        ],
-        "dateOfBirth": "1993-04-08",
-        "familyName": "DOE",
-        "firstName": "John",
-        "gender": "MALE",
-        "nameAndFamilyNameAtBirth": "John DOE",
-        "personalIdentifier": "0904008084H",
-        "placeOfBirth": "LILLE, FRANCE"
-    },
-    "evidence":
-    [
+        "degree":
         {
-            "documentPresence":
-            [
-                "Physical"
-            ],
-            "evidenceDocument":
-            [
-                "Passport"
-            ],
-            "subjectPresence": "Physical",
-            "type":
-            [
-                "DocumentVerification"
-            ],
-            "verifier": "did:ebsi:2A9BZ9SUe6BatacSpvs1V5CdjHvLpQ7bEsi2Jb6LdHKnQxaN"
+            "name": "Bachelor of Science and Arts",
+            "type": "BachelorDegree"
         }
-    ],
+    },
     "proof":
     {
         "type": "JsonWebSignature2020",
         "creator": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-        "created": "2023-04-28T10:28:20Z",
+        "created": "2023-04-28T15:42:31Z",
         "verificationMethod": "did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK#z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK",
-        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..lypagZfI0-fLjUMMpvXjzJOe0L0J3yivnHsXAVswRJ4quDiGILP1yu5Djy2kFwyVABNKN6XLhZ4IJBR1jnzIAQ"
+        "jws": "eyJiNjQiOmZhbHNlLCJjcml0IjpbImI2NCJdLCJhbGciOiJFZERTQSJ9..HDFwEbkhGCOUGUUYikbf-NfSokResd2vz1YGfJ_MpWb_Z0vqjJO4EGjw2FFtmpTOn66bFV_n4Y0aRKvaVkIvBg"
     }
 }'
 ```

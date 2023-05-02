@@ -9,8 +9,8 @@ but when specified, it includes the following mandatory fields:
 Depending on the type, a _credentialStatus_ property can contain additional fields, according to its model specification.
 
 Currently, [SSIKit](https://github.com/walt-id/waltid-ssikit) supports the following _credentialStatus_ methods:
-- [SimpleCredentialStatus2022](simple-credential-status-2022/readme.md)
 - [StatusList2021Entry](status-list-2021-entry/readme.md)
+- [SimpleCredentialStatus2022](simple-credential-status-2022/readme.md)
 
 
 More details on _credentialStatus_ specification can be found at [Verifiable Credential Data Model - Status](https://www.w3.org/TR/vc-data-model/#status).

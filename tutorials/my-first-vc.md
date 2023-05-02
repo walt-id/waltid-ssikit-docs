@@ -9,7 +9,7 @@ Utilizing the walt.id SSI-Kit's REST-API, we will provide Emma with the Verifiab
 **What we do:**
 
 1. [Run the SSI-Kit and expose API](my-first-vc.md#running-the-ssi-kit)
-2. [Create DIDs](my-first-vc.md#creating-the-did) - for Emma + University
+2. [Create DIDs](my-first-vc.md#creating-the-dids) - for Emma + University
 3. [Issue Credential](my-first-vc.md#issuing-a-verifiable-university-degree-credential) to Emma
 4. [Verify Credential](my-first-vc.md#verify-the-university-degree-credential) from Emma
 

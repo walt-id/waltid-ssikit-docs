@@ -6,12 +6,12 @@ If no _statusType_ is provided, the credential will be issued without any _crede
 
 ### Rest API interface
 
-e.g. Issue a _VerifiableId_ credential having a `StatusList2021Entry` _credentialStatus_ using the REST API
-interface issue endpoint: `{signatory-ssikithost}/v1/credentials/issue`. The request-body is presented below.
+e.g. Issue a _UniversityDegree_ credential having a `StatusList2021Entry` _credentialStatus_ using the REST API
+interface issue endpoint: `https://signatory.ssikit.walt.id/v1/credentials/issue`. The request-body is presented below.
 
 ```json
 {
-    "templateId": "VerifiableId",
+    "templateId": "UniversityDegree",
     "config":
     {
         "issuerDid": "did:key:z6MkiWE3zZaTkDYLBwrPeZ94bXC9CnDVVeRcX12tncBh9q2X>",
@@ -23,12 +23,12 @@ interface issue endpoint: `{signatory-ssikithost}/v1/credentials/issue`. The req
 
 ### Command-line interface
 
-e.g. Issue a _VerifiableId_ credential having a `StatusList2021Entry` _credentialStatus_ using the command-line
-interface issue command: `ssikit.sh vc issue -h`
+e.g. Issue a _UniversityDegree_ credential having a `StatusList2021Entry` _credentialStatus_ using the command-line
+interface issue command: `ssikit vc issue -h`
 
 ```shell
-ssikit.sh vc issue \ 
--t VerifiableId \ 
+ssikit vc issue \ 
+-t UniversityDegree \ 
 -i did:key:z6MkiWE3zZaTkDYLBwrPeZ94bXC9CnDVVeRcX12tncBh9q2X \
 -s did:key:z6MkoHRK9dK81gFrGzwo6kygHW8KRoECGhLk5QJgNPYdzCTK \
 --status-type StatusList2021Entry
