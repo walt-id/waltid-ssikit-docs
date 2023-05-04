@@ -89,9 +89,9 @@
 
 * [Credential Templates](concepts/credential-templates.md)
 * [Credential Statuses](concepts/credential-statuses/readme.md)
-  * [Issue credentials with _credentialStatus_](concepts/credential-statuses/issue-with-status.md)
   * [StatusList2021Entry](concepts/credential-statuses/status-list-2021-entry/readme.md)
   * [SimpleCredentialStatus2022](concepts/credential-statuses/simple-credential-status-2022/readme.md)
+  * [Issue credentials with _credentialStatus_](concepts/credential-statuses/issue-with-status.md)
   * [REST API](concepts/credential-statuses/rest-api/readme.md)
     * [Check the status of a credential](concepts/credential-statuses/rest-api/check-status.md)
     * [Revoke a credential](concepts/credential-statuses/rest-api/revoke.md)

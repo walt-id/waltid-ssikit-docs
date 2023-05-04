@@ -14,7 +14,7 @@ Verifies against the associated JSON schema. Note that the attribute _credential
 
 Argument: _None_.
 
-### ValidFromBeforePolicy&#x20;
+### ValidFromBeforePolicy
 
 Verify by valid from.
 
@@ -26,19 +26,19 @@ Verify by expiration date.
 
 Argument: _None_.
 
-### ChallengePolicy&#x20;
+### ChallengePolicy
 
 Verify challenge.
 
 Argument: `ChallengePolicyArg`
 
-### VpTokenClaimPolicy&#x20;
+### VpTokenClaimPolicy
 
 Verify verifiable presentation by OIDC/SIOPv2 VP token claim.
 
 Argument: `VpTokenClaim`
 
-### CredentialStatusPolicy&#x20;
+### CredentialStatusPolicy
 
 Verify by credential status.
 
@@ -56,7 +56,7 @@ The following checks are performed:
 
 * credential schema id has the correct format
 
-### EbsiTrustedIssuerDidPolicy&#x20;
+### EbsiTrustedIssuerDidPolicy
 
 Verify by trusted issuer did.
 
@@ -66,7 +66,7 @@ The following checks are performed:
 
 * issuer did is resolvable against EBSI
 
-### EbsiTrustedIssuerRegistryPolicy&#x20;
+### EbsiTrustedIssuerRegistryPolicy
 
 Verify by EBSI Trusted Issuer Registry record.
 
@@ -79,7 +79,7 @@ The following checks are performed:
 3. the authorized claim record (from p.1) has the type provided as argument to the policy
 4. issuer's accreditation is valid - verifies against `EbsiTrustedIssuerAccreditationPolicy`
 
-### EbsiTrustedSubjectDidPolicy&#x20;
+### EbsiTrustedSubjectDidPolicy
 
 Verify by trusted subject did.
 
@@ -100,7 +100,7 @@ Performs the following actions:
 1. fetches the attribute specified by the `termsOfUse` property
 2. checks whether the credential stored as the attribute body has the required accreditation claims to match the current VC schema
 
-### IssuedDateBeforePolicy&#x20;
+### IssuedDateBeforePolicy
 
 Verify by issuance date.
 
@@ -108,7 +108,7 @@ Argument: _None_.
 
 ## GAIA-X specific policies
 
-### GaiaxTrustedPolicy&#x20;
+### GaiaxTrustedPolicy
 
 Verify Gaiax trusted fields.
 
