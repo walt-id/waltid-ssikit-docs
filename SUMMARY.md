@@ -91,7 +91,7 @@
 * [Credential Statuses](concepts/credential-statuses/readme.md)
   * [StatusList2021Entry](concepts/credential-statuses/status-list-2021-entry/readme.md)
   * [SimpleCredentialStatus2022](concepts/credential-statuses/simple-credential-status-2022/readme.md)
-  * [Issue credentials with _credentialStatus_](concepts/credential-statuses/issue-with-status.md)
+  * [Issue credentials with credentialStatus](concepts/credential-statuses/issue-with-status.md)
   * [REST API](concepts/credential-statuses/rest-api/readme.md)
     * [Check the status of a credential](concepts/credential-statuses/rest-api/check-status.md)
     * [Revoke a credential](concepts/credential-statuses/rest-api/revoke.md)
@@ -109,6 +109,7 @@
   * [Parameterized Policies](concepts/verification-policies/parameterized-policies.md)
   * [Dynamic Policies](concepts/verification-policies/dynamic-policies.md)
 * [Delegation and Mandates](usage-examples/verifiable-credentials/delegation-and-mandates.md)
+* [DID Web](concepts/did-web.md)
 
 ## Community
 
