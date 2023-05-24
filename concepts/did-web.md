@@ -4,6 +4,10 @@ description: 'Learn about did:web: what it is and how to create one.'
 
 # DID Web
 
+{% embed url="https://youtu.be/yqzsw3Ffzhs" %}
+Introduction to DID Web
+{% endembed %}
+
 ## What is a DID Web
 
 Following the foundational principles defined in the DID specification. DIDs are globally unique, self-sovereign identifiers for individuals, companies, and devices, and they come in various forms, called DID methods. Those methods define the protocol for creating, reading, updating and deactivating DIDs for the target network or system. This could be a blockchain, like in the case of did:ethr or a DNS and HTTP-based systems as it is for did:web.&#x20;
