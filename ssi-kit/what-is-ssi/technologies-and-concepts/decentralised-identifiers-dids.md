@@ -6,6 +6,10 @@ description: >-
 
 # Decentralised Identifiers (DIDs)
 
+{% embed url="https://youtu.be/XajpI6yWxwA" %}
+Intro to Decentralised Identifiers (DIDs)
+{% endembed %}
+
 DIDs are **unique identifiers** (URIs) which are standardised by the [W3C](https://www.w3.org/TR/did-core). They can refer to any subject - from a person, to an organization, to a thing or basically anything else for that matter. Before we have a look at how a DID is structured and the benefit it provides, let's understand the shortcomings of current identifiers first and then see how the DID solves those.
 
 ### The shortcomings of current IDs
@@ -36,7 +40,7 @@ All of these identifiers work, but none fulfills to be decentralized, persistent
 **Is  the identifier verifiable?**
 
 * How can I prove that I own the domain, `https://www.surname.com`?
-* If I stopped paying for my domain, `https://www.surname.com` __ and somebody else would buy it. How would somebody know that the information provided on the side was actually mine?
+* If I stopped paying for my domain, `https://www.surname.com` and somebody else would buy it. How would somebody know that the information provided on the side was actually mine?
 
 All those problems make it hard to be 100% sure when exchanging information, that the party we are exchanging information with, is actually the party and not some malicious actor pretending to be the party.
 
@@ -68,7 +72,7 @@ The DID is a simple text string built up of three parts:&#x20;
 
 ![](../../../.gitbook/assets/did-format-example.png)
 
-<table data-header-hidden><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>Schema</td><td>The did <strong></strong> URI scheme identifier</td><td></td></tr><tr><td>DID Method</td><td>The identifier for the did method</td><td></td></tr><tr><td>DID Method-Specific Identifier</td><td>An identifier based on the requirements of the did method</td><td></td></tr></tbody></table>
+<table data-header-hidden><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>Schema</td><td>The did URI scheme identifier</td><td></td></tr><tr><td>DID Method</td><td>The identifier for the did method</td><td></td></tr><tr><td>DID Method-Specific Identifier</td><td>An identifier based on the requirements of the did method</td><td></td></tr></tbody></table>
 
 &#x20;
 
