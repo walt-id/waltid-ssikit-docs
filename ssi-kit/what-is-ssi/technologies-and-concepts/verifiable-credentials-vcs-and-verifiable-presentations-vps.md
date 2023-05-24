@@ -13,7 +13,7 @@ Today's credentials are easy to fake, hard to verify, and not privacy preserving
 * You might be forced to disclose more information than needed. The police officer checking your driver license, in most cases, only needs to know that you are allowed to drive, but not where you live or your name.
 * Organizations employing people who claim to have a skill by presenting a fake certificate, can get jobs, which, when performed poorly, could have catastrophic consequences.
 
-This is why we need a better way to make claims,  and that is where Verifiable Credentials come in.
+This is why we need a better way to verify the claims presented,  and that is where Verifiable Credentials come in.
 
 
 
