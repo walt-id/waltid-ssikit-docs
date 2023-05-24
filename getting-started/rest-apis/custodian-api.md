@@ -1,18 +1,21 @@
 ---
-description: >-
-  Custodian REST API functions.
+description: Custodian REST API functions.
 ---
 
-# Custodian API
+# Custodian API - For Holders
+
 [Swagger](https://custodian.ssikit.walt.id/v1/swagger) | [Redoc](https://custodian.ssikit.walt.id/v1/redoc)
 
 The _Custodian API_ provides management functions for maintaining secrets and sensitive data (e.g. keys, Verifiable Credentials) in a secure way:
+
 * [Key](custodian-api.md#key-management)
 * [DID](custodian-api.md#did-management)
 * [Credentials](custodian-api.md#credentials-management)
 
 ## Key management
+
 Key management functions include:
+
 * [List](custodian-api.md#list-keys) - lists the available keys
 * [Load](custodian-api.md#load-key) - loads a key specified by its alias
 * [Generate](custodian-api.md#generate-key) - generate a key using the specified algorithm
@@ -21,6 +24,7 @@ Key management functions include:
 * [Export](custodian-api.md#export-key) - exports public and private key parts (if supported by the underlying keystore)
 
 ### List keys
+
 The `/keys` endpoint lists the key available to the Custodian
 
 {% tabs %}
@@ -31,11 +35,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -67,6 +73,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -159,6 +166,7 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load key
+
 The `/keys/{alias}` endpoint loads a key specified by its alias.
 
 {% tabs %}
@@ -169,11 +177,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -200,6 +210,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -217,6 +228,7 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Generate key
+
 The `/keys/generate` endpoint generates a key using the specified algorithm.
 
 {% tabs %}
@@ -229,6 +241,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -236,6 +249,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -252,7 +266,7 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-E.g. Generate a key using the _EdDSA_Ed25519_ algorithm.
+E.g. Generate a key using the _EdDSA\_Ed25519_ algorithm.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -264,6 +278,7 @@ curl -X 'POST' \
   -d '{ "keyAlgorithm": "EdDSA_Ed25519" }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -271,6 +286,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -288,6 +304,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import key
+
 The `/keys/import` endpoint imports a key (_JWK_ or _PEM_ format) to the underlying keystore.
 
 {% tabs %}
@@ -300,9 +317,11 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 The key string in JWK or PEM format
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -324,6 +343,7 @@ curl -X 'POST' \
   -d '{"kty":"OKP","use":"sig","crv":"Ed25519","kid":"bc6fa6b0593648238c4616800bed7746","x":"YyswAyRO2Aur8Jmzc8aOvI3AWFka3ZynJwB84a0FJVU","alg":"EdDSA"}'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -336,6 +356,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -346,7 +367,9 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Delete key
+
 The `/keys/{id}` deletes the specified as parameter:
+
 * id path parameter (required) - the key alias
 
 {% tabs %}
@@ -357,11 +380,13 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -382,6 +407,7 @@ curl -X 'DELETE' \
 {% endtabs %}
 
 ### Export key
+
 The `/keys/export` endpoint exports a key.
 
 {% tabs %}
@@ -394,6 +420,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -403,6 +430,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The key in the specified format, JWK or PEM
@@ -426,6 +454,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -435,6 +464,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -450,7 +480,9 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## DID management
+
 DID management functions enable the following:
+
 * [List](custodian-api.md#list-did) - lists the available DIDs
 * [Load](custodian-api.md#load-did) - loads a DID by the specified id
 * [Delete](custodian-api.md#delete-did) - deletes a DID by the specified url
@@ -458,7 +490,10 @@ DID management functions enable the following:
 * [Resolve](custodian-api.md#resolve-did) - resolves a DID to a document
 * [Import](custodian-api.md#import-did) - import a DID
 
+For more info on DIDs, go [here](../../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
+
 ### List DID
+
 The `/did` endpoint lists the available DIDs.
 
 {% tabs %}
@@ -469,11 +504,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The list of DID strings
@@ -491,6 +528,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 [
@@ -504,7 +542,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load DID
+
 The `/did/{id}` endpoint loads a DID specified by:
+
 * id path parameter (required) - the DID url string
 
 {% tabs %}
@@ -515,11 +555,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -568,6 +610,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -607,7 +650,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Delete DID
+
 The `/did/{id}` deletes the DID specified by:
+
 * url - path parameter (required) - the DID url string
 
 {% tabs %}
@@ -618,11 +663,13 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -643,6 +690,7 @@ curl -X 'DELETE' \
 {% endtabs %}
 
 ### Create DID
+
 The `/did/create` endpoints creates a DID.
 
 {% tabs %}
@@ -655,6 +703,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -665,6 +714,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The DID url string
@@ -687,6 +737,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -695,6 +746,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 did:web:walt.id
@@ -703,6 +755,7 @@ did:web:walt.id
 {% endtabs %}
 
 ### Resolve DID
+
 The `/did/resolve` endpoints resolves a DID.
 
 {% tabs %}
@@ -715,6 +768,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -722,6 +776,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -760,7 +815,7 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-E.g. Reslove the DID having id = _did:key:z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
+E.g. Reslove the DID having id = _did_:key:_z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -774,6 +829,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -781,6 +837,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -830,6 +887,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Import DID
+
 The `/did/import` endpoint resolves and imports the DID to the underlying data store.
 
 {% tabs %}
@@ -842,9 +900,11 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 The DID url string.
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 201
@@ -852,7 +912,7 @@ Code 201
 {% endtab %}
 {% endtabs %}
 
-E.g. Import DID having id = _did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Import DID having id = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -864,6 +924,7 @@ curl -X 'POST' \
   -d 'did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z
@@ -872,7 +933,9 @@ did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z
 {% endtabs %}
 
 ## Credentials management
+
 The following functions are available for credentials management:
+
 * [List](custodian-api.md#list-credentials) - lists the available credentials
 * [List compact](custodian-api.md#list-credentials-compact) - lists credential ids
 * [Load](custodian-api.md#load-credential) - loads a credential by id
@@ -882,7 +945,9 @@ The following functions are available for credentials management:
 * [Present stored](custodian-api.md#present-stored-credential) - create a verifiable presentation from specific stored credential ids
 
 ### List credentials
+
 The `/credentials` endpoint lists the available credentials:
+
 * id - query parameter (optional) - the list of credentials ids
 
 {% tabs %}
@@ -893,11 +958,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The list of credentials
@@ -915,6 +982,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -965,6 +1033,7 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### List credentials compact
+
 The `/credentials/list/credentialIds` lists the available credentials ids.
 
 {% tabs %}
@@ -975,11 +1044,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The list of credentials ids
@@ -997,6 +1068,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -1010,7 +1082,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Load credential
+
 The `/credentials/{id}` loads a credential specified by:
+
 * id - path parameter (required) - the credential id
 
 {% tabs %}
@@ -1021,11 +1095,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The credential string
@@ -1043,6 +1119,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -1088,7 +1165,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ### Store credential
+
 The `/credentials/{alias}` endpoint stores a verifiable credential by:
+
 * alias - path parameter (required) - the credential's id
 
 {% tabs %}
@@ -1101,8 +1180,10 @@ curl -X 'PUT' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 The body should contain, the VC to be store. If no adjustments are required to VC, then the body can be the VC itself (e.g. the one received from the create VC endpoint).
+
 ```
 {
     "json": "string",
@@ -1304,6 +1385,7 @@ The body should contain, the VC to be store. If no adjustments are required to V
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 201
@@ -1348,6 +1430,7 @@ curl -X 'PUT' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -1393,7 +1476,9 @@ curl -X 'PUT' \
 {% endtabs %}
 
 ### Delete credential
+
 The `/credentials/{alias}` deletes a credential by:
+
 * alias - path parameter (required) - the credential's id
 
 {% tabs %}
@@ -1404,11 +1489,13 @@ curl -X 'DELETE' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -1429,6 +1516,7 @@ curl -X 'DELETE' \
 {% endtabs %}
 
 ### Present credential
+
 The `/credentials/present` endpoint creates a verifiable presentation from the specified credentials.
 
 {% tabs %}
@@ -1441,6 +1529,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -1455,6 +1544,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -1883,6 +1973,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -1895,6 +1986,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -2043,6 +2135,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ### Present stored credential
+
 The `/credentials/presentIds` endpoint creates a verifiable presentation from the specified credential ids.
 
 {% tabs %}
@@ -2055,6 +2148,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -2069,6 +2163,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 {
@@ -2496,6 +2591,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -2507,6 +2603,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {

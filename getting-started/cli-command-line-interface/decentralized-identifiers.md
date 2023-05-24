@@ -1,8 +1,6 @@
 # Decentralized Identifiers
 
-DID related operations, like registering, updating and deactivating DIDs.
-
-
+DID related operations, like registering, updating and deactivating DIDs. For more info on DIDs, go [here](../../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
 
 Commands:&#x20;
 
