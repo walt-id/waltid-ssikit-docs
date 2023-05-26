@@ -1,5 +1,9 @@
 # Verifiable Credentials (VCs)
 
+{% embed url="https://youtu.be/ce1IdSr-Kig" %}
+Verifiable Credentials Explained
+{% endembed %}
+
 Verifiable Credentials (VCs) are **digital credentials** that **contain actual identity data** of people or organizations and are standardized by the [W3C](https://www.w3.org/TR/vc-data-model/). They are **digital equivalents of paper-based identity documents** like passports or diplomas.
 
 Before we dive deeper into Verifiable Credentials and learn about their structure and how they work, we will have a look at the problems of today's credentials.
