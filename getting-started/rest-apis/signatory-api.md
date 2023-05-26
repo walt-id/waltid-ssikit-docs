@@ -14,6 +14,8 @@ The _Signatory API_ exposes the "issuance" endpoint, which provides flexible int
 
 ## Credentials
 
+If you're new to VCs, check out the [intro section](../../ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
+
 The `/v1/credentials/issue` endpoint issues a specified credential.
 
 {% tabs %}
@@ -71,7 +73,7 @@ The issued credential displayed either in JSON-LD or JWT format
 {% endtab %}
 {% endtabs %}
 
-E.g. Issue a `UniversityDegree` credential in the default JSON-LD format. In case you don't have the DID for the Issuer and or the Holder, you can create one [here](custodian-api.md#create-did). &#x20;
+E.g. Issue a `UniversityDegree` credential in the default JSON-LD format. In case you don't have the DID for the Issuer and or the Holder, you can create one [here](custodian-api.md#create-did).
 
 {% tabs %}
 {% tab title="curl" %}
@@ -171,8 +173,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 \
-Check out the [Issue with status](/concepts/credential-statuses/issue-with-status.md) section to learn about
-how to issue a verifiable credential with a _credentialStatus_ property.
+Check out the [Issue with status](../../concepts/credential-statuses/issue-with-status.md) section to learn about how to issue a verifiable credential with a _credentialStatus_ property.
 
 ## Templates
 
@@ -397,5 +398,4 @@ curl -X 'GET' \
 
 ## Revocations
 
-Refer to [Credential Statuses](/concepts/credential-statuses/readme.md) section for more details on 
-verifiable credential revocations.
+Refer to [Credential Statuses](../../concepts/credential-statuses/) section for more details on verifiable credential revocations.
