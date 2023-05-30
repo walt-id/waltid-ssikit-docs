@@ -2,9 +2,17 @@
 
 The SSIKit allows for specifying custom policies written in one of the supported policy engine lingos.
 
-A dynamic policy can be executed on the fly, if all required parameters are given, or saved with a name, by which it can be referenced in the verify command or REST API lateron.
+A dynamic policy can be executed on the fly, if all required parameters are given, or saved with a name, by which it can be referenced in the verify command or REST API later on.
 
 In this example I'm going to use a very simple policy written in the Rego language, for the **Open Policy Agent** engine.
+
+{% hint style="danger" %}
+
+In order to be able to use dynamic policies with **Open Policy Agent**, it is required to set up the **OPA Engine**.
+Refer to [Configure OPA engine](/usage-examples/open-policy-agent/configure-opa-engine.md) for more details on
+how to configure the **Open Policy Agent** engine on your machine.
+
+{% endhint %}
 
 ### Dynamic policy argument
 
