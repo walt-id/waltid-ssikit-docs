@@ -24,3 +24,7 @@ WyJXeS11VjJDa216SmJ4NGtjeTJQWjF3IiwiZGF0ZU9mQmlydGgiLCIxOTkzLTA0LTA4Il0~WyJXeS11
 ### Verification in Action
 
 Using either the CLI, Kotlin or REST option, you can start verifying your SD-JWT credential.
+
+
+
+...examples will be provided soon...
