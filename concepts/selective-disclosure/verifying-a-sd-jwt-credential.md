@@ -1,0 +1,26 @@
+---
+description: >-
+  Verifier requests, holder shares selective disclosures, verifier verifies
+  hashes and signature.
+---
+
+# Verifying a SD-JWT Credential
+
+### SD-JWT Credential Verification Process
+
+1. **Selective Disclosure Sharing**: During the verification process, the verifier asked for a certain set of claims. The selective disclosure sharing mechanism allows the holder then to only share does require claims through sending the whole SD-JWT plus the disclosures which are needed for verification. This process therefore helps with privacy by not revealing more identity information than what's specifically requested.
+2. **Disclosure Verification**: The verifier, upon receiving the shared disclosures and the SD-JWT, can confirm that the shared disclosures are a part of the SD-JWT. This is done by hashing the received disclosures in the same manner as the issuer did during [the issuance process](issuing-a-sd-jwt-credential.md).
+3. **Hash Comparison and Tamper Check**: The verifier then compares the hashed values of the shared disclosures with the values present in the SD-JWT. If the hashed values match, the verifier can be confident that the shared values haven't been tampered with and are actually part of the SD-JWT.
+4. **Transfer Format**: Transferring the credential from holder to verifier happens through the sharing of the SD-JWT with the concatenated disclosures which were chosen to be revealed using the \~ sign. An example of this format would be:
+
+{% code overflow="wrap" %}
+```
+eyJraWQiOiI5MmJlMTAzYjRkZmY0OGYxYmE5ODc4ZGQyNmZhZjcxZSIsImN0eSI6ImNyZWRlbnRpYWwtY2xhaW1zLXNldCtqc29uIiwidHlwIjoidmMrc2Qtand0IiwiYWxnIjoiRWREU0EifQ.eyJjcmVkZW50aWFsU2NoZW1hIjp7ImlkIjoiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3dhbHQtaWQvd2FsdGlkLXNzaWtpdC12Y2xpYi9tYXN0ZXIvc3JjL3Rlc3QvcmVzb3VyY2VzL3NjaGVtYXMvVmVyaWZpYWJsZUlkLmpzb24iLCJ0eXBlIjoiRnVsbEpzb25TY2hlbWFWYWxpZGF0b3IyMDIxIn0sImV2aWRlbmNlIjpbeyJkb2N1bWVudFByZXNlbmNlIjpbIlBoeXNpY2FsIl0sInZlcmlmaWVyIjoiZGlkOmVic2k6MkE5Qlo5U1VlNkJhdGFjU3B2czFWNUNkakh2THBRN2JFc2kySmI2TGRIS25ReGFOIiwiZXZpZGVuY2VEb2N1bWVudCI6WyJQYXNzcG9ydCJdLCJ0eXBlIjpbIkRvY3VtZW50VmVyaWZpY2F0aW9uIl0sInN1YmplY3RQcmVzZW5jZSI6IlBoeXNpY2FsIn1dLCJpc3N1YW5jZURhdGUiOiIyMDIxLTA4LTMxVDAwOjAwOjAwWiIsImNyZWRlbnRpYWxTdWJqZWN0Ijp7InBlcnNvbmFsSWRlbnRpZmllciI6IjA5MDQwMDgwODRIIiwiZmlyc3ROYW1lIjoiSmFuZSIsIl9zZCI6WyJuNWRYOEVpTUNoQ1hBR0o3elZCM1duQjc4Y3lBVFp3T1hwVkpCTUdOUzhzIiwiemFxMTNsa2lHLTd2am90SFppM0psSmhwS2JtUjFTVnV6Q3pLYVZYOUZRUSIsInhyYjdTOFZsNlctb0dMaVVQcTVlMmplVFpKVk5mYmRtNW9KNjd0VlVQem8iLCJwT0Jmb3hmQndqQUNPbXZ4aTNUSTc0RDN4Y2FwZS1RWVlGeUNPZEpPel9VIiwiRm1ZcmFmbWotUW9lbE1sSkQtVTN2OVgwS3hXTkZwelhwRl9McVc2dkZ0byJdLCJwbGFjZU9mQmlydGgiOiJMSUxMRSwgRlJBTkNFIiwiZ2VuZGVyIjoiRkVNQUxFIiwiZmFtaWx5TmFtZSI6IkRPRSIsImlkIjoiZGlkOmVic2k6MkFFTUFxWFdLWU11MUpIUEFnR2NnYTRkeHU3VGhnZmdOOTVWeUpCSkdaYlNKVXRwIiwibmFtZUFuZEZhbWlseU5hbWVBdEJpcnRoIjoiSmFuZSBET0UiLCJjdXJyZW50QWRkcmVzcyI6WyIxIEJvdWxldmFyZCBkZSBsYSBMaWJlcnTDqSwgNTk4MDAgTGlsbGUiXX0sIl9zZF9hbGciOiJzaGEtMjU2IiwiaWQiOiJ1cm46dXVpZDozYWRkOTRmNC0yOGVjLTQyYTEtODcwNC00ZTRhYTUxMDA2YjQiLCJ2YWxpZEZyb20iOiIyMDIxLTA4LTMxVDAwOjAwOjAwWiIsInR5cGUiOlsiVmVyaWZpYWJsZUNyZWRlbnRpYWwiLCJWZXJpZmlhYmxlQXR0ZXN0YXRpb24iLCJWZXJpZmlhYmxlSWQiXSwiaXNzdWVkIjoiMjAyMS0wOC0zMVQwMDowMDowMFoiLCJAY29udGV4dCI6WyJodHRwczovL3d3dy53My5vcmcvMjAxOC9jcmVkZW50aWFscy92MSJdLCJpc3N1ZXIiOiJkaWQ6ZWJzaToyQTlCWjlTVWU2QmF0YWNTcHZzMVY1Q2RqSHZMcFE3YkVzaTJKYjZMZEhLblF4YU4ifQ.5TZ1n6iDHtW3lnKA_7ofSQ-BWyvEr39LThGdIc1OMgUejG6JF6blGkTqcoaQABQJKq6pFgkhjrYcpDG8QcObDA~
+WyJXeS11VjJDa216SmJ4NGtjeTJQWjF3IiwiZGF0ZU9mQmlydGgiLCIxOTkzLTA0LTA4Il0~WyJXeS11VjJDa216SmJ4NGtjeTJQWjF3IiwiZGF0ZU9mQmlydGgiLCIxOTkzLTA0LTA4Il0
+
+```
+{% endcode %}
+
+### Verification in Action
+
+Using either the CLI, Kotlin or REST option, you can start verifying your SD-JWT credential.

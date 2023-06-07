@@ -14,7 +14,11 @@ It provides all functionality required by “Issuers”. For example:
 * Manage the lifecycle of VCs (e.g. revocation).
 * Issue VCs (e.g. via OIDC/SIOP)
 
-![](../../../what-is-ssikit/Signatory-Issuer.png)
+<div align="center">
+
+<img src="../../../what-is-ssikit/Signatory-Issuer.png" alt="">
+
+</div>
 
 ## Custodian | For Holders
 

@@ -4,7 +4,7 @@ description: VC related operations like issuing, verifying and revoking VCs.
 
 # Verifiable Credentials
 
-VC related operations like issuing, verifying and revoking VCs.
+VC related operations like issuing, verifying and revoking VCs. If you're new to VCs, check out the [intro section](../../ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
 
 Commands:
 
@@ -13,7 +13,7 @@ Commands:
 * [Verify VC or VP](verifiable-credentials.md#verify-vc-or-vp) - using **verify** command
 * [List verification policies](verifiable-credentials.md#list-verification-policies) - using **policies** command
 * [Import VC to custodian store](verifiable-credentials.md#import-vc-to-custodian-store) - using **import** command
-* [VC templates](verifiable-credentials.md#vc-templates) - using **templates** command 
+* [VC templates](verifiable-credentials.md#vc-templates) - using **templates** command
 * [List VCs](verifiable-credentials.md#list-vcs) - using **list** command
 
 All commands have the help option available:
@@ -23,11 +23,11 @@ All commands have the help option available:
 
 E.g. `vc issue -h`
 
-![](<../../.gitbook/assets/vc-issue-help.png>)
+![](../../.gitbook/assets/vc-issue-help.png)
 
 ### Issue and save VC
 
-Use the `issue` command to issue a W3C Verifiable Credential with either a JWT or a JSON_LD signature.
+Use the `issue` command to issue a W3C Verifiable Credential with either a JWT or a JSON\_LD signature.
 
 options:
 
@@ -43,7 +43,8 @@ options:
 * `--statusType \[StatusList2021Entry|SimpleCredentialStatus2022]` specify the _credentialStatus_ type
 
 e.g.
-  * `vc issue -t OpenBadgeCredential -s did:key:z6MkpuUYdpaZPcpnEWnkE8vb7s2u2geTZJden1BwGXsdFUz3 -i did:ebsi:zZ5apnsHPUXNqjWELjNZhYW`, returns a credential document (JSON format)
+
+* `vc issue -t OpenBadgeCredential -s did:key:z6MkpuUYdpaZPcpnEWnkE8vb7s2u2geTZJden1BwGXsdFUz3 -i did:ebsi:zZ5apnsHPUXNqjWELjNZhYW`, returns a credential document (JSON format)
 
 ![](<../../.gitbook/assets/image (14).png>)
 
@@ -81,21 +82,19 @@ Options:
 * `-f, --file TEXT` Load the DID document from the given file
 * `-d, --did TEXT` Try to resolve DID document for the given DID
 
-
-
 ### VC templates
 
 Learn about VC template related functions like the listing and exporting of templates, as well as how to create/import your own custom VC template.
 
 * `list` List VC Templates.
 
-`vc template list`  result
+`vc template list` result
 
 ![](<../../.gitbook/assets/image (6).png>)
 
 * `export <template-name>` Export VC Template.
 
-e.g.  `vc templates export VerifiableId`
+e.g. `vc templates export VerifiableId`
 
 ![](<../../.gitbook/assets/image (11).png>)
 
@@ -112,8 +111,6 @@ Arguments:
 * `credential path` the last argument of the command references the path to the custom credential, which should be imported
 
 e.g `vc templates import MyCustomCredential custom.json`
-
-
 
 **custom.json**
 
@@ -153,6 +150,3 @@ e.g `vc templates import MyCustomCredential custom.json`
 e.g. `vc list`
 
 <figure><img src="../../.gitbook/assets/Screenshot on 2022-12-22 at 08-57-11.png" alt=""><figcaption></figcaption></figure>
-
-
-
