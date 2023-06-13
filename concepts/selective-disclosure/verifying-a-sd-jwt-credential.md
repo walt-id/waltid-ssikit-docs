@@ -101,6 +101,6 @@ Verified:		 true
 {% endtab %}
 
 {% tab title="REST" %}
-
+coming soon
 {% endtab %}
 {% endtabs %}

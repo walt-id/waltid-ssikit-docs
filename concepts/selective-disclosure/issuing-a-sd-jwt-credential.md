@@ -192,7 +192,7 @@ ssikit vc parse -c vc.txt
 {% endtab %}
 
 {% tab title="REST" %}
-\
+coming soon\
 
 {% endtab %}
 {% endtabs %}
