@@ -220,9 +220,12 @@ The DID url string
 {% endtab %}
 {% endtabs %}
 
-The method-dependent options have `method` as a required property, while the `keyAlias` is
-optional (if not specified, a new key will be automatically created using the default algorithm
-according to the did-method). The other properties are also optional and have a default value.
+The `method` and `keyAlias` properties are common for all _did-method_ requests,
+`method` being required, while `keyAlias` - optional 
+(if not specified, a new key will be automatically created using the default algorithm
+according to the _did-method_).
+The method-dependent options have default values, if not specified otherwise.
+Below are the available properties by _did-method_.
 
 {% tabs %}
 {% tab title="key" %}
@@ -268,7 +271,7 @@ according to the did-method). The other properties are also optional and have a 
     "network": "string"
 }
 ```
-* `network` (default) - _testnet_
+* `network` (default) - _"testnet"_
 
 {% endtab %}
 {% tab title="iota" %}
