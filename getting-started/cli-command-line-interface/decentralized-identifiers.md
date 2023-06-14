@@ -17,7 +17,7 @@ All commands have the help option available:
 
 E.g. `did create -h`
 
-![Create did help command output](../../.gitbook/assets/Capture.PNG)
+![Create did help command output](../../.gitbook/assets/did-create-help-menu.png)
 
 ### Create DID
 
@@ -31,7 +31,9 @@ Creates a DID document using `did create [options]` command based on the corresp
 * `-k, --key TEXT` - Specific key (ID or alias)
 * `-d, --domain TEXT` - Domain for did:web
 * `-p, --path TEXT` - Path for did:web
-* `-v, --version INT` - Version of did:ebsi. Allowed values: 1 (default), 2.
+* `-v, --version INT` - Version of did:ebsi. Allowed values: 1 (default), 2
+* `-n, --network [testnet | mainnet]` - cheqd network, default is `testnet`
+* `-j, --is-jwk` - flag to create a `did:key` using a _jwk_jcs-pub_ public key type (multicodec code: `0xeb51`)
 
 The returned value represents the DID document.
 
