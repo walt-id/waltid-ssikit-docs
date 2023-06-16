@@ -207,7 +207,8 @@ curl -X 'POST' \
 {% tab title="Request body schema" %}
 ```
 {
-    "method": "key",
+    "method": "string",
+    "keyAlias": "string",
     "method-dependent-options": "..."
 }
 ```
