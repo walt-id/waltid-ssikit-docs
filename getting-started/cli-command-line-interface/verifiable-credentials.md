@@ -110,7 +110,7 @@ Arguments:
 
 * `credential path` the last argument of the command references the path to the custom credential, which should be imported
 
-e.g `vc templates import MyCustomCredential custom.json`
+e.g `vc templates import -n MyCustomCredential custom.json`
 
 **custom.json**
 
