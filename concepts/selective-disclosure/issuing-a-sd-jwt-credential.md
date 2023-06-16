@@ -197,7 +197,9 @@ coming soon\
 {% endtab %}
 {% endtabs %}
 
+### Demo Video
 
+{% embed url="https://youtu.be/fo5JxPszCqY?t=229" %}
 
 [^1]: 
 

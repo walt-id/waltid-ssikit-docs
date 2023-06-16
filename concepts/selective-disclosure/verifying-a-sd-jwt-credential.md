@@ -104,3 +104,7 @@ Verified:		 true
 coming soon
 {% endtab %}
 {% endtabs %}
+
+### Demo
+
+{% embed url="https://youtu.be/fo5JxPszCqY?t=358" %}
