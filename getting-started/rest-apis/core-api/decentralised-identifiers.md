@@ -90,7 +90,7 @@ The DID document
 {% endtab %}
 {% endtabs %}
 
-E.g. Load the DID = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Load the DID = `did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z`.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -177,7 +177,7 @@ Code 200
 {% endtab %}
 {% endtabs %}
 
-E.g. Delete the DID = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Delete the DID = `did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z`.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -353,7 +353,7 @@ The DID document
 {% endtab %}
 {% endtabs %}
 
-E.g. Resolve the DID = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
+E.g. Resolve the DID = `did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa`.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -452,7 +452,7 @@ Code 201
 {% endtab %}
 {% endtabs %}
 
-E.g. Import the DID = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_.
+E.g. Import the DID = `did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa`.
 
 {% tabs %}
 {% tab title="curl" %}

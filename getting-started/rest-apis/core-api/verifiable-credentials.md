@@ -167,7 +167,7 @@ Code 200
 {% endtab %}
 {% endtabs %}
 
-E.g. Delete the credential with id = _urn:uuid:d36986f1-3cc0-4156-b5a4-6d3deab84270_.
+E.g. Delete the credential with id = `urn:uuid:d36986f1-3cc0-4156-b5a4-6d3deab84270`.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -204,7 +204,7 @@ The verifiable credential
 {% endtab %}
 {% endtabs %}
 
-E.g. Create a credential from the _UniveristyDegree_ template, having issuer = _did_:key:_z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa_ and holder = _did_:key:_z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
+E.g. Create a credential from the _UniveristyDegree_ template, having issuer = `did:key:z6MkqmaCT2JqdUtLeKah7tEVfNXtDXtQyj4yxEgV11Y5CqUa` and holder = `did:key:z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX`.
 
 {% tabs %}
 {% tab title="Request body" %}
@@ -697,7 +697,7 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-E.g. Create a verifiable presentation from the provided _VeriafiableID_ credential for a holder with did = _did:web:my.domain_.
+E.g. Create a verifiable presentation from the provided _VeriafiableID_ credential for a holder with did = `did:web:my.domain`.
 
 {% tabs %}
 {% tab title="curl" %}

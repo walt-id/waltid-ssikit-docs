@@ -9,7 +9,7 @@ DID management functions enable the following:
 * [Resolve](#resolve-did) - resolves a DID to a document
 * [Import](#import-did) - import a DID
 
-For more info on DIDs, go [here](../../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
+For more info on DIDs, go [here](/ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
 
 ## List DID
 
@@ -405,7 +405,7 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-E.g. Reslove the DID having id = _did_:key:_z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX_.
+E.g. Reslove the DID having id = `did:key:z6MkkLmAVeM3P6B2LJ2xGrK1wVojCoephK4G9VrCcct42ADX`.
 
 {% tabs %}
 {% tab title="curl" %}
@@ -502,7 +502,7 @@ Code 201
 {% endtab %}
 {% endtabs %}
 
-E.g. Import DID having id = _did_:key:_z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z_.
+E.g. Import DID having id = `did:key:z6Mkm8NbvDnnxJ2t5zLGSkYGCWZiqq11Axr58xQ3ZG1Jss3z`.
 
 {% tabs %}
 {% tab title="curl" %}
