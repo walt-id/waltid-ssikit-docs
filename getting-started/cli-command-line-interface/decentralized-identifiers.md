@@ -33,7 +33,8 @@ Creates a DID document using `did create [options]` command based on the corresp
 * `-p, --path TEXT` - Path for did:web
 * `-v, --version INT` - Version of did:ebsi. Allowed values: 1 (default), 2
 * `-n, --network [testnet | mainnet]` - cheqd network, default is `testnet`
-* `-j, --is-jwk` - flag to create a `did:key` using a _jwk_jcs-pub_ public key type (multicodec code: `0xeb51`)
+* `-j, --useJwkJcsPub` - specifies whether to create a did:key using the jwk_jcs-pub multicodec
+  (code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 
 The returned value represents the DID document.
 
