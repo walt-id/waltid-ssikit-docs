@@ -234,10 +234,11 @@ Below are the available properties by _did-method_.
 {
     "method": "key",
     "keyAlias": "string",
-    "isJwk": "boolean"
+    "useJwkJcsPub": "boolean"
 }
 ```
-* `isJwk` (default) - _false_
+* `useJwkJcsPub` (default) - _false_ - specifies whether to create a did:key using the jwk_jcs-pub multicodec
+(code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 
 {% endtab %}
 {% tab title="web" %}
