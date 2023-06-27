@@ -2,7 +2,7 @@
 description: Credential validation powered by the Open Policy Agent
 ---
 
-# Open Policy Agent
+# Open Policy Agent (OPA)
 
 The Open Policy Agent ([https://www.openpolicyagent.org](https://www.openpolicyagent.org)) is an open source, general-purpose policy engine that unifies policy enforcement. OPA provides a high-level declarative language called [Rego](https://www.openpolicyagent.org/docs/latest/#rego) that lets you specify policy as code in order to offload policy decision-making from your business logic.
 
@@ -22,8 +22,11 @@ Further on the SSI Kit generates the verification request which is processed by 
 
 The Open Policy Agent processes the verification request and returns the result to the SSI Kit. The SSI Kit evaluates the result and composes an aggregated credential validation response (as also other validation checks are performed) for the calling party.
 
-## Example VC validation with the Open Policy Agent
 
-* See the [**Dynamic Verification Policies**](../concepts/verification-policies/dynamic-policies.md) section for a full example of verifying credentials with a Rego/OPA policy.
-* See how the verification of W3C Verifiable Credentials using OPA (Open Policy Agent) works in a [hands-on video](https://www.youtube.com/watch?v=mue4UjzOZ3Q)
+
+## Getting Started
+
+* [Setup](open-policy-agent/configure-opa-engine.md) - Install the OPA execution engine on your machine
+* [Dynamic Verification Policies](../concepts/verification-policies/dynamic-policies/) - Create and use dynamic verification polices with your VCs
+* [Demo](https://www.youtube.com/watch?v=mue4UjzOZ3Q) - Understand how to use REGO with walt.id tools through a video tutorial.
 

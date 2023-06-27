@@ -73,7 +73,7 @@ The issued credential displayed either in JSON-LD or JWT format
 {% endtab %}
 {% endtabs %}
 
-E.g. Issue a `UniversityDegree` credential in the default JSON-LD format. In case you don't have the DID for the Issuer and or the Holder, you can create one [here](custodian-api.md#create-did).
+E.g. Issue a `UniversityDegree` credential in the default JSON-LD format. In case you don't have the DID for the Issuer and or the Holder, you can create one [here](custodian-api/#create-did).
 
 {% tabs %}
 {% tab title="curl" %}

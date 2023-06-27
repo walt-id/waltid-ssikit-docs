@@ -1,24 +1,18 @@
-# Dynamic Policies
+# Dynamic/Custom Policies
 
-The SSIKit allows for specifying custom policies written in one of the supported policy engine lingos.
+SSI Kit supports custom policies, written in any of the supported policy engine languages. A dynamic policy can either be executed on the fly (if all required parameters are provided) or saved under a specific name for later reference in the verify command or REST API.
 
-A dynamic policy can be executed on the fly, if all required parameters are given, or saved with a name, by which it can be referenced in the verify command or REST API later on.
-
-In this example I'm going to use a very simple policy written in the Rego language, for the **Open Policy Agent** engine.
+This section uses a simple policy written in the Rego language for the Open Policy Agent engine as an example.
 
 {% hint style="danger" %}
-
-In order to be able to use dynamic policies with **Open Policy Agent**, it is required to set up the **OPA Engine**.
-Refer to [Configure OPA engine](/usage-examples/open-policy-agent/configure-opa-engine.md) for more details on
-how to configure the **Open Policy Agent** engine on your machine.
-
+_Note: To use dynamic policies with Open Policy Agent, setup of the OPA Engine is required. Refer to the_ [_OPA Engine configuration_](../../../usage-examples/open-policy-agent/configure-opa-engine.md) _for more details._
 {% endhint %}
 
-### Dynamic policy argument
+### Dynamic Policy Argument
 
-The dynamic policy requires an argument of the DynamicPolicyArg type, which is defined like follows:
+A dynamic policy requires an argument of the `DynamicPolicyArg` type, defined as follows:
 
-```
+```kotlin
 data class DynamicPolicyArg (
     val name: String = "DynamicPolicy",
     val description: String? = null,
@@ -32,40 +26,41 @@ data class DynamicPolicyArg (
 )
 ```
 
-**Properties:**
+The properties are as follows:
 
-* `name`: policy name, defaults to "DynamicPolicy"
-* `description`: Optional description of the policy
-* `input`: A generic map (JSON object), holding the input data required by the policy (or an empty map if no input is required)
-* `policy`: the policy definition (e.g. rego file), which can be a file path, URL, JSON Path (if policy is defined in a credential property) or the code/script directly.
-* `dataPath`: The path to the credential data, which should be verified, by default it's the whole credential object `$`. To use e.g. only the credential subject as verification data, specify the JSON path like this: `$.credentialSubject`.
-* `policyQuery`: The query string in the policy engine lingo, defaults to "data.system.main"
-* `policyEngine`: The engine to use for execution of the policy. By default `OPA` (Open Policy Agent) is used.
-* `applyToVC`: Apply this policy to verifiable credentials (Default: true)
-* `applyToVP`: Apply this policy to verifiable presentations (Default: false)
+* **`name`**: The policy name. Defaults to "DynamicPolicy".
+* **`description`**: An optional description of the policy.
+* **`input`**: A generic map (JSON object) holding the input data required by the policy. If no input is required, this can be an empty map.
+* **`policy`**: The policy definition. Can be a file path, URL, JSON Path (if policy is defined in a credential property), or the policy script directly.
+* **`dataPath`**: The path to the credential data to be verified. Defaults to the entire credential object ($). If you want to use only the credential subject as verification data, specify the JSON path like this: `$.credentialSubject`.
+* **`policyQuery`**: The query string in the policy engine language. Defaults to "data.system.main".
+* **`policyEngine`**: The engine used for policy execution. Defaults to OPA (Open Policy Agent).
+* **`applyToVC`**: Determines whether this policy should apply to verifiable credentials. Defaults to true.
+* **`applyToVP`**: Determines whether this policy should apply to verifiable presentations. Defaults to false.
 
-### Policy execution and input data
+## Policy Execution and Input Data
 
-The policy is executed by the specified policy engine. Currently the only supported engine is Open Policy Agent.
+The policy is executed by the specified policy engine, with the Open Policy Agent currently being the only supported engine. OPA receives an input object containing the dynamic policy's input parameter and the credential data configured in the policy argument.
 
-The Open Policy Agent receives an input object that contains the input parameter of the dynamic policy and the credential data, as configured in the policy argument.
+The input object for the policy engine is structured as follows:
 
-The input object for the policy engine looks like this:
-
-```
+```kotlin
 data class PolicyEngineInput(
     val credentialData: Map<String, Any?>,
     val parameter: Map<String, Any?>?
 )
 ```
 
-This means, in the definition of the REGO policy, one can access the input parameter and the credential data selected for evaluation, by these input properties:
+This structure allows the REGO policy definition to access the `input` properties as follows:
 
-`input.parameter`: The input object as defined in the `input` property of the Dynamic Policy Argument
+* **`input.parameter`**: The input object defined in the `DynamicPolicyArg`'s input property.
+* **`input.credentialData`**: The credential data selected by the JSON path provided in the `DynamicPolicyArg`'s `dataPath` property.
 
-`input.credentialData`: The credential data selected by the JSON path given in the `dataPath` property of the Dynamic Policy Argument
+### Creating and Using Dynamic Policies
 
-See the next section for a simple example.
+Here, we guide you through the process of creating and using dynamic policies, demonstrating both on-the-fly execution and how to save policies for future use.
+
+We will also show you how to update or remove dynamic policies and provide some additional tips and considerations.
 
 ### Sample policy
 

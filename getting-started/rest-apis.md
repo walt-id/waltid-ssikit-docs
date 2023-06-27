@@ -61,7 +61,7 @@ The Core API exposes most of the funtionalities provided by the SSI Kit, however
 ### Next Steps
 
 * [Issuance](rest-apis/signatory-api.md) - Learn how to issue credentials
-* [Holders](rest-apis/custodian-api.md) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
+* [Holders](rest-apis/custodian-api/) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
 * [Verifiers](rest-apis/auditor-api.md) - Learn how to verify credentials
 
 ### Tutorials

@@ -1,6 +1,6 @@
 # Create DID
 
-DID _cheqd_ scheme is supported with the same functionality as the other DID schemes (see [decentralized-identifiers.md](../../getting-started/cli-command-line-interface/decentralized-identifiers.md "mention") for command-line interface or [#decentralised-identifiers](../../getting-started/rest-apis/core-api.md#decentralised-identifiers "mention") for REST API). Creating a `did:cheqd` will also onboard with the [Universal Registrar](https://uniregistrar.io). The created DID can be checked at [https://resolver.cheqd.net/1.0/identifiers/{your-did}](https://resolver.cheqd.net/1.0/identifiers/%7Byour-did%7D) or using the [Universal Resolver](https://dev.uniresolver.io).
+DID _cheqd_ scheme is supported with the same functionality as the other DID schemes (see [decentralized-identifiers.md](../../getting-started/cli-command-line-interface/decentralized-identifiers.md "mention") for command-line interface or [#decentralised-identifiers](../../getting-started/rest-apis/core-api/#decentralised-identifiers "mention") for REST API). Creating a `did:cheqd` will also onboard with the [Universal Registrar](https://uniregistrar.io). The created DID can be checked at [https://resolver.cheqd.net/1.0/identifiers/{your-did}](https://resolver.cheqd.net/1.0/identifiers/%7Byour-did%7D) or using the [Universal Resolver](https://dev.uniresolver.io).
 
 `did:cheqd` requires keys of type `Ed25519`. They can be either:
 
