@@ -1,39 +1,23 @@
 # Verification Policies
 
-For verification of verifiable credentials, the SSIKit provides several predefined, static verification policies. Additionally, it provides a way to create custom policies dynamically, using a policy execution engine, such as **Open Policy Agent**.
+\
+For verification of verifiable credentials, the SSI-Kit offers a wide range of predefined static and parameterized verification policies, which are ready-to-use and are designed for common use cases. For more complex verification, the creation of custom policies using a policy execution engine such as the Open Policy Agent can be used.
 
-To list the available verification policies and their descriptions, run:
+### Static Verification Policies
 
-```
-ssikit vc policies list
-```
+Predefined and covering a variety of common use cases, enabling developers to verify credentials without having to dive into dynamic or custom policy creation and scripting languages. Some of these policies include `SignaturePolicy`, `JsonSchemaPolicy`, `ValidFromBeforePolicy`, `ExpirationDateAfterPolicy`, and more.&#x20;
 
-The output will show the available policies, where static, predefined policies are indicated by the leading `-`, whereas dynamically created policies are indicated by `*`:
+[Learn more about Static Verification Policies.](../../concepts/verification-policies/static-policies.md)
 
-```
-ssikit vc policies list
-walt.id SSI Kit 1.11.0-SNAPSHOT (running on Java 16.0.2+7-suse-lp153.30.15-x8664)
+### Parameterized Verification Policies
 
-- SignaturePolicy       Verify by signature,    Argument: None
-- JsonSchemaPolicy       Verify by JSON schema,  Argument: None
-- EbsiTrustedSchemaRegistryPolicy    Verify by EBSI Trusted Schema Registry,         Argument: None
-- EbsiTrustedIssuerDidPolicy         Verify by trusted issuer did,   Argument: None
-- EbsiTrustedIssuerRegistryPolicy    Verify by trusted EBSI Trusted Issuer Registry record,  Argument: None
-- EbsiTrustedSubjectDidPolicy        Verify by trusted subject did,  Argument: None
-- EbsiTrustedIssuerAccreditationPolicy    Verify by issuer's authorized claims,  Argument: None
-- IssuedDateBeforePolicy         Verify by issuance date,        Argument: None
-- ValidFromBeforePolicy  Verify by valid from,   Argument: None
-- ExpirationDateAfterPolicy      Verify by expiration date,      Argument: None
-- GaiaxTrustedPolicy     Verify Gaiax trusted fields,    Argument: None
-- GaiaxSDPolicy  Verify Gaiax SD fields,         Argument: None
-- ChallengePolicy        Verify challenge,       Argument: ChallengePolicyArg
-- VpTokenClaimPolicy     Verify verifiable presentation by OIDC/SIOPv2 VP token claim,   Argument: VpTokenClaim
-- CredentialStatusPolicy         Verify by credential status,    Argument: None
-- DynamicPolicy  Verify credential by rego policy,       Argument: DynamicPolicyArg
-- VerifiableMandatePolicy        Predefined policy for verifiable mandates,      Argument: JsonObject
-* GaiaXPolicy    - no description -,     Argument: JsonObject
-* ItsMePolicy    Check that credential is mine,  Argument: JsonObject
+Parameterized policies are a type of policy that requires certain parameters or arguments for their execution.&#x20;
 
-(*) ... mutable dynamic policy
-```
+[Learn more about Parameterized Verification Polices.](../../concepts/verification-policies/parameterized-policies.md)
+
+### Dynamic Verification Policies
+
+Dynamic policies offer a more customized approach to credential verification, enabling even the most complex of use-cases. Policies can be created based on different policy engine languages.
+
+[Learn more about Dynamic Verification Policies.](../../concepts/verification-policies/dynamic-policies/)
 
