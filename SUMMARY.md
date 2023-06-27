@@ -101,6 +101,7 @@
     * [Creating Dynamic Policies](concepts/verification-policies/dynamic-policies/creating-dynamic-policies.md)
     * [Using Dynamic Policies](concepts/verification-policies/dynamic-policies/using-dynamic-policies.md)
     * [Removing Dynamic Policies](concepts/verification-policies/dynamic-policies/removing-dynamic-policies.md)
+    * [Dynamic Policies | Data Classes](concepts/verification-policies/dynamic-policies/dynamic-policies-or-data-classes.md)
 * [Selective Disclosure](concepts/selective-disclosure/README.md)
   * [Intro](concepts/selective-disclosure/intro.md)
   * [Issuing a SD-JWT Credential](concepts/selective-disclosure/issuing-a-sd-jwt-credential.md)
