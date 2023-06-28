@@ -68,8 +68,9 @@ curl -X 'POST' \
 ```
 
 **Body Parameters**\
-\*\*\*\*`method`: _**\[string]**_ method of the did. Value can be one of `key`, `web`, `ebsi`, `iota`, `cheqd`, `jwk`\
-`\` **Example**
+`method`: _**\[string]**_ method of the did. Value can be one of `key`, `web`, `ebsi`, `iota`, `cheqd`, `jwk`\
+\
+**Example**
 
 ```bash
 curl -X 'POST' \
