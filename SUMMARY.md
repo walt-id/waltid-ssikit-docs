@@ -90,6 +90,7 @@
 ## Tutorials
 
 * [My First VC](tutorials/my-first-vc.md)
+* [Advanced VC](tutorials/advanced-vc.md)
 
 ## Concepts
 

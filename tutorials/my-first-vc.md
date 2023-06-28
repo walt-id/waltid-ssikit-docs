@@ -51,7 +51,7 @@ The first time you run the command you will be asked to built the project. You c
 {% endtab %}
 {% endtabs %}
 
-Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)\\
+Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)
 
 #### **Creating the DIDs**
 
