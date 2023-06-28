@@ -1,122 +1,28 @@
 # Static Policies
 
+Static verification policies are predefined for verifying credentials in standard use cases. The following lists out supported static policies by SSI-Kit along with their arguments
+
 ## General policies
 
-### SignaturePolicy
+| Name                      | Description                                                                                                                                               | Argument                                                                   |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| SignaturePolicy           | Verifies the signature of the W3C Verifiable credential.                                                                                                  | None                                                                       |
+| JsonSchemaPolicy          | Verifies against the associated JSON schema. Note that the attribute credentialSchema must be set and the JSON schema must be accessible by the http URL. | None                                                                       |
+| ValidFromBeforePolicy     | Verifies the credentials based on their valid-from date                                                                                                   | None                                                                       |
+| ExpirationDateAfterPolicy | Verifies the credentials based on their expiration date                                                                                                   | None                                                                       |
+| ChallengePolicy           | Verifies challenge                                                                                                                                        | `ChallengePolicyArg`, which contains specific challenges to check against. |
+| VpTokenClaimPolicy        | Verify verifiable presentation by OIDC/SIOPv2 VP token claim.                                                                                             | `VpTokenClaim`                                                             |
+| CredentialStatusPolicy    | Verifies credentials based on their status                                                                                                                | None                                                                       |
 
-Verifies the signature of the W3C Verifiable credential.
+## EBIS/ESSIF Specific Policies
 
-Argument: _None_.
+<table><thead><tr><th width="337">Name</th><th width="287.3333333333333">Description</th><th>Argument</th></tr></thead><tbody><tr><td>EbsiTrustedSchemaRegistryPolicy</td><td><p>Verify by EBSI Trusted Schema Registry.<br><br><em>Checks performed:</em> </p><ul><li>credential schema id has the correct format</li></ul></td><td>None</td></tr><tr><td>EbsiTrustedIssuerDidPolicy</td><td><p>Verify by trusted issuer did.<br><br>Checks performed: </p><ul><li>issuer did is resolvable against EBSI</li></ul></td><td>None</td></tr><tr><td>EbsiTrustedIssuerRegistryPolicy</td><td><p>Verify by EBSI Trusted Issuer Registry record.<br><br>Checks performed:</p><ul><li>issuer has any record on trusted registry having an authorization claim matching the VC schema</li></ul><ul><li>issuer's TIR record contains a VerifiableId credential</li></ul><ul><li>the authorized claim record (from p.1) has the type provided as argument to the policy</li></ul><ul><li>issuer's accreditation is valid - verifies against <code>EbsiTrustedIssuerAccreditationPolicy</code></li></ul></td><td><code>EbsiTrustedIssuerRegistryPolicyArg</code></td></tr><tr><td>EbsiTrustedSubjectDidPolicy</td><td><p>Verify by trusted subject did.<br><br>Checks performed:</p><ul><li>subject did is resolvable against EBSI</li></ul></td><td>None</td></tr><tr><td>EbsiTrustedIssuerAccreditationPolicy</td><td><p>Verify by issuer's authorized claims.<br><br>Checks performed: </p><ul><li>fetches the attribute specified by the <code>termsOfUse</code> property</li></ul><ul><li>checks whether the credential stored as the attribute body has the required accreditation claims to match the current VC schema</li></ul></td><td>None</td></tr><tr><td>IssuedDateBeforePolicy</td><td>Verify by issuance date.</td><td>None</td></tr></tbody></table>
 
-### JsonSchemaPolicy
 
-Verifies against the associated JSON schema. Note that the attribute _credentialSchema_ must be set and the JSON schema must be accessible by the http URL.
-
-Argument: _None_.
-
-### ValidFromBeforePolicy
-
-Verify by valid from.
-
-Argument: _None_.
-
-### ExpirationDateAfterPolicy
-
-Verify by expiration date.
-
-Argument: _None_.
-
-### ChallengePolicy
-
-Verify challenge.
-
-Argument: `ChallengePolicyArg`
-
-### VpTokenClaimPolicy
-
-Verify verifiable presentation by OIDC/SIOPv2 VP token claim.
-
-Argument: `VpTokenClaim`
-
-### CredentialStatusPolicy
-
-Verify by credential status.
-
-Argument: _None_.
-
-## EBIS/ESSIF specific policies
-
-### EbsiTrustedSchemaRegistryPolicy
-
-Verify by EBSI Trusted Schema Registry.
-
-Argument: _None_.
-
-The following checks are performed:
-
-* credential schema id has the correct format
-
-### EbsiTrustedIssuerDidPolicy
-
-Verify by trusted issuer did.
-
-Argument: _None_.
-
-The following checks are performed:
-
-* issuer did is resolvable against EBSI
-
-### EbsiTrustedIssuerRegistryPolicy
-
-Verify by EBSI Trusted Issuer Registry record.
-
-Argument: `EbsiTrustedIssuerRegistryPolicyArg`.
-
-The following checks are performed:
-
-1. issuer has any record on trusted registry having an authorization claim matching the VC schema
-2. issuer's TIR record contains a VerifiableId credential
-3. the authorized claim record (from p.1) has the type provided as argument to the policy
-4. issuer's accreditation is valid - verifies against `EbsiTrustedIssuerAccreditationPolicy`
-
-### EbsiTrustedSubjectDidPolicy
-
-Verify by trusted subject did.
-
-Argument: _None_.
-
-The following checks are performed:
-
-* subject did is resolvable against EBSI
-
-### EbsiTrustedIssuerAccreditationPolicy
-
-Verify by issuer's authorized claims.
-
-Argument: _None_.
-
-Performs the following actions:
-
-1. fetches the attribute specified by the `termsOfUse` property
-2. checks whether the credential stored as the attribute body has the required accreditation claims to match the current VC schema
-
-### IssuedDateBeforePolicy
-
-Verify by issuance date.
-
-Argument: _None_.
 
 ## GAIA-X specific policies
 
-### GaiaxTrustedPolicy
-
-Verify Gaiax trusted fields.
-
-Argument: _None_.
-
-### GaiaxSDPolicy
-
-Verify Gaiax SD fields.
-
-Argument: _None_.
-
+| Name               | Description                  | Argument |
+| ------------------ | ---------------------------- | -------- |
+| GaiaxTrustedPolicy | Verify Gaiax trusted fields. | None     |
+| GaiaxSDPolicy      | Verify Gaiax SD fields.      | None     |
