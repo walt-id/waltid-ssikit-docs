@@ -11,4 +11,5 @@ The SSI-Kit's functionality can be used in a variety of ways. Select your prefer
 ### Tutorials
 
 * [My First Verifiable Credential (VC)](../tutorials/my-first-vc.md) - Issue and verify your first VC using the SSI-Kit Api
+* [Advanced Verifiable Credentials (VC)](../tutorials/advanced-vc.md) - Leverage custom credential templates, the credential status property, prebuild and custom verification policies.
 
