@@ -4,7 +4,7 @@ In this tutorial, our fictional SSI Use-Case involves Emma, a recent university 
 
 **Where we start:**
 
-Utilizing the walt.id SSI-Kit's REST-API, we will provide Emma with the Verifiable  Degree Credential by creating a DID for both the university (Issuer) and Emma (Holder). After that, the employer (Verifier) will authenticate the Degree Credential using the associated DIDs.
+Utilizing the walt.id SSI-Kit's REST-API, we will provide Emma with the Verifiable Degree Credential by creating a DID for both the university (Issuer) and Emma (Holder). After that, the employer (Verifier) will authenticate the Degree Credential using the associated DIDs.
 
 **What we do:**
 
@@ -12,8 +12,6 @@ Utilizing the walt.id SSI-Kit's REST-API, we will provide Emma with the Verifiab
 2. [Create DIDs](my-first-vc.md#creating-the-dids) - for Emma + University
 3. [Issue Credential](my-first-vc.md#issuing-a-verifiable-university-degree-credential) to Emma
 4. [Verify Credential](my-first-vc.md#verify-the-university-degree-credential) from Emma
-
-
 
 ### Running the SSI-Kit
 
@@ -53,8 +51,7 @@ The first time you run the command you will be asked to built the project. You c
 {% endtab %}
 {% endtabs %}
 
-Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)\
-
+Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)\\
 
 #### **Creating the DIDs**
 
@@ -71,9 +68,8 @@ curl -X 'POST' \
 ```
 
 **Body Parameters**\
-****`method`: _**\[string]**_ method of the did. Value can be one of `key`, `web`, `ebsi`, `iota`, `cheqd`, `jwk`\
-``\
-``**Example**
+\*\*\*\*`method`: _**\[string]**_ method of the did. Value can be one of `key`, `web`, `ebsi`, `iota`, `cheqd`, `jwk`\
+`\` **Example**
 
 ```bash
 curl -X 'POST' \
@@ -176,7 +172,7 @@ curl -X 'POST' \
 
 **Body Parameters**
 
-* `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. This template defines the structure and format of the credential being issued.&#x20;
+* `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. This template defines the structure and format of the credential being issued.
 * `config`: _**\[object]**_ Contains configuration parameters for the issuance process.
   * `issuerDid`: _**\[string]**_ The DID of the entity issuing the credential (University).
   * `subjectDid`: _**\[string]**_ The DID of the entity receiving the credential (Emma).
@@ -187,8 +183,6 @@ curl -X 'POST' \
     * `degree`: _**\[object]**_ Contains details of the degree earned by the credential holder.
       * `name`: _**\[string]**_ The name of the earned degree (e.g., "Bachelor of Science and Arts").
       * `type`: _**\[string]**_ The type of the earned degree (e.g., "BachelorDegree").
-
-
 
 **Example:**
 
@@ -216,14 +210,11 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-Awesome, you just issued your first VC 🎉. Now Emma can use it to prove her academic credentials to her employer.\
-\
-
+Awesome, you just issued your first VC 🎉. Now Emma can use it to prove her academic credentials to her employer.
 
 #### **Verify The University Degree Credential**
 
-****\
-****Emma needs to verify her academic credentials to her employer, which involves the following steps performed by the verifier (employer):
+Emma needs to verify her academic credentials to her employer, which involves the following steps performed by the verifier (employer):
 
 1. **Verify the credential's digital signature**: The Verifier checks if the digital signature on the credential is valid and has been signed by the Issuer's private key. This ensures that the credential was indeed issued by the claimed Issuer.
 2. **Check the Issuer's DID**: The Verifier validates the Issuer's Decentralized Identifier (DID) by resolving it to a DID Document. This step helps confirm the Issuer's identity and retrieve their public key for signature verification.
@@ -310,12 +301,10 @@ curl -X 'POST' \
 {% endtab %}
 {% endtabs %}
 
-You have successfully issued and verified a Verifiable Credential. Great job!!  Emma can start her new job 🎉\
+You have successfully issued and verified a Verifiable Credential. Great job!! Emma can start her new job 🎉\
 \
 **Where to go next?**
 
 1. Exploring ssi-kit Capabilities - Familiarize yourself with the various features of ssi-kit by reviewing the [REST API](../getting-started/rest-apis.md) or [Command Line](../getting-started/cli-command-line-interface.md) section.
 2. [Understanding Verification Policies](../usage-examples/verifiable-credentials/verification-policies.md) - Discover the potential applications of Verification Policies and how they can be useful for your particular use-case.
 3. [Exploring Supported Ecosystems](../what-is-the-ssi-kit/ssi-kit/architecture/ecosystem-abstraction.md) - Visit our ecosystem overview page to explore the different ecosystems (did:methods) that we support.
-
-\
