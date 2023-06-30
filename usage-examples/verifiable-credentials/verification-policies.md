@@ -1,6 +1,9 @@
 # Verification Policies
 
-\
+{% embed url="https://youtu.be/yTQl7_HYWJo" %}
+Introduction to Verification Policies
+{% endembed %}
+
 For verification of verifiable credentials, the SSI-Kit offers a wide range of predefined static and parameterized verification policies, which are ready-to-use and are designed for common use cases. For more complex verification, the creation of custom policies using a policy execution engine such as the Open Policy Agent can be used.
 
 ### Static Verification Policies
