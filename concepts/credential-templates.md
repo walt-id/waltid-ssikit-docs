@@ -1,5 +1,9 @@
 # Credential Templates
 
+{% embed url="https://youtu.be/a3l3VhLWZaI" %}
+Introduction to Credential Templates
+{% endembed %}
+
 They are the blueprint on which Verifiable Credentials are issued, and we offer two variants:&#x20;
 
 1. [Prebuild templates](../getting-started/rest-apis/signatory-api.md#list-templates) for the most relevant use-cases
