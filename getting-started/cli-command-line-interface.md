@@ -23,7 +23,7 @@ docker pull waltid/ssikit
 2\. Setting and alias for convenience
 
 ```
-alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit"
+alias ssikit="docker container run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data docker.io/waltid/ssikit -b 0.0.0.0"
 ```
 
 
