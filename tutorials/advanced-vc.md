@@ -31,7 +31,7 @@ Make sure you have Docker or a JDK 16 build environment including Gradle install
 Pull the docker container directly from docker hub and run the project
 
 ```
-docker run -itv $(pwd)/data:/app/data waltid/ssikit serve
+docker run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data waltid/ssikit serve -b 0.0.0.0
 ```
 
 This will create a folder called data in your current directory as storge for the VC, DIDs, Keys and other things which need to be stored in order to provide all the fuctionality.
