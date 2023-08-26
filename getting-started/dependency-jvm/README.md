@@ -26,7 +26,7 @@ Required Maven repos:
 
 ```
 https://maven.walt.id/repository/waltid/
-https://maven.walt.id/repository/waltid-ssikit/
+https://maven.walt.id/repository/waltid-ssi-kit/
 ```
 
 {% hint style="info" %}
