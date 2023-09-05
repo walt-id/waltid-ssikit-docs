@@ -74,13 +74,7 @@ To see available verification policies, use `vc policies` command
 
 ### Import VC to custodian store
 
-Import DID to custodian store
-
-Options:
-
-* `-k, --key-id TEXT` Specify key ID for imported did, if left empty, only public key will be imported
-* `-f, --file TEXT` Load the DID document from the given file
-* `-d, --did TEXT` Try to resolve DID document for the given DID
+Import VC to custodian store
 
 ### VC templates
 
