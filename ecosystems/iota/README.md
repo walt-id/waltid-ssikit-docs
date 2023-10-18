@@ -1,4 +1,8 @@
-# IOTA identity framework integration
+# IOTA
+
+{% hint style="danger" %}
+Our current implementation does not support the latest changes in&#x20;
+{% endhint %}
 
 The following section outlines the planned integration of the IOTA identity framework with the walt.id SSI Kit and gives insight on the architecture of the integration and the required changes that need to be applied to the SSI Kit to establish smooth interoperability with the IOTA ecosystem.
 
@@ -14,10 +18,10 @@ Thanks to the use of W3C standards for DID documents and verifiable credentials,
 
 The following aspects have been identified, which require implementation changes and/or integration work in the SSI Kit:
 
-1) **IOTA DID method**: Creation, management and registration of DIDs on the IOTA tangle
-2) **Key management**: Integrate SSI Kit key management seamlessly, such that keys managed by the SSI Kit (or a supported key store implementation) can be leveraged in the context of the IOTA framework.
-3) **Signature type**: To ensure compatibility of issued credentials with both the SSI Kit and the IOTA framework, the LD-signature type _JcsEd25519Signature2020_ needs to be supported in the SSI Kit.
-4) **Public key format**: The public key, stored in the verification methods of the IOTA DID documents, is formatted in multibase encoding, for which support in the SSI Kit needs to be provided.
+1. **IOTA DID method**: Creation, management and registration of DIDs on the IOTA tangle
+2. **Key management**: Integrate SSI Kit key management seamlessly, such that keys managed by the SSI Kit (or a supported key store implementation) can be leveraged in the context of the IOTA framework.
+3. **Signature type**: To ensure compatibility of issued credentials with both the SSI Kit and the IOTA framework, the LD-signature type _JcsEd25519Signature2020_ needs to be supported in the SSI Kit.
+4. **Public key format**: The public key, stored in the verification methods of the IOTA DID documents, is formatted in multibase encoding, for which support in the SSI Kit needs to be provided.
 
 The following subsections give more details on the planned integration work.
 
@@ -25,7 +29,7 @@ The following subsections give more details on the planned integration work.
 
 The following chart outlines the overall architecture of the integration between the walt.id SSI Kit and the IOTA framework:
 
-![Integration architecture](./integration-architecture.png)
+![Integration architecture](integration-architecture.png)
 
 ## Rust library wrapper
 
@@ -37,11 +41,11 @@ This approach also facilitates portability of the wrapper library to all operati
 
 ## DID management
 
-For DID creation and management, the wrapper library implements an interface method, called by the _IotaService_ component in the SSI Kit. 
+For DID creation and management, the wrapper library implements an interface method, called by the _IotaService_ component in the SSI Kit.
 
-The public and private keys for creating the DID, should be managed by the SSI Kit and its key store abstraction layer, with support for various key store implementations (see also [Key management](#key-management) below).
+The public and private keys for creating the DID, should be managed by the SSI Kit and its key store abstraction layer, with support for various key store implementations (see also [Key management](./#key-management) below).
 
-The wrapper library makes use of the _AccountBuilder_ of the _identity_iota::account_ module to create and register a DID on the IOTA ledger. After creation the library updates the DID document to include the various [verification method relationships](https://www.w3.org/TR/did-core/#verification-relationships), such that issuance (_assertionMethod_) and presentation (_authentication_) of verifiable credentials is permitted using the new DID.
+The wrapper library makes use of the _AccountBuilder_ of the _identity\_iota::account_ module to create and register a DID on the IOTA ledger. After creation the library updates the DID document to include the various [verification method relationships](https://www.w3.org/TR/did-core/#verification-relationships), such that issuance (_assertionMethod_) and presentation (_authentication_) of verifiable credentials is permitted using the new DID.
 
 The created DID document is returned to the SSI Kit, where it can be parsed and stored for further use.
 
@@ -51,7 +55,7 @@ In order to be able to make full use of the SSI Kit together with the IOTA frame
 
 The SSI Kit provides a key store abstraction layer, that has support for various key store implementations, including an embedded key store and cryptography library, as well as cloud-based HSM stores, such as Azure key vault and the walt.id Storage Kit, a general-purpose distributed encrypted data store.
 
-In order to leverage the SSI Kit key store abstraction with the IOTA identity framework integration, we plan to implement a _key store mediator_ component in the Rust wrapper library, which exposes the IOTA [_storage interface_](https://wiki.iota.org/identity.rs/concepts/advanced/storage_interface) on the one hand, and, on the other hand, communicates the signing or encryption/decryption requests to the SSI Kit via a native-to-managed callback function. This _key store mediator_ can be passed to the _AccountBuilder_ as to storage interface to use for DID creation. The SSI Kit can then fulfill the cryptographic requests using the configured key store implementation and hand back the result to the wrapper library and IOTA framework internals.
+In order to leverage the SSI Kit key store abstraction with the IOTA identity framework integration, we plan to implement a _key store mediator_ component in the Rust wrapper library, which exposes the IOTA [_storage interface_](https://wiki.iota.org/identity.rs/concepts/advanced/storage\_interface) on the one hand, and, on the other hand, communicates the signing or encryption/decryption requests to the SSI Kit via a native-to-managed callback function. This _key store mediator_ can be passed to the _AccountBuilder_ as to storage interface to use for DID creation. The SSI Kit can then fulfill the cryptographic requests using the configured key store implementation and hand back the result to the wrapper library and IOTA framework internals.
 
 ## LD signature type
 
