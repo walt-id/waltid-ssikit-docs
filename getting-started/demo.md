@@ -16,6 +16,10 @@ The demo shows an end-to-end SSI use case from the perspective of an individual 
 
 **Verifier Portal:** Shows the presentation of VCs by Holder in order to authenticate or identify towards a Relying Party (Verifier).
 
+{% hint style="danger" %}
+Our hosted demo verifier is currently not working with our wallet. We are working on fixing the issue. Please [reach out](https://walt.id/discord) in case of any questions.
+{% endhint %}
+
 1. Visit the [Verifier Portal](https://verifier.walt.id/).
 2. Connect the wallet to share VCs.
 3. Log into the wallet (you used before)
