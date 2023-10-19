@@ -3,7 +3,7 @@
 {% hint style="danger" %}
 We're redesigning our product stack to make it available for different programming languages and improve the overall developer experience.
 
-We are currently focusing all of our efforts on introducing our new stack, so you won't see as much development activity on the current stack. However, we are still addressing any upcoming issues. If you have any questions or concerns, please don't hesitate to [contact us](https://walt.id/discord).
+We don't add new features to current products, only fixing urgent issues. We try to keep you up to date on anything that might break, but may have missed something. If you encounter any issues, please [reach out](https://walt.id/discord).
 {% endhint %}
 
 \
