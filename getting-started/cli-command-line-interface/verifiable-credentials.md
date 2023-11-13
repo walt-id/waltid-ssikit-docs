@@ -80,15 +80,23 @@ Import VC to custodian store
 
 Learn about VC template related functions like the listing and exporting of templates, as well as how to create/import your own custom VC template.
 
+#### List VC templates in custodian store
+
 * `list` List VC Templates.
 
 `vc template list` result
 
 ![](<../../.gitbook/assets/image (6).png>)
 
+#### Export VC template from custodian store
+
 * `export <template-name>` Export VC Template.
 
-e.g. `vc templates export VerifiableId`
+Options:
+
+* `-n, --name <Name>` Name of the template
+
+e.g. `vc templates export --name VerifiableId`
 
 ![](<../../.gitbook/assets/image (11).png>)
 
