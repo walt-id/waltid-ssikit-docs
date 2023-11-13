@@ -12,15 +12,13 @@ In this tutorial, we will expand on the ["My First VC" tutorial](my-first-vc.md)
 
 Using the walt.id SSI-Kit's REST API, we'll streamline access control within the company by
 
-* [**Establishing a Digital Identity (DID)**](advanced-vc.md#establishing-a-digital-identity-did): The company will be set up as the issuer through its own Digital Identity (DID).
-* [**Creating an EmployeeID Template**](advanced-vc.md#creating-an-employeeid-template): This template will be used for generating verifiable credentials for employees.
-* [**Issuing a Verifiable Credential to Emma**](advanced-vc.md#issuing-a-verifiable-credential-to-emma): Emma, an employee, will be issued a Verifiable Credential, making her the holder.
-* [**Authenticating with Door Access System**](advanced-vc.md#authenticating-with-door-access-system): The system, acting as the Verifier, will:&#x20;
-  * Confirm Emma's employment status
-  * Assess her role within the company
-  * Grant or deny access to specific areas on the company campus based on the above.
-
-
+- [**Establishing a Digital Identity (DID)**](advanced-vc.md#establishing-a-digital-identity-did): The company will be set up as the issuer through its own Digital Identity (DID).
+- [**Creating an EmployeeID Template**](advanced-vc.md#creating-an-employeeid-template): This template will be used for generating verifiable credentials for employees.
+- [**Issuing a Verifiable Credential to Emma**](advanced-vc.md#issuing-a-verifiable-credential-to-emma): Emma, an employee, will be issued a Verifiable Credential, making her the holder.
+- [**Authenticating with Door Access System**](advanced-vc.md#authenticating-with-door-access-system): The system, acting as the Verifier, will:&#x20;
+  - Confirm Emma's employment status
+  - Assess her role within the company
+  - Grant or deny access to specific areas on the company campus based on the above.
 
 ### Running the SSI-Kit
 
@@ -34,10 +32,11 @@ Pull the docker container directly from docker hub and run the project
 docker run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data waltid/ssikit serve -b 0.0.0.0
 ```
 
-This will create a folder called data in your current directory as storge for the VC, DIDs, Keys and other things which need to be stored in order to provide all the fuctionality.
+This will create a folder called data in your current directory as storage for the VC, DIDs, Keys and other things which need to be stored in order to provide all the functionality.
 {% endtab %}
 
 {% tab title="Local" %}
+
 1. Clone the project
 
 ```
@@ -55,14 +54,13 @@ cd waltid-ssikit/
 The first time you run the command you will be asked to built the project. You can confirm the prompt.
 
 ```
-./ssikit.sh serve 
+./ssikit.sh serve
 ```
+
 {% endtab %}
 {% endtabs %}
 
 Now with the SSI-Kit up and running, we can create the DID for the company, establishing its Digital Identity.
-
-
 
 ### **Establishing a Digital Identity (DID)**
 
@@ -94,12 +92,11 @@ curl -X 'POST' \
   "method": "key"
 }'
 ```
+
 {% endtab %}
 {% endtabs %}
 
 Create one DID for the company using the command above. In case you don't have done the My First VC tutorial and still have the DID for Emma, create another one for her. Make sure to save both, as we will be needing them later for the issuance of the EmployeID. You can also use [the list DID endpoint ](../getting-started/rest-apis/custodian-api/did-management.md#list-did)to see all previously created DIDs.
-
-
 
 ### **Creating an EmployeeID Template**
 
@@ -107,20 +104,20 @@ The SSI-Kit supports the creation of [credential templates](../concepts/credenti
 
 Let's create one for an EmployeeID. The template will include the following properties:
 
-* `id`: Identifier for the employee
-* `name`: Name of the employee
-* `role`: Role or designation in the company
-* `joiningDate`: Date of joining the company
+- `id`: Identifier for the employee
+- `name`: Name of the employee
+- `role`: Role or designation in the company
+- `joiningDate`: Date of joining the company
 
 ```json
 {
-    "type": ["VerifiableCredential", "EmployeeID"],
-    "credentialSubject": {
-        "id": "",
-        "name": "",
-        "role": "",
-        "joiningDate": ""
-    }
+  "type": ["VerifiableCredential", "EmployeeID"],
+  "credentialSubject": {
+    "id": "",
+    "name": "",
+    "role": "",
+    "joiningDate": ""
+  }
 }
 ```
 
@@ -128,6 +125,7 @@ Let's create one for an EmployeeID. The template will include the following prop
 
 {% tabs %}
 {% tab title="API" %}
+
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:7001/v1/templates/{id}' \
@@ -136,9 +134,9 @@ curl -X 'POST' \
   -d '{credentialTemplate}'
 ```
 
-**Path Paramethers**
+**Path Parameters**
 
-* `id`: The name for the credential template, which we will later reference during issuance. e.g. EmployeeID
+- `id`: The name for the credential template, which we will later reference during issuance. e.g. EmployeeID
 
 **Body**\
 Use the JSON structure from above as the body.\
@@ -160,6 +158,7 @@ curl -X 'POST' \
     }
 }'
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -187,6 +186,7 @@ In order to issue Emma's EmployeeID VC, we will use one of the credential templa
 
 {% tabs %}
 {% tab title="API" %}
+
 ```bash
 curl -X 'POST' \
   'http://localhost:7001/v1/credentials/issue' \
@@ -197,7 +197,7 @@ curl -X 'POST' \
   "config": {
     "issuerDid": "{issuerDid}",
     "subjectDid": "{subjectDid}",
-    "proofType": "{proofType}", 
+    "proofType": "{proofType}",
     "statusType": "{statusType}"
   },
   "credentialData": {
@@ -211,14 +211,14 @@ curl -X 'POST' \
 
 **Body Parameters**
 
-* `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. In our case this would be the EmployeeID or EngineerEmployeeID template.
-* `config`: _**\[object]**_ Contains configuration parameters for the issuance process.
-  * `issuerDid`: _**\[string]**_ The DID of the entity issuing the credential (University).
-  * `subjectDid`: _**\[string]**_ The DID of the entity receiving the credential (Emma).
-  * `proofType`: _**\[string]**_ Specifies the format and cryptographic algorithm used for the digital signature of the Verifiable Credential. E.g. LD\_PROOF
-  * `statusType`: _**\[statusType]**_ Specifies if the credential should be issued with status and the type of the status. Options `StatusList2021Entry` or `SimpleCredentialStatus2022`
-* `credentialData`: _**\[object]**_ Contains the actual data of the credential being issued.
-  * `credentialSubject`: _**\[object]**_ Holds the information about the employee as described in the EmployeeID credential template.
+- `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. In our case this would be the EmployeeID or EngineerEmployeeID template.
+- `config`: _**\[object]**_ Contains configuration parameters for the issuance process.
+  - `issuerDid`: _**\[string]**_ The DID of the entity issuing the credential (University).
+  - `subjectDid`: _**\[string]**_ The DID of the entity receiving the credential (Emma).
+  - `proofType`: _**\[string]**_ Specifies the format and cryptographic algorithm used for the digital signature of the Verifiable Credential. E.g. LD_PROOF
+  - `statusType`: _**\[statusType]**_ Specifies if the credential should be issued with status and the type of the status. Options `StatusList2021Entry` or `SimpleCredentialStatus2022`
+- `credentialData`: _**\[object]**_ Contains the actual data of the credential being issued.
+  - `credentialSubject`: _**\[object]**_ Holds the information about the employee as described in the EmployeeID credential template.
 
 {% hint style="info" %}
 The `id` in the credential subject we don't need to provide as this will be prefilled automatically with the DID of Emma.
@@ -247,8 +247,6 @@ curl -X 'POST' \
 }'
 ```
 
-
-
 **Example EngineerEmployeeID:**
 
 ```bash
@@ -270,12 +268,11 @@ curl -X 'POST' \
   }
 }'
 ```
+
 {% endtab %}
 {% endtabs %}
 
 Now we can use the issued VC in the company campus verification system.
-
-
 
 ### **Authenticating with Door Access System**
 
@@ -329,6 +326,7 @@ main {
 
 {% tabs %}
 {% tab title="API" %}
+
 ```bash
 curl -X 'POST' \
   'http://127.0.0.1:7003/v1/create/{{policyName}}?update=true&downloadPolicy=true' \
@@ -357,13 +355,12 @@ main {
 
 **Path parameters:**&#x20;
 
-* `policyName`: _**\[string]**_ Name of the policy, e.g. IsCompany
+- `policyName`: _**\[string]**_ Name of the policy, e.g. IsCompany
 
 **Query parameters:**&#x20;
 
-* `update`: _**\[boolean]**_ Specifies if existing policy with same name should be overridden (if mutable)
-* `downloadPolicy`: _**\[boolean]**_ When using an URL to reference the to created policy. Downloads and/or saves the policy definition locally, rather than keeping the reference to the original URL\
-
+- `update`: _**\[boolean]**_ Specifies if existing policy with same name should be overridden (if mutable)
+- `downloadPolicy`: _**\[boolean]**_ When using an URL to reference the to created policy. Downloads and/or saves the policy definition locally, rather than keeping the reference to the original URL\
 
 **Body**
 
@@ -387,22 +384,20 @@ main {
 }
 ```
 
-* `name`: _**\[string]**_ Policy name, must not conflict with existing policies
-* `description`: _**\[string]**_ Optional policy description
-* `input`: _**\[JSON]**_ Input JSON object for rego query, which can be overridden/extended on verification. Can be a JSON string or JSON file
-* `policy`: _**\[URL, REGO]**_ Whole Policy or URL to policy definition.
-* `dataPath`: _**\[JSON path]**_ JSON path to the data in the credential which should be verified, default: "$" (whole credential object)
-* `policyQuery`: _**\[string]**_ The query string in the policy engine language. Defaults to\
+- `name`: _**\[string]**_ Policy name, must not conflict with existing policies
+- `description`: _**\[string]**_ Optional policy description
+- `input`: _**\[JSON]**_ Input JSON object for rego query, which can be overridden/extended on verification. Can be a JSON string or JSON file
+- `policy`: _**\[URL, REGO]**_ Whole Policy or URL to policy definition.
+- `dataPath`: _**\[JSON path]**_ JSON path to the data in the credential which should be verified, default: "$" (whole credential object)
+- `policyQuery`: _**\[string]**_ The query string in the policy engine language. Defaults to\
   "data.system.main".
-* `policyEngine`: _**\[string]**_ Policy engine type, default: OPA. Options, OPA
-* `applyToVC`: _**\[boolean]**_ Apply/Don't apply to verifiable credentials (default: apply)
-* `applyToVP`: _**\[boolean]**_ Apply/Don't apply to verifiable presentaion (default: don't apply)
-{% endtab %}
-{% endtabs %}
+- `policyEngine`: _**\[string]**_ Policy engine type, default: OPA. Options, OPA
+- `applyToVC`: _**\[boolean]**_ Apply/Don't apply to verifiable credentials (default: apply)
+- `applyToVP`: _**\[boolean]**_ Apply/Don't apply to verifiable presentation (default: don't apply)
+  {% endtab %}
+  {% endtabs %}
 
 Using the endpoint above, you can save both policies.
-
-
 
 #### Verifying the credential with all policies
 
@@ -424,9 +419,9 @@ curl -X 'POST' \
             "policy": "CredentialStatusPolicy"
         },
         {
-            "policy": "IsRole", 
+            "policy": "IsRole",
             "argument": {"role": "Engineer"}
-        }, 
+        },
         {
             "policy": "IsCompany"
         }
@@ -463,8 +458,6 @@ curl -X 'POST' \
 '
 ```
 
-
-
 **Body**
 
 ```json
@@ -477,9 +470,9 @@ curl -X 'POST' \
             "policy": "CredentialStatusPolicy"
         },
         {
-            "policy": "IsRole", 
+            "policy": "IsRole",
             "argument": {"role": "Engineer"}
-        }, 
+        },
         {
             "policy": "IsCompany"
         }
@@ -491,18 +484,17 @@ curl -X 'POST' \
 
 ```
 
-* `policies`: _**\[array]**_ A list of policy definitions to verify against
-  * `policy`: _**\[string]**_ The name/id of the policy
-  * `argument`: _**\[JSON]**_ The argument needed by the policy (optional)
-* `credentials`: _**\[array]**_ An array of credentials in JWT, or LD\_PROOF format
-{% endtab %}
-{% endtabs %}
+- `policies`: _**\[array]**_ A list of policy definitions to verify against
+  - `policy`: _**\[string]**_ The name/id of the policy
+  - `argument`: _**\[JSON]**_ The argument needed by the policy (optional)
+- `credentials`: _**\[array]**_ An array of credentials in JWT, or LD_PROOF format
+  {% endtab %}
+  {% endtabs %}
 
 Congratulations, you've reached the finish line! 🎉 You have skillfully utilized an array of features to bring this use case to life. Now, you have the opportunity to explore further and deepen your understanding of the concepts introduced today. Happy building!
 
 ### Next Steps
 
-* [Credential Templates](../concepts/credential-templates.md) - Dive deeper into credential templates and what you can do with them
-* [Credential Status](../concepts/credential-statuses/) - Learn more about the credential status property and what is enables.
-* [Verification Policies](../usage-examples/verifiable-credentials/verification-policies.md) - Explore our pre-build templates and learn more about how to build and leverage custom ones using OPA (Open Policy Agent) and the Rego language.
-
+- [Credential Templates](../concepts/credential-templates.md) - Dive deeper into credential templates and what you can do with them
+- [Credential Status](../concepts/credential-statuses/) - Learn more about the credential status property and what is enables.
+- [Verification Policies](../usage-examples/verifiable-credentials/verification-policies.md) - Explore our pre-build templates and learn more about how to build and leverage custom ones using OPA (Open Policy Agent) and the Rego language.

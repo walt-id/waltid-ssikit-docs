@@ -14,10 +14,11 @@ Pull the docker container directly from docker hub and run the project
 docker run -p 7000-7004:7000-7004 -itv $(pwd)/data:/app/data waltid/ssikit serve -b 0.0.0.0
 ```
 
-This will create a folder called data in your current directory as storge for the VC, DIDs, Keys and other things which need to be stored in order to provide all the fuctionality.
+This will create a folder called data in your current directory as storage for the VC, DIDs, Keys and other things which need to be stored in order to provide all the functionality.
 {% endtab %}
 
 {% tab title="Local" %}
+
 1. Clone the project
 
 ```
@@ -35,8 +36,9 @@ cd waltid-ssikit/
 The first time you run the command you will be asked to built the project. You can confirm the prompt.
 
 ```
-./ssikit.sh serve 
+./ssikit.sh serve
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -55,16 +57,15 @@ After successfully running the project, you will have the endpoints, described b
 | ESSIF API                   | http://127.0.0.1:7004 | [https://essif.ssikit.walt.id/](https://essif.ssikit.walt.id/)         |
 
 {% hint style="info" %}
-The Core API exposes most of the funtionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
+The Core API exposes most of the functionalities provided by the SSI Kit, however newer features will only be released in the other API endpoints. Therefore, it is recommended to use the Signatory API, Custodian API and Auditor API for most use cases.
 {% endhint %}
 
 ### Next Steps
 
-* [Issuance](rest-apis/signatory-api.md) - Learn how to issue credentials
-* [Holders](rest-apis/custodian-api/) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
-* [Verifiers](rest-apis/auditor-api.md) - Learn how to verify credentials
+- [Issuance](rest-apis/signatory-api.md) - Learn how to issue credentials
+- [Holders](rest-apis/custodian-api/) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
+- [Verifiers](rest-apis/auditor-api.md) - Learn how to verify credentials
 
 ### Tutorials
 
-* [My First VC](../tutorials/my-first-vc.md) - Play through a whole use case from Issuance to Verification
-
+- [My First VC](../tutorials/my-first-vc.md) - Play through a whole use case from Issuance to Verification
