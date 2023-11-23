@@ -5,9 +5,13 @@ description: Getting started with the SSI Kit.
 # Quick Start
 
 {% hint style="danger" %}
-We're redesigning our product stack to make it available for different programming languages and improve the overall developer experience.
+### Discontinuation Notice
 
-We don't add new features to current products, only fixing urgent issues. We try to keep you up to date on anything that might break, but may have missed something. If you encounter any issues, please [reach out](https://walt.id/discord).
+**Important:** Please be informed that, beginning from December 2023, the SSI Kit will no longer receive new features. Furthermore, the SSI Kit is planned for discontinuation by the end of Q3 2024.\
+\
+However, all functionalities currently offered by the SSI Kit will be integrated into our new libraries, APIs, and apps under [The Community Stack](https://walt.id/blog/p/community-stack). This is aimed at providing a more modular, flexible, and efficient solution for your needs.\
+\
+For any clarification or queries, feel free to [contact us](https://walt.id/discord) as we aim to make this transition as smooth as possible.
 {% endhint %}
 
 The SSI-Kit's functionality can be used in a variety of ways. Select your preference to get started
