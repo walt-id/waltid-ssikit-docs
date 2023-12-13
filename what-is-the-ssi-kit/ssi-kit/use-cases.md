@@ -43,7 +43,7 @@ You can find more examples in our White Papers:
 
 ## **Identity Wallets**
 
-You can launch identity wallets or extend your existing applications with the SSI capabilities. Check out our [**Wallet**](http://localhost:5000/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/) if you are interested to learn more.
+You can launch identity wallets or extend your existing applications with the SSI capabilities. Check out our [**Wallet**](https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/) if you are interested to learn more.
 
 ## Any Questions
 

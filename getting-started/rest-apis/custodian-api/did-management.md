@@ -1,15 +1,15 @@
-# DID management
+# Did management
 
 DID management functions enable the following:
 
-* [List](#list-did) - lists the available DIDs
-* [Load](#load-did) - loads a DID by the specified id
-* [Delete](#delete-did) - deletes a DID by the specified url
-* [Create](#create-did) - creates a new DID
-* [Resolve](#resolve-did) - resolves a DID to a document
-* [Import](#import-did) - import a DID
+* [List](did-management.md#list-did) - lists the available DIDs
+* [Load](did-management.md#load-did) - loads a DID by the specified id
+* [Delete](did-management.md#delete-did) - deletes a DID by the specified url
+* [Create](did-management.md#create-did) - creates a new DID
+* [Resolve](did-management.md#resolve-did) - resolves a DID to a document
+* [Import](did-management.md#import-did) - import a DID
 
-For more info on DIDs, go [here](/ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
+For more info on DIDs, go [here](../../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
 
 ## List DID
 
@@ -234,18 +234,13 @@ curl -X 'POST' \
 {% endtab %}
 
 {% tab title="Response body schema" %}
-```text
+```
 The DID url string
 ```
 {% endtab %}
 {% endtabs %}
 
-The `method` and `keyAlias` properties are common for all _did-method_ requests,
-`method` being required, while `keyAlias` - optional
-(if not specified, a new key will be automatically created using the default algorithm
-according to the _did-method_).
-The method-dependent options have default values, if not specified otherwise.
-Below are the available properties by _did-method_.
+The `method` and `keyAlias` properties are common for all _did-method_ requests, `method` being required, while `keyAlias` - optional (if not specified, a new key will be automatically created using the default algorithm according to the _did-method_). The method-dependent options have default values, if not specified otherwise. Below are the available properties by _did-method_.
 
 {% tabs %}
 {% tab title="key" %}
@@ -256,10 +251,10 @@ Below are the available properties by _did-method_.
     "useJwkJcsPub": "boolean"
 }
 ```
-* `useJwkJcsPub` (default) - _false_ - specifies whether to create a did:key using the jwk_jcs-pub multicodec
-  (code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 
+* `useJwkJcsPub` (default) - _false_ - specifies whether to create a did:key using the jwk\_jcs-pub multicodec (code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 {% endtab %}
+
 {% tab title="web" %}
 ```json
 {
@@ -269,10 +264,11 @@ Below are the available properties by _did-method_.
   "didWebPath": "string"
 }
 ```
+
 * `didWebDomain` (default) - _"walt.id"_
 * `didWebPath` (default) - _empty-string_
-
 {% endtab %}
+
 {% tab title="ebsi" %}
 ```json
 {
@@ -281,9 +277,10 @@ Below are the available properties by _did-method_.
     "version": "int"
 }
 ```
-* `version` (default) - _1_
 
+* `version` (default) - _1_
 {% endtab %}
+
 {% tab title="cheqd" %}
 ```json
 {
@@ -292,9 +289,10 @@ Below are the available properties by _did-method_.
     "network": "string"
 }
 ```
-* `network` (default) - _"testnet"_
 
+* `network` (default) - _"testnet"_
 {% endtab %}
+
 {% tab title="iota" %}
 ```json
 {
@@ -303,6 +301,7 @@ Below are the available properties by _did-method_.
 }
 ```
 {% endtab %}
+
 {% tab title="jwk" %}
 ```json
 {
@@ -339,7 +338,7 @@ curl -X 'POST' \
 {% endtab %}
 
 {% tab title="Response body" %}
-```text
+```
 did:web:walt.id
 ```
 {% endtab %}

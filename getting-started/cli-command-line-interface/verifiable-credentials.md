@@ -4,7 +4,7 @@ description: VC related operations like issuing, verifying and revoking VCs.
 
 # Verifiable Credentials
 
-VC related operations like issuing, verifying and revoking VCs. If you're new to VCs, check out the [intro section](../../ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
+VC related operations like issuing, verifying and revoking VCs. If you're new to VCs, check out the [intro section](../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
 
 Commands:
 

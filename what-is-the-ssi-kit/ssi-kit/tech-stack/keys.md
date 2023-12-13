@@ -11,4 +11,4 @@ The SSI Kit supports:
 
 _Note that we are continuously adding support for new key types._
 
-You can learn more about keys [here](../../../ssi-kit/what-is-ssi/technologies-and-concepts/).
+You can learn more about keys [here](../../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/).

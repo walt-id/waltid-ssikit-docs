@@ -9,4 +9,4 @@ The SSI Kit supports latest OpenID Connect extension for SSI:
 
 The implementation of the protocols is conformant with the latest specs from EBSI [https://api-conformance.ebsi.eu/docs/wallet-conformance](https://api-conformance.ebsi.eu/docs/wallet-conformance)
 
-You can learn more about protocols [here](../../../ssi-kit/what-is-ssi/technologies-and-concepts/).
+You can learn more about protocols [here](../../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/).

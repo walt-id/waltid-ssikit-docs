@@ -70,7 +70,7 @@ The design of DIDs, which is a new form of unique identifier that has been stand
 
 The DID is a simple text string built up of three parts:&#x20;
 
-![](../../../.gitbook/assets/did-format-example.png)
+![](../../../../.gitbook/assets/did-format-example.png)
 
 <table data-header-hidden><thead><tr><th></th><th></th><th data-hidden></th></tr></thead><tbody><tr><td>Schema</td><td>The did URI scheme identifier</td><td></td></tr><tr><td>DID Method</td><td>The identifier for the did method</td><td></td></tr><tr><td>DID Method-Specific Identifier</td><td>An identifier based on the requirements of the did method</td><td></td></tr></tbody></table>
 
@@ -106,7 +106,7 @@ A container of information holding:
 
 ### DID general flow
 
-![](../../../.gitbook/assets/DID-flow.png)
+![](../../../../.gitbook/assets/DID-flow.png)
 
 ### Example  (did:ebsi)
 

@@ -64,7 +64,7 @@ When the holder receives their Verifiable Credential it will be saved on their w
 
 The holder can now use the VC in their wallet to access services, and get access to products by presenting it to the service/product provider (The Verifier) and thereby making it a [Verifiable Presentation](verifiable-presentations-vps.md). The verifier will go through the following steps to make sure the certificate is valid:
 
-1. Before the validation of the content of the certificate can take place, the VC needs to be parsed from the support JSON-LD or the JWT format. Depending on the ecosystem used, there will also happen a [validation of the schema](../../../usage-examples/verifiable-credentials/verification-policies.md) of the credential.
+1. Before the validation of the content of the certificate can take place, the VC needs to be parsed from the support JSON-LD or the JWT format. Depending on the ecosystem used, there will also happen a [validation of the schema](../../../../usage-examples/verifiable-credentials/verification-policies.md) of the credential.
 2. Validate that the DID of the holder, stated in the certificate, is the person presenting the VC.
 3. Checking if all the state values are valid (expiration date and if the certificate is revoked or not).
 4. Checking the claims about the subject and if they match the requirements to give the person access to the service they are requesting to get access to.

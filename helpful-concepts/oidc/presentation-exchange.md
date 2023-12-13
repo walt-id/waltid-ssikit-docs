@@ -14,6 +14,6 @@ The respective **OIDC4VP/SIOPv2** specification can be found at:
 Refer also to our **web wallet documentation**, for an example of an actual end-to-end integration of the OIDC verification flow:
 {% endhint %}
 
-{% content-ref url="http://localhost:5000/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/" %}
-[Wallet Kit](http://localhost:5000/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/)
+{% content-ref url="https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/" %}
+[Wallet Kit](https://app.gitbook.com/o/ZPIzdSlXqm9n9ywE2dcK/s/rhL2aTXU1w6MO3blK9B1/)
 {% endcontent-ref %}

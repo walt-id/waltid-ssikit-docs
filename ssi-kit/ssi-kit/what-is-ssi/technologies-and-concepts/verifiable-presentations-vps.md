@@ -17,7 +17,7 @@ Taking a closer look at how they are built up. We will see four different layers
 3. **Credential Proof Layer -** Holding the proofs of the credentials and the signatures from Layer
 4. **Presentation Proof Layer -** Holding the proof of the Verifiable Presentation and its signatures
 
-![](<../../../.gitbook/assets/Verifiable Presentation Overview (1).jpg>)
+![](<../../../../.gitbook/assets/Verifiable Presentation Overview (1).jpg>)
 
 ### Example of a Verifiable Presentation in code
 

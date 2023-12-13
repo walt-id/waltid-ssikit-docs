@@ -29,7 +29,6 @@ This will create a folder called data in your current directory as storage for t
 {% endtab %}
 
 {% tab title="Local" %}
-
 1. Clone the project
 
 ```
@@ -49,17 +48,15 @@ The first time you run the command you will be asked to built the project. You c
 ```
 ./ssikit.sh serve
 ```
-
 {% endtab %}
 {% endtabs %}
 
-Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)
+Now with the project up and running, visit the [walt.id Custodian API](http://localhost:7002/v1/swagger) URL displayed in your terminal. We will use it, to create our first DID (Decentralised Identifier). If you want to learn more about DIDs, visit the [general section.](../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md)
 
 #### **Creating the DIDs**
 
 {% tabs %}
 {% tab title="REST API" %}
-
 ```bash
 curl -X 'POST' \
   'http://localhost:7002/did/create' \
@@ -84,7 +81,6 @@ curl -X 'POST' \
   "method": "key"
 }'
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -131,20 +127,20 @@ Using the DIDs from the previous step, we will now issue a University Degree Cre
 
 This Verifiable Diploma includes the following key elements:
 
-- `"type"`: Defines the credential as both a general "VerifiableCredential" and a more specific "UniversityDegreeCredential".
-- `"@context"`: Provides references to the necessary standards and examples for interpreting the credential.
-- `"id"`: A unique identifier for the credential.
-- `"issuer"`: The DID of the university issuing the diploma (e.g., "did:example:456").
-- `"issuanceDate"`: The timestamp indicating when the credential was issued.
-- `"issued"`: The timestamp indicating when the credential was issued.
-- `"validFrom"`: The timestamp indicating from when the credential is valid.
-- `"credentialSubject"`: Contains the DID of the credential holder (Emma - e.g., "did:example:123") and the details of the degree earned, such as the name of the degree and its type.
-- `proof`: The proof object contains the digital signature and related information that is used to verify the authenticity and integrity of the Verifiable Credential.
-  - `type`: "JsonWebSignature2020" indicates the cryptographic suite used for generating the digital signature. In this case, it's the JSON Web Signature (JWS) standard based on the Ed25519 signature algorithm.
-  - `creator`: "did:example:456" is the DID of the entity that created the digital signature, in this case, the issuer of the Verifiable Credential.
-  - `created`: "2023-03-21T15:35:08Z" is the timestamp when the digital signature was created. It is in the ISO 8601 format.
-  - `verificationMethod`: "did:example:456" is the identifier for the public key or cryptographic method used to verify the digital signature.
-  - `jws`: is the actual digital signature (JWS) generated using the Ed25519 algorithm. This signature is used to verify the authenticity and integrity of the Verifiable Credential.
+* `"type"`: Defines the credential as both a general "VerifiableCredential" and a more specific "UniversityDegreeCredential".
+* `"@context"`: Provides references to the necessary standards and examples for interpreting the credential.
+* `"id"`: A unique identifier for the credential.
+* `"issuer"`: The DID of the university issuing the diploma (e.g., "did:example:456").
+* `"issuanceDate"`: The timestamp indicating when the credential was issued.
+* `"issued"`: The timestamp indicating when the credential was issued.
+* `"validFrom"`: The timestamp indicating from when the credential is valid.
+* `"credentialSubject"`: Contains the DID of the credential holder (Emma - e.g., "did:example:123") and the details of the degree earned, such as the name of the degree and its type.
+* `proof`: The proof object contains the digital signature and related information that is used to verify the authenticity and integrity of the Verifiable Credential.
+  * `type`: "JsonWebSignature2020" indicates the cryptographic suite used for generating the digital signature. In this case, it's the JSON Web Signature (JWS) standard based on the Ed25519 signature algorithm.
+  * `creator`: "did:example:456" is the DID of the entity that created the digital signature, in this case, the issuer of the Verifiable Credential.
+  * `created`: "2023-03-21T15:35:08Z" is the timestamp when the digital signature was created. It is in the ISO 8601 format.
+  * `verificationMethod`: "did:example:456" is the identifier for the public key or cryptographic method used to verify the digital signature.
+  * `jws`: is the actual digital signature (JWS) generated using the Ed25519 algorithm. This signature is used to verify the authenticity and integrity of the Verifiable Credential.
 
 Now that we know how the credential looks like, let's issue it.
 
@@ -153,7 +149,6 @@ Now that we know how the credential looks like, let's issue it.
 
 {% tabs %}
 {% tab title="REST API" %}
-
 ```bash
 curl -X 'POST' \
   'http://localhost:7001/v1/credentials/issue' \
@@ -178,17 +173,17 @@ curl -X 'POST' \
 
 **Body Parameters**
 
-- `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. This template defines the structure and format of the credential being issued.
-- `config`: _**\[object]**_ Contains configuration parameters for the issuance process.
-  - `issuerDid`: _**\[string]**_ The DID of the entity issuing the credential (University).
-  - `subjectDid`: _**\[string]**_ The DID of the entity receiving the credential (Emma).
-  - `proofType`: _**\[string]**_ Specifies the format and cryptographic algorithm used for the digital signature of the Verifiable Credential. E.g. LD_PROOF
-- `credentialData`: _**\[object]**_ Contains the actual data of the credential being issued.
-  - `credentialSubject`: _**\[object]**_ Holds the information about the credential holder and the earned degree.
-    - `id`: _**\[string]**_ The DID of the credential holder, identical to the `subjectDid` in the `config` object.
-    - `degree`: _**\[object]**_ Contains details of the degree earned by the credential holder.
-      - `name`: _**\[string]**_ The name of the earned degree (e.g., "Bachelor of Science and Arts").
-      - `type`: _**\[string]**_ The type of the earned degree (e.g., "BachelorDegree").
+* `templateId`: _**\[string]**_ The identifier of the template used for issuing a Verifiable Credential. This template defines the structure and format of the credential being issued.
+* `config`: _**\[object]**_ Contains configuration parameters for the issuance process.
+  * `issuerDid`: _**\[string]**_ The DID of the entity issuing the credential (University).
+  * `subjectDid`: _**\[string]**_ The DID of the entity receiving the credential (Emma).
+  * `proofType`: _**\[string]**_ Specifies the format and cryptographic algorithm used for the digital signature of the Verifiable Credential. E.g. LD\_PROOF
+* `credentialData`: _**\[object]**_ Contains the actual data of the credential being issued.
+  * `credentialSubject`: _**\[object]**_ Holds the information about the credential holder and the earned degree.
+    * `id`: _**\[string]**_ The DID of the credential holder, identical to the `subjectDid` in the `config` object.
+    * `degree`: _**\[object]**_ Contains details of the degree earned by the credential holder.
+      * `name`: _**\[string]**_ The name of the earned degree (e.g., "Bachelor of Science and Arts").
+      * `type`: _**\[string]**_ The type of the earned degree (e.g., "BachelorDegree").
 
 **Example:**
 
@@ -213,7 +208,6 @@ curl -X 'POST' \
   }
 }'
 ```
-
 {% endtab %}
 {% endtabs %}
 
@@ -235,7 +229,6 @@ To verify the credential, we will be using the [Auditor API](http://localhost:70
 
 {% tabs %}
 {% tab title="REST API" %}
-
 ```bash
 curl -X 'POST' \
   'http://localhost:7003/v1/verify' \
@@ -306,7 +299,6 @@ curl -X 'POST' \
   ]
 }'
 ```
-
 {% endtab %}
 {% endtabs %}
 

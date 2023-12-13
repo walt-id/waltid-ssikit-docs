@@ -14,7 +14,7 @@ The _Signatory API_ exposes the "issuance" endpoint, which provides flexible int
 
 ## Credentials
 
-If you're new to VCs, check out the [intro section](../../ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
+If you're new to VCs, check out the [intro section](../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/verifiable-credentials-vcs-and-verifiable-presentations-vps.md) for an overview.
 
 The `/v1/credentials/issue` endpoint issues a specified credential.
 

@@ -5,7 +5,7 @@ The SSI Kit exposes high-level interfaces / APIs to hide the complex introduced 
 * low-level services (e.g. key management, signing, data storage)
 * different ecosystems (i.e. different SSI flavors, business logic and governance frameworks).
 
-The functionality of the high-level interfaces correlate with the [SSI Kit Components](../ssi-kit-or-basics/components.md). The functions are grouped around:
+The functionality of the high-level interfaces correlate with the [SSI Kit Components](../../../ssi-kit/ssi-kit-or-basics/components.md). The functions are grouped around:
 
 * **issuing** Verifiable Credentials by the Signatory,
 * **holding** (storing, presenting) Verifiable Credentials by the Custodian
