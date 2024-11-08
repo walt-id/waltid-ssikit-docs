@@ -53,7 +53,7 @@ CLI users can find instructions for build and SSIKit integration at:
 
 ### Resolve DID
 
-Resolves the DID document.
+Resolves the DID document using `did resolve` command
 
 Options:
 
