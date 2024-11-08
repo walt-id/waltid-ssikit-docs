@@ -84,7 +84,7 @@ Learn about VC template related functions like the listing and exporting of temp
 
 * `list` List VC Templates.
 
-`vc template list` result
+`vc templates list` result
 
 ![](<../../.gitbook/assets/image (6).png>)
 
