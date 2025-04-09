@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Create DID
 
 DID _cheqd_ scheme is supported with the same functionality as the other DID schemes (see [decentralized-identifiers.md](../../getting-started/cli-command-line-interface/decentralized-identifiers.md "mention") for command-line interface or [#decentralised-identifiers](../../getting-started/rest-apis/core-api/#decentralised-identifiers "mention") for REST API). Creating a `did:cheqd` will also onboard with the [Universal Registrar](https://uniregistrar.io). The created DID can be checked at [https://resolver.cheqd.net/1.0/identifiers/{your-did}](https://resolver.cheqd.net/1.0/identifiers/%7Byour-did%7D) or using the [Universal Resolver](https://dev.uniresolver.io).
@@ -29,23 +33,22 @@ ssikit did create -m cheqd --network testnet
 
 [Detailed instructions](../../getting-started/rest-apis.md) on how to build and run the SSI-Kit's REST API.&#x20;
 
-{% swagger method="post" path="/" baseUrl="https://core.ssikit.walt.id/v1/did/create" summary="Create a did:cheqd document on the test or main network" expanded="false" %}
-{% swagger-description %}
+## Create a did:cheqd document on the test or main network
 
-{% endswagger-description %}
+<mark style="color:green;">`POST`</mark> `https://core.ssikit.walt.id/v1/did/create/`
 
-{% swagger-parameter in="body" name="method" required="true" %}
-did schema (use cheqd)
-{% endswagger-parameter %}
+#### Request Body
 
-{% swagger-parameter in="body" name="network" %}
-mainnet or testnet
-{% endswagger-parameter %}
+| Name                                     | Type   | Description            |
+| ---------------------------------------- | ------ | ---------------------- |
+| method<mark style="color:red;">\*</mark> | String | did schema (use cheqd) |
+| network                                  | String | mainnet or testnet     |
 
-{% swagger-response status="201: Created" description="" %}
+{% tabs %}
+{% tab title="201: Created " %}
 ```
 did:cheqd:testnet:dc3a71fb-be38-4145-a80a-dfc67628ab53
 ```
-{% endswagger-response %}
-{% endswagger %}
+{% endtab %}
+{% endtabs %}
 

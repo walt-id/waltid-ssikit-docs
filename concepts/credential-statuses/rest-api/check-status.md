@@ -1,7 +1,6 @@
-# Check the status of a verifiable credential
+# Check the status of a credential
 
-Checking the status of a verifiable credential can be done using the REST API interface by supplying the
-credential as the body to the following `POST` request `https://signatory.ssikit.walt.id/v1/revocations/check`. 
+Checking the status of a verifiable credential can be done using the REST API interface by supplying the credential as the body to the following `POST` request `https://signatory.ssikit.walt.id/v1/revocations/check`.
 
 e.g. Execute the status check for a credential with a _credentialStatus_ property
 
@@ -60,6 +59,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Status result" %}
 ```json
 {
@@ -118,6 +118,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Status result" %}
 ```json
 "Verifiable credential has no credential-status property"

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # My First VC
 
 In this tutorial, our fictional SSI Use-Case involves Emma, a recent university graduate, who wants to apply for a job. The employer requires proof of her academic credentials. To achieve this, she will use her Verifiable Degree Credential issued by her university.

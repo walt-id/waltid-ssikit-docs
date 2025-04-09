@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Trust Registries
 
 Our products are agnostic towards the underlying technologies used to implement Trust Registries, which means that the SSI Kit is potentially compatible with any type of Trust Registry.

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Did management
 
 DID management functions enable the following:

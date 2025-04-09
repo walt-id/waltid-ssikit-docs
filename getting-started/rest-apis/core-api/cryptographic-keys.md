@@ -1,13 +1,17 @@
+---
+noIndex: true
+---
+
 # Cryptographic keys
 
 The following key management functions are available:
 
-* [list](#list-key-ids) - list of key ids
-* [load](#load-key) - load the public key in _JWK_ format
-* [delete](#delete-key) - delete key
-* [generate](#generate-key) - generate key
-* [import](#import-key) - import key
-* [export](#export-key) - export key
+* [list](cryptographic-keys.md#list-key-ids) - list of key ids
+* [load](cryptographic-keys.md#load-key) - load the public key in _JWK_ format
+* [delete](cryptographic-keys.md#delete-key) - delete key
+* [generate](cryptographic-keys.md#generate-key) - generate key
+* [import](cryptographic-keys.md#import-key) - import key
+* [export](cryptographic-keys.md#export-key) - export key
 
 ## List key ids
 

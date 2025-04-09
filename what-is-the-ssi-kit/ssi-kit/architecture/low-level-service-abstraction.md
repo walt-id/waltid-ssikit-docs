@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Low-Level Service Abstraction
 
 This software-layer holds a set of generic core services for common SSI and cryptographic functions. The services are in the scope of key management, decentralized identifiers, verifiable credentials and data storage.&#x20;

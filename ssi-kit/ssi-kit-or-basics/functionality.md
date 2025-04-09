@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Functionality
 
 The SSI Kit establishes an identity infrastructure layer for any use case in any industry. Its core services are in the scope of:
@@ -10,4 +14,4 @@ The SSI Kit establishes an identity infrastructure layer for any use case in any
 
 _Illustration:_
 
-![](../../../what-is-ssikit/SSI-Kit.png)
+![](../../what-is-ssikit/SSI-Kit.png)

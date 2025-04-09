@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Demo
 
 The demo shows an end-to-end SSI use case from the perspective of an individual (Holder).

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Local Build
 
 For building the project **JDK 16+** is required.

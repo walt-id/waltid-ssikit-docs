@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Overview
 
 Here are the most important things you need to know about the SSI Kit:

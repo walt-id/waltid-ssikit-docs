@@ -1,25 +1,33 @@
+---
+noIndex: true
+---
+
 # Onboarding
 
 Velocity onboading commands are available under the `onboard` command as follows:
-* [DID acquisition](./onboarding.md#did-acquisition)
-* [tenant management](./onboarding.md#tenant-management)
-* [disclosure management](./onboarding.md#disclosure-management)
+
+* [DID acquisition](onboarding.md#did-acquisition)
+* [tenant management](onboarding.md#tenant-management)
+* [disclosure management](onboarding.md#disclosure-management)
 
 ```
 ./ssikit.sh velocity onboard -h
 ```
 
-![onboard-cmd](./assets/onboard-cmd.png)
+![onboard-cmd](assets/onboard-cmd.png)
 
 ## DID acquisition
+
 Once an account was set up with the registrar (see [onboarding](../basics/onboarding.md)), cli-tool can be used to register the organization, using the command:
+
 ```
 ./ssikit.sh velocity onboard organization <org-file>
 ```
 
-![organization-cmd](./assets/organization-cmd.png)
+![organization-cmd](assets/organization-cmd.png)
 
 E.g. Onboarding organization.
+
 ```
 ./ssikit.sh velocity onboard organization organization.json
 ```
@@ -101,6 +109,7 @@ E.g. Onboarding organization.
 }
 ```
 {% endtab %}
+
 {% tab title="response" %}
 ```
 {
@@ -272,16 +281,19 @@ E.g. Onboarding organization.
 {% endtabs %}
 
 ## Tenant management
+
 Every organization needs a tenant on the credential agent. Tenant functions are available under the `tenant` command:
+
 * create tenant
 
 ```
 ./ssikit.sh velocity onboard tenant -h
 ```
 
-![tenant-cmd](./assets/tenant-cmd.png)
+![tenant-cmd](assets/tenant-cmd.png)
 
 E.g. Add a tenant having verifier, issuer and agent operator purposes.
+
 ```
 ./ssikit.sh velocity onboard tenant tenant.json
 ```
@@ -333,6 +345,7 @@ E.g. Add a tenant having verifier, issuer and agent operator purposes.
 }
 ```
 {% endtab %}
+
 {% tab title="response" %}
 ```
 {
@@ -344,16 +357,19 @@ E.g. Add a tenant having verifier, issuer and agent operator purposes.
 {% endtabs %}
 
 ## Disclosure management
+
 In order to be able to issue / verify credential, it is required to have the correct identification disclosure set up. Current disclosure management functions are:
+
 * create disclosure
 
 ```
 ./ssikit.sh velocity onboard disclosure -h
 ```
 
-![disclosure-cmd](./assets/disclosure-cmd.png)
+![disclosure-cmd](assets/disclosure-cmd.png)
 
 E.g. Create an integrated issuing identification disclosure.
+
 ```
 ./ssikit.sh velocity onboard disclosure -i did:ion:1234567890 disclosure.json
 ```
@@ -392,6 +408,7 @@ E.g. Create an integrated issuing identification disclosure.
 }
 ```
 {% endtab %}
+
 {% tab title="response" %}
 ```
 {

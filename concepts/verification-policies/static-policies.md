@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Static Policies
 
 Static verification policies are predefined for verifying credentials in standard use cases. The following lists out supported static policies by SSI-Kit along with their arguments

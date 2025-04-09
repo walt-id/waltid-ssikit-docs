@@ -1,5 +1,6 @@
 ---
 description: Signatory REST API functions.
+noIndex: true
 ---
 
 # Signatory API - For Issuers

@@ -1,5 +1,6 @@
 ---
 description: 'Learn about did:web: what it is and how to create one.'
+noIndex: true
 ---
 
 # DID Web

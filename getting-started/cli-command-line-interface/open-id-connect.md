@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # OpenID Connect (OIDC)
 
 OIDC for verifiable presentation and credential issuance

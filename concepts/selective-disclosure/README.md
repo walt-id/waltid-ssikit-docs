@@ -1,5 +1,6 @@
 ---
 description: Guide to SD-JWTs for selective disclosure; create, verify.
+noIndex: true
 ---
 
 # Selective Disclosure

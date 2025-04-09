@@ -1,4 +1,8 @@
-# Configuration
+---
+noIndex: true
+---
+
+# Project Configurations
 
 Services come with their own configuration files.
 

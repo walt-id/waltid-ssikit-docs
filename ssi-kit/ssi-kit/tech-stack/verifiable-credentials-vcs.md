@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Verifiable Credentials (VCs)
 
 Verifiable Credentials (VCs) are digital identity documents that can easily and securely be shared with and verified (incl. validity, integrity, authenticity, provenance) by anyone in a privacy preserving way. Importantly, they are never (!) stored on a blockchain due to privacy and compliance reasons.

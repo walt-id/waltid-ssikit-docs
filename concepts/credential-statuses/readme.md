@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Credential Statuses
 
 {% embed url="https://youtu.be/-7_GLOZ_pik" %}

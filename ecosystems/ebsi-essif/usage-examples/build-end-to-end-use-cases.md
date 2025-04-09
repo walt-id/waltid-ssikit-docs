@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Build end-to-end use cases
 
 This is a holistic SSI use case, which demonstrates the setup of two identities for an _Issuer_ and a _Holder_ on the EBSI blockchain. It also shows the steps to issue two diploma credentials to the _Holder_ (e.g student), which then creates a Verifiable Presentation including both credentials in order to be verified. The _Verifier_ then resolves the DIDs from the EBSI ledger and uses the corresponding public keys to verify the signatures from the issued credentials.

@@ -1,13 +1,17 @@
+---
+noIndex: true
+---
+
 # Key management
 
 Key management functions include:
 
-* [List](#list-keys) - lists the available keys
-* [Load](#load-key) - loads a key specified by its alias
-* [Generate](#generate-key) - generate a key using the specified algorithm
-* [Import](#import-key) - imports a key
-* [Delete](#delete-key) - deletes a specific key
-* [Export](#export-key) - exports public and private key parts (if supported by the underlying keystore)
+* [List](key-management.md#list-keys) - lists the available keys
+* [Load](key-management.md#load-key) - loads a key specified by its alias
+* [Generate](key-management.md#generate-key) - generate a key using the specified algorithm
+* [Import](key-management.md#import-key) - imports a key
+* [Delete](key-management.md#delete-key) - deletes a specific key
+* [Export](key-management.md#export-key) - exports public and private key parts (if supported by the underlying keystore)
 
 ## List keys
 

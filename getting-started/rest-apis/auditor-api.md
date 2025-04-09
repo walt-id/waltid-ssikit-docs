@@ -1,5 +1,6 @@
 ---
 description: Auditor REST API functions.
+noIndex: true
 ---
 
 # Auditor API - For Verifiers

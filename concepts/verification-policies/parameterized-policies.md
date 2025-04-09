@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Parameterized Policies
 
 Some policies may require a parameter or argument for execution. The parameter is indicated in the policy list output, together with the expected data type.

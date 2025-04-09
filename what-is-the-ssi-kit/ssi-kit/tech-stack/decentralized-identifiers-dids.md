@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Decentralized Identifiers (DIDs)
 
 Our open source solutions enable you to use different types of DIDs and different identity ecosystems. Every relevant functionality is supported from the generation of DIDs and DID Documents to anchoring or resolving them on/from Registries.

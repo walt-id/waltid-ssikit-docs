@@ -1,5 +1,6 @@
 ---
 description: A shared and trusted record of information.
+noIndex: true
 ---
 
 # Registries

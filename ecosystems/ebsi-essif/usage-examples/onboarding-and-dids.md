@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Onboarding & DIDs
 
 This use case describes the steps, which are required to register a DID on the EBSI blockchain.

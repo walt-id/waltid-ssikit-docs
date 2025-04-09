@@ -1,5 +1,6 @@
 ---
 description: Credential validation powered by the Open Policy Agent
+noIndex: true
 ---
 
 # Open Policy Agent (OPA)

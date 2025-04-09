@@ -1,5 +1,6 @@
 ---
 description: Getting started with the SSI Kit.
+noIndex: true
 ---
 
 # Quick Start

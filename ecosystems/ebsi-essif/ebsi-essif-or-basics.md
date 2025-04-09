@@ -1,4 +1,8 @@
-# EBSI/ESSIF | Basics
+---
+noIndex: true
+---
+
+# Basics
 
 ## **EU Blockchain Service Infrastructure (EBSI)**
 

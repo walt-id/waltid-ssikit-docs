@@ -1,5 +1,6 @@
 ---
 description: Learn what SSI is.
+noIndex: true
 ---
 
 # SSI | Basics

@@ -1,5 +1,6 @@
 ---
 description: Selective Disclosure allows holders to reveal only necessary information.
+noIndex: true
 ---
 
 # Intro

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Use Cases & Flow Diagrams
 
 {% hint style="danger" %}
@@ -8,7 +12,7 @@ Note, that EBSI/ESSIF specifications are evolving, which means that some flows a
 
 Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable Authorizations" and EBSI access tokens).
 
-![ESSIF DID registration](02\_essif-register-did.png)
+![ESSIF DID registration](02_essif-register-did.png)
 
 For SSIKit usage examples, refer to: [**EBSI DID registration**](../usage-examples/onboarding-and-dids.md)
 
@@ -22,7 +26,7 @@ Onboarding of a legal entity to the EBSI/ESSIF ecosystem (incl. combined VC requ
 
 Gaining access to protected EBSI/ESSIF services (incl. presentation of "Verifiable Authorization").
 
-![EBSI Auth API](04\_essif-auth-api.png)
+![EBSI Auth API](04_essif-auth-api.png)
 
 ## Issuance of Verifiable Credentials
 

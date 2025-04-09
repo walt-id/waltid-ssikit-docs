@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Delegation and Mandates
 
 The SSI Kit contains and implementation of Authority Delegation (AD) or Verifiable Mandates (VM) – as referred within EBSI/ESSIF. Together with NETIS and the team of the Faculty of Electrical Engineering and Computer Science of the University of Maribor a concept and resarch paper "_A Comprehensive Novel Model for Self-Sovereign Identity Authority_" to outline a possible solution for archiving AD/VM was created. This was funded and support by eSSIF Lab:

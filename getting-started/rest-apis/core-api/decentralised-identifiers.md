@@ -1,13 +1,17 @@
-# Decentralised identifiers
+---
+noIndex: true
+---
+
+# Decentralised-Identifiers
 
 The following DID management functions are available:
 
-* [list](#list-dids) - list DIDs
-* [load](#load-did) - load DID
-* [delete by url](#delete-did) - delete by DID url
-* [create](#create-did) - create DID
-* [resolve](#resolve-did) - resolve DID
-* [import](#import-did) - import DID
+* [list](decentralised-identifiers.md#list-dids) - list DIDs
+* [load](decentralised-identifiers.md#load-did) - load DID
+* [delete by url](decentralised-identifiers.md#delete-did) - delete by DID url
+* [create](decentralised-identifiers.md#create-did) - create DID
+* [resolve](decentralised-identifiers.md#resolve-did) - resolve DID
+* [import](decentralised-identifiers.md#import-did) - import DID
 
 ## List DIDs
 
@@ -221,12 +225,7 @@ The DID url string
 {% endtab %}
 {% endtabs %}
 
-The `method` and `keyAlias` properties are common for all _did-method_ requests,
-`method` being required, while `keyAlias` - optional 
-(if not specified, a new key will be automatically created using the default algorithm
-according to the _did-method_).
-The method-dependent options have default values, if not specified otherwise.
-Below are the available properties by _did-method_.
+The `method` and `keyAlias` properties are common for all _did-method_ requests, `method` being required, while `keyAlias` - optional (if not specified, a new key will be automatically created using the default algorithm according to the _did-method_). The method-dependent options have default values, if not specified otherwise. Below are the available properties by _did-method_.
 
 {% tabs %}
 {% tab title="key" %}
@@ -237,10 +236,10 @@ Below are the available properties by _did-method_.
     "useJwkJcsPub": "boolean"
 }
 ```
-* `useJwkJcsPub` (default) - _false_ - specifies whether to create a did:key using the jwk_jcs-pub multicodec
-(code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 
+* `useJwkJcsPub` (default) - _false_ - specifies whether to create a did:key using the jwk\_jcs-pub multicodec (code: [0xeb51](https://github.com/multiformats/multicodec/blob/master/table.csv#L516))
 {% endtab %}
+
 {% tab title="web" %}
 ```json
 {
@@ -250,10 +249,11 @@ Below are the available properties by _did-method_.
   "didWebPath": "string"
 }
 ```
+
 * `didWebDomain` (default) - _"walt.id"_
 * `didWebPath` (default) - _empty-string_
-
 {% endtab %}
+
 {% tab title="ebsi" %}
 ```json
 {
@@ -262,9 +262,10 @@ Below are the available properties by _did-method_.
     "version": "int"
 }
 ```
-* `version` (default) - _1_
 
+* `version` (default) - _1_
 {% endtab %}
+
 {% tab title="cheqd" %}
 ```json
 {
@@ -273,9 +274,10 @@ Below are the available properties by _did-method_.
     "network": "string"
 }
 ```
-* `network` (default) - _"testnet"_
 
+* `network` (default) - _"testnet"_
 {% endtab %}
+
 {% tab title="iota" %}
 ```json
 {
@@ -284,6 +286,7 @@ Below are the available properties by _did-method_.
 }
 ```
 {% endtab %}
+
 {% tab title="jwk" %}
 ```json
 {

@@ -1,8 +1,10 @@
 ---
-description: >-
-  ESSIF REST API functions.
+description: ESSIF REST API functions.
+noIndex: true
 ---
-# ESSIF API
+
+# REST API
+
 [Swagger](https://essif.ssikit.walt.id/v1/swagger) | [ReDoc](https://essif.ssikit.walt.id/v1/redoc)
 
 The _ESSIF API_ exposes the necessary endpoints for running the ESSIF specific flows between Issuers (incl. ESSIF Onboarding Services), Holders and Verifiers.
@@ -12,6 +14,7 @@ Aligned with the ESSIF terminology, the API is grouped by the User Wallet (walle
 Note that the EBSI/ESSIF specifications are expected to evolve which will be reflected in continuous updates of the proposed APIs.
 
 The following functions are available:
+
 * [onboard](essif-api.md#onboard) - EBSI onboarding flow, requests a Verifiable Authorization from EOS
 * [authorize](essif-api.md#authorize) - ESSIF authorization flow
 * [register did](essif-api.md#register-did) - registers DID on the EBSI blockchain
@@ -20,6 +23,7 @@ The following functions are available:
 * [load timestamp by hash](essif-api.md#load-timestamp-by-hash) - loads a timestamp by the transaction hash
 
 ## Onboard
+
 The `/v1/client/onboard` endpoint onboards the specified DID to the EBSI blockchain. It runs the ESSIF onboard API and requires a _Bearer_ token, which can be acquired from https://app.preprod.ebsi.eu/users-onboarding.
 
 {% tabs %}
@@ -32,6 +36,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -40,6 +45,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The VerifiableAuthorization credential string
@@ -62,6 +68,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -70,6 +77,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 "{\"verifiableCredential\":{\"id\":\"vc:ebsi:authentication#b1a82eb3-9a29-429d-b440-91894ed07720\",\"issuer\":\"did:ebsi:zcGvqgZTHCtkjgtcKRL7H8k\",\"validFrom\":\"2022-10-10T11:35:23Z\",\"credentialSubject\":{\"id\":\"did:ebsi:zYubw2L8tCZSKKpAcMmCY2Q\"},\"credentialSchema\":{\"id\":\"https://api.preprod.ebsi.eu/trusted-schemas-registry/v1/schemas/0x28d76954924d1c4747a4f1f9e3e9edc9ca965efbf8ff20e4339c2bf2323a5773\",\"type\":\"OID\"},\"issuanceDate\":\"2022-10-10T11:35:23Z\",\"expirationDate\":\"2023-04-10T11:35:23Z\",\"@context\":[\"https://www.w3.org/2018/credentials/v1\",\"https://www.w3.org/2018/credentials/examples/v1\",\"https://w3c-ccg.github.io/lds-jws2020/contexts/lds-jws2020-v1.json\"],\"type\":[\"VerifiableCredential\",\"VerifiableAuthorisation\"],\"proof\":{\"type\":\"EcdsaSecp256k1Signature2019\",\"created\":\"2022-10-10T11:35:23Z\",\"proofPurpose\":\"assertionMethod\",\"verificationMethod\":\"did:ebsi:zcGvqgZTHCtkjgtcKRL7H8k#keys-1\",\"jws\":\"eyJhbGciOiJFUzI1NksiLCJ0eXAiOiJKV1QifQ..WEwqx6kOJMA5Mk6xZ7uTfkZB8RDnAhnnIWInBH6BlJNjtsbzIfpHyzB11Gh1xWQVejD3i-0jnwxJyHs8m4JtuQ\"}}}"
@@ -78,6 +86,7 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## Authorize
+
 The `/v1/client/auth` runs the ESSIF authorization flow for the specified did.
 
 {% tabs %}
@@ -90,11 +99,13 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The did string
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -114,6 +125,7 @@ curl -X 'POST' \
   -d 'did:ebsi:zYubw2L8tCZSKKpAcMmCY2Q'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 did:ebsi:zYubw2L8tCZSKKpAcMmCY2Q
@@ -122,6 +134,7 @@ did:ebsi:zYubw2L8tCZSKKpAcMmCY2Q
 {% endtabs %}
 
 ## Register DID
+
 The `/v1/client/registerDid` endpoint registers the specified DID on the EBSI ledger.
 
 {% tabs %}
@@ -134,11 +147,13 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 The did url string
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 Code 200
@@ -158,6 +173,7 @@ curl -X 'POST' \
   -d 'did:ebsi:zwdPobJGue3w86Gpqhq5Cni'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 did:ebsi:zwdPobJGue3w86Gpqhq5Cni
@@ -166,6 +182,7 @@ did:ebsi:zwdPobJGue3w86Gpqhq5Cni
 {% endtabs %}
 
 ## Create timestamp
+
 The `/v1/client/timestamp` endpoint creates a timestamp on the EBSI ledger, using the provided DID as a key. The data will be written to the data-field of the timestamp.
 
 {% tabs %}
@@ -178,6 +195,7 @@ curl -X 'POST' \
   -d '<request-body>'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 {
@@ -187,6 +205,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The transaction hash
@@ -209,6 +228,7 @@ curl -X 'POST' \
 }'
 ```
 {% endtab %}
+
 {% tab title="Request body" %}
 ```
 {
@@ -217,6 +237,7 @@ curl -X 'POST' \
 }
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 0x9c60ca0094771afe4093b0e47260eb623d5d18140e188e671cf912609cd0e169
@@ -225,7 +246,9 @@ curl -X 'POST' \
 {% endtabs %}
 
 ## Load timestamp by id
+
 The `/v1/client/timestamp/id/{timestampId}` endpoint loads the timestamp based on the provided parameter:
+
 * timestampId - path parameter (required) - the timestamp id
 
 {% tabs %}
@@ -236,11 +259,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The timestamp json object
@@ -258,6 +283,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {
@@ -275,7 +301,9 @@ curl -X 'GET' \
 {% endtabs %}
 
 ## Load timestamp by hash
+
 The `/v1/client/timestamp/txhash/{txhash}` endpoint loads the timestamp based on the provided parameter:
+
 * txhash - path parameter (required) - the transaction hash
 
 {% tabs %}
@@ -286,11 +314,13 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Request body schema" %}
 ```
 No parameters
 ```
 {% endtab %}
+
 {% tab title="Response body schema" %}
 ```
 The timestamp json object
@@ -308,6 +338,7 @@ curl -X 'GET' \
   -H 'accept: application/json'
 ```
 {% endtab %}
+
 {% tab title="Response body" %}
 ```
 {

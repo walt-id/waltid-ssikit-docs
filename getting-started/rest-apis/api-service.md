@@ -1,4 +1,8 @@
-# API Service
+---
+noIndex: true
+---
+
+# API Serving Configs
 
 To expose the API service using the CLI tool or the docker container, use one of the following commands:
 

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Keys
 
 Cryptographic keys convey control over digital identities and enable core functionality such as encryption and authentication.

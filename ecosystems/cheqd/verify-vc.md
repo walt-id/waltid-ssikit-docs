@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Verify VC
 
 ### Verify credentials using the CLI

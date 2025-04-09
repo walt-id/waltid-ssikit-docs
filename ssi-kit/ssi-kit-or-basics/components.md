@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Components
 
 ## Signatory | For Issuers
@@ -14,11 +18,7 @@ It provides all functionality required by “Issuers”. For example:
 * Manage the lifecycle of VCs (e.g. revocation).
 * Issue VCs (e.g. via OIDC/SIOP)
 
-<div align="center">
-
-<img src="../../../what-is-ssikit/Signatory-Issuer.png" alt="">
-
-</div>
+<div align="center"><img src="../../what-is-ssikit/Signatory-Issuer.png" alt=""></div>
 
 ## Custodian | For Holders
 
@@ -30,7 +30,7 @@ Custodian is a secure data hub for people and organizations. It provides all fun
 * Selectively disclose data (VCs/VPs) for authentication and identification,
 * Manage consent and data access in a user-centric fashion.
 
-![](../../../what-is-ssikit/Custodian-Holder.png)
+![](../../what-is-ssikit/Custodian-Holder.png)
 
 
 

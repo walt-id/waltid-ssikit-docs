@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Open Source | Always Free
 
 All our products are open source under the permissive [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) license. This means:

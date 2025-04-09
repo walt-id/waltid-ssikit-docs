@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Verifiable Credentials (VCs)
 
 {% embed url="https://youtu.be/ce1IdSr-Kig" %}

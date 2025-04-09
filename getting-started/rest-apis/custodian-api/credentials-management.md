@@ -1,14 +1,18 @@
+---
+noIndex: true
+---
+
 # Credentials management
 
 The following functions are available for credentials management:
 
-* [List](#list-credentials) - lists the available credentials
-* [List compact](#list-credentials-compact) - lists credential ids
-* [Load](#load-credential) - loads a credential by id
-* [Store](#store-credential) - store a credential
-* [Delete](#delete-credential) - delete a credential by id
-* [Present](#present-credential) - create a verifiable presentation from specific credentials
-* [Present stored](#present-stored-credential) - create a verifiable presentation from specific stored credential ids
+* [List](credentials-management.md#list-credentials) - lists the available credentials
+* [List compact](credentials-management.md#list-credentials-compact) - lists credential ids
+* [Load](credentials-management.md#load-credential) - loads a credential by id
+* [Store](credentials-management.md#store-credential) - store a credential
+* [Delete](credentials-management.md#delete-credential) - delete a credential by id
+* [Present](credentials-management.md#present-credential) - create a verifiable presentation from specific credentials
+* [Present stored](credentials-management.md#present-stored-credential) - create a verifiable presentation from specific stored credential ids
 
 ## List credentials
 

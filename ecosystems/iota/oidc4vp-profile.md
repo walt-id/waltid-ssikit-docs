@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # OIDC4VP profile for Login-with-IOTA
 
 {% hint style="danger" %}
@@ -9,33 +13,33 @@ December 2022
 
 ## Introduction
 
-_Login-with-IOTA_ is defined as a profile of the _OpenID Connect for Verifiable Presentations_ specification \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)], which defines the protocol for authorization using SSI, based on top of OAuth 2.0 \[[RFC6749](oidc4vp-profile.md#rfc6749)] and introduces protocol extensions for the presentation of claims via Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc\_data\_model)]. In this document we will describe the specifics of using the OIDC4VP protocol in the scope of _Login-with-IOTA_ to ensure compatibility with the _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota\_identity)].
+_Login-with-IOTA_ is defined as a profile of the _OpenID Connect for Verifiable Presentations_ specification \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)], which defines the protocol for authorization using SSI, based on top of OAuth 2.0 \[[RFC6749](oidc4vp-profile.md#rfc6749)] and introduces protocol extensions for the presentation of claims via Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc_data_model)]. In this document we will describe the specifics of using the OIDC4VP protocol in the scope of _Login-with-IOTA_ to ensure compatibility with the _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota_identity)].
 
 ## DIDs and Key Material
 
-The _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota\_identity)] defines a custom _DID method_ \[[IOTA\_DID](oidc4vp-profile.md#iota\_did)], based on the public key of the user account. The key material used is an _EdDSA/Ed25519_ \[[RFC8032](oidc4vp-profile.md#rfc8032)] key pair.
+The _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota_identity)] defines a custom _DID method_ \[[IOTA\_DID](oidc4vp-profile.md#iota_did)], based on the public key of the user account. The key material used is an _EdDSA/Ed25519_ \[[RFC8032](oidc4vp-profile.md#rfc8032)] key pair.
 
-| DID method                               | Key algorithm                               |
-| ---------------------------------------- | ------------------------------------------- |
-| [did:iota](oidc4vp-profile.md#iota\_did) | [EdDSA/Ed25519](oidc4vp-profile.md#rfc8032) |
+| DID method                              | Key algorithm                               |
+| --------------------------------------- | ------------------------------------------- |
+| [did:iota](oidc4vp-profile.md#iota_did) | [EdDSA/Ed25519](oidc4vp-profile.md#rfc8032) |
 
-To ensure compatibility with the IOTA identity framework \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota\_identity)], the issuers and holders of verifiable credentials should use a _did:iota_ for issuance and as credential subject.
+To ensure compatibility with the IOTA identity framework \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota_identity)], the issuers and holders of verifiable credentials should use a _did:iota_ for issuance and as credential subject.
 
 ## Verifiable Credentials and Proof Format
 
-The credentials used by the _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota\_identity)] are in line with the W3C specification for Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc\_data\_model)]. Every type of credential, that is compatible with the W3C specification, should in theory be supported.
+The credentials used by the _IOTA identity framework_ \[[IOTA\_IDENTITY](oidc4vp-profile.md#iota_identity)] are in line with the W3C specification for Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc_data_model)]. Every type of credential, that is compatible with the W3C specification, should in theory be supported.
 
-**Proofs** for the credentials are created in the linked data format, **ldp\_vc** or **ldp\_vp**, as described by the _W3C data integrity_ specification \[[VC\_DATA\_INTEGRITY](oidc4vp-profile.md#vc\_data\_integrity)], using \[[JSON-LD](oidc4vp-profile.md#json\_ld)] as the credential format and the _JCS Ed25519 Signature 2020_ \[[JcsEd25519Signature2020](oidc4vp-profile.md#jcsed25519signature2020)] signature type.
+**Proofs** for the credentials are created in the linked data format, **ldp\_vc** or **ldp\_vp**, as described by the _W3C data integrity_ specification \[[VC\_DATA\_INTEGRITY](oidc4vp-profile.md#vc_data_integrity)], using \[[JSON-LD](oidc4vp-profile.md#json_ld)] as the credential format and the _JCS Ed25519 Signature 2020_ \[[JcsEd25519Signature2020](oidc4vp-profile.md#jcsed25519signature2020)] signature type.
 
-| Format                                                      | Signature type                                                        |
-| ----------------------------------------------------------- | --------------------------------------------------------------------- |
-| [ldp\_vc / ldp\_vp](oidc4vp-profile.md#vc\_data\_integrity) | [JcsEd25519Signature2020](oidc4vp-profile.md#jcsed25519signature2020) |
+| Format                                                    | Signature type                                                        |
+| --------------------------------------------------------- | --------------------------------------------------------------------- |
+| [ldp\_vc / ldp\_vp](oidc4vp-profile.md#vc_data_integrity) | [JcsEd25519Signature2020](oidc4vp-profile.md#jcsed25519signature2020) |
 
 ## Authorization flow
 
 The \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)] specification is based on top of OAuth 2.0 \[[RFC6749](oidc4vp-profile.md#rfc6749)], which enables implementers to also build on top of _OpenID Connect_ \[[OIDC](oidc4vp-profile.md#oidc)] and the _Self-issued OpenId Provider_ specification \[[SIOPv2](oidc4vp-profile.md#siopv2)].
 
-This _Login-with-IOTA_ profile of the \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)] specification supports only W3C Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc\_data\_model)].
+This _Login-with-IOTA_ profile of the \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)] specification supports only W3C Verifiable Credentials \[[VC\_DATA\_MODEL](oidc4vp-profile.md#vc_data_model)].
 
 Like described by \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)], verifiable presentations can be requested by adding the `presentation_definition` parameter to the authorization request. The presentation is returned in the `vp_token` response parameter.
 
@@ -113,7 +117,7 @@ GET /authorize?
 
 The response parameters depend on the `response_type` defined in the authorization request. Possible response parameters include:
 
-* `vp_token`: The verifiable presentation or array of presentations matching the presentation definition in the request. The required format in this profile is \[[`ldp_vp`](oidc4vp-profile.md#vc\_data\_integrity)] / \[[JSON-LD](oidc4vp-profile.md#json\_ld)]. The JSON data must be URL encoded. See also section 7.3 of \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)].
+* `vp_token`: The verifiable presentation or array of presentations matching the presentation definition in the request. The required format in this profile is \[[`ldp_vp`](oidc4vp-profile.md#vc_data_integrity)] / \[[JSON-LD](oidc4vp-profile.md#json_ld)]. The JSON data must be URL encoded. See also section 7.3 of \[[OIDC4VP](oidc4vp-profile.md#oidc4vp)].
 * `id_token`: The ID token as defined by section 2 of the \[[OIDC](oidc4vp-profile.md#oidc)] core specification.
 * `presentation_submission`: The presentation submission object, as defined in \[[DIF.PresentationExchange](oidc4vp-profile.md#difpresentationexchange)], which links the input descriptors of the presentation definition in the request to the corresponding presentation(s) in the `vp_token` response.
 * `state`: Optional state parameter passed through from the authorization request.
@@ -132,7 +136,7 @@ Any combination of `vp_token` with a `response_type` other than `id_token` is un
 
 The `vp_token` response parameter contains the verifiable presentation or array of verifiable presentations, matching the input descriptors of the presentation definition, specified in the authorization request.
 
-The only supported format of the verifiable presentation in this specification is the \[[`ldp_vp`](oidc4vp-profile.md#vc\_data\_integrity)] / \[[JSON-LD](oidc4vp-profile.md#json\_ld)] format. The JSON data can be either a single presentation object or an array of JSON objects and must be URL encoded.
+The only supported format of the verifiable presentation in this specification is the \[[`ldp_vp`](oidc4vp-profile.md#vc_data_integrity)] / \[[JSON-LD](oidc4vp-profile.md#json_ld)] format. The JSON data can be either a single presentation object or an array of JSON objects and must be URL encoded.
 
 #### presentation\_submission
 
@@ -297,9 +301,9 @@ vp_token=[...]
 
 ## References
 
-#### \[[OIDC4VP](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html)]
+#### \[[OIDC4VP](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)]
 
-Terbu, O., Lodderstedt, T., Yasuda, K., Lemmon, A., Looker, T., "OpenID for Verifiable Presentations", September 2022, [https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html](https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html)
+Terbu, O., Lodderstedt, T., Yasuda, K., Lemmon, A., Looker, T., "OpenID for Verifiable Presentations", September 2022, [https://openid.net/specs/openid-4-verifiable-presentations-1\_0.html](https://openid.net/specs/openid-4-verifiable-presentations-1_0.html)
 
 #### \[[RFC6749](https://www.rfc-editor.org/info/rfc6749)]
 
@@ -313,9 +317,9 @@ Sporny, M., Longley, D., Chadwick, D., "Verifiable Credentials Data Model v1.1",
 
 IOTA Foundation, "IOTA Identity Framework Guide", [https://wiki.iota.org/identity.rs/introduction/](https://wiki.iota.org/identity.rs/introduction/)
 
-#### \[[IOTA\_DID](https://wiki.iota.org/identity.rs/specs/did/iota\_did\_method\_spec/)]
+#### \[[IOTA\_DID](https://wiki.iota.org/identity.rs/specs/did/iota_did_method_spec/)]
 
-Millenaar, J., IOTA Foundation, "IOTA DID Method Specification", [https://wiki.iota.org/identity.rs/specs/did/iota\_did\_method\_spec/](https://wiki.iota.org/identity.rs/specs/did/iota\_did\_method\_spec/)
+Millenaar, J., IOTA Foundation, "IOTA DID Method Specification", [https://wiki.iota.org/identity.rs/specs/did/iota\_did\_method\_spec/](https://wiki.iota.org/identity.rs/specs/did/iota_did_method_spec/)
 
 #### \[[RFC8032](https://datatracker.ietf.org/doc/html/rfc8032)]
 
@@ -333,13 +337,13 @@ Sporny, M., Longley, D., Kellog, G., Lanthaler, M., Champin, P., Lindström, N.,
 
 Cohen, G., Steele, O, Decentralized Identity Foundation, "JCS Ed25519 Signature 2020", [https://identity.foundation/JcsEd25519Signature2020/](https://identity.foundation/JcsEd25519Signature2020/)
 
-#### \[[OIDC](https://openid.net/specs/openid-connect-core-1\_0.html)]
+#### \[[OIDC](https://openid.net/specs/openid-connect-core-1_0.html)]
 
-N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 1", November 8, 2014, [https://openid.net/specs/openid-connect-core-1\_0.html](https://openid.net/specs/openid-connect-core-1\_0.html)
+N. Sakimura, J. Bradley, M. Jones, B. de Medeiros, C. Mortimore, "OpenID Connect Core 1.0 incorporating errata set 1", November 8, 2014, [https://openid.net/specs/openid-connect-core-1\_0.html](https://openid.net/specs/openid-connect-core-1_0.html)
 
-#### \[[SIOPv2](https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1\_0.html)]
+#### \[[SIOPv2](https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1_0.html)]
 
-K. Yasuda, M. Jones, T. Lodderstedt, "Self-Issued OpenID Provider v2", September 2022, [https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1\_0.html](https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1\_0.html)
+K. Yasuda, M. Jones, T. Lodderstedt, "Self-Issued OpenID Provider v2", September 2022, [https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1\_0.html](https://openid.bitbucket.io/connect/openid-connect-self-issued-v2-1_0.html)
 
 #### \[[DIF.PresentationExchange](https://identity.foundation/presentation-exchange/spec/v2.0.0/)]
 

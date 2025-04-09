@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # High-Level Interfaces / APIs
 
 The SSI Kit exposes high-level interfaces / APIs to hide the complex introduced by

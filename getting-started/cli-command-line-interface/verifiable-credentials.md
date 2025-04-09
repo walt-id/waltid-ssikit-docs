@@ -1,5 +1,6 @@
 ---
 description: VC related operations like issuing, verifying and revoking VCs.
+noIndex: true
 ---
 
 # Verifiable Credentials

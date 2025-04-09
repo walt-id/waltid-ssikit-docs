@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Decentralized Identifiers
 
 DID related operations, like registering, updating and deactivating DIDs. For more info on DIDs, go [here](../../ssi-kit/ssi-kit/what-is-ssi/technologies-and-concepts/decentralised-identifiers-dids.md).
@@ -57,11 +61,11 @@ Resolves the DID document.
 
 Options:
 
-\-d, --did TEXT DID to be resolved
+-d, --did TEXT DID to be resolved
 
-\-r, --raw / -t, --typed
+-r, --raw / -t, --typed
 
-\-w, --write
+-w, --write
 
 ### List DIDs
 

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Ecosystem Abstraction
 
 We believe in a **multi-ecosystem future**.

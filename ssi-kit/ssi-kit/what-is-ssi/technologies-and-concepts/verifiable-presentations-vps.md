@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Verifiable Presentations (VPs)
 
 A Verifiable Presentation (VP) is a collection from one or more Verifiable Credentials, whereas the authorship of the whole collection can be cryptographically verified. VPs are standardized as part of the [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/#presentations).
@@ -21,7 +25,7 @@ Taking a closer look at how they are built up. We will see four different layers
 
 ### Example of a Verifiable Presentation in code
 
-If you want to get a better understanding of the different attributes present, please visit our section about [VCs](https://docs.walt.id/v/idpkit/concepts/identity-provision-via-nfts#nft\_token-scope).
+If you want to get a better understanding of the different attributes present, please visit our section about [VCs](https://docs.walt.id/v/idpkit/concepts/identity-provision-via-nfts#nft_token-scope).
 
 ```json
 {

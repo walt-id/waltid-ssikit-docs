@@ -1,6 +1,11 @@
-# Issuance
+---
+noIndex: true
+---
+
+# Issuing
 
 Velocity issuance commands are available under `issue` command as follows:
+
 * offer management
 * credential management
 
@@ -8,20 +13,24 @@ Velocity issuance commands are available under `issue` command as follows:
 ./ssikit.sh velocity issue -h
 ```
 
-![issue-cmd](./assets/issue-cmd.png)
+![issue-cmd](assets/issue-cmd.png)
 
 ## Offer management
+
 Before being able to issue verifiable credentials, the credential data needs to be prepared. Offers represent the way to set up credential data. Basically, an offer is a credential that has not been signed. The offer management functions can be accessed from the command:
+
 ```
 ./ssikit.sh velocity issue offer -h
 ```
 
 Currently available functions are:
+
 * create offer
 
-![offer-cmd](./assets/offer-cmd.png)
+![offer-cmd](assets/offer-cmd.png)
 
 E.g. Create an offer.
+
 ```
 ./ssikit.sh velocity issue -i did:velocity:0xd4df29726d500f9b85bc6c7f1b3c021f16305692 -d 61966dfc4732da2ea0e64826 -m adam.smith@example.com
 ```
@@ -81,6 +90,7 @@ E.g. Create an offer.
 }
 ```
 {% endtab %}
+
 {% tab title="response" %}
 ```
 {
@@ -146,16 +156,19 @@ E.g. Create an offer.
 {% endtabs %}
 
 ## Credential management
+
 Credential management functions include:
+
 * issue credential
 
 ```
 ./ssikit.sh velocity issue credential -h
 ```
 
-![credential-cmd](./assets/credential-cmd.png)
+![credential-cmd](assets/credential-cmd.png)
 
 E.g. Issue credential.
+
 ```
 ./ssikit.sh velocity issue credential -i did:velocity:0x6872fedef46b03e9863a56859a1cdb45648907f7 -c PastEmploymentCredential credential-data.json
 ```
@@ -215,6 +228,7 @@ E.g. Issue credential.
 }
 ```
 {% endtab %}
+
 {% tab title="response" %}
 ```
 velocity-network://issue?request_uri=https://stagingagent.velocitycareerlabs.io/api/holder/v0.6/org/did:velocity:0x6872fedef46b03e9863a56859a1cdb45648907f7/issue/get-credential-manifest?exchange_id=634d9a9caa4dc9cf44a8f37f&credential_types=PastEmploymentPosition

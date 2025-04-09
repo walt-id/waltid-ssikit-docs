@@ -2,6 +2,7 @@
 description: >-
   Data Exchange (Protocols) enable the exchange of data (VCs) between different
   parties.
+noIndex: true
 ---
 
 # Data Exchange (Protocols)

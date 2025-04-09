@@ -1,14 +1,18 @@
-# Verifiable credentials
+---
+noIndex: true
+---
+
+# Verifiable-Credentials
 
 The following credentials management functions are available:
 
-* [list](#list-credentials) - list verifiable credentials
-* [load](#load-credential) - load the verifiable credential
-* [delete](#delete-credential) - delete the verifiable credential
-* [create](#create-credential) - create a verifiable credential
-* [present](#present-credentials) - create a verifiable presentation from the supplied credentials
-* [verify](#verifiable-credentials) - verify credential / presentation
-* [import](#import-credential) - import the verifiable credential
+* [list](verifiable-credentials.md#list-credentials) - list verifiable credentials
+* [load](verifiable-credentials.md#load-credential) - load the verifiable credential
+* [delete](verifiable-credentials.md#delete-credential) - delete the verifiable credential
+* [create](verifiable-credentials.md#create-credential) - create a verifiable credential
+* [present](verifiable-credentials.md#present-credentials) - create a verifiable presentation from the supplied credentials
+* [verify](verifiable-credentials.md#verifiable-credentials) - verify credential / presentation
+* [import](verifiable-credentials.md#import-credential) - import the verifiable credential
 
 ## List credentials
 

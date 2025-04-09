@@ -2,6 +2,7 @@
 description: >-
   DIDs give us the power of verifying information, for example credentials,
   anywhere, anytime, through the establishment of a public key infrastructure.
+noIndex: true
 ---
 
 # Decentralised Identifiers (DIDs)
