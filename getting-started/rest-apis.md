@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # REST API
 
 Manage keys, DIDs, issue Verifiable Credentials, and verify them using the SSI-Kit's REST API.
@@ -18,7 +22,6 @@ This will create a folder called data in your current directory as storage for t
 {% endtab %}
 
 {% tab title="Local" %}
-
 1. Clone the project
 
 ```
@@ -38,13 +41,12 @@ The first time you run the command you will be asked to built the project. You c
 ```
 ./ssikit.sh serve
 ```
-
 {% endtab %}
 {% endtabs %}
 
 If you want to get a more detailed overview of the options provided for building the project on your machine, please refer to [building the project](build.md).
 
-After successfully running the project, you will have the endpoints, described below, available for use.&#x20;
+After successfully running the project, you will have the endpoints, described below, available for use.
 
 **Exposed endpoints:**
 
@@ -62,10 +64,10 @@ The Core API exposes most of the functionalities provided by the SSI Kit, howeve
 
 ### Next Steps
 
-- [Issuance](rest-apis/signatory-api.md) - Learn how to issue credentials
-- [Holders](rest-apis/custodian-api/) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
-- [Verifiers](rest-apis/auditor-api.md) - Learn how to verify credentials
+* [Issuance](rest-apis/signatory-api.md) - Learn how to issue credentials
+* [Holders](rest-apis/custodian-api/) - Learn how to maintain secrets and sensitive data (e.g. keys, Verifiable Credentials)
+* [Verifiers](rest-apis/auditor-api.md) - Learn how to verify credentials
 
 ### Tutorials
 
-- [My First VC](../tutorials/my-first-vc.md) - Play through a whole use case from Issuance to Verification
+* [My First VC](../tutorials/my-first-vc.md) - Play through a whole use case from Issuance to Verification

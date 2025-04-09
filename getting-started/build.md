@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Building the Project
 
 For building the project **Gradle 7** as well as **JDK 16 (or above)** is required.

@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # EBSI
 
 This section shows how you can use the SSI Kit to interact with Europe’s emerging identity ecosystem based on the
@@ -17,7 +21,7 @@ Note, that some of the flows are not in their final version. Slight modification
 
 Creation and anchoring of a new DID on the EBSI ledger (incl. use of "Verifiable Authorizations" and EBSI access tokens).
 
-![ESSIF DID registration](use-cases/02\_essif-register-did.png)
+![ESSIF DID registration](use-cases/02_essif-register-did.png)
 
 For SSIKit usage examples, refer to: [**EBSI DID registration**](usage-examples/onboarding-and-dids.md)
 
@@ -31,7 +35,7 @@ Onboarding of a legal entity to the EBSI/ESSIF ecosystem (incl. combined VC requ
 
 Gaining access to protected EBSI/ESSIF services (incl. presentation of "Verifiable Authorization").
 
-![EBSI Auth API](use-cases/04\_essif-auth-api.png)
+![EBSI Auth API](use-cases/04_essif-auth-api.png)
 
 ### Issuance of Verifiable Credentials
 

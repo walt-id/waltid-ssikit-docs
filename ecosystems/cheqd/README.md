@@ -1,8 +1,9 @@
 ---
 description: A Cosmos based blockchain
+noIndex: true
 ---
 
-# Cheqd
+# cheqd
 
 ### Intro
 

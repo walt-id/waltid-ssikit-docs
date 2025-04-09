@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Verification Policies
 
 {% embed url="https://youtu.be/yTQl7_HYWJo" %}

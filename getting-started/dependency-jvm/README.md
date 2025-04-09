@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Dependency (JVM)
 
 The SSI Kit can also be used as direct dependency for JVM-based applications. In this case an existing application can easily be enhanced with SSI functionality.
