@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # SSI Kit
 
 This section elaborates the theory behind the SSI Kit:
