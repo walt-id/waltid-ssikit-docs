@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # CLI | Command Line Interface
 
 Manage keys, DIDs, issue Verifiable Credentials, and verify them using the SSI-Kit command line tool.
