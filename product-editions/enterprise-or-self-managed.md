@@ -1,5 +1,6 @@
 ---
 description: Run our products with the support of our experts.
+noIndex: true
 ---
 
 # Enterprise | Self-Managed
