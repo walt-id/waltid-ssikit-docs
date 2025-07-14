@@ -1,3 +1,7 @@
+---
+noIndex: true
+---
+
 # Credential Templates
 
 {% embed url="https://youtu.be/a3l3VhLWZaI" %}
