@@ -30,7 +30,7 @@ This is why we need a better way to verify the claims presented,  and that is wh
 With VCs and the standard introduced by [W3C](https://www.w3.org/TR/vc-data-model/), we now have a way of creating a digital piece of information that identifies a particular entity or verifies a specific attribute, qualification or claim about them, in a way, that is almost impossible to forger, easy to verify, and privacy preserving by design.  Leaving us with the following benefits:
 
 * **Easy to verify:** There is a clearly defined and reliable way of verifying a Verifiable Credential.&#x20;
-* **Temper-proof:** No one expect the issuer (entity creating the VC) can change the claims stated in the VC.
+* **Tamper-proof:** No one expect the issuer (entity creating the VC) can change the claims stated in the VC.
 * **Independent:** No need to contact the issuer of the presented certificate to be certain about its validity. The check can happen in an independent, asynchronous way.
 * **Data is owned:** The holder of a certificate now owns the data and decides what to share and when, only providing proof but never actually giving it (a copy) to the service provider.
 * **Portable:** The user is free to choose where to take their VC and in which wallet it is saved.
@@ -62,7 +62,7 @@ When the holder receives their Verifiable Credential it will be saved on their w
   * The DID of the holder of the credential
   * The claims about the subject (what the issuer asserts about the subject). This could be, if they can drive a car and what type of car (driver license) or the subject of their study and knowledge areas skilled in (university certificate).
 * **Proof:**
-  * This will contain the signatures of the issuer, which can be used to see if the content of the VC has been tempered with and for an authenticity check.&#x20;
+  * This will contain the signatures of the issuer, which can be used to see if the content of the VC has been tampered with and for an authenticity check.&#x20;
 
 ### Using the Certificate
 
@@ -134,7 +134,7 @@ When all the checks pass, the verifier can now grant the holder access to the se
       "documentPresence": "Physical"
     }
   ],
-  // Digital proof that makes the credential temper-evident
+  // Digital proof that makes the credential tamper-evident
   "proof": {
     // The cryptographic signature suite that was used to generate the signature
     "type": "EidasSeal2021",
